@@ -1,6 +1,6 @@
 <?php
-define("SERVIDOR","74.208.36.204");
-define("BD","taxisCompany");
+define("SERVIDOR","74.208.93.220");
+define("BD","VSAT_Inverlima");
 define("USUARIO","sistemasvsat");
 define("CLAVE","mfcvelazvsat");
 date_default_timezone_set('America/Bogota');

@@ -39,7 +39,7 @@ exit;*/
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Visualsat | SUTC</title>
+  <title>Visualsat | INVERLIMA</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="../Vista/imagenes/icon_taxi2.png" />
@@ -212,8 +212,8 @@ if(isset($Datos[$i]['submodulos'])){
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-8">
-          <img src="../Vista/imagenes/logo_administracion2021.png" class="logosHome">
-            <h1 class="m-0 text-dark">Bienvenidos al SUTC - SISTEMA UNICO DE TARJETONES DE COLOMBIA</h1>
+          <img src="../Vista/imagenes/logo_administracion.png" class="logosHome">
+            <h1 class="m-0 text-dark">Bienvenidos a Inverlima</h1>
           </div><!-- /.col -->
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->

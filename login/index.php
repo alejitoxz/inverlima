@@ -16,7 +16,7 @@ if(isset($_SESSION['S_ID'])){
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
-    <title>SUTC | INGRESAR</title>
+    <title>INVERLIMA | INGRESAR</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/style.css">
@@ -42,7 +42,7 @@ if(isset($_SESSION['S_ID'])){
     <div class="login-logo">
     <a href="#" class="text-light"><img src="../Vista/imagenes/logo_administracion.png" class="logosIndex"></a>
   </div>
-      <h5 class="login-box-msg">Sistema Único de Tarjetones</h5>
+      <h5 class="login-box-msg">INVERLIMA</h5>
 
         <div class="input-group mb-3">
           <input type="text" class="form-control" id="txt_usu" placeholder="Usuario">

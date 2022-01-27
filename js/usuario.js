@@ -23,20 +23,14 @@ function VerificarUsuario(){
                 var Id      = resultado[0]['submodulos'][0]['id'];
                 var Usuario = resultado[0]['submodulos'][0]['usuario'];
                 var Rol     = resultado[0]['submodulos'][0]['idRol'];
-                var Company     = resultado[0]['submodulos'][0]['idCompany'];
-                var Ente     = resultado[0]['submodulos'][0]['EntResp'];
             }else if(resultado[1]['submodulos'].length > 0){
                 var Id      = resultado[1]['submodulos'][0]['id'];
                 var Usuario = resultado[1]['submodulos'][0]['usuario'];
                 var Rol     = resultado[1]['submodulos'][0]['idRol'];
-                var Company     = resultado[1]['submodulos'][0]['idCompany'];
-                var Ente     = resultado[1]['submodulos'][0]['EntResp'];
             }else{
                 var Id      = resultado[2]['submodulos'][0]['id'];
                 var Usuario = resultado[2]['submodulos'][0]['usuario'];
                 var Rol     = resultado[2]['submodulos'][0]['idRol'];
-                var Company     = resultado[2]['submodulos'][0]['idCompany'];
-                var Ente     = resultado[2]['submodulos'][0]['EntResp'];
             }
             
             let Datos = [];
@@ -50,8 +44,6 @@ function VerificarUsuario(){
                     id : Id,
                     usuario : Usuario,
                     rol : Rol,
-                    company : Company,
-                    ente : Ente,
                     Datos : Datos
                 }
             }).done(function(req){

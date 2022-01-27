@@ -21,7 +21,6 @@ session_start();
                     m.id as idMenu
                     FROM
                     usuario as u
-                    INNER JOIN company as c ON (c.id = u.idCompany)
                     INNER JOIN rol as r ON (r.id = u.idRol) 
                     LEFT JOIN rol_modulos as rm ON (rm.idRol = r.id)
                     LEFT JOIN modulos as m ON (m.id = rm.idModulos)  
@@ -104,19 +103,14 @@ session_start();
         }
         function listar_usuario(){
             $conn = $this->conexion->conectar();
-            $idCompany = $_SESSION['COMPANY'];
             $Rol = $_SESSION['ROL'];
             $idUsuario = $_SESSION['S_ID'];
 
             if ($Rol == 2) {
                 $wr = "and u.id = $idUsuario";
-                $com = "and u.idCompany = $idCompany";
             }else if ($Rol == 1) {
                 $com = "";
                 $wr = "";
-            }else{
-                $wr = "";
-                $com = "and u.idCompany = $idCompany";
             }
             $sql  = "SELECT
                     u.id,
@@ -135,10 +129,9 @@ session_start();
                     p.id as idPersona
                     FROM
                     usuario AS u
-                    INNER JOIN company AS co ON (u.idCompany = co.id)
                     INNER JOIN rol AS r ON (u.idRol = r.id)
                     INNER JOIN persona AS p ON (u.idPersona = p.id)
-                    WHERE u.estatus = 1 $com and r.Id not in (1) $wr
+                    WHERE u.estatus = 1  r.Id not in (1) $wr
             ";
            // echo $sql;
             $resp = sqlsrv_query($conn, $sql);

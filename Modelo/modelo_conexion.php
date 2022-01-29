@@ -18,7 +18,7 @@ date_default_timezone_set('America/Bogota');
             $connectionInfo = array("Database" => BD, "UID"=>USUARIO, "PWD"=>CLAVE , "CharacterSet" => "UTF-8");
             $conn = sqlsrv_connect($serverName, $connectionInfo);
             if( $conn === false ) {
-                echo -1;
+                echo -9;
                 exit;
             }
     

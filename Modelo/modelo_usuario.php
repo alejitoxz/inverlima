@@ -21,16 +21,18 @@ session_start();
                     m.id as idMenu
                     FROM
                     usuario as u
+                    INNER JOIN company as c ON (c.id = u.idCompany)
                     INNER JOIN rol as r ON (r.id = u.idRol) 
                     LEFT JOIN rol_modulos as rm ON (rm.idRol = r.id)
                     LEFT JOIN modulos as m ON (m.id = rm.idModulos)  
                     WHERE u.usuario = '$usuario' AND u.estatus = 1 
                     and m.nivel = 2 
                     ORDER BY m.orden";
+                    echo $sql1;
             $resp1 = sqlsrv_query($conn, $sql1);
-           
+          
             if( $resp1 === false) {
-                return 0;
+                return 1;
             }
 			$i = 0;
             $data1 = [];

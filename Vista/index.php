@@ -322,6 +322,7 @@ if(isset($Datos[$i]['submodulos'])){
 <script src="../plantilla/DataTables/datatables.min.js" ></script>
 <script src="../plantilla/select2/select2.min.js" ></script>
 <script src="plugins/sweetalert2/sweetalert2.all.min.js"></script>
+<script src="bs-stepper.min.js"></script>
 
 </body>
 </html>

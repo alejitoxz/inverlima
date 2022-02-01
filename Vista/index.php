@@ -326,6 +326,14 @@ if(isset($Datos[$i]['submodulos'])){
 <script src="plugins/sweetalert2/sweetalert2.all.min.js"></script>
 <!-- BS-Stepper -->
 <script src="plugins/bs-stepper/js/bs-stepper.min.js"></script>
+<script>
 
+$(document).ready(function(){
+  
+
+  });
+
+  
+</script>
 </body>
 </html>

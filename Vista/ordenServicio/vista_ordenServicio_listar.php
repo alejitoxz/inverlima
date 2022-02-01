@@ -43,7 +43,7 @@
 
 <div class="modal fade" id="modal_registro_company" role="dialog">
 
-    <div class="modal-dialog modal-lg">
+    <div class="modal-dialog modal-xl">
       <div class="modal-content">
         <div class="modal-header modal-primary">
         <h4 class="modal-title"><b>Registro de compañia</b></h4>
@@ -54,47 +54,75 @@
         
         <div class="row">
           <div class="col-md-12">
-            <div class="card card-default">
-              <div class="card-header">
-                <h3 class="card-title">bs-stepper</h3>
-              </div>
+            <div class="card">
               <div class="card-body p-0">
                 <div class="bs-stepper linear">
+
+
                   <div class="bs-stepper-header" role="tablist">
-                    <!-- your steps here -->
-                    <div class="step active" data-target="#logins-part">
-                      <button type="button" class="step-trigger" role="tab" aria-controls="logins-part" id="logins-part-trigger" aria-selected="true">
+
+                    <!-- DATOS DEL VEHICULO -->
+                    <div class="step active" data-target="#datos-part">
+                      <button type="button" class="step-trigger" role="tab" aria-controls="datos-part" id="datos-trigger" aria-selected="true">
                         <span class="bs-stepper-circle">1</span>
-                        <span class="bs-stepper-label">Logins</span>
+                        <span class="bs-stepper-label">Datos del Vehículo</span>
                       </button>
                     </div>
+
+                    <!-- DATOS DE BATERIAS -->
                     <div class="line"></div>
-                    <div class="step" data-target="#information-part">
-                      <button type="button" class="step-trigger" role="tab" aria-controls="information-part" id="information-part-trigger" aria-selected="false" disabled="disabled">
+                    <div class="step" data-target="#bateria-part">
+                      <button type="button" class="step-trigger" role="tab" aria-controls="bateria-part" id="bateria-trigger" aria-selected="false">
                         <span class="bs-stepper-circle">2</span>
-                        <span class="bs-stepper-label">Various information</span>
+                        <span class="bs-stepper-label">Batería</span>
                       </button>
                     </div>
-                  </div>
+
+                    <!-- DATOS DE LLANTAS -->
+                    <div class="line"></div>
+                    <div class="step" data-target="#llanta-part">
+                      <button type="button" class="step-trigger" role="tab" aria-controls="llanta-part" id="llanta-trigger" aria-selected="false" >
+                        <span class="bs-stepper-circle">3</span>
+                        <span class="bs-stepper-label">Llanta</span>
+                      </button>
+                    </div>
+
+                    <!-- DATOS DE ACEITES -->
+                    <div class="line"></div>
+                    <div class="step" data-target="#aceite-part">
+                      <button type="button" class="step-trigger" role="tab" aria-controls="aceite-part" id="aceite-trigger" aria-selected="false" >
+                        <span class="bs-stepper-circle">4</span>
+                        <span class="bs-stepper-label">Aceites</span>
+                      </button>
+                    </div>
+
+                  </div><!-- FIN DE LOS TITULOS-->
                   <div class="bs-stepper-content">
-                    <!-- your steps content here -->
-                    <div id="logins-part" class="content active dstepper-block" role="tabpanel" aria-labelledby="logins-part-trigger">
+
+
+                    <!-- FORMULARIO DATOIS-->
+                    <div id="datos-part" class="content active dstepper-block" role="tabpanel" aria-labelledby="datos-trigger">
                       <div class="form-group">
                         <label for="exampleInputEmail1">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                        <input type="email" class="form-control" id="" placeholder="Enter email">
                       </div>
                       <div class="form-group">
                         <label for="exampleInputPassword1">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        <input type="password" class="form-control" id="" placeholder="Password">
                       </div>
-                      <button class="btn btn-primary" onclick="stepper.next()">Next</button>
+                      <button class="btn btn-primary" onclick="stepper.next()">Siguiente</button>
                     </div>
-                    <div id="information-part" class="content" role="tabpanel" aria-labelledby="information-part-trigger">
+
+
+
+                    
+                    <!-- FORMULARIO BATERIA-->
+                    <div id="bateria-part" class="content" role="tabpanel" aria-labelledby="bateria-trigger">
                       <div class="form-group">
                         <label for="exampleInputFile">File input</label>
                         <div class="input-group">
                           <div class="custom-file">
-                            <input type="file" class="custom-file-input" id="exampleInputFile">
+                            <input type="file" class="custom-file-input" id="">
                             <label class="custom-file-label" for="exampleInputFile">Choose file</label>
                           </div>
                           <div class="input-group-append">
@@ -102,25 +130,71 @@
                           </div>
                         </div>
                       </div>
-                      <button class="btn btn-primary" onclick="stepper.previous()">Previous</button>
-                      <button type="submit" class="btn btn-primary">Submit</button>
+                      <button class="btn btn-primary" onclick="stepper.previous()">Anterior</button>
+                      <button class="btn btn-primary" onclick="stepper.next()">Siguiente</button>
                     </div>
+                      
+
+
+
+                     <!-- FORMULARIO llanta-->
+                     <div id="llanta-part" class="content" role="tabpanel" aria-labelledby="llanta-trigger">
+                      <div class="form-group">
+                        <label for="exampleInputFile">File input</label>
+                        <div class="input-group">
+                          <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="">
+                            <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                          </div>
+                          <div class="input-group-append">
+                            <span class="input-group-text">Upload</span>
+                          </div>
+                        </div>
+                      </div>
+                      <button class="btn btn-primary" onclick="stepper.previous()">Anterior</button>
+                      <button class="btn btn-primary" onclick="stepper.next()">Siguiente</button>
+                    </div>
+
+
+
+
+                      <!-- FORMULARIO ACCEITE-->
+                      <div id="aceite-part" class="content" role="tabpanel" aria-labelledby="aceite-trigger">
+                      <div class="form-group">
+                        <label for="exampleInputFile">File input</label>
+                        <div class="input-group">
+                          <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="">
+                            <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                          </div>
+                          <div class="input-group-append">
+                            <span class="input-group-text">Upload</span>
+                          </div>
+                        </div>
+                      </div>
+                      <button class="btn btn-primary" onclick="stepper.previous()">Anterior</button>
+                      <button type="submit" class="btn btn-primary">Guardar</button>
+                    </div>
+
+
                   </div>
                 </div>
               </div>
               <!-- /.card-body -->
               <div class="card-footer">
-                Visit <a href="https://github.com/Johann-S/bs-stepper/#how-to-use-it">bs-stepper documentation</a> for more examples and information about the plugin.
               </div>
             </div>
             <!-- /.card -->
           </div>
         </div>
-        </form>
+
+        
         </div>
       </div>
     </div>
 </div>
+
+</form>
 
 <script type="text/javascript" src="../js/company.js"></script>
 <script>
@@ -130,10 +204,9 @@
     });
 
     // inicimos wizzard
-    // BS-Stepper Init
-  document.addEventListener('DOMContentLoaded', function () {
-    window.stepper = new Stepper(document.querySelector('.bs-stepper'))
-  })
+      // BS-Stepper Init
+      window.stepper = new Stepper(document.querySelector('.bs-stepper'))
+    
 
   });
 </script>

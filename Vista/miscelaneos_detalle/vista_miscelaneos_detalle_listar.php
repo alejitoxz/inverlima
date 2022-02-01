@@ -1,7 +1,7 @@
 <div class="col-md-12">
     <div class="card card-success">
             <div class="card-header">
-            <h3 class="card-title">Bienvenido a Miscelaneos</h3>
+            <h3 class="card-title">Bienvenido a Detalle Miscelaneos</h3>
 
             <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="card-refresh" data-source="/pages/widgets.html" data-source-selector="#card-refresh-content"><i class="fas fa-sync-alt"></i></button>
@@ -45,7 +45,7 @@
     <div class="modal-dialog modal-sm">
       <div class="modal-content">
         <div class="modal-header modal-primary">
-        <h4 class="modal-title"><b>Registro de Miscelaneo</b></h4>
+        <h4 class="modal-title"><b>Registro de Miscelaneo detalle</b></h4>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
         <div class="modal-body">
@@ -58,12 +58,19 @@
               <label for="">Descripcion</label>
               <input type="text" class="form-control" id="txt_descripcion" placeholder="Ingrese la Descripcion"><br>
             </div>
+            <div class="col-md-12">
+            <div class="form-group">
+              <label for="">Categoria Miscelaneo</label>
+              <select class="js-example-basic-single"  name="state" id="sel_cat_miscelaneo" style="width:100%; heigth: 40px;">   
+              </select><br><br>
+            </div>
+          </div>
           </div>
         </div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-close"><b>&nbsp;Cerrar</b></i></button>
-          <button type="button" class="btn btn-primary" onclick="registrar_miscelaneos()"><i class="fa fa-check"><b>&nbsp;Guardar</b></i></button>
+          <button type="button" class="btn btn-primary" onclick="registrar_miscelaneos_detalle()"><i class="fa fa-check"><b>&nbsp;Guardar</b></i></button>
         </div>
       </div>
     </div>
@@ -105,7 +112,8 @@
 <script>
   $(document).ready(function(){
     listar_miscelaneos();
-    $("#modal_registro_miscelaneos").on('shown.bs.modal',function(){
+    $('.js-example-basic-single').select2();
+    $("#modal_registro_miscelaneos_detalle").on('shown.bs.modal',function(){
 
     });
   });

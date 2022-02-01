@@ -1,6 +1,6 @@
-var table_miscelaneos;
+var table_miscelaneos_detalle;
 function listar_miscelaneos(){
-    table_miscelaneos = $('#tabla_miscelaneos').DataTable( {
+    table_miscelaneos_detalle = $('#tabla_miscelaneos_detalle').DataTable( {
         "ordering":true,
         "paging": true,
         "searching": { "regex": true },
@@ -10,7 +10,7 @@ function listar_miscelaneos(){
         "async": true ,
         "processing": true,
         "ajax": {
-            "url": "../controlador/miscelaneos/controlador_miscelaneos_listar.php",
+            "url": "../controlador/miscelaneos_detalle/controlador_miscelaneos_detalle_listar.php",
             "type": "POST"
         },
         "columns": [

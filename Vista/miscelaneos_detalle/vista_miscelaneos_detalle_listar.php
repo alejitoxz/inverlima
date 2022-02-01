@@ -16,15 +16,16 @@
             <div class="form-group">
                 <div class="col-lg-10">
                     <div class="col-lg-2">
-                    <button type="button" class="btn btn-primary"  onclick="AbrirModalRegistromiscelaneos()"><i class="fas fa-plus"> </i> Registrar</button>
+                    <button type="button" class="btn btn-primary"  onclick="AbrirModalRegistromiscelaneos_detalle()"><i class="fas fa-plus"> </i> Registrar</button>
                     </div> 
                 </div>
             </div>
-            <table id="tabla_miscelaneos" class="display responsive nowrap" style="width:100%">
+            <table id="tabla_miscelaneos_detalle" class="display responsive nowrap" style="width:100%">
                     <thead>
                         <tr>
                           <!--<th>#</th>-->
                           <th>Descripcion</th>
+                          <th>Categoria</th>
                           <th>Editar</th>
                         </tr>
                     </thead>
@@ -40,7 +41,7 @@
 
 <form autocomplete="false" onsubmit="return false">
 
-<div class="modal fade" id="modal_registro_miscelaneos" role="dialog">
+<div class="modal fade" id="modal_registro_miscelaneos_detalle" role="dialog">
 
     <div class="modal-dialog modal-sm">
       <div class="modal-content">
@@ -56,12 +57,12 @@
           <div class="col-md-12">
             <div class="form-group">
               <label for="">Descripcion</label>
-              <input type="text" class="form-control" id="txt_descripcion" placeholder="Ingrese la Descripcion"><br>
+              <input type="text" class="form-control" id="txt_descripcion_detalle" placeholder="Ingrese la Descripcion"><br>
             </div>
             <div class="col-md-12">
             <div class="form-group">
               <label for="">Categoria Miscelaneo</label>
-              <select class="js-example-basic-single"  name="state" id="sel_cat_miscelaneo" style="width:100%; heigth: 40px;">   
+              <select class="js-example-basic-single"  name="state" id="sel_cat_miscelaneo_detalle" style="width:100%; heigth: 40px;">   
               </select><br><br>
             </div>
           </div>
@@ -94,24 +95,24 @@
           <input type="hidden" id="id" >
             <div class="form-group">
               <label for="">Nueva Descripcion</label>
-              <input type="text" class="form-control" id="txt_miscelaneos_edit" placeholder="Ingrese la descripcion"><br>
+              <input type="text" class="form-control" id="txt_miscelaneos_detalle_edit" placeholder="Ingrese la descripcion"><br>
             </div>
           </div>
         </div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-close"> </i> Cancelar</button>
-          <button type="button" class="btn btn-primary" onclick="modificar_miscelaneos()"><i class="fa fa-check"> </i> Modificar</button>
+          <button type="button" class="btn btn-primary" onclick="modificar_miscelaneos_detalle()"><i class="fa fa-check"> </i> Modificar</button>
         </div>
       </div>
     </div>
   </div>
   </form>
-<script type="text/javascript" src="../js/miscelaneos.js"></script>
+<script type="text/javascript" src="../js/miscelaneos_detalle.js"></script>
 
 <script>
   $(document).ready(function(){
-    listar_miscelaneos();
+    listar_miscelaneos_detalle();
     $('.js-example-basic-single').select2();
     $("#modal_registro_miscelaneos_detalle").on('shown.bs.modal',function(){
 

@@ -1,5 +1,5 @@
 <?php
-    class modelo_miscelaneos{
+    class modelo_miscelaneos_detalle{
         private $conexion;
         public $data;
 
@@ -8,14 +8,16 @@
             $this->conexion = new conexion();
         }
 
-        function listar_miscelaneos(){
+        function listar_miscelaneos_detalle(){
             $conn = $this->conexion->conectar();
             $sql  = "SELECT
-            id,
-            descripcion
+            md.id,
+            md.descripcion, 
+            m.descripcion AS descripcion_miscelaneos
             FROM
-            miscelaneos
-            WHERE estatus = 1;
+            miscelaneos_detalle as md
+            INNER JOIN miscelaneos as m ON (m.id = md.id_miscelaneo AND m.estatus = 1)
+            WHERE md.estatus = 1;
             ";
 
             $resp = sqlsrv_query($conn, $sql);
@@ -39,11 +41,11 @@
            
         }
 
-        function registrar_miscelaneos($descripcion){
+        function registrar_miscelaneos_detalle($descripcion_detalle,$categoria_miscelaneo){
             $conn = $this->conexion->conectar();
-            $sql  = "INSERT INTO miscelaneos(
-                    descripcion,estatus)
-                     VALUES ('$descripcion',1)
+            $sql  = "INSERT INTO miscelaneos_detalle(
+                    descripcion,id_miscelaneo,estatus)
+                     VALUES ('$descripcion_detalle',$categoria_miscelaneo,1)
                      ";
                    
             $resp = sqlsrv_query($conn, $sql);

@@ -1,5 +1,5 @@
 var table_miscelaneos_detalle;
-function listar_miscelaneos(){
+function listar_miscelaneos_detalle(){
     table_miscelaneos_detalle = $('#tabla_miscelaneos_detalle').DataTable( {
         "ordering":true,
         "paging": true,
@@ -16,6 +16,7 @@ function listar_miscelaneos(){
         "columns": [
             //{ "data": "id" },
             { "data": "descripcion" },
+            { "data": "descripcion_miscelaneos"},
             {"defaultContent":
             "<button style='font-size:13px;' type='button' class='eliminarc btn btn-danger'><i class='fa fa-trash'></i></button><button style='font-size:13px;' type='button' class='editarc btn btn-info'><i class='fa fa-edit'></i></button>"}
         ],
@@ -24,31 +25,35 @@ function listar_miscelaneos(){
     } );
     
 }
-function AbrirModalRegistromiscelaneos(){
-    $("#modal_registro_miscelaneos").modal({backdrop:'static',keyboard:false})
-    $("#modal_registro_miscelaneos").modal('show');
+function AbrirModalRegistromiscelaneos_detalle(){
+    $("#modal_registro_miscelaneos_detalle").modal({backdrop:'static',keyboard:false})
+    $("#modal_registro_miscelaneos_detalle").modal('show');
 }
 
-function registrar_miscelaneos(){
-    var descripcion = $("#txt_descripcion").val();
+function registrar_miscelaneos_detalle(){
+    var descripcion_detalle = $("#txt_descripcion_detalle").val();
+    var categoria_miscelaneo = $("#sel_cat_miscelaneo_detalle").val();
 
-    if( descripcion == ''
+    if( descripcion_detalle == '' ||
+        categoria_miscelaneo == ''
+
         ){
             return swal.fire("Mensaje De Advertencia", "llene los campos vacios", "warning");
         }
     $.ajax({
-        "url": "../controlador/miscelaneos/controlador_miscelaneos_registro.php",
+        "url": "../controlador/miscelaneos/controlador_miscelaneos_detalle_registro.php",
         "type": "POST",
         data:{
-        descripcion:descripcion,
+        descripcion_detalle:descripcion_detalle,
+        categoria_miscelaneo:categoria_miscelaneo
         }
     }).done(function(resp){
         console.log(resp);
         if(resp > 0){
             if(resp==1){
-            $("#modal_registro_miscelaneos").modal('hide');
+            $("#modal_registro_miscelaneos_detalle").modal('hide');
             Swal.fire("Mensaje De Confirmacion",'Registro realizado', "success").then((value)=>{
-                table_miscelaneos.ajax.reload();
+                table_miscelaneos_detalle.ajax.reload();
                 limpiarRegistro();
             });
         }
@@ -59,15 +64,16 @@ function registrar_miscelaneos(){
 
 }
 function limpiarRegistro(){
-    $("#txt_descripcion").val("");
+    $("#txt_descripcion_detalle").val("");
+    $("#sel_cat_miscelaneo_detalle").val("");
 }
 
 // FUNCION PARA ELIMINAR (ANULAR) REGISTRO
-$('#tabla_miscelaneos').on('click','.eliminarc',function(){
-    if(table_miscelaneos.row(this).child.isShown()){
-        var idmiscelaneos = table_miscelaneos.row(this).data().id;
+$('#tabla_miscelaneos_detalle').on('click','.eliminarc',function(){
+    if(table_miscelaneos_detalle.row(this).child.isShown()){
+        var idmiscelaneos_detalle = table_miscelaneos_detalle.row(this).data().id;
     }else{
-        var idmiscelaneos = table_miscelaneos.row($(this).parents('tr')).data().id;
+        var idmiscelaneos_detalle = table_miscelaneos_detalle.row($(this).parents('tr')).data().id;
     }
     Swal.fire({
         title: '¿Seguro desea eliminar el registro?',
@@ -81,7 +87,7 @@ $('#tabla_miscelaneos').on('click','.eliminarc',function(){
       }).then((result) => {
           console.log(result);
         if (result.value) {
-        modificar_estatus(idmiscelaneos,0);
+        modificar_estatus(idmiscelaneos_detalle,0);
           Swal.fire(
             'Eliminado',
             '¡Tu registro ha sido eliminado!',
@@ -118,26 +124,26 @@ function AbrirModalEditarC(){
 }
 
 // FUNCION PARA EDITAR REGISTRO
-$('#tabla_miscelaneos').on('click','.editarc',function(){
+$('#tabla_miscelaneos_detalle').on('click','.editarc',function(){
     
-    if(table_miscelaneos.row(this).child.isShown()){
-        var datosmiscelaneos = table_miscelaneos.row(this).data();
+    if(table_miscelaneos_detalle.row(this).child.isShown()){
+        var datosmiscelaneos_detalle = table_miscelaneos_detalle.row(this).data();
     }else{
-        var datosmiscelaneos = table_miscelaneos.row($(this).parents('tr')).data();
+        var datosmiscelaneos_detalle = table_miscelaneos_detalle.row($(this).parents('tr')).data();
     }
     
-    var id = datosmiscelaneos.id;
+    var id = datosmiscelaneos_detalle.id;
     var descripcion = datosmiscelaneos.descripcion;
      //levantar modal
     AbrirModalEditarC();
     //ingresas datos modal
     $("#id").val(id);
-    $("#txt_miscelaneos_edit").val(descripcion);
+    $("#txt_miscelaneos_detalle_edit").val(descripcion);
    
 })
-function modificar_miscelaneos(){
+function modificar_miscelaneos_detalle(){
     var id = $("#id").val();
-    var descripcion = $("#txt_miscelaneos_edit").val();
+    var descripcion = $("#txt_miscelaneos_detalle_edit").val();
 
     console.log(descripcion);
     if( descripcion == ''

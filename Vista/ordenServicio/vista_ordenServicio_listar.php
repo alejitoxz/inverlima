@@ -123,14 +123,17 @@
 </div>
 
 <script type="text/javascript" src="../js/company.js"></script>
-<script src="bs-stepper.min.js"></script>
 <script>
   $(document).ready(function(){
     listar_company();
     $("#modal_registro_company").on('shown.bs.modal',function(){
-
     });
-  });
-    
 
+    // inicimos wizzard
+    // BS-Stepper Init
+  document.addEventListener('DOMContentLoaded', function () {
+    window.stepper = new Stepper(document.querySelector('.bs-stepper'))
+  })
+
+  });
 </script>

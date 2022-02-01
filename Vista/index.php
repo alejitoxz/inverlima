@@ -66,6 +66,8 @@ exit;*/
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="../plantilla/DataTables/datatables.min.css">
   <link rel="stylesheet" href="../plantilla/select2/select2.min.css">
+  <!-- BS Stepper -->
+  <link rel="stylesheet" href="plugins/bs-stepper/css/bs-stepper.min.css">
 </head>
 <body class="sidebar-mini layout-fixed sidebar-collapse">
 <div class="wrapper">
@@ -322,7 +324,8 @@ if(isset($Datos[$i]['submodulos'])){
 <script src="../plantilla/DataTables/datatables.min.js" ></script>
 <script src="../plantilla/select2/select2.min.js" ></script>
 <script src="plugins/sweetalert2/sweetalert2.all.min.js"></script>
-<script src="bs-stepper.min.js"></script>
+<!-- BS-Stepper -->
+<script src="plugins/bs-stepper/js/bs-stepper.min.js"></script>
 
 </body>
 </html>

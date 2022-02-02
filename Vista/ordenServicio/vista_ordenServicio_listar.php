@@ -16,7 +16,7 @@
             <div class="form-group">
                 <div class="col-lg-10">
                     <div class="col-lg-2">
-                    <button type="button" class="btn btn-primary"  onclick="AbrirModalRegistroCompany()"><i class="fas fa-plus"> </i> Registrar</button>
+                    <button type="button" class="btn btn-primary"  onclick="AbrirModalRegistroOrdenServicio()"><i class="fas fa-plus"> </i> Registrar</button>
                     </div> 
                 </div>
             </div>
@@ -41,7 +41,7 @@
 
 <form autocomplete="false" onsubmit="return false">
 
-<div class="modal fade" id="modal_registro_company" role="dialog">
+<div class="modal fade" id="modal_registro_OrdenServicio" role="dialog">
 
     <div class="modal-dialog modal-xl">
       <div class="modal-content">
@@ -1192,20 +1192,4 @@
 
 </form>
 
-<script type="text/javascript" src="../js/company.js"></script>
-<script>
-  $(document).ready(function(){
-    listar_company();
-    $('.js-example-basic-single').select2();
-    $("#modal_registro_company").on('shown.bs.modal',function(){
-    });
-
-    // inicimos wizzard
-      // BS-Stepper Init
-      window.stepper = new Stepper(document.querySelector('.bs-stepper'))
-      
-      
-    
-
-  });
-</script>
+<script type="text/javascript" src="../js/ordenServicio.js"></script>

@@ -244,42 +244,564 @@
 
                      <!-- FORMULARIO llanta-->
                     <div id="llanta-part" class="content" role="tabpanel" aria-labelledby="llanta-trigger">
+                    <h5>Llanta 1</h5>
                     <div class="row">
-                      <div class="col-md-2">
-                          <div class="form-group">
-                            <label for="">Profundidad</label>
-                            <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
-                            </select><br><br>
+
+                      <div class="col-md-3">
+                      <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                              <label for="">serial</label>
+                              <input type="text" class="form-control" id="txt_mar_edit" placeholder="Ingrese la marca" ><br>
+                            </div>
                           </div>
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <label for="">Profundidad</label>
+                              <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                              </select><br><br>
+                            </div>
+                        </div>
+                        </div>
                       </div>
-                      <div class="col-md-1">
+                      
+                      <div class="col-md-3">
                           <div class="form-group">
                             <label for="">Marca</label>
                             <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
                             </select><br><br>
                           </div>
                       </div>
-                      <div class="col-md-1">
+                      <div class="col-md-3">
                           <div class="form-group">
                             <label for="">Tipo</label>
                             <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
                             </select><br><br>
                           </div>
                       </div>
-                      <div class="col-md-1">
+                      <div class="col-md-3">
                           <div class="form-group">
                             <label for="">Estado</label>
                             <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
                             </select><br><br>
                           </div>
                       </div>
-                      <div class="col-md-1">
+                      
+                    </div>
+                    <div class="row">
+                        
+                        <div class="col-md-3">
                           <div class="form-group">
-                            <label for="">serial</label>
-                            <input type="text" class="form-control" id="txt_mar_edit" placeholder="Ingrese la marca" ><br>
+                            <label for="">F.Instalacion</label>
+                            <input type="date" class="form-control" id="txt_mar_edit" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
-                    </div> 
+                        <div class="col-md-3">
+                          <div class="form-group">
+                            <label for="">F.Reencauche</label>
+                            <input type="date" class="form-control" id="txt_mar_edit" style="width:100%; heigth: 40px;">
+                          </div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="form-group">
+                            <label for="">F.Cambio</label>
+                            <input type="date" class="form-control" id="txt_mar_edit" style="width:100%; heigth: 40px;">
+                          </div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="form-group">
+                            <label for="">F. Rotacion</label>
+                            <input type="date" class="form-control" id="txt_mar_edit" style="width:100%; heigth: 40px;">
+                          </div>
+                        </div>
+                    </div>
+                    <h5>Llanta 2</h5>
+                    <div class="row">
+
+                      <div class="col-md-3">
+                      <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                              <label for="">serial</label>
+                              <input type="text" class="form-control" id="txt_mar_edit" placeholder="Ingrese la marca" ><br>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <label for="">Profundidad</label>
+                              <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                              </select><br><br>
+                            </div>
+                        </div>
+                        </div>
+                      </div>
+                      
+                      <div class="col-md-3">
+                          <div class="form-group">
+                            <label for="">Marca</label>
+                            <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                            </select><br><br>
+                          </div>
+                      </div>
+                      <div class="col-md-3">
+                          <div class="form-group">
+                            <label for="">Tipo</label>
+                            <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                            </select><br><br>
+                          </div>
+                      </div>
+                      <div class="col-md-3">
+                          <div class="form-group">
+                            <label for="">Estado</label>
+                            <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                            </select><br><br>
+                          </div>
+                      </div>
+                      
+                    </div>
+                    <div class="row">
+                        
+                        <div class="col-md-3">
+                          <div class="form-group">
+                            <label for="">F.Instalacion</label>
+                            <input type="date" class="form-control" id="txt_mar_edit" style="width:100%; heigth: 40px;">
+                          </div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="form-group">
+                            <label for="">F.Reencauche</label>
+                            <input type="date" class="form-control" id="txt_mar_edit" style="width:100%; heigth: 40px;">
+                          </div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="form-group">
+                            <label for="">F.Cambio</label>
+                            <input type="date" class="form-control" id="txt_mar_edit" style="width:100%; heigth: 40px;">
+                          </div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="form-group">
+                            <label for="">F. Rotacion</label>
+                            <input type="date" class="form-control" id="txt_mar_edit" style="width:100%; heigth: 40px;">
+                          </div>
+                        </div>
+                    </div>
+                    <h5>Llanta 3</h5>
+                    <div class="row">
+
+                      <div class="col-md-3">
+                      <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                              <label for="">serial</label>
+                              <input type="text" class="form-control" id="txt_mar_edit" placeholder="Ingrese la marca" ><br>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <label for="">Profundidad</label>
+                              <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                              </select><br><br>
+                            </div>
+                        </div>
+                        </div>
+                      </div>
+                      
+                      <div class="col-md-3">
+                          <div class="form-group">
+                            <label for="">Marca</label>
+                            <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                            </select><br><br>
+                          </div>
+                      </div>
+                      <div class="col-md-3">
+                          <div class="form-group">
+                            <label for="">Tipo</label>
+                            <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                            </select><br><br>
+                          </div>
+                      </div>
+                      <div class="col-md-3">
+                          <div class="form-group">
+                            <label for="">Estado</label>
+                            <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                            </select><br><br>
+                          </div>
+                      </div>
+                      
+                    </div>
+                    <div class="row">
+                        
+                        <div class="col-md-3">
+                          <div class="form-group">
+                            <label for="">F.Instalacion</label>
+                            <input type="date" class="form-control" id="txt_mar_edit" style="width:100%; heigth: 40px;">
+                          </div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="form-group">
+                            <label for="">F.Reencauche</label>
+                            <input type="date" class="form-control" id="txt_mar_edit" style="width:100%; heigth: 40px;">
+                          </div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="form-group">
+                            <label for="">F.Cambio</label>
+                            <input type="date" class="form-control" id="txt_mar_edit" style="width:100%; heigth: 40px;">
+                          </div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="form-group">
+                            <label for="">F. Rotacion</label>
+                            <input type="date" class="form-control" id="txt_mar_edit" style="width:100%; heigth: 40px;">
+                          </div>
+                        </div>
+                    </div>
+                    <h5>Llanta 4</h5>
+                    <div class="row">
+
+                      <div class="col-md-3">
+                      <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                              <label for="">serial</label>
+                              <input type="text" class="form-control" id="txt_mar_edit" placeholder="Ingrese la marca" ><br>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <label for="">Profundidad</label>
+                              <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                              </select><br><br>
+                            </div>
+                        </div>
+                        </div>
+                      </div>
+                      
+                      <div class="col-md-3">
+                          <div class="form-group">
+                            <label for="">Marca</label>
+                            <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                            </select><br><br>
+                          </div>
+                      </div>
+                      <div class="col-md-3">
+                          <div class="form-group">
+                            <label for="">Tipo</label>
+                            <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                            </select><br><br>
+                          </div>
+                      </div>
+                      <div class="col-md-3">
+                          <div class="form-group">
+                            <label for="">Estado</label>
+                            <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                            </select><br><br>
+                          </div>
+                      </div>
+                      
+                    </div>
+                    <div class="row">
+                        
+                        <div class="col-md-3">
+                          <div class="form-group">
+                            <label for="">F.Instalacion</label>
+                            <input type="date" class="form-control" id="txt_mar_edit" style="width:100%; heigth: 40px;">
+                          </div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="form-group">
+                            <label for="">F.Reencauche</label>
+                            <input type="date" class="form-control" id="txt_mar_edit" style="width:100%; heigth: 40px;">
+                          </div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="form-group">
+                            <label for="">F.Cambio</label>
+                            <input type="date" class="form-control" id="txt_mar_edit" style="width:100%; heigth: 40px;">
+                          </div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="form-group">
+                            <label for="">F. Rotacion</label>
+                            <input type="date" class="form-control" id="txt_mar_edit" style="width:100%; heigth: 40px;">
+                          </div>
+                        </div>
+                    </div>
+                    <h5>Llanta 5</h5>
+                    <div class="row">
+
+                      <div class="col-md-3">
+                      <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                              <label for="">serial</label>
+                              <input type="text" class="form-control" id="txt_mar_edit" placeholder="Ingrese la marca" ><br>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <label for="">Profundidad</label>
+                              <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                              </select><br><br>
+                            </div>
+                        </div>
+                        </div>
+                      </div>
+                      
+                      <div class="col-md-3">
+                          <div class="form-group">
+                            <label for="">Marca</label>
+                            <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                            </select><br><br>
+                          </div>
+                      </div>
+                      <div class="col-md-3">
+                          <div class="form-group">
+                            <label for="">Tipo</label>
+                            <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                            </select><br><br>
+                          </div>
+                      </div>
+                      <div class="col-md-3">
+                          <div class="form-group">
+                            <label for="">Estado</label>
+                            <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                            </select><br><br>
+                          </div>
+                      </div>
+                      
+                    </div>
+                    <div class="row">
+                        
+                        <div class="col-md-3">
+                          <div class="form-group">
+                            <label for="">F.Instalacion</label>
+                            <input type="date" class="form-control" id="txt_mar_edit" style="width:100%; heigth: 40px;">
+                          </div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="form-group">
+                            <label for="">F.Reencauche</label>
+                            <input type="date" class="form-control" id="txt_mar_edit" style="width:100%; heigth: 40px;">
+                          </div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="form-group">
+                            <label for="">F.Cambio</label>
+                            <input type="date" class="form-control" id="txt_mar_edit" style="width:100%; heigth: 40px;">
+                          </div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="form-group">
+                            <label for="">F. Rotacion</label>
+                            <input type="date" class="form-control" id="txt_mar_edit" style="width:100%; heigth: 40px;">
+                          </div>
+                        </div>
+                    </div>
+                    <h5>Llanta 6</h5>
+                    <div class="row">
+
+                      <div class="col-md-3">
+                      <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                              <label for="">serial</label>
+                              <input type="text" class="form-control" id="txt_mar_edit" placeholder="Ingrese la marca" ><br>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <label for="">Profundidad</label>
+                              <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                              </select><br><br>
+                            </div>
+                        </div>
+                        </div>
+                      </div>
+                      
+                      <div class="col-md-3">
+                          <div class="form-group">
+                            <label for="">Marca</label>
+                            <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                            </select><br><br>
+                          </div>
+                      </div>
+                      <div class="col-md-3">
+                          <div class="form-group">
+                            <label for="">Tipo</label>
+                            <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                            </select><br><br>
+                          </div>
+                      </div>
+                      <div class="col-md-3">
+                          <div class="form-group">
+                            <label for="">Estado</label>
+                            <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                            </select><br><br>
+                          </div>
+                      </div>
+                      
+                    </div>
+                    <div class="row">
+                        
+                        <div class="col-md-3">
+                          <div class="form-group">
+                            <label for="">F.Instalacion</label>
+                            <input type="date" class="form-control" id="txt_mar_edit" style="width:100%; heigth: 40px;">
+                          </div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="form-group">
+                            <label for="">F.Reencauche</label>
+                            <input type="date" class="form-control" id="txt_mar_edit" style="width:100%; heigth: 40px;">
+                          </div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="form-group">
+                            <label for="">F.Cambio</label>
+                            <input type="date" class="form-control" id="txt_mar_edit" style="width:100%; heigth: 40px;">
+                          </div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="form-group">
+                            <label for="">F. Rotacion</label>
+                            <input type="date" class="form-control" id="txt_mar_edit" style="width:100%; heigth: 40px;">
+                          </div>
+                        </div>
+                    </div>
+                    <h5>Calibracion:</h5>
+                    <div class="row">
+                        <div class="col-md-2">
+                          <div class="form-group">
+                            <label for="">llanta 1/Lbs.</label>
+                            <input type="text" class="form-control" id="txt_mar_edit" style="width:100%; heigth: 40px;">
+                          </div>
+                        </div>
+                        <div class="col-md-2">
+                          <div class="form-group">
+                            <label for="">llanta 2/Lbs.</label>
+                            <input type="text" class="form-control" id="txt_mar_edit" style="width:100%; heigth: 40px;">
+                          </div>
+                        </div>
+                        <div class="col-md-2">
+                          <div class="form-group">
+                            <label for="">llanta 3/Lbs.</label>
+                            <input type="text" class="form-control" id="txt_mar_edit" style="width:100%; heigth: 40px;">
+                          </div>
+                        </div>
+                        <div class="col-md-2">
+                          <div class="form-group">
+                            <label for="">llanta 4/Lbs.</label>
+                            <input type="text" class="form-control" id="txt_mar_edit" style="width:100%; heigth: 40px;">
+                          </div>
+                        </div>
+                        <div class="col-md-2">
+                          <div class="form-group">
+                            <label for="">llanta 5/Lbs.</label>
+                            <input type="text" class="form-control" id="txt_mar_edit" style="width:100%; heigth: 40px;">
+                          </div>
+                        </div>
+                        <div class="col-md-2">
+                          <div class="form-group">
+                            <label for="">llanta 6/Lbs.</label>
+                            <input type="text" class="form-control" id="txt_mar_edit" style="width:100%; heigth: 40px;">
+                          </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                    <div class="col-md-12">
+                          <div class="form-group">
+                            <label for="">Observaciones de calibracion</label>
+                            <textarea  class="form-control" id="txt_mar_edit" ></textarea>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-2">
+                          <div class="form-group">
+                            <label for="">Balanceo 1.</label>
+                            <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                            </select><br><br>
+                          </div>
+                      </div>
+                      <div class="col-md-2">
+                          <div class="form-group">
+                            <label for="">Balanceo 2.</label>
+                            <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                            </select><br><br>
+                          </div>
+                      </div>
+                      <div class="col-md-2">
+                          <div class="form-group">
+                            <label for="">Balanceo 3.</label>
+                            <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                            </select><br><br>
+                          </div>
+                      </div>
+                      <div class="col-md-2">
+                          <div class="form-group">
+                            <label for="">Balanceo 4.</label>
+                            <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                            </select><br><br>
+                          </div>
+                      </div>
+                      <div class="col-md-2">
+                          <div class="form-group">
+                            <label for="">Balanceo 5.</label>
+                            <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                            </select><br><br>
+                          </div>
+                      </div>
+                      <div class="col-md-2">
+                          <div class="form-group">
+                            <label for="">Balanceo 6.</label>
+                            <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                            </select><br><br>
+                          </div>
+                      </div>
+                      <div class="col-md-12">
+                          <div class="form-group">
+                            <label for="">Observaciones de Balanceo</label>
+                            <textarea  class="form-control" id="txt_mar_edit" ></textarea>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-2">
+                          <div class="form-group">
+                            <label for="">Balanceo 1.</label>
+                            <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                            </select><br><br>
+                          </div>
+                      </div>
+                      <div class="col-md-2">
+                          <div class="form-group">
+                            <label for="">Balanceo 2.</label>
+                            <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                            </select><br><br>
+                          </div>
+                      </div>
+                      <div class="col-md-12">
+                          <div class="form-group">
+                            <label for="">Observaciones de Balanceo</label>
+                            <textarea  class="form-control" id="txt_mar_edit" ></textarea>
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <label for="">Observaciones de Balanceo</label>
+                            <textarea  class="form-control" id="txt_mar_edit" ></textarea>
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <label for="">Observaciones de Balanceo</label>
+                            <textarea  class="form-control" id="txt_mar_edit" ></textarea>
+                          </div>
+                        </div>
+                    </div>
+                     
                     <button class="btn btn-primary" onclick="stepper.previous()">Anterior</button>
                     <button class="btn btn-primary" onclick="stepper.next()">Siguiente</button>
                     </div>
@@ -289,18 +811,369 @@
 
                       <!-- FORMULARIO ACCEITE-->
                       <div id="aceite-part" class="content" role="tabpanel" aria-labelledby="aceite-trigger">
-                      <div class="form-group">
-                        <label for="exampleInputFile">File input</label>
-                        <div class="input-group">
-                          <div class="custom-file">
-                            <input type="file" class="custom-file-input" id="">
-                            <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                        <h5>Cambio de aceite del motor</h5>
+                        <div class="row">
+                          <div class="col-md-4">
+                            <div class="form-group">
+                              <label for="">Fecha</label>
+                              <input type="date" class="form-control" id="txt_pla_edit" placeholder="Ingrese placa"><br>
+                            </div>
                           </div>
-                          <div class="input-group-append">
-                            <span class="input-group-text">Upload</span>
+                          <div class="col-md-4">
+                            <div class="form-group">
+                              <label for="">Proximo cambio</label>
+                              <input type="date" class="form-control" id="txt_pla_edit" placeholder="Ingrese placa"><br>
+                            </div>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="form-group">
+                              <label for="">Kilometraje</label>
+                              <input type="text" class="form-control" id="txt_pla_edit" placeholder="Ingrese placa"><br>
+                            </div>
                           </div>
                         </div>
-                      </div>
+                        <div class="row">
+                          <div class="col-md-4">
+                            <div class="form-group">
+                              <label for="">Cambio x Kilometraje</label>
+                              <input type="text" class="form-control" id="txt_pla_edit" placeholder="Ingrese placa"><br>
+                            </div>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="form-group">
+                              <label for="">Tipo de aceite</label>
+                              <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                              </select><br><br>
+                            </div>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="form-group">
+                              <label for="">Marca</label>
+                              <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                              </select><br><br>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-3">
+                            <div class="form-group">
+                              <label for="">Cantidad x 1/4</label>
+                              <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                              </select><br><br>
+                            </div>
+                          </div>
+                          <div class="col-md-3">
+                            <div class="form-group">
+                              <label for="">presentacion</label>
+                              <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                              </select><br><br>
+                            </div>
+                          </div>
+                          <div class="col-md-3">
+                            <div class="form-group">
+                              <label for="">nivelacion</label>
+                              <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                              </select><br><br>
+                            </div>
+                          </div>
+                          <div class="col-md-3">
+                            <div class="form-group">
+                              <label for="">cantidad nivelada 1/4</label>
+                              <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                              </select><br><br>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                              <label for="">Filtro aceite</label>
+                              <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                              </select><br><br>
+                            </div>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="form-group">
+                              <label for="">Filtro de combustible</label>
+                              <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                              </select><br><br>
+                            </div>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="form-group">
+                              <label for="">Filtro de aire</label>
+                              <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                              </select><br><br>
+                            </div>
+                          </div>
+                        </div>
+                        <h5>Aceite de caja</h5>
+                        <div class="row">
+                        <div class="col-md-3">
+                            <div class="form-group">
+                              <label for="">Tipo de aceite</label>
+                              <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                              </select><br><br>
+                            </div>
+                          </div>
+                          <div class="col-md-3">
+                            <div class="form-group">
+                              <label for="">Marca</label>
+                              <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                              </select><br><br>
+                            </div>
+                          </div>
+                          <div class="col-md-3">
+                            <div class="form-group">
+                              <label for="">Ultimo cambio</label>
+                              <input type="date" class="form-control" id="txt_pla_edit" placeholder="Ingrese placa"><br>
+                            </div>
+                          </div>
+                          <div class="col-md-3">
+                            <div class="form-group">
+                              <label for="">Proximo cambio</label>
+                              <input type="date" class="form-control" id="txt_pla_edit" placeholder="Ingrese placa"><br>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-3">
+                              <div class="form-group">
+                                <label for="">Cantidad x 1/4</label>
+                                <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                                </select><br><br>
+                              </div>
+                            </div>
+                            <div class="col-md-3">
+                              <div class="form-group">
+                                <label for="">presentacion</label>
+                                <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                                </select><br><br>
+                              </div>
+                            </div>
+                            <div class="col-md-3">
+                              <div class="form-group">
+                                <label for="">nivelacion</label>
+                                <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                                </select><br><br>
+                              </div>
+                            </div>
+                            <div class="col-md-3">
+                              <div class="form-group">
+                                <label for="">cantidad nivelada 1/4</label>
+                                <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                                </select><br><br>
+                              </div>
+                            </div>
+                          </div>
+                        <h5>Aceite de la transmision</h5>
+                        <div class="row">
+                        <div class="col-md-3">
+                            <div class="form-group">
+                              <label for="">Tipo de aceite</label>
+                              <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                              </select><br><br>
+                            </div>
+                          </div>
+                          <div class="col-md-3">
+                            <div class="form-group">
+                              <label for="">Marca</label>
+                              <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                              </select><br><br>
+                            </div>
+                          </div>
+                          <div class="col-md-3">
+                            <div class="form-group">
+                              <label for="">Ultimo cambio</label>
+                              <input type="date" class="form-control" id="txt_pla_edit" placeholder="Ingrese placa"><br>
+                            </div>
+                          </div>
+                          <div class="col-md-3">
+                            <div class="form-group">
+                              <label for="">Proximo cambio</label>
+                              <input type="date" class="form-control" id="txt_pla_edit" placeholder="Ingrese placa"><br>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-3">
+                              <div class="form-group">
+                                <label for="">Cantidad x 1/4</label>
+                                <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                                </select><br><br>
+                              </div>
+                            </div>
+                            <div class="col-md-3">
+                              <div class="form-group">
+                                <label for="">presentacion</label>
+                                <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                                </select><br><br>
+                              </div>
+                            </div>
+                            <div class="col-md-3">
+                              <div class="form-group">
+                                <label for="">nivelacion</label>
+                                <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                                </select><br><br>
+                              </div>
+                            </div>
+                            <div class="col-md-3">
+                              <div class="form-group">
+                                <label for="">cantidad nivelada 1/4</label>
+                                <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                                </select><br><br>
+                              </div>
+                            </div>
+                          </div>
+                        <h5>Refrigerante</h5>
+                        <div class="row">
+                        <div class="col-md-3">
+                            <div class="form-group">
+                              <label for="">Tipo de aceite</label>
+                              <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                              </select><br><br>
+                            </div>
+                          </div>
+                          <div class="col-md-3">
+                            <div class="form-group">
+                              <label for="">Marca</label>
+                              <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                              </select><br><br>
+                            </div>
+                          </div>
+                          <div class="col-md-3">
+                            <div class="form-group">
+                              <label for="">Ultimo cambio</label>
+                              <input type="date" class="form-control" id="txt_pla_edit" placeholder="Ingrese placa"><br>
+                            </div>
+                          </div>
+                          <div class="col-md-3">
+                            <div class="form-group">
+                              <label for="">Proximo cambio</label>
+                              <input type="date" class="form-control" id="txt_pla_edit" placeholder="Ingrese placa"><br>
+                            </div>
+                          </div>
+                        </div>
+                        <h5>Hidraulico</h5>
+                        <div class="row">
+                        <div class="col-md-3">
+                            <div class="form-group">
+                              <label for="">Tipo de aceite</label>
+                              <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                              </select><br><br>
+                            </div>
+                          </div>
+                          <div class="col-md-3">
+                            <div class="form-group">
+                              <label for="">Marca</label>
+                              <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                              </select><br><br>
+                            </div>
+                          </div>
+                          <div class="col-md-3">
+                            <div class="form-group">
+                              <label for="">Ultimo cambio</label>
+                              <input type="date" class="form-control" id="txt_pla_edit" placeholder="Ingrese placa"><br>
+                            </div>
+                          </div>
+                          <div class="col-md-3">
+                            <div class="form-group">
+                              <label for="">Proximo cambio</label>
+                              <input type="date" class="form-control" id="txt_pla_edit" placeholder="Ingrese placa"><br>
+                            </div>
+                          </div>
+                        </div>
+                        <h5>Medicion de liquidos</h5>
+                        <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                              <label for="">Liquido de frenos</label>
+                              <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                              </select><br><br>
+                            </div>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="form-group">
+                              <label for="">liquido de parabrisas</label>
+                              <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                              </select><br><br>
+                            </div>
+                          </div>
+                          <div class="col-md-4">
+                              <div class="form-group">
+                                <label for="">Refrigerantes</label>
+                                <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                                </select><br><br>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                              <div class="form-group">
+                                <label for="">Hidraulico</label>
+                                <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                                </select><br><br>
+                              </div>
+                            </div>
+                            <div class="col-md-3">
+                              <div class="form-group">
+                                <label for="">Motor</label>
+                                <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                                </select><br><br>
+                              </div>
+                            </div>
+                            <div class="col-md-3">
+                              <div class="form-group">
+                                <label for="">Caja</label>
+                                <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                                </select><br><br>
+                              </div>
+                            </div>
+                            <div class="col-md-3">
+                              <div class="form-group">
+                                <label for="">Transmision</label>
+                                <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                                </select><br><br>
+                              </div>
+                            </div>
+                          </div>
+                          <h5>Otros</h5>
+                          <div class="row">
+                          <div class="col-md-3">
+                              <div class="form-group">
+                                <label for="">Limpieza de frenos</label>
+                                <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                                </select><br><br>
+                              </div>
+                            </div>
+                            <div class="col-md-3">
+                              <div class="form-group">
+                                <label for="">Engrase</label>
+                                <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                                </select><br><br>
+                              </div>
+                            </div>
+                            <div class="col-md-3">
+                              <div class="form-group">
+                                <label for="">Sopleteo Radiador</label>
+                                <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                                </select><br><br>
+                              </div>
+                            </div>
+                            <div class="col-md-3">
+                              <div class="form-group">
+                                <label for="">Sopleteo filtro de aire</label>
+                                <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                                </select><br><br>
+                              </div>
+                            </div>
+                            <div class="col-md-12">
+                          <div class="form-group">
+                            <label for="">Observaciones</label>
+                            <textarea class="form-control" id="txt_mar_edit" placeholder="Ingrese la marca"></textarea><br>
+                          </div>
+                        </div>
+                          </div>
                       <button class="btn btn-primary" onclick="stepper.previous()">Anterior</button>
                       <button type="submit" class="btn btn-primary">Guardar</button>
                     </div>

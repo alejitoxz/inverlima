@@ -62,36 +62,36 @@
                   <div class="bs-stepper-header" role="tablist">
 
                     <!-- DATOS DEL VEHICULO -->
-                    <div class="step active" data-target="#datos-part">
+                    <div class="step active" data-target="#datos-part" onclick="stepper.to(1)">
                       <button type="button" class="step-trigger" role="tab" aria-controls="datos-part" id="datos-trigger" aria-selected="true">
-                        <span class="bs-stepper-circle">1</span>
+                        <span class="bs-stepper-circle"><i class="fas fa-bus"></i></span>
                         <span class="bs-stepper-label">Datos del Vehículo</span>
                       </button>
                     </div>
 
                     <!-- DATOS DE BATERIAS -->
                     <div class="line"></div>
-                    <div class="step" data-target="#bateria-part">
+                    <div class="step" data-target="#bateria-part" onclick="stepper.to(2)">
                       <button type="button" class="step-trigger" role="tab" aria-controls="bateria-part" id="bateria-trigger" aria-selected="false">
-                        <span class="bs-stepper-circle">2</span>
+                        <span class="bs-stepper-circle"><i class="fas fa-car-battery"></i></span>
                         <span class="bs-stepper-label">Batería</span>
                       </button>
                     </div>
 
                     <!-- DATOS DE LLANTAS -->
                     <div class="line"></div>
-                    <div class="step" data-target="#llanta-part">
+                    <div class="step" data-target="#llanta-part" onclick="stepper.to(3)">
                       <button type="button" class="step-trigger" role="tab" aria-controls="llanta-part" id="llanta-trigger" aria-selected="false" >
-                        <span class="bs-stepper-circle">3</span>
+                        <span class="bs-stepper-circle"><i class="fas fa-ring"></i></span>
                         <span class="bs-stepper-label">Llanta</span>
                       </button>
                     </div>
 
                     <!-- DATOS DE ACEITES -->
                     <div class="line"></div>
-                    <div class="step" data-target="#aceite-part">
+                    <div class="step" data-target="#aceite-part" onclick="stepper.to(4)">
                       <button type="button" class="step-trigger" role="tab" aria-controls="aceite-part" id="aceite-trigger" aria-selected="false" >
-                        <span class="bs-stepper-circle">4</span>
+                        <span class="bs-stepper-circle"><i class="fas fa-oil-can"></i></span>
                         <span class="bs-stepper-label">Aceites</span>
                       </button>
                     </div>
@@ -1209,6 +1209,8 @@
     // inicimos wizzard
       // BS-Stepper Init
       window.stepper = new Stepper(document.querySelector('.bs-stepper'))
+      
+      
     
 
   });

@@ -41,7 +41,7 @@ function registrar_miscelaneos_detalle(){
             return swal.fire("Mensaje De Advertencia", "llene los campos vacios", "warning");
         }
     $.ajax({
-        "url": "../controlador/miscelaneos/controlador_miscelaneos_detalle_registro.php",
+        "url": "../controlador/miscelaneos_detalle/controlador_miscelaneos_detalle_registro.php",
         "type": "POST",
         data:{
         descripcion_detalle:descripcion_detalle,
@@ -62,6 +62,28 @@ function registrar_miscelaneos_detalle(){
         }
     })
 
+}
+function selectMiscelaneo(){
+    $.ajax({
+        "url": "../controlador/miscelaneos/controlador_miscelaneos_listar.php",
+        "type": "POST"
+    }).done(function(resp){
+        var data = JSON.parse(resp);
+        var cadena="";
+        
+        if(data["data"].length>0){
+            cadena+="<option value='0'>Seleccionar</option>"; 
+            for(var i=0; i < data["data"].length; i++){
+               console.log(data["data"][i])
+                cadena+="<option value ='"+data["data"][i]['id']+"'>"+data["data"][i]['descripcion']+"</option>";
+            }
+            
+            $("#sel_cat_miscelaneo_detalle").html(cadena);
+            $("#sel_cat_miscelaneo_detalle_edit").html(cadena);
+        }else{
+            cadena+="<option value='0'>No se encontraron registros</option>"; 
+        }
+    })
 }
 function limpiarRegistro(){
     $("#txt_descripcion_detalle").val("");

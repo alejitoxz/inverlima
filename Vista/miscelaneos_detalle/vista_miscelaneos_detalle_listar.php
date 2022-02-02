@@ -113,6 +113,7 @@
 <script>
   $(document).ready(function(){
     listar_miscelaneos_detalle();
+    selectMiscelaneo();
     $('.js-example-basic-single').select2();
     $("#modal_registro_miscelaneos_detalle").on('shown.bs.modal',function(){
 

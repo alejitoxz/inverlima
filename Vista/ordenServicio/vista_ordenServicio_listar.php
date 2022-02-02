@@ -770,33 +770,27 @@
                     <div class="row">
                       <div class="col-md-2">
                           <div class="form-group">
-                            <label for="">Balanceo 1.</label>
+                            <label for="">Alineacion 1.</label>
                             <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
                             </select><br><br>
                           </div>
                       </div>
                       <div class="col-md-2">
                           <div class="form-group">
-                            <label for="">Balanceo 2.</label>
+                            <label for="">Alineacion 2.</label>
                             <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
                             </select><br><br>
                           </div>
                       </div>
                       <div class="col-md-12">
                           <div class="form-group">
-                            <label for="">Observaciones de Balanceo</label>
+                            <label for="">Observaciones</label>
                             <textarea  class="form-control" id="txt_mar_edit" ></textarea>
                           </div>
                         </div>
                         <div class="col-md-12">
                           <div class="form-group">
-                            <label for="">Observaciones de Balanceo</label>
-                            <textarea  class="form-control" id="txt_mar_edit" ></textarea>
-                          </div>
-                        </div>
-                        <div class="col-md-12">
-                          <div class="form-group">
-                            <label for="">Observaciones de Balanceo</label>
+                            <label for="">Observaciones de Mejora</label>
                             <textarea  class="form-control" id="txt_mar_edit" ></textarea>
                           </div>
                         </div>

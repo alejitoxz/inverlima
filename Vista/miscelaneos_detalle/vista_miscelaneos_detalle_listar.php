@@ -23,7 +23,7 @@
             <table id="tabla_miscelaneos_detalle" class="display responsive nowrap" style="width:100%">
                     <thead>
                         <tr>
-                          <!--<th>#</th>-->
+                          <th style="display:none"></th>
                           <th>Descripcion</th>
                           <th>Categoria</th>
                           <th>Editar</th>
@@ -62,7 +62,7 @@
             <div class="col-md-12">
             <div class="form-group">
               <label for="">Categoria Miscelaneo</label>
-              <select class="js-example-basic-single"  name="state" id="sel_cat_miscelaneo_detalle" style="width:100%; heigth: 40px;">   
+              <select class="js-example-basic-single"  name="state" id="sel_cat_miscelaneos_detalle" style="width:100%; heigth: 40px;">   
               </select><br><br>
             </div>
           </div>
@@ -96,6 +96,13 @@
             <div class="form-group">
               <label for="">Nueva Descripcion</label>
               <input type="text" class="form-control" id="txt_miscelaneos_detalle_edit" placeholder="Ingrese la descripcion"><br>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+              <label for="">Categoria Miscelaneo</label>
+              <select class="js-example-basic-single"  name="state" id="sel_cat_miscelaneos_detalle_edit" style="width:100%; heigth: 40px;">   
+              </select><br><br>
             </div>
           </div>
         </div>

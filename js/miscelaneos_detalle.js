@@ -13,8 +13,14 @@ function listar_miscelaneos_detalle(){
             "url": "../controlador/miscelaneos_detalle/controlador_miscelaneos_detalle_listar.php",
             "type": "POST"
         },
+        "columnDefs": [
+            {
+                "targets": [ 0 ],
+                "visible": false
+            }
+        ],
         "columns": [
-            //{ "data": "id" },
+            { "data": "idMiscelaneos" },
             { "data": "descripcion" },
             { "data": "descripcion_miscelaneos"},
             {"defaultContent":
@@ -32,7 +38,7 @@ function AbrirModalRegistromiscelaneos_detalle(){
 
 function registrar_miscelaneos_detalle(){
     var descripcion_detalle = $("#txt_descripcion_detalle").val();
-    var categoria_miscelaneo = $("#sel_cat_miscelaneo_detalle").val();
+    var categoria_miscelaneo = $("#sel_cat_miscelaneos_detalle").val();
 
     if( descripcion_detalle == '' ||
         categoria_miscelaneo == ''
@@ -78,8 +84,8 @@ function selectMiscelaneo(){
                 cadena+="<option value ='"+data["data"][i]['id']+"'>"+data["data"][i]['descripcion']+"</option>";
             }
             
-            $("#sel_cat_miscelaneo_detalle").html(cadena);
-            $("#sel_cat_miscelaneo_detalle_edit").html(cadena);
+            $("#sel_cat_miscelaneos_detalle").html(cadena);
+            $("#sel_cat_miscelaneos_detalle_edit").html(cadena);
         }else{
             cadena+="<option value='0'>No se encontraron registros</option>"; 
         }
@@ -87,7 +93,7 @@ function selectMiscelaneo(){
 }
 function limpiarRegistro(){
     $("#txt_descripcion_detalle").val("");
-    $("#sel_cat_miscelaneo_detalle").val("");
+    $("#sel_cat_miscelaneos_detalle").val("");
 }
 
 // FUNCION PARA ELIMINAR (ANULAR) REGISTRO
@@ -109,7 +115,7 @@ $('#tabla_miscelaneos_detalle').on('click','.eliminarc',function(){
       }).then((result) => {
           console.log(result);
         if (result.value) {
-        modificar_estatus(idmiscelaneos_detalle,0);
+        modificar_estatus_miscelaneos_detalle(idmiscelaneos_detalle,0);
           Swal.fire(
             'Eliminado',
             '¡Tu registro ha sido eliminado!',
@@ -119,9 +125,9 @@ $('#tabla_miscelaneos_detalle').on('click','.eliminarc',function(){
       })
     
 })
-function modificar_estatus(id,estatus){
+function modificar_estatus_miscelaneos_detalle(id,estatus){
     $.ajax({
-        "url": "../controlador/miscelaneos/controlador_modificar_miscelaneos_estatus.php",
+        "url": "../controlador/miscelaneos_detalle/controlador_modificar_miscelaneos_detalle_estatus.php",
         type: "POST",
         data:{
         id:id,
@@ -130,7 +136,7 @@ function modificar_estatus(id,estatus){
     }).done(function(resp){
         if(resp>0){
             if(resp==1){
-                    listar_miscelaneos();
+                    listar_miscelaneos_detalle();
                 
             }else{
                 Swal.fire("Mensaje De Advertencia",'No se pudo borrar el archivo', "warning")
@@ -155,30 +161,36 @@ $('#tabla_miscelaneos_detalle').on('click','.editarc',function(){
     }
     
     var id = datosmiscelaneos_detalle.id;
-    var descripcion = datosmiscelaneos.descripcion;
+    var descripcion = datosmiscelaneos_detalle.descripcion;
+    var categoria_miscelaneo = datosmiscelaneos_detalle.idMiscelaneos;
      //levantar modal
     AbrirModalEditarC();
+    console.log(categoria_miscelaneo)
     //ingresas datos modal
     $("#id").val(id);
     $("#txt_miscelaneos_detalle_edit").val(descripcion);
+    $("#sel_cat_miscelaneos_detalle_edit").val(categoria_miscelaneo).trigger('change');
    
 })
 function modificar_miscelaneos_detalle(){
     var id = $("#id").val();
     var descripcion = $("#txt_miscelaneos_detalle_edit").val();
+    var categoria_miscelaneo = $("#sel_cat_miscelaneos_detalle_edit").val();
 
     console.log(descripcion);
-    if( descripcion == ''
+    if( descripcion == ''||
+        categoria_miscelaneo == '' 
     ){
             return swal.fire("Mensaje De Advertencia", "llene los campos vacios", "warning");
         }
 
     $.ajax({
-        "url": "../controlador/miscelaneos/controlador_miscelaneos_editar.php",
+        "url": "../controlador/miscelaneos_detalle/controlador_miscelaneos_detalle_editar.php",
         "type": "POST",
         data:{
         id:id,
         descripcion:descripcion,
+        categoria_miscelaneo:categoria_miscelaneo,
         }
     }).done(function(resp){
         console.log(resp);
@@ -186,7 +198,7 @@ function modificar_miscelaneos_detalle(){
             $("#modal_editar_C").modal('hide');
             Swal.fire("Mensaje De Confirmacion",'Datos Actualizados', "success")
                 .then((value)=> {
-                table_miscelaneos.ajax.reload();
+                table_miscelaneos_detalle.ajax.reload();
             });
         
         }else{

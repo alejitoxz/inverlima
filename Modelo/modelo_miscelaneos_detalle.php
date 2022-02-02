@@ -13,7 +13,8 @@
             $sql  = "SELECT
             md.id,
             md.descripcion, 
-            m.descripcion AS descripcion_miscelaneos
+            m.descripcion AS descripcion_miscelaneos,
+            m.id AS idMiscelaneos
             FROM
             miscelaneos_detalle as md
             INNER JOIN miscelaneos as m ON (m.id = md.id_miscelaneo AND m.estatus = 1)
@@ -59,9 +60,9 @@
             $this->conexion->conectar();
         }
         
-        function modificar_estatus_miscelaneos($id,$estatus){
+        function modificar_estatus_miscelaneos_detalle($id,$estatus){
             $conn = $this->conexion->conectar();
-            $sql  = "UPDATE miscelaneos set estatus = $estatus
+            $sql  = "UPDATE miscelaneos_detalle set estatus = $estatus
                     WHERE id='$id'
                     ";
                    
@@ -76,11 +77,12 @@
             $this->conexion->conectar();
         }
         
-        function editar_miscelaneos($id,$descripcion){
+        function editar_miscelaneos_detalle($id,$descripcion,$categoria_miscelaneo){
             $conn = $this->conexion->conectar();
     
-            $sql  = "UPDATE miscelaneos SET
-                    descripcion = '$descripcion'
+            $sql  = "UPDATE miscelaneos_detalle SET
+                    descripcion = '$descripcion',
+                    id_miscelaneo = $categoria_miscelaneo
                     WHERE id=$id 
                     ";
                      

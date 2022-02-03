@@ -42,6 +42,37 @@
            
         }
 
+        function buscar_miscelaneos_detalle($descripcion){
+            $conn = $this->conexion->conectar();
+            $sql  = "SELECT
+            md.id,
+            md.descripcion 
+            FROM
+            miscelaneos_detalle as md
+            INNER JOIN miscelaneos as m ON (m.id = md.id_miscelaneo AND m.estatus = 1)
+            WHERE md.estatus = 1 and m.descripcion = '$descripcion';
+            ";
+
+            $resp = sqlsrv_query($conn, $sql);
+            if( $resp === false) {
+                return 0;
+            }
+            $i = 0;
+            while($row = sqlsrv_fetch_array( $resp, SQLSRV_FETCH_ASSOC))
+            {
+                $data[$i] = $row;
+                $i++;
+            }
+            if($data>0){
+                return $data;
+            }else{
+                return 0;
+            }
+            
+            $this->conexion->conectar();
+           
+        }
+
         function registrar_miscelaneos_detalle($descripcion_detalle,$categoria_miscelaneo){
             $conn = $this->conexion->conectar();
             $sql  = "INSERT INTO miscelaneos_detalle(

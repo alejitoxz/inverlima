@@ -14,49 +14,45 @@ session_start();
             $idCompany = $_SESSION['COMPANY'];
             $Rol = $_SESSION['ROL'];
             $idUsuario = $_SESSION['S_ID'];
-
-            if ($Rol == 2) {
-                $wr = "and pro.idUsuario = $idUsuario";
-                $com = "and v.idCompany = $idCompany";
-            }else if ($Rol == 1) {
-                $com = "";
-                $wr = "";
-            }else{
-                $com = "and v.idCompany = $idCompany";
-                $wr = "";
-            }
             
-
             $sql  = "SELECT
             v.id,
-            v.placa,
+            v.cod_interno,
             v.marca,
             v.modelo,
-            co.entResp,
+            v.chasis,
+            v.placa,
             p.nombre,
             p.apellido,
-            v.nInterno,
-            CONVERT(varchar,v.vMovilizacion) as vMovilizacion,
+            md.Descripcion as empresa,
+            md.id as idEmpresa,
+            v.soat,
+            v.pContractual,
+            v.pExtraContractual,
+            v.tecnomecanica,
+            v.chasis,
+            v.num_pasajero,
             CONVERT(varchar,v.vSoat) as vSoat,
-            v.nMovilizacion,
-            co.id as idEntResp,
+			CONVERT(varchar,v.vContractual) as vContractual,
+            CONVERT(varchar,v.vExtraContractual) as vExtraContractual,
+			CONVERT(varchar,v.vTecnomecanica) as vTecnomecanica,
             pro.id as idPropietario
             FROM
             vehiculo AS v
-            INNER JOIN company AS co ON (v.idCompany = co.id)
-            INNER JOIN propietario AS pro ON (v.idPropietario = pro.id)
-            INNER JOIN persona AS p ON (pro.idPersona = p.id)
-            WHERE v.estatus = 1 $com $wr;
+            left JOIN company AS co ON (v.idCompany = co.id)
+            left JOIN propietario AS pro ON (v.idPropietario = pro.id)
+            left JOIN persona AS p ON (pro.idPersona = p.id)
+            LEFT JOIN miscelaneos_detalle AS md ON (md.id = v.idEmpresa)
+            WHERE v.estatus = 1 and co.Id = $idCompany;
             ";
             $resp = sqlsrv_query($conn, $sql);
             if( $resp === false) {
                 return 0;
             }
             $i = 0;
-            $data = [];
             while($row = sqlsrv_fetch_array( $resp, SQLSRV_FETCH_ASSOC))
             {
-                $data['data'][] = $row;
+                $data['data'][$i] = $row;
                 $i++;
             }
             if($data>0){
@@ -76,23 +72,14 @@ session_start();
         $Rol = $_SESSION['ROL'];
         $idUsuario = $_SESSION['S_ID'];
 
-        if ($Rol == 2) {
-            $wr = "and pro.idUsuario = $idUsuario";
-            $com = "pro.idCompany = $idCompany";
-        }else if ($Rol == 1) {
-            $com = "";
-            $wr = "";
-        }else{
-            $com = "pro.idCompany = $idCompany";
-            $wr = "";
-        }
+
         $sql  = "SELECT 
         pro.id,
         (p.nombre + ' ' +p.apellido) as dueno
         from 
         propietario as pro
         INNER JOIN persona AS p ON (pro.idPersona = p.id)
-        where $com  and pro.estatus = 1 $wr
+        where  pro.estatus = 1 
         ";
         //echo $sql;
         $resp = sqlsrv_query($conn, $sql);
@@ -115,13 +102,59 @@ session_start();
         $this->conexion->conectar();
     }
     
-    function registrar_vehiculo($placa,$marca,$modelo,$idPropietario,$nInterno,$vMovilizacion,$vSoat,$nMovilizacion){
+    function registrar_vehiculo($txt_interno,$txt_placa,$txt_marca,$txt_modelo,$txt_chasis,$txt_pasajeros,$sel_empresa,$sel_pro_vehiculo,$txt_soat,$txt_tecnomecanica,$txt_poliza_cont,$txt_poliza_ext,$venc_soat,$venc_tecno,$venc_poliza_cont,$venc_poliza_ext){
         $conn = $this->conexion->conectar();
         $idCompany = $_SESSION['COMPANY'];
         $idUsuario = $_SESSION['S_ID'];
 
-        $sql  = "INSERT INTO vehiculo(placa,marca,modelo,idCompany,idPropietario,nInterno,vMovilizacion,vSoat,estatus,nMovilizacion,idUsuario)
-                 VALUES('$placa','$marca','$modelo',$idCompany,'$idPropietario','$nInterno','$vMovilizacion','$vSoat',1,'$nMovilizacion',$idUsuario)
+        if($idPropietario != ''){
+            $propietario = $idPropietario;
+        }else{
+            $propietario = 0;
+        }
+
+        $sql  = "INSERT INTO vehiculo(
+                            cod_interno,
+                            placa,
+                            marca,
+                            modelo,
+                            chasis,
+                            num_pasajero,
+                            soat,
+                            vSoat,
+                            tecnomecanica,
+                            vTecnomecanica,
+                            pContractual,
+                            vContractual,
+                            pExtraContractual,
+                            vExtraContractual,
+                            idEmpresa,
+                            idPropietario,
+                            idUsuario,
+                            idCompany,
+                            estatus
+                            )
+                 VALUES(
+                        '$txt_interno',
+                        '$txt_placa',
+                        '$txt_marca',
+                        '$txt_modelo',
+                        '$txt_chasis',
+                        '$txt_pasajeros',
+                        '$txt_soat',
+                        '$venc_soat',
+                        '$txt_tecnomecanica',
+                        '$venc_tecno',
+                        '$txt_poliza_cont',
+                        '$venc_poliza_cont',
+                        '$txt_poliza_ext',
+                        '$venc_poliza_ext',
+                        $sel_empresa,
+                        $sel_pro_vehiculo,
+                        $idUsuario,
+                        $idCompany,
+                        1
+                        )
                  ";
                  //echo $sql;
         $resp = sqlsrv_query($conn, $sql);
@@ -153,21 +186,29 @@ session_start();
         $this->conexion->conectar();
     }
 
-    function editar_vehiculo($id,$placa,$marca,$modelo,$idPropietario,$nInterno,$vMovilizacion,$vSoat,$nMovilizacion){
+    function editar_vehiculo($id,$txt_interno,$txt_placa,$txt_marca,$txt_modelo,$txt_chasis,$txt_pasajeros,$sel_empresa,$sel_pro_vehiculo,$txt_soat,$txt_tecnomecanica,$txt_poliza_cont,$txt_poliza_ext,$venc_soat,$venc_tecno,$venc_poliza_cont,$venc_poliza_ext){
         $conn = $this->conexion->conectar();
 
         $sql  = "UPDATE vehiculo SET
-                placa= '$placa', 
-                marca= '$marca',
-                modelo = '$modelo',
-                idPropietario = '$idPropietario',
-                nInterno = '$nInterno',
-                vMovilizacion = '$vMovilizacion',
-                vSoat = '$vSoat',
-                nMovilizacion = '$nMovilizacion'
+                cod_interno = '$txt_interno',
+                placa= '$txt_placa', 
+                marca= '$txt_marca',
+                modelo = '$txt_modelo',
+                chasis = '$txt_chasis',
+                num_pasajero = '$txt_pasajeros',
+                soat = '$txt_soat',
+                vSoat = '$venc_soat',
+                tecnomecanica = '$txt_tecnomecanica',
+                vTecnomecanica = '$venc_tecno',
+                pContractual = '$txt_poliza_cont',
+                vContractual = '$venc_poliza_cont',
+                pExtraContractual = '$txt_poliza_ext',
+                vExtraContractual = '$venc_poliza_ext',
+                idEmpresa = $sel_empresa,
+                idPropietario = $sel_pro_vehiculo
                 WHERE id=$id
                 ";
-                 
+                 //echo $sql;
         $resp = sqlsrv_query($conn, $sql);
         
         if( $resp === false) {
@@ -185,7 +226,7 @@ session_start();
         $Rol = $_SESSION['ROL'];
         $idUsuario = $_SESSION['S_ID'];
 
-        if ($Rol == 2) {
+       /* if ($Rol == 2) {
             $wr = "and idUsuario = $idUsuario";
             $com = "AND idCompany = $idCompany";
         }else if ($Rol == 1) {
@@ -194,12 +235,12 @@ session_start();
         }else{
             $com = "AND idCompany = $idCompany";
             $wr = "";
-        }
+        }*/
 
         $sql  = "SELECT  
                 COUNT(id) as contadorVehiculo 
                 from vehiculo
-                where estatus = 1 $com";
+                where estatus = 1 ";
        //echo $sql;
         $resp = sqlsrv_query($conn, $sql);
         if( $resp === false) {

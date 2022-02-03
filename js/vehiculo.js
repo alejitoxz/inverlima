@@ -150,7 +150,7 @@ function registrar_vehiculo(){
             if(resp==1){
             $("#modal_registro_vehiculo").modal('hide');
             Swal.fire("Mensaje De Confirmacion",'Registro realizado', "success").then((value)=>{
-                table.ajax.reload();
+                tabla_vehiculo.ajax.reload();
                 limpiarRegistro();
             });
         }else{
@@ -328,7 +328,7 @@ function modificar_vehiculo(){
             $("#modal_editar_v").modal('hide');
             Swal.fire("Mensaje De Confirmacion",'Datos Actualizados', "success")
                 .then((value)=>{
-                table.ajax.reload();
+                    tabla_vehiculo.ajax.reload();
             });
         
         }else{
@@ -356,13 +356,26 @@ function contarVehiculo(){
 }
 
 function limpiarRegistro(){
-    $("#txt_pla").val("");
-    $("#txt_mar").val("");
-    $("#txt_mod").val("");
-    $("#txt_int").val("");
-    $("#txt_mov").val("");
-    $("#txt_soa").val("");
-    $("#sel_pro_vehiculo").val("0");
-    $("#txt_nmov").val("");
+    $("#idVehiculo").val("");
+    //ingresas datos modal
+    $("#txt_interno_edit").val("");
+    $("#txt_placa_edit").val("");
+    $("#txt_marca_edit").val("");
+    $("#txt_modelo_edit").val("");
+
+    $("#txt_chasis_edit").val("");
+    $("#txt_pasajeros_edit").val("");
+    $("#sel_empresa_edit").val(0).trigger('change');
+    $("#sel_pro_vehiculo_edit").val(0).trigger('change');
+
+    $("#txt_soat_edit").val("");
+    $("#txt_tecnomecanica_edit").val("");
+    $("#txt_poliza_cont_edit").val("");
+    $("#txt_poliza_ext_edit").val("");
+
+    $("#venc_soat_edit").val("");
+    $("#venc_tecno_edit").val("");
+    $("#venc_poliza_cont_edit").val("");
+    $("#venc_poliza_ext_edit").val("");
     
 }

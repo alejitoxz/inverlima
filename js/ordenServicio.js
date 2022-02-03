@@ -273,8 +273,8 @@ function registrar_orden_Servicio(){
     var pMantenimiento = $("#txt_pMantenimiento").val();
     var oMejora = $("#txt_oMejora").val();
     var llantaSerial1 = $("#txt_llantaSerial1").val();
-    var profundidad = $("#sel_profundidad1").val();
-    var operario = $("#sel_operario").val();
+    var profundidad1 = $("#sel_profundidad1").val();
+    var opmarca1 = $("#sel_operario").val();
     var bateria = $("#sel_bateria").val();
     var tipoBateria = $("#sel_tipoBateria").val();
     var marca = $("#sel_marca").val();

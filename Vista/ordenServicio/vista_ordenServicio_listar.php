@@ -294,14 +294,14 @@
                       <div class="col-md-3">
                           <div class="form-group">
                             <label for="">Marca</label>
-                            <select class="js-example-basic-single"  name="state" id="sel_marca_llanta" style="width:100%; heigth: 40px;">   
+                            <select class="js-example-basic-single"  name="state" id="sel_marca_llanta1" style="width:100%; heigth: 40px;">   
                             </select><br><br>
                           </div>
                       </div>
                       <div class="col-md-3">
                           <div class="form-group">
                             <label for="">Tipo</label>
-                            <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                            <select class="js-example-basic-single"  name="state" id="sel_tipoLlanta1" style="width:100%; heigth: 40px;">   
                               <option value="0" selected>Seleccionar</option>
                               <option value="1">Traccion</option>
                               <option value="2">Direccional</option>
@@ -311,7 +311,7 @@
                       <div class="col-md-3">
                           <div class="form-group">
                             <label for="">Estado</label>
-                            <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                            <select class="js-example-basic-single"  name="state" id="sel_estado1" style="width:100%; heigth: 40px;">   
                               <option value="0" selected>Seleccionar</option>
                               <option value="1">Nueva</option>
                               <option value="2">Reencauchada</option>
@@ -325,25 +325,25 @@
                         <div class="col-md-3">
                           <div class="form-group">
                             <label for="">F.Instalacion</label>
-                            <input type="date" class="form-control" id="txt_mar_edit" style="width:100%; heigth: 40px;">
+                            <input type="date" class="form-control" id="txt_fInstalacion1" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
                         <div class="col-md-3">
                           <div class="form-group">
                             <label for="">F.Reencauche</label>
-                            <input type="date" class="form-control" id="txt_mar_edit" style="width:100%; heigth: 40px;">
+                            <input type="date" class="form-control" id="txt_fReencauche1" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
                         <div class="col-md-3">
                           <div class="form-group">
                             <label for="">F.Cambio</label>
-                            <input type="date" class="form-control" id="txt_mar_edit" style="width:100%; heigth: 40px;">
+                            <input type="date" class="form-control" id="txt_fCambio1" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
                         <div class="col-md-3">
                           <div class="form-group">
                             <label for="">F. Rotacion</label>
-                            <input type="date" class="form-control" id="txt_mar_edit" style="width:100%; heigth: 40px;">
+                            <input type="date" class="form-control" id="txt_fRotacion1" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
                     </div>
@@ -355,13 +355,13 @@
                         <div class="col-md-6">
                             <div class="form-group">
                               <label for="">serial</label>
-                              <input type="text" class="form-control" id="txt_mar_edit" placeholder="Ingrese la marca" ><br>
+                              <input type="text" class="form-control" id="txt_mar_edit2" placeholder="Ingrese la marca" ><br>
                             </div>
                           </div>
                           <div class="col-md-6">
                             <div class="form-group">
                               <label for="">Profundidad</label>
-                              <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                              <select class="js-example-basic-single"  name="state" id="sel_profundidad2" style="width:100%; heigth: 40px;">   
                               <option value="0">Seleccionar</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -398,7 +398,7 @@
                       <div class="col-md-3">
                           <div class="form-group">
                             <label for="">Tipo</label>
-                            <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                            <select class="js-example-basic-single"  name="state" id="sel_tipoMarca2" style="width:100%; heigth: 40px;">   
                               <option value="0" selected>Seleccionar</option>
                               <option value="1">Traccion</option>
                               <option value="2">Direccional</option>
@@ -408,7 +408,7 @@
                       <div class="col-md-3">
                           <div class="form-group">
                             <label for="">Estado</label>
-                            <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                            <select class="js-example-basic-single"  name="state" id="sel_estado2" style="width:100%; heigth: 40px;">   
                               <option value="0" selected>Seleccionar</option>
                               <option value="1">Nueva</option>
                               <option value="2">Reencauchada</option>
@@ -422,25 +422,25 @@
                         <div class="col-md-3">
                           <div class="form-group">
                             <label for="">F.Instalacion</label>
-                            <input type="date" class="form-control" id="txt_mar_edit" style="width:100%; heigth: 40px;">
+                            <input type="date" class="form-control" id="sel_fInstalacion2" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
                         <div class="col-md-3">
                           <div class="form-group">
                             <label for="">F.Reencauche</label>
-                            <input type="date" class="form-control" id="txt_mar_edit" style="width:100%; heigth: 40px;">
+                            <input type="date" class="form-control" id="txt_fReencauche2" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
                         <div class="col-md-3">
                           <div class="form-group">
                             <label for="">F.Cambio</label>
-                            <input type="date" class="form-control" id="txt_mar_edit" style="width:100%; heigth: 40px;">
+                            <input type="date" class="form-control" id="txt_fCambio2" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
                         <div class="col-md-3">
                           <div class="form-group">
                             <label for="">F. Rotacion</label>
-                            <input type="date" class="form-control" id="txt_mar_edit" style="width:100%; heigth: 40px;">
+                            <input type="date" class="form-control" id="txt_fRotacion2" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
                     </div>
@@ -452,13 +452,13 @@
                         <div class="col-md-6">
                             <div class="form-group">
                               <label for="">serial</label>
-                              <input type="text" class="form-control" id="txt_mar_edit" placeholder="Ingrese la marca" ><br>
+                              <input type="text" class="form-control" id="txt_llantaSerial3" placeholder="Ingrese la marca" ><br>
                             </div>
                           </div>
                           <div class="col-md-6">
                             <div class="form-group">
                               <label for="">Profundidad</label>
-                              <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                              <select class="js-example-basic-single"  name="state" id="sel_profundidad3" style="width:100%; heigth: 40px;">   
                                 <option value="0">Seleccionar</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -495,7 +495,7 @@
                       <div class="col-md-3">
                           <div class="form-group">
                             <label for="">Tipo</label>
-                            <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                            <select class="js-example-basic-single"  name="state" id="sel_tipoMarca3" style="width:100%; heigth: 40px;">   
                               <option value="0" selected>Seleccionar</option>
                               <option value="1">Traccion</option>
                               <option value="2">Direccional</option>
@@ -505,7 +505,7 @@
                       <div class="col-md-3">
                           <div class="form-group">
                             <label for="">Estado</label>
-                            <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                            <select class="js-example-basic-single"  name="state" id="sel_estado3" style="width:100%; heigth: 40px;">   
                               <option value="0" selected>Seleccionar</option>
                               <option value="1">Nueva</option>
                               <option value="2">Reencauchada</option>
@@ -519,25 +519,25 @@
                         <div class="col-md-3">
                           <div class="form-group">
                             <label for="">F.Instalacion</label>
-                            <input type="date" class="form-control" id="txt_mar_edit" style="width:100%; heigth: 40px;">
+                            <input type="date" class="form-control" id="sel_fInstalacion3" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
                         <div class="col-md-3">
                           <div class="form-group">
                             <label for="">F.Reencauche</label>
-                            <input type="date" class="form-control" id="txt_mar_edit" style="width:100%; heigth: 40px;">
+                            <input type="date" class="form-control" id="txt_fReencauche3" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
                         <div class="col-md-3">
                           <div class="form-group">
                             <label for="">F.Cambio</label>
-                            <input type="date" class="form-control" id="txt_mar_edit" style="width:100%; heigth: 40px;">
+                            <input type="date" class="form-control" id="txt_fCambio3" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
                         <div class="col-md-3">
                           <div class="form-group">
                             <label for="">F. Rotacion</label>
-                            <input type="date" class="form-control" id="txt_mar_edit" style="width:100%; heigth: 40px;">
+                            <input type="date" class="form-control" id="txt_fRotacion3" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
                     </div>
@@ -549,13 +549,13 @@
                         <div class="col-md-6">
                             <div class="form-group">
                               <label for="">serial</label>
-                              <input type="text" class="form-control" id="txt_mar_edit" placeholder="Ingrese la marca" ><br>
+                              <input type="text" class="form-control" id="txt_llantaSerial4" placeholder="Ingrese la marca" ><br>
                             </div>
                           </div>
                           <div class="col-md-6">
                             <div class="form-group">
                               <label for="">Profundidad</label>
-                              <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                              <select class="js-example-basic-single"  name="state" id="sel_profundidad4" style="width:100%; heigth: 40px;">   
                                 <option value="0">Seleccionar</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -592,7 +592,7 @@
                       <div class="col-md-3">
                           <div class="form-group">
                             <label for="">Tipo</label>
-                            <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                            <select class="js-example-basic-single"  name="state" id="sel_tipoMarca4" style="width:100%; heigth: 40px;">   
                               <option value="0" selected>Seleccionar</option>
                               <option value="1">Traccion</option>
                               <option value="2">Direccional</option>
@@ -602,7 +602,7 @@
                       <div class="col-md-3">
                           <div class="form-group">
                             <label for="">Estado</label>
-                            <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                            <select class="js-example-basic-single"  name="state" id="sel_estado4" style="width:100%; heigth: 40px;">   
                               <option value="0" selected>Seleccionar</option>
                               <option value="1">Nueva</option>
                               <option value="2">Reencauchada</option>
@@ -616,25 +616,25 @@
                         <div class="col-md-3">
                           <div class="form-group">
                             <label for="">F.Instalacion</label>
-                            <input type="date" class="form-control" id="txt_mar_edit" style="width:100%; heigth: 40px;">
+                            <input type="date" class="form-control" id="sel_fInstalacion4" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
                         <div class="col-md-3">
                           <div class="form-group">
                             <label for="">F.Reencauche</label>
-                            <input type="date" class="form-control" id="txt_mar_edit" style="width:100%; heigth: 40px;">
+                            <input type="date" class="form-control" id="txt_fReencauche4" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
                         <div class="col-md-3">
                           <div class="form-group">
                             <label for="">F.Cambio</label>
-                            <input type="date" class="form-control" id="txt_mar_edit" style="width:100%; heigth: 40px;">
+                            <input type="date" class="form-control" id="txt_fCambio4" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
                         <div class="col-md-3">
                           <div class="form-group">
                             <label for="">F. Rotacion</label>
-                            <input type="date" class="form-control" id="txt_mar_edit" style="width:100%; heigth: 40px;">
+                            <input type="date" class="form-control" id="txt_fRotacion4" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
                     </div>
@@ -646,13 +646,13 @@
                         <div class="col-md-6">
                             <div class="form-group">
                               <label for="">serial</label>
-                              <input type="text" class="form-control" id="txt_mar_edit" placeholder="Ingrese la marca" ><br>
+                              <input type="text" class="form-control" id="txt_llantaSerial5" placeholder="Ingrese la marca" ><br>
                             </div>
                           </div>
                           <div class="col-md-6">
                             <div class="form-group">
                               <label for="">Profundidad</label>
-                              <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                              <select class="js-example-basic-single"  name="state" id="sel_profundidad5" style="width:100%; heigth: 40px;">   
                                 <option value="0">Seleccionar</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -689,7 +689,7 @@
                       <div class="col-md-3">
                           <div class="form-group">
                             <label for="">Tipo</label>
-                            <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                            <select class="js-example-basic-single"  name="state" id="sel_tipoMarca5" style="width:100%; heigth: 40px;">   
                               <option value="0" selected>Seleccionar</option>
                               <option value="1">Traccion</option>
                               <option value="2">Direccional</option>
@@ -699,7 +699,7 @@
                       <div class="col-md-3">
                           <div class="form-group">
                             <label for="">Estado</label>
-                            <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                            <select class="js-example-basic-single"  name="state" id="sel_estado5" style="width:100%; heigth: 40px;">   
                               <option value="0" selected>Seleccionar</option>
                               <option value="1">Nueva</option>
                               <option value="2">Reencauchada</option>
@@ -713,25 +713,25 @@
                         <div class="col-md-3">
                           <div class="form-group">
                             <label for="">F.Instalacion</label>
-                            <input type="date" class="form-control" id="txt_mar_edit" style="width:100%; heigth: 40px;">
+                            <input type="date" class="form-control" id="sel_fInstalacion5" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
                         <div class="col-md-3">
                           <div class="form-group">
                             <label for="">F.Reencauche</label>
-                            <input type="date" class="form-control" id="txt_mar_edit" style="width:100%; heigth: 40px;">
+                            <input type="date" class="form-control" id="txt_fReencauche5" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
                         <div class="col-md-3">
                           <div class="form-group">
                             <label for="">F.Cambio</label>
-                            <input type="date" class="form-control" id="txt_mar_edit" style="width:100%; heigth: 40px;">
+                            <input type="date" class="form-control" id="txt_fCambio5" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
                         <div class="col-md-3">
                           <div class="form-group">
                             <label for="">F. Rotacion</label>
-                            <input type="date" class="form-control" id="txt_mar_edit" style="width:100%; heigth: 40px;">
+                            <input type="date" class="form-control" id="txt_fRotacion5" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
                     </div>
@@ -743,13 +743,13 @@
                         <div class="col-md-6">
                             <div class="form-group">
                               <label for="">serial</label>
-                              <input type="text" class="form-control" id="txt_mar_edit" placeholder="Ingrese la marca" ><br>
+                              <input type="text" class="form-control" id="txt_llantaSerial6" placeholder="Ingrese la marca" ><br>
                             </div>
                           </div>
                           <div class="col-md-6">
                             <div class="form-group">
                               <label for="">Profundidad</label>
-                              <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                              <select class="js-example-basic-single"  name="state" id="sel_profundidad6" style="width:100%; heigth: 40px;">   
                               <option value="0">Seleccionar</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -779,14 +779,14 @@
                       <div class="col-md-3">
                           <div class="form-group">
                             <label for="">Marca</label>
-                            <select class="js-example-basic-single"  name="state" id="sel_marca_llanta1" style="width:100%; heigth: 40px;">   
+                            <select class="js-example-basic-single"  name="state" id="sel_marca_llanta" style="width:100%; heigth: 40px;">   
                             </select><br><br>
                           </div>
                       </div>
                       <div class="col-md-3">
                           <div class="form-group">
                             <label for="">Tipo</label>
-                            <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                            <select class="js-example-basic-single"  name="state" id="sel_tipoMarca6" style="width:100%; heigth: 40px;">   
                               <option value="0" selected>Seleccionar</option>
                               <option value="1">Traccion</option>
                               <option value="2">Direccional</option>
@@ -796,7 +796,7 @@
                       <div class="col-md-3">
                           <div class="form-group">
                             <label for="">Estado</label>
-                            <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                            <select class="js-example-basic-single"  name="state" id="sel_estado6" style="width:100%; heigth: 40px;">   
                                 <option value="0" selected>Seleccionar</option>
                               <option value="1">Nueva</option>
                               <option value="2">Reencauchada</option>
@@ -810,25 +810,25 @@
                         <div class="col-md-3">
                           <div class="form-group">
                             <label for="">F.Instalacion</label>
-                            <input type="date" class="form-control" id="txt_mar_edit" style="width:100%; heigth: 40px;">
+                            <input type="date" class="form-control" id="sel_fInstalacion6" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
                         <div class="col-md-3">
                           <div class="form-group">
                             <label for="">F.Reencauche</label>
-                            <input type="date" class="form-control" id="txt_mar_edit" style="width:100%; heigth: 40px;">
+                            <input type="date" class="form-control" id="txt_fReencauche6" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
                         <div class="col-md-3">
                           <div class="form-group">
                             <label for="">F.Cambio</label>
-                            <input type="date" class="form-control" id="txt_mar_edit" style="width:100%; heigth: 40px;">
+                            <input type="date" class="form-control" id="txt_fCambio6" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
                         <div class="col-md-3">
                           <div class="form-group">
                             <label for="">F. Rotacion</label>
-                            <input type="date" class="form-control" id="txt_mar_edit" style="width:100%; heigth: 40px;">
+                            <input type="date" class="form-control" id="txt_fRotacion6" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
                     </div>
@@ -837,37 +837,37 @@
                         <div class="col-md-2">
                           <div class="form-group">
                             <label for="">llanta 1/Lbs.</label>
-                            <input type="text" class="form-control" id="txt_mar_edit" style="width:100%; heigth: 40px;">
+                            <input type="number" class="form-control" id="txt_cal1" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
                         <div class="col-md-2">
                           <div class="form-group">
                             <label for="">llanta 2/Lbs.</label>
-                            <input type="text" class="form-control" id="txt_mar_edit" style="width:100%; heigth: 40px;">
+                            <input type="number" class="form-control" id="txt_cal2" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
                         <div class="col-md-2">
                           <div class="form-group">
                             <label for="">llanta 3/Lbs.</label>
-                            <input type="text" class="form-control" id="txt_mar_edit" style="width:100%; heigth: 40px;">
+                            <input type="number" class="form-control" id="txt_cal3" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
                         <div class="col-md-2">
                           <div class="form-group">
                             <label for="">llanta 4/Lbs.</label>
-                            <input type="text" class="form-control" id="txt_mar_edit" style="width:100%; heigth: 40px;">
+                            <input type="number" class="form-control" id="txt_cal4" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
                         <div class="col-md-2">
                           <div class="form-group">
                             <label for="">llanta 5/Lbs.</label>
-                            <input type="text" class="form-control" id="txt_mar_edit" style="width:100%; heigth: 40px;">
+                            <input type="number" class="form-control" id="txt_cal5" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
                         <div class="col-md-2">
                           <div class="form-group">
                             <label for="">llanta 6/Lbs.</label>
-                            <input type="text" class="form-control" id="txt_mar_edit" style="width:100%; heigth: 40px;">
+                            <input type="number" class="form-control" id="txt_cal6" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
                     </div>
@@ -875,7 +875,7 @@
                     <div class="col-md-12">
                           <div class="form-group">
                             <label for="">Observaciones de calibracion</label>
-                            <textarea  class="form-control" id="txt_mar_edit" ></textarea>
+                            <textarea  class="form-control" id="txt_oCalibracion" ></textarea>
                           </div>
                         </div>
                     </div>
@@ -883,7 +883,7 @@
                       <div class="col-md-2">
                           <div class="form-group">
                             <label for="">Balanceo 1.</label>
-                            <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                            <select class="js-example-basic-single"  name="state" id="sel_bal1" style="width:100%; heigth: 40px;">   
                               <option value="0" selected>Seleccionar</option>
                               <option value="1">Si</option>
                               <option value="2">No</option>
@@ -893,7 +893,7 @@
                       <div class="col-md-2">
                           <div class="form-group">
                             <label for="">Balanceo 2.</label>
-                            <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                            <select class="js-example-basic-single"  name="state" id="sel_bal2" style="width:100%; heigth: 40px;">   
                               <option value="0" selected>Seleccionar</option>
                               <option value="1">Si</option>
                               <option value="2">No</option>
@@ -903,7 +903,7 @@
                       <div class="col-md-2">
                           <div class="form-group">
                             <label for="">Balanceo 3.</label>
-                            <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                            <select class="js-example-basic-single"  name="state" id="sel_bal3" style="width:100%; heigth: 40px;">   
                               <option value="0" selected>Seleccionar</option>
                               <option value="1">Si</option>
                               <option value="2">No</option>
@@ -913,7 +913,7 @@
                       <div class="col-md-2">
                           <div class="form-group">
                             <label for="">Balanceo 4.</label>
-                            <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                            <select class="js-example-basic-single"  name="state" id="sel_bal4" style="width:100%; heigth: 40px;">   
                               <option value="0" selected>Seleccionar</option>
                               <option value="1">Si</option>
                               <option value="2">No</option>
@@ -923,7 +923,7 @@
                       <div class="col-md-2">
                           <div class="form-group">
                             <label for="">Balanceo 5.</label>
-                            <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                            <select class="js-example-basic-single"  name="state" id="sel_bal5" style="width:100%; heigth: 40px;">   
                               <option value="0" selected>Seleccionar</option>
                               <option value="1">Si</option>
                               <option value="2">No</option>
@@ -933,7 +933,7 @@
                       <div class="col-md-2">
                           <div class="form-group">
                             <label for="">Balanceo 6.</label>
-                            <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                            <select class="js-example-basic-single"  name="state" id="sel_bal6" style="width:100%; heigth: 40px;">   
                               <option value="0" selected>Seleccionar</option>
                               <option value="1">Si</option>
                               <option value="2">No</option>

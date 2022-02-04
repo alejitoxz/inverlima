@@ -274,7 +274,81 @@ function registrar_orden_Servicio(){
     var oMejora = $("#txt_oMejora").val();
     var llantaSerial1 = $("#txt_llantaSerial1").val();
     var profundidad1 = $("#sel_profundidad1").val();
-    var opmarca1 = $("#sel_operario").val();
+    var opmarca1 = $("#sel_marca_llanta1").val();
+    var tipoMarca1 = $("#sel_tipoMarca1").val();
+    var estado1 = $("#sel_estado1").val();
+    var fInstalacion1 = $("#sel_fInstalacion1").val();
+    var fReencauche1 = $("#txt_fReencauche1").val();
+    var fCambio1 = $("#txt_fCambio1").val();
+    var fRotacion1 = $("#txt_fRotacion1").val();
+
+    var llantaSerial2 = $("#txt_llantaSerial2").val();
+    var profundidad2 = $("#sel_profundidad2").val();
+    var opmarca2 = $("#sel_marca_llanta2").val();
+    var tipoMarca2 = $("#sel_tipoMarca2").val();
+    var estado2 = $("#sel_estado2").val();
+    var fInstalacion2 = $("#sel_fInstalacion2").val();
+    var fReencauche2 = $("#txt_fReencauche2").val();
+    var fCambio2 = $("#txt_fCambio2").val();
+    var fRotacion2 = $("#txt_fRotacion2").val();
+
+    var llantaSerial3 = $("#txt_llantaSerial3").val();
+    var profundidad3 = $("#sel_profundidad3").val();
+    var opmarca3 = $("#sel_marca_llanta3").val();
+    var tipoMarca3 = $("#sel_tipoMarca3").val();
+    var estado3 = $("#sel_estado3").val();
+    var fInstalacion3 = $("#sel_fInstalacion3").val();
+    var fReencauche3 = $("#txt_fReencauche3").val();
+    var fCambio3 = $("#txt_fCambio3").val();
+    var fRotacion3 = $("#txt_fRotacion3").val();
+
+    var llantaSerial4 = $("#txt_llantaSerial4").val();
+    var profundidad4 = $("#sel_profundidad4").val();
+    var opmarca4 = $("#sel_marca_llanta4").val();
+    var tipoMarca4 = $("#sel_tipoMarca4").val();
+    var estado4 = $("#sel_estado4").val();
+    var fInstalacion4 = $("#sel_fInstalacion4").val();
+    var fReencauche4 = $("#txt_fReencauche4").val();
+    var fCambio4 = $("#txt_fCambio4").val();
+    var fRotacion4 = $("#txt_fRotacion4").val();
+
+    var llantaSerial5 = $("#txt_llantaSerial5").val();
+    var profundidad5 = $("#sel_profundidad5").val();
+    var opmarca5 = $("#sel_marca_llanta5").val();
+    var tipoMarca5 = $("#sel_tipoMarca5").val();
+    var estado5 = $("#sel_estado5").val();
+    var fInstalacion5 = $("#sel_fInstalacion5").val();
+    var fReencauche5 = $("#txt_fReencauche5").val();
+    var fCambio5 = $("#txt_fCambio5").val();
+    var fRotacion5 = $("#txt_fRotacion5").val();
+
+    var llantaSerial6 = $("#txt_llantaSerial6").val();
+    var profundidad6 = $("#sel_profundidad6").val();
+    var opmarca6 = $("#sel_marca_llanta6").val();
+    var tipoMarca6 = $("#sel_tipoMarca6").val();
+    var estado6 = $("#sel_estado6").val();
+    var fInstalacion6 = $("#sel_fInstalacion6").val();
+    var fReencauche6 = $("#txt_fReencauche6").val();
+    var fCambio6 = $("#txt_fCambio6").val();
+    var fRotacion6 = $("#txt_fRotacion6").val();
+
+
+    var calibracion1 = $("#txt_cal1").val();
+    var calibracion2 = $("#txt_cal2").val();
+    var calibracion3 = $("#txt_cal3").val();
+    var calibracion4 = $("#txt_cal4").val();
+    var calibracion5 = $("#txt_cal5").val();
+    var calibracion6 = $("#txt_cal6").val();
+    var oCalibracion = $("#txt_oCalibracion").val();
+    var balanceo1 = $("#sel_bal1").val();
+    var balanceo2 = $("#sel_bal2").val();
+    var balanceo3 = $("#sel_bal3").val();
+    var balanceo4 = $("#sel_bal4").val();
+    var balanceo5 = $("#sel_bal5").val();
+    var balanceo6 = $("#sel_bal6").val();
+    var oBalanceo = $("#txt_oBalanceo").val();
+    var alineacion1 = $("#sel_profundidad1").val();
+    var alineacion2 = $("#sel_operario").val();
     var bateria = $("#sel_bateria").val();
     var tipoBateria = $("#sel_tipoBateria").val();
     var marca = $("#sel_marca").val();

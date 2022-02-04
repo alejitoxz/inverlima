@@ -151,14 +151,14 @@
                         <div class="col-md-4">
                           <div class="form-group">
                             <label for="">Observaciones de la registradora</label>
-                            <input type="text" class="form-control" id="txt_oReg" placeholder="Ingrese la marca"><br>
+                            <input type="text" class="form-control" id="txt_oReg" placeholder="Ingrese la observacion"><br>
                           </div>
                         </div>
                       </div>
                       <div class="col-md-13">
                           <div class="form-group">
                             <label for="">Observaciones</label>
-                            <textarea class="form-control" id="txt_obs" placeholder="Ingrese la marca"></textarea><br>
+                            <textarea class="form-control" id="txt_obs" placeholder="Ingrese las observaciones"></textarea><br>
                           </div>
                         </div>
                         <div class="col-md-4">
@@ -203,7 +203,7 @@
                         <div class="col-md-4">
                           <div class="form-group">
                             <label for="">serial</label>
-                            <input type="text" class="form-control" id="txt_serial" placeholder="Ingrese la marca"><br>
+                            <input type="text" class="form-control" id="txt_serial" placeholder="Ingrese el serial"><br>
                           </div>
                         </div>
                         <div class="col-md-4">
@@ -223,7 +223,7 @@
                         <div class="col-md-4">
                           <div class="form-group">
                             <label for="">Tiempo de uso</label>
-                            <input type="text" class="form-control" id="txt_tUso" placeholder="Ingrese la marca"><br>
+                            <input type="text" class="form-control" id="txt_tUso" placeholder="Registre el tiempo de uso"><br>
                           </div>
                         </div>
                         <div class="col-md-4">
@@ -262,7 +262,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                               <label for="">serial</label>
-                              <input type="text" class="form-control" id="txt_llantaSerial1" placeholder="Ingrese la marca" ><br>
+                              <input type="text" class="form-control" id="txt_llantaSerial1" placeholder="Ingrese el serial" ><br>
                             </div>
                           </div>
                           <div class="col-md-6">
@@ -359,7 +359,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                               <label for="">serial</label>
-                              <input type="text" class="form-control" id="txt_mar_edit2" placeholder="Ingrese la marca" ><br>
+                              <input type="text" class="form-control" id="txt_mar_edit2" placeholder="Ingrese el serial" ><br>
                             </div>
                           </div>
                           <div class="col-md-6">
@@ -456,7 +456,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                               <label for="">serial</label>
-                              <input type="text" class="form-control" id="txt_llantaSerial3" placeholder="Ingrese la marca" ><br>
+                              <input type="text" class="form-control" id="txt_llantaSerial3" placeholder="Ingrese el serial" ><br>
                             </div>
                           </div>
                           <div class="col-md-6">
@@ -553,7 +553,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                               <label for="">serial</label>
-                              <input type="text" class="form-control" id="txt_llantaSerial4" placeholder="Ingrese la marca" ><br>
+                              <input type="text" class="form-control" id="txt_llantaSerial4" placeholder="Ingrese el serial" ><br>
                             </div>
                           </div>
                           <div class="col-md-6">
@@ -650,7 +650,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                               <label for="">serial</label>
-                              <input type="text" class="form-control" id="txt_llantaSerial5" placeholder="Ingrese la marca" ><br>
+                              <input type="text" class="form-control" id="txt_llantaSerial5" placeholder="Ingrese el serial" ><br>
                             </div>
                           </div>
                           <div class="col-md-6">
@@ -747,7 +747,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                               <label for="">serial</label>
-                              <input type="text" class="form-control" id="txt_llantaSerial6" placeholder="Ingrese la marca" ><br>
+                              <input type="text" class="form-control" id="txt_llantaSerial6" placeholder="Ingrese el serial" ><br>
                             </div>
                           </div>
                           <div class="col-md-6">
@@ -1000,19 +1000,19 @@
                           <div class="col-md-4">
                             <div class="form-group">
                               <label for="">Fecha</label>
-                              <input type="date" class="form-control" id="txt_fechaA" placeholder="Ingrese placa"><br>
+                              <input type="date" class="form-control" id="txt_fechaA" placeholder="Ingrese la fecha"><br>
                             </div>
                           </div>
                           <div class="col-md-4">
                             <div class="form-group">
                               <label for="">Proximo cambio</label>
-                              <input type="date" class="form-control" id="txt_pCambioA" placeholder="Ingrese placa"><br>
+                              <input type="date" class="form-control" id="txt_pCambioA" placeholder="Ingrese el proximo cambio"><br>
                             </div>
                           </div>
                           <div class="col-md-4">
                             <div class="form-group">
                               <label for="">Kilometraje</label>
-                              <input type="text" class="form-control" id="txt_kilometraje" placeholder="Ingrese placa"><br>
+                              <input type="text" class="form-control" id="txt_kilometraje" placeholder="Ingrese el Kilometraje"><br>
                             </div>
                           </div>
                         </div>
@@ -1020,7 +1020,7 @@
                           <div class="col-md-4">
                             <div class="form-group">
                               <label for="">Cambio x Kilometraje</label>
-                              <input type="text" class="form-control" id="txt_ckilometraje" placeholder="Ingrese placa"><br>
+                              <input type="text" class="form-control" id="txt_ckilometraje" placeholder="Ingrese datos"><br>
                             </div>
                           </div>
                           <div class="col-md-4">
@@ -1042,7 +1042,7 @@
                           <div class="col-md-3">
                             <div class="form-group">
                               <label for="">Cantidad x 1/4</label>
-                              <input type="Number"value="0" class="form-control" id="txt_cantidad1" placeholder="Ingrese placa"><br>
+                              <input type="Number"value="0" class="form-control" id="txt_cantidad1" placeholder="Ingrese datos"><br>
                             </div>
                           </div>
                           <div class="col-md-3">
@@ -1068,7 +1068,7 @@
                           <div class="col-md-3">
                             <div class="form-group">
                               <label for="">cantidad nivelada 1/4</label>
-                              <input type="number"value="0" class="form-control" id="txt_cNivelacion1" placeholder="Ingrese placa"><br>
+                              <input type="number"value="0" class="form-control" id="txt_cNivelacion1" placeholder="Ingrese datos"><br>
                             </div>
                           </div>
                         </div>
@@ -1114,13 +1114,13 @@
                           <div class="col-md-3">
                             <div class="form-group">
                               <label for="">Ultimo cambio</label>
-                              <input type="date" class="form-control" id="txt_uCambio1" placeholder="Ingrese placa"><br>
+                              <input type="date" class="form-control" id="txt_uCambio1" placeholder="Ingrese ultimo cambio"><br>
                             </div>
                           </div>
                           <div class="col-md-3">
                             <div class="form-group">
                               <label for="">Proximo cambio</label>
-                              <input type="date" class="form-control" id="txt_pCambio1" placeholder="Ingrese placa"><br>
+                              <input type="date" class="form-control" id="txt_pCambio1" placeholder="Ingrese proximo cambio"><br>
                             </div>
                           </div>
                         </div>
@@ -1128,7 +1128,7 @@
                           <div class="col-md-3">
                               <div class="form-group">
                                 <label for="">Cantidad x 1/4</label>
-                                <input type="number"value="0" class="form-control" id="txt_cantidad2" placeholder="Ingrese placa"><br>
+                                <input type="number"value="0" class="form-control" id="txt_cantidad2" placeholder="Ingrese datos"><br>
                               </div>
                             </div>
                             <div class="col-md-3">
@@ -1154,7 +1154,7 @@
                             <div class="col-md-3">
                               <div class="form-group">
                                 <label for="">cantidad nivelada 1/4</label>
-                                <input type="number"value="0" class="form-control" id="txt_nivelacion2" placeholder="Ingrese placa"><br>
+                                <input type="number"value="0" class="form-control" id="txt_nivelacion2" placeholder="Ingrese datos"><br>
                               </div>
                             </div>
                           </div>
@@ -1177,13 +1177,13 @@
                           <div class="col-md-3">
                             <div class="form-group">
                               <label for="">Ultimo cambio</label>
-                              <input type="date" class="form-control" id="txt_uCambio2" placeholder="Ingrese placa"><br>
+                              <input type="date" class="form-control" id="txt_uCambio2" placeholder="Ingrese ultimo cambio"><br>
                             </div>
                           </div>
                           <div class="col-md-3">
                             <div class="form-group">
                               <label for="">Proximo cambio</label>
-                              <input type="date" class="form-control" id="txt_pCambio2" placeholder="Ingrese placa"><br>
+                              <input type="date" class="form-control" id="txt_pCambio2" placeholder="Ingrese proximo cambio"><br>
                             </div>
                           </div>
                         </div>
@@ -1191,7 +1191,7 @@
                           <div class="col-md-3">
                               <div class="form-group">
                                 <label for="">Cantidad x 1/4</label>
-                                <input type="number"value="0" class="form-control" id="txt_cantidad2" placeholder="Ingrese placa"><br>
+                                <input type="number"value="0" class="form-control" id="txt_cantidad2" placeholder="Ingrese datos"><br>
                               </div>
                             </div>
                             <div class="col-md-3">
@@ -1217,7 +1217,7 @@
                             <div class="col-md-3">
                               <div class="form-group">
                                 <label for="">cantidad nivelada 1/4</label>
-                                <input type="number"value="0" class="form-control" id="txt_nivelacion3" placeholder="Ingrese placa"><br>
+                                <input type="number"value="0" class="form-control" id="txt_nivelacion3" placeholder="Ingrese datos"><br>
                               </div>
                             </div>
                           </div>
@@ -1240,13 +1240,13 @@
                           <div class="col-md-3">
                             <div class="form-group">
                               <label for="">Ultimo cambio</label>
-                              <input type="date" class="form-control" id="txt_uCambio3" placeholder="Ingrese placa"><br>
+                              <input type="date" class="form-control" id="txt_uCambio3" placeholder="Ingrese ultimo cambio"><br>
                             </div>
                           </div>
                           <div class="col-md-3">
                             <div class="form-group">
                               <label for="">Proximo cambio</label>
-                              <input type="date" class="form-control" id="txt_pCambio3" placeholder="Ingrese placa"><br>
+                              <input type="date" class="form-control" id="txt_pCambio3" placeholder="Ingrese proximo cambio"><br>
                             </div>
                           </div>
                         </div>
@@ -1269,13 +1269,13 @@
                           <div class="col-md-3">
                             <div class="form-group">
                               <label for="">Ultimo cambio</label>
-                              <input type="date" class="form-control" id="txt_uCambio4" placeholder="Ingrese placa"><br>
+                              <input type="date" class="form-control" id="txt_uCambio4" placeholder="Ingrese ultimo cambio"><br>
                             </div>
                           </div>
                           <div class="col-md-3">
                             <div class="form-group">
                               <label for="">Proximo cambio</label>
-                              <input type="date" class="form-control" id="txt_pCambio4" placeholder="Ingrese placa"><br>
+                              <input type="date" class="form-control" id="txt_pCambio4" placeholder="Ingrese proximo cambio"><br>
                             </div>
                           </div>
                         </div>
@@ -1399,7 +1399,7 @@
                             <div class="col-md-12">
                           <div class="form-group">
                             <label for="">Observaciones</label>
-                            <textarea class="form-control" id="txt_observacionesF" placeholder="Ingrese la marca"></textarea><br>
+                            <textarea class="form-control" id="txt_observacionesF" placeholder="Ingrese las observaciones"></textarea><br>
                           </div>
                         </div>
                           </div>

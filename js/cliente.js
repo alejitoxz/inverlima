@@ -111,7 +111,7 @@ function registrar_cliente(){
                 limpiarRegistro();
             $("#modal_registro_cliente").modal('hide');
             Swal.fire("Mensaje De Confirmacion",'Registro realizado', "success").then((value)=>{
-                table.ajax.reload();
+                table_cliente.ajax.reload();
                 
             });
         }else{

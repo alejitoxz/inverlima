@@ -49,10 +49,8 @@ session_start();
                 return 0;
             }
             
-            $this->conexion->conectar();
-           
+            $this->conexion->conectar();        
         }
-
 
         function buscarPersona($valor){
             $conn = $this->conexion->conectar();

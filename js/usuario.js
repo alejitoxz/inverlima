@@ -402,18 +402,18 @@ function registrar_usuario(){
 
 }
 
-function contarUsuario(){
-    $("#contadorUsuario").html(0);
+function contarOrden(){
+    $("#contadorOrden").html(0);
     $.ajax({
-        url:'../controlador/usuario/controlador_contador_usuario.php',
+        url:'../controlador/ordenServicio/controlador_contador_orden.php',
         type:'post',
     }).done(function(req){
 		var resultado=eval("("+req+")");
 
         if(resultado.length>0){
-            $("#contadorUsuario").html(resultado[0]['contadorUsuario']);
+            $("#contadorServicio").html(resultado[0]['contadorServicio']);
          }else{
-            $("#contadorUsuario").html(0);
+            $("#contadorServicio").html(0);
          }
             
             

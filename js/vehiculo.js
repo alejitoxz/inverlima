@@ -24,6 +24,7 @@ function listar_vehiculo(){
             { "data": "id" },
             { "data": "placa" },
             { "data": "cod_interno" },
+            { "data": "Odometer" },
             { "data": "marca" },
             { "data": "modelo" },
             { "data": "empresa" },
@@ -116,11 +117,8 @@ function registrar_vehiculo(){
     if( txt_interno == '' ||
         txt_placa == ''
     ){
-            return swal.fire("Mensaje De Advertencia", "llene los campos vacios", "warning");
-        }if(
-            idPropietario == 0 ){
-            return swal.fire("Mensaje De Advertencia", "llene los campos vacios", "warning");
-        }
+        return swal.fire("Mensaje De Advertencia", "llene los campos vacios", "warning");
+    }
 
     $.ajax({
         "url": "../controlador/vehiculo/controlador_vehiculo_registrar.php",
@@ -358,24 +356,24 @@ function contarVehiculo(){
 function limpiarRegistro(){
     $("#idVehiculo").val("");
     //ingresas datos modal
-    $("#txt_interno_edit").val("");
-    $("#txt_placa_edit").val("");
-    $("#txt_marca_edit").val("");
-    $("#txt_modelo_edit").val("");
+    $("#txt_interno").val("");
+    $("#txt_placa").val("");
+    $("#txt_marca").val("");
+    $("#txt_modelo").val("");
 
-    $("#txt_chasis_edit").val("");
-    $("#txt_pasajeros_edit").val("");
-    $("#sel_empresa_edit").val(0).trigger('change');
-    $("#sel_pro_vehiculo_edit").val(0).trigger('change');
+    $("#txt_chasis").val("");
+    $("#txt_pasajeros").val("");
+    $("#sel_empresa").val(0).trigger('change');
+    $("#sel_pro_vehiculo").val(0).trigger('change');
 
-    $("#txt_soat_edit").val("");
-    $("#txt_tecnomecanica_edit").val("");
-    $("#txt_poliza_cont_edit").val("");
-    $("#txt_poliza_ext_edit").val("");
+    $("#txt_soat").val("");
+    $("#txt_tecnomecanica").val("");
+    $("#txt_poliza_cont").val("");
+    $("#txt_poliza_ext").val("");
 
-    $("#venc_soat_edit").val("");
-    $("#venc_tecno_edit").val("");
-    $("#venc_poliza_cont_edit").val("");
-    $("#venc_poliza_ext_edit").val("");
+    $("#venc_soat").val("");
+    $("#venc_tecno").val("");
+    $("#venc_poliza_cont").val("");
+    $("#venc_poliza_ext").val("");
     
 }

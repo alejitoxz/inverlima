@@ -36,13 +36,16 @@ session_start();
 			CONVERT(varchar,v.vContractual) as vContractual,
             CONVERT(varchar,v.vExtraContractual) as vExtraContractual,
 			CONVERT(varchar,v.vTecnomecanica) as vTecnomecanica,
-            pro.id as idPropietario
+            pro.id as idPropietario,
+			vwo.Odometer/1000 as Odometer
             FROM
             vehiculo AS v
             left JOIN company AS co ON (v.idCompany = co.id)
             left JOIN propietario AS pro ON (v.idPropietario = pro.id)
             left JOIN persona AS p ON (pro.idPersona = p.id)
             LEFT JOIN miscelaneos_detalle AS md ON (md.id = v.idEmpresa)
+            left JOIN [Visualsat.Avl.Database_col].dbo.vw_Vehicles AS vw ON (vw.Plate = v.placa)
+			left JOIN [Visualsat.Avl.Database_col].dbo.vw_VehiclesOdometer AS vwo ON (vw.Id = vwo.VehicleId)
             WHERE v.estatus = 1 and co.Id = $idCompany;
             ";
             $resp = sqlsrv_query($conn, $sql);
@@ -107,8 +110,8 @@ session_start();
         $idCompany = $_SESSION['COMPANY'];
         $idUsuario = $_SESSION['S_ID'];
 
-        if($idPropietario != ''){
-            $propietario = $idPropietario;
+        if($sel_pro_vehiculo != ''){
+            $propietario = $sel_pro_vehiculo;
         }else{
             $propietario = 0;
         }
@@ -150,7 +153,7 @@ session_start();
                         '$txt_poliza_ext',
                         '$venc_poliza_ext',
                         $sel_empresa,
-                        $sel_pro_vehiculo,
+                        $propietario,
                         $idUsuario,
                         $idCompany,
                         1

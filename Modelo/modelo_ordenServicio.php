@@ -685,6 +685,36 @@ session_start();
             $this->conexion->conectar();
         }
 
+        function contador_orden(){
+            $conn = $this->conexion->conectar();
+            $idCompany = $_SESSION['COMPANY'];
+            $Rol = $_SESSION['ROL'];
+            $idUsuario = $_SESSION['S_ID'];
+
+
+            $sql  = "SELECT COUNT(id) as contadorServicio from servicio
+           ";
+           //echo $sql;
+            $resp = sqlsrv_query($conn, $sql);
+            if( $resp === false) {
+                return 0;
+            }
+            $i = 0;
+            
+            while($row = sqlsrv_fetch_array( $resp, SQLSRV_FETCH_ASSOC))
+            {
+                $data[$i] = $row;
+                $i++;
+            }
+            if($data>0){
+                return $data;
+            }else{
+                return 0;
+            }
+            
+            $this->conexion->conectar();
+        }
+
         function modificar_conductor($id,$estatus){
             $conn = $this->conexion->conectar();
             $sql  = "UPDATE conductor set estatus= $estatus

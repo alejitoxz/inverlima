@@ -27,6 +27,7 @@
                           <th>#</th>
                           <th>Placa</th>
                           <th>Cod Interno</th>
+                          <th>Odometro</th>
                           <th>Marca</th>
                           <th>Modelo</th>
                           <th>Empresa</th>
@@ -67,7 +68,7 @@
           <div class="col-md-3">
             <div class="form-group">
               <label for="">Placa</label>
-              <input type="text" class="form-control" id="txt_placa" placeholder="Ingrese placa"><br>
+              <input type="text" class="form-control" id="txt_placa" placeholder="WTN248"><br>
             </div>
           </div>
           <div class="col-md-3">

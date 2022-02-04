@@ -12,14 +12,14 @@ if ($Rol == 1 || $Rol == 4) {
                 <div class="col-lg-3 col-6">
                 <div class="small-box bg-warning">
                     <div class="inner">
-                    <h3 id="contadorUsuario">0</h3>
+                    <h3 id="contadorOrden">0</h3>
 
-                    <p>Usuarios</p>
+                    <p>Orden de servicio</p>
                     </div>
                     <div class="icon">
-                    <i class="fas fa-user-friends"></i>
+                    <i class="fas fa-list"></i>
                     </div>
-                    <a onclick="cargar_contenido('contenido_principal','usuario/vista_usuario_listar.php')" class="small-box-footer">Usuarios Registrados 
+                    <a onclick="cargar_contenido('contenido_principal','ordenServicio/vista_ordenServicio_listar.php')" class="small-box-footer">Usuarios Registrados 
                         <i class="fas fa-arrow-circle-right"></i>
                     </a>
                 </div>
@@ -57,23 +57,7 @@ if ($Rol == 1 || $Rol == 4) {
                     </div>
                 </div>
           
-                <!-- ./col -->
-                <div class="col-lg-3 col-6">
-                <!-- small box -->
-                <div class="small-box bg-danger">
-                    <div class="inner">
-                    <h3 id="contadorConductor">0</h3>
-
-                    <p>Conductores</p>
-                    </div>
-                    <div class="icon">
-                    <i class="fas fa-id-card"></i>
-                    </div>
-                    <a onclick="cargar_contenido('contenido_principal','conductor/vista_conductor_listar.php')" class="small-box-footer">Conductores Registrados 
-                        <i class="fas fa-arrow-circle-right"></i>
-                    </a>
-                </div>
-                </div>
+              
 
             </div>
         </div>
@@ -137,12 +121,11 @@ if ($Rol == 1 || $Rol == 4) {
 <script src="../js/usuario.js"></script>
 <script src="../js/vehiculo.js"></script>
 <script src="../js/propietario.js"></script>
-<script src="../js/conductor.js"></script>
 <script>
-    contarUsuario();
+    contarOrden();
     contarVehiculo();
     contarPropietario();
-    contarConductor();
+    //contarConductor();
 </script>
 <style>
     .red{

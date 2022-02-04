@@ -10,6 +10,48 @@ session_start();
             $this->conexion = new conexion();
         }
 
+        function listar_orden(){
+            $conn = $this->conexion->conectar();
+            $idCompany = $_SESSION['COMPANY'];
+            $Rol = $_SESSION['ROL'];
+            $idUsuario = $_SESSION['S_ID'];
+
+            $sql = "SELECT
+            ( prop.nombre + ' ' + prop.apellido ) AS operario,
+            v.placa,
+			v.cod_interno,
+            os.id,
+            os.rRegistradora,
+            os.observacion,
+            CONVERT ( VARCHAR, os.fecha_creacion ) AS fecha_creacion
+            FROM
+                ordenServicio AS os
+                LEFT JOIN vehiculo AS v ON ( os.idVehiculo = v.id )
+                LEFT JOIN operario AS op ON ( op.id = os.idOperario)
+                LEFT JOIN persona AS prop ON ( op.idPersona = prop.id )
+                INNER JOIN servicio AS s ON ( os.idServicio = s.id )
+								order by os.fecha_creacion asc";
+            $resp = sqlsrv_query($conn, $sql);
+            if( $resp === false) {
+                return 0;
+            }
+            $i = 0;
+            $data = [];
+            while($row = sqlsrv_fetch_array( $resp, SQLSRV_FETCH_ASSOC))
+            {
+                $data['data'][] = $row;
+                $i++;
+                
+            }
+            if($data>0){
+                return $data;
+            }else{
+                return 0;
+            }
+
+            $this->conexion->conectar();
+        }
+
         function listar_conductor(){
             $conn = $this->conexion->conectar();
             $idCompany = $_SESSION['COMPANY'];
@@ -972,6 +1014,7 @@ session_start();
             
             $this->conexion->conectar();
         }
+        
 
 
 

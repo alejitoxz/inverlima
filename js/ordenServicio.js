@@ -28,7 +28,7 @@ function listar_placa(){
             cadena+="<option value='0'>Seleccionar</option>"; 
             for(var i=0; i < data.length; i++){
                 cadena+="<option value ='"+data[i]['id']+"'>"+data[i]['placa']+" - "+data[i]['cod_interno']+"</option>";
-            }
+            } 
             $("#sel_placa_vehiculo").html(cadena);
             $("#sel_placa_vehiculo_edit").html(cadena);
         }else{
@@ -65,7 +65,7 @@ function odometro(id){
         "data": {id}
     }).done(function(resp){
         var data = JSON.parse(resp);
-        
+         
         var cadena="";
         if(data.length>0){            
             $("#txt_kmGps").val(data[0]['Odometer']);

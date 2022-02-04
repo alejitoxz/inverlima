@@ -610,7 +610,7 @@ session_start();
                             otrosEngrase,
                             otrosSopleteoRadiador,
                             otrosSopleteoFiltroAire,
-                            observacionesGenerales2,
+                            observacionesGenerales2
                     
                                     )
                 VALUES(
@@ -737,7 +737,7 @@ session_start();
                     $lParabrisa,
                     $refrigerante,
                     $hidraulico,
-                    $lMotor',
+                    $lMotor,
                     $lCaja,
                     $lTransmision,
                     $lFrenos1,
@@ -748,19 +748,19 @@ session_start();
                 )
                 SET @idServicio = SCOPE_IDENTITY()
                 INSERT INTO ordenServicio(
-                    idServicio
-                    idVehiculo
-                    estatus
-                    revBimCotrautol
-                    vExtintor
-                    rRegistradora
-                    oRegistradora
-                    observacion
+                    idServicio,
+                    idVehiculo,
+                    estatus,
+                    revBimCotrautol,
+                    vExtintor,
+                    rRegistradora,
+                    oRegistradora,
+                    observacion,
                     idOperario
 
                 ) 
                 VALUES(
-                    @idServicio,'$placa',$revBimCotrautol,$rRegistradora,'$kmGps','$vExtintor','$oReg','$observacion',$operario
+                    @idServicio,$placa,$revBimCotrautol,1,'$vExtintor',$rRegistradora,'$oReg','$observacion',$operario
                 )";
             
             
@@ -775,7 +775,7 @@ session_start();
                      BEGIN CATCH
                      ROLLBACK TRAN
                      END CATCH";
-                     //echo $sql;
+                     echo $sql;
             $resp = sqlsrv_query($conn, $sql);
 
             if( $resp === false) {

@@ -301,7 +301,7 @@
                       <div class="col-md-3">
                           <div class="form-group">
                             <label for="">Tipo</label>
-                            <select class="js-example-basic-single"  name="state" id="sel_tipoLlanta1" style="width:100%; heigth: 40px;">   
+                            <select class="js-example-basic-single"  name="state" id="sel_tipoMarca1" style="width:100%; heigth: 40px;">   
                               <option value="0" selected>Seleccionar</option>
                               <option value="1">Traccion</option>
                               <option value="2">Direccional</option>
@@ -399,7 +399,7 @@
                           <div class="form-group">
                             <label for="">Tipo</label>
                             <select class="js-example-basic-single"  name="state" id="sel_tipoMarca2" style="width:100%; heigth: 40px;">   
-                              <option value="0" selected>Seleccionar</option>
+                              <option value="0">Seleccionar</option>
                               <option value="1">Traccion</option>
                               <option value="2">Direccional</option>
                             </select><br><br>
@@ -409,7 +409,7 @@
                           <div class="form-group">
                             <label for="">Estado</label>
                             <select class="js-example-basic-single"  name="state" id="sel_estado2" style="width:100%; heigth: 40px;">   
-                              <option value="0" selected>Seleccionar</option>
+                              <option value="0">Seleccionar</option>
                               <option value="1">Nueva</option>
                               <option value="2">Reencauchada</option>
                             </select><br><br>
@@ -837,37 +837,37 @@
                         <div class="col-md-2">
                           <div class="form-group">
                             <label for="">llanta 1/Lbs.</label>
-                            <input type="number" class="form-control" id="txt_cal1" style="width:100%; heigth: 40px;">
+                            <input type="number" value="0" class="form-control" id="txt_cal1" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
                         <div class="col-md-2">
                           <div class="form-group">
                             <label for="">llanta 2/Lbs.</label>
-                            <input type="number" class="form-control" id="txt_cal2" style="width:100%; heigth: 40px;">
+                            <input type="number"value="0" class="form-control" id="txt_cal2" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
                         <div class="col-md-2">
                           <div class="form-group">
                             <label for="">llanta 3/Lbs.</label>
-                            <input type="number" class="form-control" id="txt_cal3" style="width:100%; heigth: 40px;">
+                            <input type="number"value="0" class="form-control" id="txt_cal3" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
                         <div class="col-md-2">
                           <div class="form-group">
                             <label for="">llanta 4/Lbs.</label>
-                            <input type="number" class="form-control" id="txt_cal4" style="width:100%; heigth: 40px;">
+                            <input type="number"value="0" class="form-control" id="txt_cal4" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
                         <div class="col-md-2">
                           <div class="form-group">
                             <label for="">llanta 5/Lbs.</label>
-                            <input type="number" class="form-control" id="txt_cal5" style="width:100%; heigth: 40px;">
+                            <input type="number"value="0" class="form-control" id="txt_cal5" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
                         <div class="col-md-2">
                           <div class="form-group">
                             <label for="">llanta 6/Lbs.</label>
-                            <input type="number" class="form-control" id="txt_cal6" style="width:100%; heigth: 40px;">
+                            <input type="number"value="0" class="form-control" id="txt_cal6" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
                     </div>
@@ -1038,7 +1038,7 @@
                           <div class="col-md-3">
                             <div class="form-group">
                               <label for="">Cantidad x 1/4</label>
-                              <input type="Number" class="form-control" id="txt_cantidad1" placeholder="Ingrese placa"><br>
+                              <input type="Number"value="0" class="form-control" id="txt_cantidad1" placeholder="Ingrese placa"><br>
                             </div>
                           </div>
                           <div class="col-md-3">
@@ -1064,7 +1064,7 @@
                           <div class="col-md-3">
                             <div class="form-group">
                               <label for="">cantidad nivelada 1/4</label>
-                              <input type="number" class="form-control" id="txt_cNivelacion1" placeholder="Ingrese placa"><br>
+                              <input type="number"value="0" class="form-control" id="txt_cNivelacion1" placeholder="Ingrese placa"><br>
                             </div>
                           </div>
                         </div>
@@ -1124,7 +1124,7 @@
                           <div class="col-md-3">
                               <div class="form-group">
                                 <label for="">Cantidad x 1/4</label>
-                                <input type="number" class="form-control" id="txt_cantidad2" placeholder="Ingrese placa"><br>
+                                <input type="number"value="0" class="form-control" id="txt_cantidad2" placeholder="Ingrese placa"><br>
                               </div>
                             </div>
                             <div class="col-md-3">
@@ -1150,7 +1150,7 @@
                             <div class="col-md-3">
                               <div class="form-group">
                                 <label for="">cantidad nivelada 1/4</label>
-                                <input type="number" class="form-control" id="txt_nivelacion2" placeholder="Ingrese placa"><br>
+                                <input type="number"value="0" class="form-control" id="txt_nivelacion2" placeholder="Ingrese placa"><br>
                               </div>
                             </div>
                           </div>
@@ -1187,7 +1187,7 @@
                           <div class="col-md-3">
                               <div class="form-group">
                                 <label for="">Cantidad x 1/4</label>
-                                <input type="number" class="form-control" id="txt_cantidad2" placeholder="Ingrese placa"><br>
+                                <input type="number"value="0" class="form-control" id="txt_cantidad2" placeholder="Ingrese placa"><br>
                               </div>
                             </div>
                             <div class="col-md-3">
@@ -1213,7 +1213,7 @@
                             <div class="col-md-3">
                               <div class="form-group">
                                 <label for="">cantidad nivelada 1/4</label>
-                                <input type="number" class="form-control" id="txt_nivelacion3" placeholder="Ingrese placa"><br>
+                                <input type="number"value="0" class="form-control" id="txt_nivelacion3" placeholder="Ingrese placa"><br>
                               </div>
                             </div>
                           </div>
@@ -1400,7 +1400,7 @@
                         </div>
                           </div>
                       <button class="btn btn-primary" onclick="stepper.previous()">Anterior</button>
-                      <button type="submit" class="btn btn-primary">Guardar</button>
+                      <button type="submit" class="btn btn-primary" onclick="registrar_orden_Servicio()">Guardar</button>
                     </div>
 
 

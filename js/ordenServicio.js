@@ -342,7 +342,7 @@ function registrar_orden_Servicio(){
 
     var llantaSerial6 = $("#txt_llantaSerial6").val();
     var profundidad6 = $("#sel_profundidad6").val();
-    var opmarca6 = $("#sel_marca_llanta6").val();
+    var opmarca6 = $("#sel_marca_llanta").val();
     var tipoMarca6 = $("#sel_tipoMarca6").val();
     var estado6 = $("#sel_estado6").val();
     var fInstalacion6 = $("#sel_fInstalacion6").val();

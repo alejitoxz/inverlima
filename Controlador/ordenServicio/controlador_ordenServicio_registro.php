@@ -144,6 +144,7 @@
     $engrase = htmlspecialchars($_POST['engrase'],ENT_QUOTES,'UTF-8');
     $sRadiador = htmlspecialchars($_POST['sRadiador'],ENT_QUOTES,'UTF-8');
     $sFiltroAire = htmlspecialchars($_POST['sFiltroAire'],ENT_QUOTES,'UTF-8');
+    $observacionesF = htmlspecialchars($_POST['sFiltroAire'],ENT_QUOTES,'UTF-8');
 
     $consulta = $MU->registrar_ordenServicio(
     $id,$placa,$revBimCotrautol,$rRegistradora,$kmGps,$vExtintor,$oReg,
@@ -168,7 +169,7 @@
     $pCambio3,$cantidad3,$presentacion3,$nivelacion3,$cNivelacion3,$tipoAceite4,$marca4,$uCambio4,$pCambio4,$tipoAceite5,$marca5,
     $uCambio5,$pCambio5,$lFreno,$lParabrisa,$refrigerante,$hidraulico,
     $lMotor,$lCaja,$lTransmision,$lFrenos1,$engrase,$sRadiador,
-    $sFiltroAire
+    $sFiltroAire,$observacionesF
     );
     $qr = $MU->generarqr(false);
     echo $consulta;

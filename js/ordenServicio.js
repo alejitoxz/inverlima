@@ -607,7 +607,8 @@ function registrar_orden_Servicio(){
         lFrenos1:lFrenos1,
         engrase:engrase,
         sRadiador:sRadiador,
-        sFiltroAire:sFiltroAire
+        sFiltroAire:sFiltroAire,
+        observacionesF:observacionesF
         }
     }).done(function(resp){
         console.log(resp);

@@ -1,3 +1,34 @@
+var table;
+function listar_orden(){
+    table = $('#tabla_orden').DataTable( {
+        "ordering":true,
+        "paging": true,
+        "searching": { "regex": true },
+        "lengthMenu": [ [10, 25, 50, 100, -1], [10, 25, 50, 100, "All"] ],
+        "pageLength": 10,
+        "destroy":true,
+        "async": true ,
+        "processing": true,
+        "ajax": {
+            "url": "../controlador/ordenServicio/controlador_listar_orden.php",
+            "type": "POST"
+        },
+        "columns": [
+            { "data": "id" },
+            { "data": "placa" },
+            { "data": "cod_interno" },
+            { "data": "rRegistradora" },
+            { "data": "operario" },
+            { "data": "fecha_creacion" },
+            { "data": "observacion" },
+            {"defaultContent":
+            "<button style='font-size:13px;' type='button' class='eliminarp btn btn-danger'><i class='fa fa-trash'></i></button><button style='font-size:13px;' type='button' class='editarp btn btn-info'><i class='fa fa-edit'></i></button>"}
+        ],
+        "language":idioma_espanol,
+       select: true
+    } );
+    
+}
 
 function AbrirModalRegistroOrdenServicio(){
     $("#modal_registro_OrdenServicio").modal({backdrop:'static',keyboard:false})

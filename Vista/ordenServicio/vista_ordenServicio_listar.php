@@ -20,16 +20,20 @@
                     </div> 
                 </div>
             </div>
-            <table id="tabla_company" class="display responsive nowrap" style="width:100%">
+            <table id="tabla_orden" class="display responsive nowrap" style="width:100%">
                     <thead>
                         <tr>
-                          <th>#</th>
-                          <th>Compañia</th>
-                          <th>NIT</th>
-                          <th>Editar</th>
+                          <th>Orden</th>
+                          <th>Placa</th>
+                          <th>N. Interno</th>
+                          <th>Registradora</th>
+                          <th>Operario</th>
+                          <th>Creacion</th>
+                          <th>Observacion</th>
+                          <th>Acciones</th>
                         </tr>
                     </thead>
-                    <tbody id="Listadocompanias">
+                    <tbody id="ListadoOrden">
                     </tbody>
             </table>
             </div>
@@ -1436,4 +1440,5 @@
   listar_filtro_aceite();
   listar_filtro_combustible();
   listar_filtro_aire();
+  listar_orden();
 </script>

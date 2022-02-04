@@ -12,48 +12,10 @@ function listar_home(){
         "ajax": {
             "url": "../controlador/home/controlador_home_listar.php",
             "type": "POST"
-        },"columnDefs": [
-            {
-                "targets": [ 0 ],
-                "visible": false
-            },
-            {
-                "targets": [ 1 ],
-                "visible": false
-            },
-            {
-                "targets": [ 2 ],
-                "visible": false
-            },
-            {
-                "targets": [ 3 ],
-                "visible": false
-            },
-            {
-                "targets": [ 4 ],
-                "visible": false
-            },
-            {
-                "targets": [ 5 ],
-                "visible": false
-            },
-            {
-                "targets": [ 6 ],
-                "visible": false
-            }
-        ],
+        },
         "columns": [
-            { "data": "propietario" },
-            { "data": "placa" },
-            { "data": "conductor" },
-            { "data": "email" },
-            { "data": "vLicencia" },
-            { "data": "vMovilizacion" },
-            { "data": "vSoat" },
-            { "data": "id" },
             { "data": "propietario"},
             { "data": "placa" },
-            { "data": "conductor" },
             { "data": "email" },
             { "data": "Vencimiento" },
             { "data": "Fecha" },
@@ -76,7 +38,6 @@ $('#tabla_alerta').on('click','.enviarCorreo',function(){
     }
 
     var propietario = datos.propietario;
-    var conductor = datos.conductor;
     var placa = datos.placa;
     var email = datos.email;
     var Vencimiento = datos.Vencimiento;
@@ -98,7 +59,6 @@ $('#tabla_alerta').on('click','.enviarCorreo',function(){
                 "type": "POST",
                 data:{
                 Propietario : propietario,
-                Conductor    : conductor,
                 Vencimiento : Vencimiento,
                 Placa       : placa,
                 Email       : email,

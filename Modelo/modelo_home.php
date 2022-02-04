@@ -22,112 +22,154 @@ session_start();
             $Rol = $_SESSION['ROL'];
             $idUsuario = $_SESSION['S_ID'];
 
-            if ($Rol == 2) {
-                $wr = "and pro.idUsuario = $idUsuario";
-            }else if ($Rol == 1) {
-                $com = "";
-                $wr = "";
-            }else{
-                $wr = "";
-                $com = "AND c.id = $idCompany ";
-            }
-            $sql  = "DECLARE @Fecha DATE = DATEADD( DAY, 15, CONVERT ( DATE, GETDATE( ), 1 ) ), @fechaActual DATE = GETDATE( ) 
-            SELECT
+          
+            $sql  = "DECLARE @Fecha DATE = DATEADD( DAY, 15, CONVERT ( DATE, GETDATE( ), 1 ) ), @fechaActual DATE = GETDATE( ) SELECT
             * 
             FROM
                 (
                 SELECT
-                    con.id,
-                    ( p.nombre + ' ' + p.apellido ) AS conductor,
                     ( prop.nombre + ' ' + prop.apellido ) AS propietario,
-                    p.cedula,
-                    p.telefono,
-                    p.email,
+                    prop.cedula,
+                    prop.telefono,
+                    prop.email,
                     v.placa,
-                    CONVERT(varchar,con.vLicencia) as vLicencia,
-                    CONVERT(varchar,v.vSoat) as vSoat,
-                    CONVERT(varchar,v.vMovilizacion) as vMovilizacion,
+                    CONVERT ( VARCHAR, s.motorProximoCambio ) AS Fecha,
                     @Fecha AS FechaActual,
                 CASE
                         
-                        WHEN con.vLicencia BETWEEN @fechaActual 
+                        WHEN s.motorProximoCambio BETWEEN @fechaActual 
                         AND @Fecha THEN
-                            'Licencia' 
+                            'Aceite Motor' 
                             END AS Vencimiento 
                     FROM
-                        conductor AS con
-                        INNER JOIN persona AS p ON ( con.idPersona = p.id )
-                        INNER JOIN vehiculo AS v ON ( con.idVehiculo = v.id )
-                        INNER JOIN company AS c ON ( c.id = con.idCompany )
-                        INNER JOIN propietario AS pro ON ( pro.id = v.idPropietario )
-                        INNER JOIN persona AS prop ON ( pro.idPersona = prop.id ) 
-                    WHERE
-                        pro.estatus = 1 
-                        $com
-                        $wr
-                    UNION
+                        ordenServicio AS os
+                        LEFT JOIN vehiculo AS v ON ( os.idVehiculo = v.id )
+                        LEFT JOIN propietario AS pro ON ( pro.id = v.idPropietario )
+                        LEFT JOIN persona AS prop ON ( pro.idPersona = prop.id )
+                        INNER JOIN servicio AS s ON ( os.idServicio = s.id ) UNION
                     SELECT
-                        con.id,
-                        ( p.nombre + ' ' + p.apellido ) AS conductor,
                         ( prop.nombre + ' ' + prop.apellido ) AS propietario,
-                        p.cedula,
-                        p.telefono,
-                        p.email,
+                        prop.cedula,
+                        prop.telefono,
+                        prop.email,
                         v.placa,
-                        CONVERT(varchar,con.vLicencia) as vLicencia,
-                        CONVERT(varchar,v.vSoat) as vSoat,
-                        CONVERT(varchar,v.vMovilizacion) as vMovilizacion,
+                        CONVERT ( VARCHAR, s.cajaProximoCambio ) AS Fecha,
                         @Fecha AS FechaActual,
                     CASE
                             
-                            WHEN v.vMovilizacion BETWEEN @fechaActual 
+                            WHEN s.cajaProximoCambio BETWEEN @fechaActual 
                             AND @Fecha THEN
-                                'Movilizacion' 
+                                'Aceite Caja' 
                                 END AS Vencimiento 
                         FROM
-                            conductor AS con
-                            INNER JOIN persona AS p ON ( con.idPersona = p.id )
-                            INNER JOIN vehiculo AS v ON ( con.idVehiculo = v.id )
-                            INNER JOIN company AS c ON ( c.id = con.idCompany )
-                            INNER JOIN propietario AS pro ON ( pro.id = v.idPropietario )
-                            INNER JOIN persona AS prop ON ( pro.idPersona = prop.id ) 
-                        WHERE
-                            pro.estatus = 1 
-                            $com
-                            $wr
-                        UNION
+                            ordenServicio AS os
+                            LEFT JOIN vehiculo AS v ON ( os.idVehiculo = v.id )
+                            LEFT JOIN propietario AS pro ON ( pro.id = v.idPropietario )
+                            LEFT JOIN persona AS prop ON ( pro.idPersona = prop.id )
+                            INNER JOIN servicio AS s ON ( os.idServicio = s.id ) UNION
                         SELECT
-                            con.id,
-                            ( p.nombre + ' ' + p.apellido ) AS conductor,
                             ( prop.nombre + ' ' + prop.apellido ) AS propietario,
-                            p.cedula,
-                            p.telefono,
-                            p.email,
+                            prop.cedula,
+                            prop.telefono,
+                            prop.email,
                             v.placa,
-                            CONVERT(varchar,con.vLicencia) as vLicencia,
-                            CONVERT(varchar,v.vSoat) as vSoat,
-                            CONVERT(varchar,v.vMovilizacion) as vMovilizacion,
+                            CONVERT ( VARCHAR, s.transmicionProximoCambio ) AS Fecha,
                             @Fecha AS FechaActual,
                         CASE
                                 
-                                WHEN v.vSoat BETWEEN @fechaActual 
+                                WHEN s.transmicionProximoCambio BETWEEN @fechaActual 
                                 AND @Fecha THEN
-                                    'Soat' 
+                                    'Aceite Transmision' 
                                     END AS Vencimiento 
                             FROM
-                                conductor AS con
-                                INNER JOIN persona AS p ON ( con.idPersona = p.id )
-                                INNER JOIN vehiculo AS v ON ( con.idVehiculo = v.id )
-                                INNER JOIN company AS c ON ( c.id = con.idCompany )
-                                INNER JOIN propietario AS pro ON ( pro.id = v.idPropietario )
-                                INNER JOIN persona AS prop ON ( pro.idPersona = prop.id ) 
-                            WHERE
-                                pro.estatus = 1 
-                                $com
-                                $wr
-                            ) tablas 
-                    WHERE 
-                Vencimiento IS NOT NULL  
+                                ordenServicio AS os
+                                LEFT JOIN vehiculo AS v ON ( os.idVehiculo = v.id )
+                                LEFT JOIN propietario AS pro ON ( pro.id = v.idPropietario )
+                                LEFT JOIN persona AS prop ON ( pro.idPersona = prop.id )
+                                INNER JOIN servicio AS s ON ( os.idServicio = s.id ) UNION
+                            SELECT
+                                ( prop.nombre + ' ' + prop.apellido ) AS propietario,
+                                prop.cedula,
+                                prop.telefono,
+                                prop.email,
+                                v.placa,
+                                CONVERT ( VARCHAR, s.refrigeranteProximoCambio ) AS Fecha,
+                                @Fecha AS FechaActual,
+                            CASE
+                                    
+                                    WHEN s.refrigeranteProximoCambio BETWEEN @fechaActual 
+                                    AND @Fecha THEN
+                                        'Refrigerante' 
+                                        END AS Vencimiento 
+                                FROM
+                                    ordenServicio AS os
+                                    LEFT JOIN vehiculo AS v ON ( os.idVehiculo = v.id )
+                                    LEFT JOIN propietario AS pro ON ( pro.id = v.idPropietario )
+                                    LEFT JOIN persona AS prop ON ( pro.idPersona = prop.id )
+                                    INNER JOIN servicio AS s ON ( os.idServicio = s.id ) UNION
+                                SELECT
+                                    ( prop.nombre + ' ' + prop.apellido ) AS propietario,
+                                    prop.cedula,
+                                    prop.telefono,
+                                    prop.email,
+                                    v.placa,
+                                    CONVERT ( VARCHAR, s.hidraulicoProximoCambio ) AS Fecha,
+                                    @Fecha AS FechaActual,
+                                CASE
+                                        
+                                        WHEN s.hidraulicoProximoCambio BETWEEN @fechaActual 
+                                        AND @Fecha THEN
+                                            'Aceite Hidraulico' 
+                                            END AS Vencimiento 
+                                    FROM
+                                        ordenServicio AS os
+                                        LEFT JOIN vehiculo AS v ON ( os.idVehiculo = v.id )
+                                        LEFT JOIN propietario AS pro ON ( pro.id = v.idPropietario )
+                                        LEFT JOIN persona AS prop ON ( pro.idPersona = prop.id )
+                                        INNER JOIN servicio AS s ON ( os.idServicio = s.id ) UNION
+                                    SELECT
+                                        ( prop.nombre + ' ' + prop.apellido ) AS propietario,
+                                        prop.cedula,
+                                        prop.telefono,
+                                        prop.email,
+                                        v.placa,
+                                        CONVERT ( VARCHAR, s.proximoCambio ) AS Fecha,
+                                        @Fecha AS FechaActual,
+                                    CASE
+                                            
+                                            WHEN s.proximoCambio BETWEEN @fechaActual 
+                                            AND @Fecha THEN
+                                                'Bateria' 
+                                                END AS Vencimiento 
+                                        FROM
+                                            ordenServicio AS os
+                                            LEFT JOIN vehiculo AS v ON ( os.idVehiculo = v.id )
+                                            LEFT JOIN propietario AS pro ON ( pro.id = v.idPropietario )
+                                            LEFT JOIN persona AS prop ON ( pro.idPersona = prop.id )
+                                            INNER JOIN servicio AS s ON ( os.idServicio = s.id ) UNION
+                                        SELECT
+                                            ( prop.nombre + ' ' + prop.apellido ) AS propietario,
+                                            prop.cedula,
+                                            prop.telefono,
+                                            prop.email,
+                                            v.placa,
+                                            CONVERT ( VARCHAR, os.vExtintor ) AS Fecha,
+                                            @Fecha AS FechaActual,
+                                        CASE
+                                                
+                                                WHEN os.vExtintor BETWEEN @fechaActual 
+                                                AND @Fecha THEN
+                                                    'Extintor' 
+                                                    END AS Vencimiento 
+                                            FROM
+                                                ordenServicio AS os
+                                                LEFT JOIN vehiculo AS v ON ( os.idVehiculo = v.id )
+                                                LEFT JOIN propietario AS pro ON ( pro.id = v.idPropietario )
+                                                LEFT JOIN persona AS prop ON ( pro.idPersona = prop.id )
+                                                INNER JOIN servicio AS s ON ( os.idServicio = s.id ) 
+                                            ) tablas 
+                                    WHERE
+                Vencimiento IS NOT NULL
             ";
             $resp = sqlsrv_query($conn, $sql);
             if( $resp === false) {
@@ -139,18 +181,8 @@ session_start();
             while($row = sqlsrv_fetch_array( $resp, SQLSRV_FETCH_ASSOC))
             {
                 $data['data'][$i] = $row;
-                $Vencimiento = $data['data'][$i]['Vencimiento'];
-                $Soat = $data['data'][$i]['vSoat'];
-                $Movilizacion = $data['data'][$i]['vMovilizacion'];
-                $Licencia = $data['data'][$i]['vLicencia'];
 
-                if($Vencimiento == 'Licencia'){
-                    $data['data'][$i]['Fecha'] = $Licencia;
-                }else if($Vencimiento == 'Movilizacion'){
-                    $data['data'][$i]['Fecha'] = $Movilizacion;
-                }elseif ($Vencimiento == 'Soat') {
-                    $data['data'][$i]['Fecha'] = $Soat;
-                }
+             
                 $i++;
             }
 
@@ -166,15 +198,14 @@ session_start();
            
         }
 
-        function enviarVencimiento($Propietario,$Conductor,$Placa,$Vencimiento,$Fecha,$Email){
+        function enviarVencimiento($Propietario,$Placa,$Vencimiento,$Fecha,$Email){
             
             //echo $Email;
             try {
             $cuerpoMail = utf8_decode("
-            <b><h4><center>ALCALDÍA DE IBAGUÉ</center></h4><b>
-            <center><img width='150' height='150' src='https://www.visualsatco.com/visualsat.sutc/Vista/imagenes/logo-alcaldia.png'>
-            <img width='130' height='150' src='https://www.visualsatco.com/visualsat.sutc/Vista/imagenes/musical.png'></center>
-            <b><h4><center>Hola $Conductor, te saluda el SUTC, SISTEMA UNICO DE TARJETONES DE COLOMBIA</center></h4><b>
+            <b><h4><center>Inverlima</center></h4><b>
+            <center><img width='450' height='150' src='https://www.visualsaturbano.com/inverlima/Vista/imagenes/logo_administracion.png'></center>
+            <b><h4><center>Hola $Propietario, Inverlima te informa:</center></h4><b>
             <b><h4><center>Le indicamos que su vehículo de placa $Placa, esta próximo a su vencimiento :</center></h4><b>
             <b><h4><center>$Vencimiento  $Fecha</center></h4><b>
             <h4><center>Por favor, debe estar al día</center></h4>
@@ -189,9 +220,9 @@ session_start();
             $this->mail->Password = "123456789-a";									
             $this->mail->setFrom( 'pruebahost19@gmail.com'  );
             $this->mail->addAddress ( $Email );									
-            $this->mail->Subject='SUTC';
+            $this->mail->Subject='INVERLIMA';
             $this->mail->From ="pruebahost19@gmail.com";
-            $this->mail->FromName = "SUTC"; 
+            $this->mail->FromName = "INVERLIMA"; 
             $this->mail->MsgHTML($cuerpoMail);
             $this->mail->IsHTML(true);
             $this->mail->Send();

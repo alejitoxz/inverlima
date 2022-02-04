@@ -27,7 +27,7 @@ function listar_placa(){
         if(data.length>0){
             cadena+="<option value='0'>Seleccionar</option>"; 
             for(var i=0; i < data.length; i++){
-                cadena+="<option value ='"+data[i]['id']+"'>"+data[i]['placa']+" - "+data[i]['cod_interno']+"</option>";
+                cadena+="<option value ='"+data[i]['id']+"'>"+data[i]['placa']+"</option>";
             }
             $("#sel_placa_vehiculo").html(cadena);
             $("#sel_placa_vehiculo_edit").html(cadena);
@@ -36,7 +36,6 @@ function listar_placa(){
         }
     })
 }
-
 function listar_operario(){
     $.ajax({
         "url": "../controlador/ordenServicio/controlador_operario_listar.php",
@@ -52,24 +51,6 @@ function listar_operario(){
             }
             $("#sel_operario").html(cadena);
             $("#sel_placa_vehiculo_edit").html(cadena);
-        }else{
-            cadena+="<option value =''>No se encontraron registros</option>"; 
-        }
-    })
-}
-
-function odometro(id){
-    $.ajax({
-        "url": "../controlador/vehiculo/controlador_odometro.php",
-        "type": "POST",
-        "data": {id}
-    }).done(function(resp){
-        var data = JSON.parse(resp);
-        
-        var cadena="";
-        if(data.length>0){            
-            $("#txt_kmGps").val(data[0]['Odometer']);
-            $("#txt_kmGps_edit").val(data[0]['Odometer']);
         }else{
             cadena+="<option value =''>No se encontraron registros</option>"; 
         }
@@ -366,10 +347,29 @@ function registrar_orden_Servicio(){
     var balanceo5 = $("#sel_bal5").val();
     var balanceo6 = $("#sel_bal6").val();
     var oBalanceo = $("#txt_oBalanceo").val();
-    var alineacion1 = $("#sel_profundidad1").val();
-    var alineacion2 = $("#sel_operario").val();
-    var bateria = $("#sel_bateria").val();
-    var tipoBateria = $("#sel_tipoBateria").val();
+    var alineacion1 = $("#sel_alineacion1").val();
+    var alineacion2 = $("#sel_alineacion2").val();
+    var observacionG3 = $("#txt_obs3").val();
+    var observacionM3 = $("#txt_obsM3").val();
+
+    var fecha = $("#txt_fechaA").val();
+    var pCambioA = $("#txt_pCambioA").val();
+    var kilometraje = $("#txt_kilometraje").val();
+    var cKilometraje = $("#txt_ckilometraje").val();
+    var tipoAceite = $("#sel_tipo_aceite").val();
+    var marca = $("#sel_marca_aceite").val();
+    var cantidad1 = $("#txt_cantidad1").val();
+    var presentacion1 = $("#sel_presentacion1").val();
+    var nivelacion = $("#sel_nivelacion1").val();
+    var cNivelacion = $("#txt_cNivelacion1").val();
+    var fAceite = $("#sel_filtro_aceite").val();
+    var fCombustible = $("#sel_filtro_combustible").val();
+    var fAire = $("#sel_filtro_aire").val();
+    var serial = $("#txt_serial").val();
+    var fVenta = $("#txt_fVenta").val();
+    var marca = $("#sel_marca").val();
+    var serial = $("#txt_serial").val();
+    var fVenta = $("#txt_fVenta").val();
     var marca = $("#sel_marca").val();
     var serial = $("#txt_serial").val();
     var fVenta = $("#txt_fVenta").val();

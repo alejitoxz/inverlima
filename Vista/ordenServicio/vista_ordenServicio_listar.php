@@ -1110,13 +1110,13 @@
                           <div class="col-md-3">
                             <div class="form-group">
                               <label for="">Ultimo cambio</label>
-                              <input type="date" class="form-control" id="txt_pla_edit" placeholder="Ingrese placa"><br>
+                              <input type="date" class="form-control" id="txt_uCambio1" placeholder="Ingrese placa"><br>
                             </div>
                           </div>
                           <div class="col-md-3">
                             <div class="form-group">
                               <label for="">Proximo cambio</label>
-                              <input type="date" class="form-control" id="txt_pla_edit" placeholder="Ingrese placa"><br>
+                              <input type="date" class="form-control" id="txt_pCambio1" placeholder="Ingrese placa"><br>
                             </div>
                           </div>
                         </div>
@@ -1124,13 +1124,13 @@
                           <div class="col-md-3">
                               <div class="form-group">
                                 <label for="">Cantidad x 1/4</label>
-                                <input type="number" class="form-control" id="txt_pla_edit" placeholder="Ingrese placa"><br>
+                                <input type="number" class="form-control" id="txt_cantidad2" placeholder="Ingrese placa"><br>
                               </div>
                             </div>
                             <div class="col-md-3">
                               <div class="form-group">
                                 <label for="">presentacion</label>
-                                <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                                <select class="js-example-basic-single"  name="state" id="sel_presentacion2" style="width:100%; heigth: 40px;">   
                                   <option value="0">Seleccionar</option>
                                   <option value="1">Sellado</option>
                                   <option value="2">Granel</option>
@@ -1140,7 +1140,7 @@
                             <div class="col-md-3">
                               <div class="form-group">
                                 <label for="">nivelacion</label>
-                                <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                                <select class="js-example-basic-single"  name="state" id="sel_nivelacion2" style="width:100%; heigth: 40px;">   
                                   <option value="0">Seleccionar</option>
                                   <option value="1">Si</option>
                                   <option value="2">No</option>
@@ -1150,7 +1150,7 @@
                             <div class="col-md-3">
                               <div class="form-group">
                                 <label for="">cantidad nivelada 1/4</label>
-                                <input type="number" class="form-control" id="txt_pla_edit" placeholder="Ingrese placa"><br>
+                                <input type="number" class="form-control" id="txt_nivelacion2" placeholder="Ingrese placa"><br>
                               </div>
                             </div>
                           </div>
@@ -1173,13 +1173,13 @@
                           <div class="col-md-3">
                             <div class="form-group">
                               <label for="">Ultimo cambio</label>
-                              <input type="date" class="form-control" id="txt_pla_edit" placeholder="Ingrese placa"><br>
+                              <input type="date" class="form-control" id="txt_uCambio2" placeholder="Ingrese placa"><br>
                             </div>
                           </div>
                           <div class="col-md-3">
                             <div class="form-group">
                               <label for="">Proximo cambio</label>
-                              <input type="date" class="form-control" id="txt_pla_edit" placeholder="Ingrese placa"><br>
+                              <input type="date" class="form-control" id="txt_pCambio2" placeholder="Ingrese placa"><br>
                             </div>
                           </div>
                         </div>
@@ -1187,13 +1187,13 @@
                           <div class="col-md-3">
                               <div class="form-group">
                                 <label for="">Cantidad x 1/4</label>
-                                <input type="number" class="form-control" id="txt_pla_edit" placeholder="Ingrese placa"><br>
+                                <input type="number" class="form-control" id="txt_cantidad2" placeholder="Ingrese placa"><br>
                               </div>
                             </div>
                             <div class="col-md-3">
                               <div class="form-group">
                                 <label for="">presentacion</label>
-                                <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                                <select class="js-example-basic-single"  name="state" id="sel_presentacion3" style="width:100%; heigth: 40px;">   
                                   <option value="0">Seleccionar</option>
                                   <option value="1">Sellado</option>
                                   <option value="2">Granel</option>
@@ -1203,7 +1203,7 @@
                             <div class="col-md-3">
                               <div class="form-group">
                                 <label for="">nivelacion</label>
-                                <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                                <select class="js-example-basic-single"  name="state" id="sel_nivelacion3" style="width:100%; heigth: 40px;">   
                                   <option value="0">Seleccionar</option>
                                   <option value="1">Si</option>
                                   <option value="2">No</option>
@@ -1213,7 +1213,7 @@
                             <div class="col-md-3">
                               <div class="form-group">
                                 <label for="">cantidad nivelada 1/4</label>
-                                <input type="number" class="form-control" id="txt_pla_edit" placeholder="Ingrese placa"><br>
+                                <input type="number" class="form-control" id="txt_nivelacion3" placeholder="Ingrese placa"><br>
                               </div>
                             </div>
                           </div>
@@ -1236,13 +1236,13 @@
                           <div class="col-md-3">
                             <div class="form-group">
                               <label for="">Ultimo cambio</label>
-                              <input type="date" class="form-control" id="txt_pla_edit" placeholder="Ingrese placa"><br>
+                              <input type="date" class="form-control" id="txt_uCambio3" placeholder="Ingrese placa"><br>
                             </div>
                           </div>
                           <div class="col-md-3">
                             <div class="form-group">
                               <label for="">Proximo cambio</label>
-                              <input type="date" class="form-control" id="txt_pla_edit" placeholder="Ingrese placa"><br>
+                              <input type="date" class="form-control" id="txt_pCambio3" placeholder="Ingrese placa"><br>
                             </div>
                           </div>
                         </div>
@@ -1265,13 +1265,13 @@
                           <div class="col-md-3">
                             <div class="form-group">
                               <label for="">Ultimo cambio</label>
-                              <input type="date" class="form-control" id="txt_pla_edit" placeholder="Ingrese placa"><br>
+                              <input type="date" class="form-control" id="txt_uCambio4" placeholder="Ingrese placa"><br>
                             </div>
                           </div>
                           <div class="col-md-3">
                             <div class="form-group">
                               <label for="">Proximo cambio</label>
-                              <input type="date" class="form-control" id="txt_pla_edit" placeholder="Ingrese placa"><br>
+                              <input type="date" class="form-control" id="txt_pCambio4" placeholder="Ingrese placa"><br>
                             </div>
                           </div>
                         </div>
@@ -1280,7 +1280,7 @@
                         <div class="col-md-4">
                             <div class="form-group">
                               <label for="">Liquido de frenos</label>
-                              <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                              <select class="js-example-basic-single"  name="state" id="sel_lFreno" style="width:100%; heigth: 40px;">   
                                 <option value="0">Seleccionar</option>
                                 <option value="1">Si</option>
                                 <option value="2">No</option>
@@ -1290,7 +1290,7 @@
                           <div class="col-md-4">
                             <div class="form-group">
                               <label for="">liquido de parabrisas</label>
-                              <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                              <select class="js-example-basic-single"  name="state" id="sel_lParabrisa" style="width:100%; heigth: 40px;">   
                                 <option value="0">Seleccionar</option>
                                 <option value="1">Si</option>
                                 <option value="2">No</option>
@@ -1300,7 +1300,7 @@
                           <div class="col-md-4">
                               <div class="form-group">
                                 <label for="">Refrigerantes</label>
-                                <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                                <select class="js-example-basic-single"  name="state" id="sel_refrigerante" style="width:100%; heigth: 40px;">   
                                   <option value="0">Seleccionar</option>
                                   <option value="1">Si</option>
                                   <option value="2">No</option>
@@ -1312,7 +1312,7 @@
                             <div class="col-md-3">
                               <div class="form-group">
                                 <label for="">Hidraulico</label>
-                                <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                                <select class="js-example-basic-single"  name="state" id="sel_hidraulico" style="width:100%; heigth: 40px;">   
                                   <option value="0">Seleccionar</option>
                                   <option value="1">Si</option>
                                   <option value="2">No</option>
@@ -1322,7 +1322,7 @@
                             <div class="col-md-3">
                               <div class="form-group">
                                 <label for="">Motor</label>
-                                <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                                <select class="js-example-basic-single"  name="state" id="sel_lMotor" style="width:100%; heigth: 40px;">   
                                   <option value="0">Seleccionar</option>
                                   <option value="1">Si</option>
                                   <option value="2">No</option>
@@ -1332,7 +1332,7 @@
                             <div class="col-md-3">
                               <div class="form-group">
                                 <label for="">Caja</label>
-                                <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                                <select class="js-example-basic-single"  name="state" id="sel_lCaja" style="width:100%; heigth: 40px;">   
                                   <option value="0">Seleccionar</option>
                                   <option value="1">Si</option>
                                   <option value="2">No</option>
@@ -1342,7 +1342,7 @@
                             <div class="col-md-3">
                               <div class="form-group">
                                 <label for="">Transmision</label>
-                                <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                                <select class="js-example-basic-single"  name="state" id="sel_lTransmision" style="width:100%; heigth: 40px;">   
                                   <option value="0">Seleccionar</option>
                                   <option value="1">Si</option>
                                   <option value="2">No</option>
@@ -1355,7 +1355,7 @@
                           <div class="col-md-3">
                               <div class="form-group">
                                 <label for="">Limpieza de frenos</label>
-                                <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                                <select class="js-example-basic-single"  name="state" id="sel_lFrenos1" style="width:100%; heigth: 40px;">   
                                   <option value="0">Seleccionar</option>
                                   <option value="1">Si</option>
                                   <option value="2">No</option>
@@ -1365,7 +1365,7 @@
                             <div class="col-md-3">
                               <div class="form-group">
                                 <label for="">Engrase</label>
-                                <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                                <select class="js-example-basic-single"  name="state" id="sel_engrase" style="width:100%; heigth: 40px;">   
                                   <option value="0">Seleccionar</option>
                                   <option value="1">Si</option>
                                   <option value="2">No</option>
@@ -1375,7 +1375,7 @@
                             <div class="col-md-3">
                               <div class="form-group">
                                 <label for="">Sopleteo Radiador</label>
-                                <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                                <select class="js-example-basic-single"  name="state" id="sel_sRadiador" style="width:100%; heigth: 40px;">   
                                   <option value="0">Seleccionar</option>
                                   <option value="1">Si</option>
                                   <option value="2">No</option>
@@ -1385,7 +1385,7 @@
                             <div class="col-md-3">
                               <div class="form-group">
                                 <label for="">Sopleteo filtro de aire</label>
-                                <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                                <select class="js-example-basic-single"  name="state" id="sel_sFiltroAire" style="width:100%; heigth: 40px;">   
                                   <option value="0">Seleccionar</option>
                                   <option value="1">Si</option>
                                   <option value="2">No</option>
@@ -1395,7 +1395,7 @@
                             <div class="col-md-12">
                           <div class="form-group">
                             <label for="">Observaciones</label>
-                            <textarea class="form-control" id="txt_mar_edit" placeholder="Ingrese la marca"></textarea><br>
+                            <textarea class="form-control" id="txt_observacionesF" placeholder="Ingrese la marca"></textarea><br>
                           </div>
                         </div>
                           </div>

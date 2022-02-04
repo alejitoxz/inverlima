@@ -375,7 +375,7 @@ function registrar_orden_Servicio(){
     var kilometraje = $("#txt_kilometraje").val();
     var cKilometraje = $("#txt_ckilometraje").val();
     var tipoAceite = $("#sel_tipo_aceite").val();
-    var marca = $("#sel_marca_aceite").val();
+    var marca10 = $("#sel_marca_aceite").val();
     var cantidad1 = $("#txt_cantidad1").val();
     var presentacion1 = $("#sel_presentacion1").val();
     var nivelacion = $("#sel_nivelacion1").val();
@@ -383,39 +383,206 @@ function registrar_orden_Servicio(){
     var fAceite = $("#sel_filtro_aceite").val();
     var fCombustible = $("#sel_filtro_combustible").val();
     var fAire = $("#sel_filtro_aire").val();
-    var serial = $("#txt_serial").val();
-    var fVenta = $("#txt_fVenta").val();
-    var marca = $("#sel_marca").val();
-    var serial = $("#txt_serial").val();
-    var fVenta = $("#txt_fVenta").val();
-    var marca = $("#sel_marca").val();
-    var serial = $("#txt_serial").val();
-    var fVenta = $("#txt_fVenta").val();
+    var tipoAceite1 = $("#sel_tipo_aceite1").val();
+    var marca1 = $("#sel_marca_aceite1").val();
+    var uCambio = $("#txt_uCambio1").val();
+    var pCambio10 = $("#txt_pCambio1").val();
+    var cantidad2 = $("#txt_cantidad2").val();
+    var presentacion2 = $("#sel_presentacion2").val();
+    var nivelacion2 = $("#sel_nivelacion2").val();
+    var cNivelacion2 = $("#txt_nivelacion2").val();
+
+    var tipoAceite3 = $("#sel_tipo_aceite2").val();
+    var marca3 = $("#sel_marca_aceite2").val();
+    var uCambio3 = $("#txt_uCambio2").val();
+    var pCambio3 = $("#txt_pCambio2").val();
+    var cantidad3 = $("#txt_cantidad2").val();
+    var presentacion3 = $("#sel_presentacion3").val();
+    var nivelacion3 = $("#sel_nivelacion3").val();
+    var cNivelacion3 = $("#txt_nivelacion3").val();
+
+    var tipoAceite4 = $("#sel_tipo_aceite3").val();
+    var marca4 = $("#sel_marca_aceite3").val();
+    var uCambio4 = $("#txt_uCambio3").val();
+    var pCambio4 = $("#txt_pCambio3").val();
+
+    var tipoAceite5 = $("#sel_tipo_aceite4").val();
+    var marca5 = $("#sel_marca_aceite4").val();
+    var uCambio5 = $("#txt_uCambio4").val();
+    var pCambio5 = $("#txt_pCambio4").val();
+
+    var lFreno = $("#sel_lFreno").val();
+    var lParabrisa = $("#sel_lParabrisa").val();
+    var refrigerante = $("#sel_refrigerante").val();
+    var hidraulico = $("#sel_hidraulico").val();
+    var lMotor = $("#sel_lMotor").val();
+    var lCaja = $("#sel_lCaja").val();
+    var lTransmision = $("#sel_lTransmision").val();
+
+    var lFrenos1 = $("#sel_lFrenos1").val();
+    var engrase = $("#sel_engrase").val();
+    var sRadiador = $("#sel_sRadiador").val();
+    var sFiltroAire = $("#sel_sFiltroAire").val();
+
+    
+    var observacionesF = $("#txt_observacionesF").val();
 
     $.ajax({
-        "url": "../controlador/conductor/controlador_conductor_registro.php",
+        "url": "../controlador/ordenServicio/controlador_ordenServicio_registro.php",
         "type": "POST",
         data:{
         id:id,
-        nombre:nombre,
-        apellido:apellido,
-        cedula:cedula,
-        telefono:telefono,
-        email:email,
-        direccion:direccion,
-        eps:eps,
-        vSeguridad:vSeguridad,
-        arl:arl,
-        rh:rh,
-        fondoPension:fondoPension,
-        vLicencia:vLicencia,
-        placa:placa
+        placa:placa,
+        revBimCotrautol:revBimCotrautol,
+        rRegistradora:rRegistradora,
+        kmGps:kmGps,
+        vExtintor:vExtintor,
+        oReg:oReg,
+        observacion:observacion,
+        operario:operario,
+        bateria:bateria,
+        tipoBateria:tipoBateria,
+        marca:marca,
+        serial:serial,
+        fVenta:fVenta,
+        fIntalacion:fIntalacion,
+        tUso:tUso,
+        pCambio:pCambio,
+        pMantenimiento:pMantenimiento,
+        oMejora:oMejora,
+        llantaSerial1:llantaSerial1,
+        profundidad1:profundidad1,
+        opmarca1:opmarca1,
+        tipoMarca1:tipoMarca1,
+        estado1:estado1,
+        fInstalacion1:fInstalacion1,
+
+        fReencauche1:fReencauche1,
+        fCambio1:fCambio1,
+        fRotacion1:fRotacion1,
+        llantaSerial2:llantaSerial2,
+        profundidad2:profundidad2,
+        opmarca2:opmarca2,
+        tipoMarca2:tipoMarca2,
+        estado2:estado2,
+        fInstalacion2:fInstalacion2,
+        fReencauche2:fReencauche2,
+        fCambio2:fCambio2,
+        fRotacion2:fRotacion2,
+
+        llantaSerial3:llantaSerial3,
+        profundidad3:profundidad3,
+        opmarca3:opmarca3,
+        tipoMarca3:tipoMarca3,
+        estado3:estado3,
+        fInstalacion3:fInstalacion3,
+        fReencauche3:fReencauche3,
+        fCambio3:fCambio3,
+        fRotacion3:fRotacion3,
+        llantaSerial4:llantaSerial4,
+        profundidad4:profundidad4,
+        opmarca4:opmarca4,
+        tipoMarca4:tipoMarca4,
+        estado4:estado4,
+        fInstalacion4:fInstalacion4,
+        fReencauche4:fReencauche4,
+        fCambio4:fCambio4,
+        fRotacion4:fRotacion4,
+        llantaSerial5:llantaSerial5,
+        profundidad5:profundidad5,
+        opmarca5:opmarca5,
+        tipoMarca5:tipoMarca5,
+        estado5:estado5,
+        fInstalacion5:fInstalacion5,
+        fReencauche5:fReencauche5,
+        fCambio5:fCambio5,
+        fRotacion5:fRotacion5,
+        llantaSerial6:llantaSerial6,
+        profundidad6:profundidad6,
+        opmarca6:opmarca6,
+        tipoMarca6:tipoMarca6,
+        estado6:estado6,
+        fInstalacion6:fInstalacion6,
+        fReencauche6:fReencauche6,
+        fCambio6:fCambio6,
+        fRotacion6:fRotacion6,
+
+        calibracion1:calibracion1,
+        calibracion2:calibracion2,
+        calibracion3:calibracion3,
+        calibracion4:calibracion4,
+        calibracion5:calibracion5,
+        calibracion6:calibracion6,
+        oCalibracion:oCalibracion,
+        balanceo1:balanceo1,
+        balanceo2:balanceo2,
+        balanceo3:balanceo3,
+        balanceo4:balanceo4,
+        balanceo5:balanceo5,
+        balanceo6:balanceo6,
+        oBalanceo:oBalanceo,
+        alineacion1:alineacion1,
+        alineacion2:alineacion2,
+        observacionG3:observacionG3,
+        observacionM3:observacionM3,
+
+        fecha:fecha,
+        pCambioA:pCambioA,
+        kilometraje:kilometraje,
+        cKilometraje:cKilometraje,
+        tipoAceite:tipoAceite,
+        marca10:marca10,
+        cantidad1:cantidad1,
+        presentacion1:presentacion1,
+        nivelacion:nivelacion,
+        cNivelacion:cNivelacion,
+        fAceite:fAceite,
+        fCombustible:fCombustible,
+        fAire:fAire,
+        tipoAceite1:tipoAceite1,
+        marca1:marca1,
+        uCambio:uCambio,
+        pCambio10:pCambio10,
+        cantidad2:cantidad2,
+        presentacion2:presentacion2,
+        nivelacion2:nivelacion2,
+        cNivelacion2:cNivelacion2,
+
+        tipoAceite3:tipoAceite3,
+        marca3:marca3,
+        uCambio3:uCambio3,
+        pCambio3:pCambio3,
+        cantidad3:cantidad3,
+        presentacion3:presentacion3,
+        nivelacion3:nivelacion3,
+        cNivelacion3:cNivelacion3,
+
+        tipoAceite4:tipoAceite4,
+        marca4:marca4,
+        uCambio4:uCambio4,
+        pCambio4:pCambio4,
+        tipoAceite5:tipoAceite5,
+        marca5:marca5,
+        uCambio5:uCambio5,
+        pCambio5:pCambio5,
+
+        lFreno:lFreno,
+        lParabrisa:lParabrisa,
+        refrigerante:refrigerante,
+        hidraulico:hidraulico,
+        lMotor:lMotor,
+        lCaja:lCaja,
+        lTransmision:lTransmision,
+        lFrenos1:lFrenos1,
+        engrase:engrase,
+        sRadiador:sRadiador,
+        sFiltroAire:sFiltroAire
         }
     }).done(function(resp){
         console.log(resp);
         if(resp > 0){
             if(resp==1){
-            $("#modal_registro_conductor").modal('hide');
+            $("#modal_registro_ordenServicio").modal('hide');
             Swal.fire("Mensaje De Confirmacion",'Registro realizado', "success").then((value)=>{
                 table.ajax.reload();
                 limpiarRegistro();

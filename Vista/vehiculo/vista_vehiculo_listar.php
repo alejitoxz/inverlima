@@ -20,21 +20,17 @@
                     </div> 
                 </div>
             </div>
-            <table id="tabla_vehiculo" class="display responsive nowrap" style="width:100%">
+            <table id="tabla_vehiculos" class="display responsive" style="width:100%">
                     <thead>
                         <tr>
                           <th style="display:none"></th>
                           <th>#</th>
                           <th>Placa</th>
+                          <th>Cod Interno</th>
                           <th>Marca</th>
                           <th>Modelo</th>
-                          <th>Ent. Responsable</th>
-                          <th>nombre</th>
-                          <th>apellido</th>
-                          <th>Numero Interno</th>
-                          <th>Vencimiento Movilizacion</th>
-                          <th>Vencimiento Soat</th>
-                          <th>N. Movilizacion</th>
+                          <th>Empresa</th>
+                          <th>Dueño</th>
                           <th align="right" >Acciones</th>
                         </tr>
                     </thead>
@@ -51,7 +47,7 @@
 <form autocomplete="false" onsubmit="return false">
 
 <div class="modal fade" id="modal_registro_vehiculo" role="dialog">
-    <div class="modal-dialog modal-lg">
+    <div class="modal-dialog modal-xl">
       <div class="modal-content">
         <div class="modal-header modal-primary">
         <h4 class="modal-title"><b>Registro de vehiculo</b></h4>
@@ -62,62 +58,118 @@
         <form class="form">
         
         <div class="row">
-          <div class="col-md-4">
-            <div class="form-group">
-              <label for="">Placa</label>
-              <input type="text" class="form-control" id="txt_pla" placeholder="Ingrese placa"><br>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="form-group">
-              <label for="">Marca</label>
-              <input type="text" class="form-control" id="txt_mar" placeholder="Ingrese la marca"><br>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="form-group">
-              <label for="">Modelo</label>
-              <input type="text" class="form-control" id="txt_mod" placeholder="Ingrese el modelo"><br>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4">
+          <div class="col-md-3">
             <div class="form-group">
               <label for="">Numero interno</label>
-              <input type="text" class="form-control" id="txt_int" placeholder="Ingrese el numero interno"><br>
+              <input type="text" class="form-control" id="txt_interno" placeholder="Ingrese el numero interno"><br>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-3">
             <div class="form-group">
-              <label for="">Vencimiento movilizacion</label>
-              <input type="date" class="form-control" id="txt_mov" ><br>
+              <label for="">Placa</label>
+              <input type="text" class="form-control" id="txt_placa" placeholder="Ingrese placa"><br>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-3">
             <div class="form-group">
-              <label for="">Vencimiento soat</label>
-              <input type="date" class="form-control" id="txt_soa" ><br>
+              <label for="">Marca</label>
+              <input type="text" class="form-control" id="txt_marca" placeholder="Ingrese la marca"><br>
             </div>
           </div>
-        </div>
-        <div class="row">
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="">Modelo</label>
+              <input type="text" class="form-control" id="txt_modelo" placeholder="Ingrese el modelo"><br>
+            </div>
+          </div>
           
-          <div class="col-md-4">
+        </div>
+
+        <div class="row">
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="">Chasis</label>
+              <input type="text" class="form-control" id="txt_chasis" ><br>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="">Num Pasajeros</label>
+              <input type="text" class="form-control" id="txt_pasajeros" ><br>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="">Empresa</label>
+              <select class="js-example-basic-single"  name="state" id="sel_empresa" style="width:100%; heigth: 40px;">
+              </select><br><br>
+            </div>
+          </div>
+          <div class="col-md-3">
             <div class="form-group">
               <label for="">Dueño</label>
               <select class="js-example-basic-single"  name="state" id="sel_pro_vehiculo" style="width:100%; heigth: 40px;">   
               </select><br><br>
             </div>
           </div>
-          <div class="col-md-4">
+        </div>
+
+        <div class="row">
+        <div class="col-md-3">
             <div class="form-group">
-              <label for="">Numero Movilizacion</label>
-              <input type="text" class="form-control" id="txt_nmov" placeholder="Ingrese el numero interno"><br>
+              <label for="">Soat</label>
+              <input type="text" class="form-control" id="txt_soat" ><br>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="">Tecno Mec.</label>
+              <input type="text" class="form-control" id="txt_tecnomecanica" ><br>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="">Póliza Contractual</label>
+              <input type="text" class="form-control" id="txt_poliza_cont" ><br>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="">Póliza Extracontractual</label>
+              <input type="text" class="form-control" id="txt_poliza_ext" ><br>
             </div>
           </div>
         </div>
+
+        <div class="row">
+        <div class="col-md-3">
+            <div class="form-group">
+              <label for="">Vencimiento Soat</label>
+              <input type="date" class="form-control" id="venc_soat" ><br>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="">Vencimiento Tecnomecánica</label>
+              <input type="date" class="form-control" id="venc_tecno" ><br>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="">Vencimiento Póliza Cont.</label>
+              <input type="date" class="form-control" id="venc_poliza_cont" ><br>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="">Vencimiento Póliza Extra.</label>
+              <input type="date" class="form-control" id="venc_poliza_ext" ><br>
+            </div>
+          </div>
         </div>
+
+        </div>
+
         <div class="modal-footer">
           <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-close"> </i> Cancelar</button>
           <button type="button" class="btn btn-primary" onclick="registrar_vehiculo()"><i class="fa fa-check"> </i> Guardar</button>
@@ -129,8 +181,8 @@
 
 
   <!-- MODAL PARA EDITAR REGISTRO -->
-  <div class="modal fade" id="modal_editar_V" role="dialog">
-    <div class="modal-dialog modal-lg">
+  <div class="modal fade" id="modal_editar_v" role="dialog">
+    <div class="modal-dialog modal-xl">
       <div class="modal-content">
         <div class="modal-header modal-primary">
         <h4 class="modal-title"><b>Edicion de vehiculo</b></h4>
@@ -139,64 +191,118 @@
         <div class="modal-body">
           <!-- FORMULARIO REGISTRO DE vehiculo, CAMPOS -->
         <form class="form">
-        <input type="hidden" id="id">
-        <input type="hidden" id="idPropietario">
+        <input type="hidden" id="idVehiculo">
         <div class="row">
-          <div class="col-md-4">
-            <div class="form-group">
-              <label for="">Placa</label>
-              <input type="text" class="form-control" id="txt_pla_edit" placeholder="Ingrese placa"><br>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="form-group">
-              <label for="">Marca</label>
-              <input type="text" class="form-control" id="txt_mar_edit" placeholder="Ingrese la marca"><br>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="form-group">
-              <label for="">Modelo</label>
-              <input type="text" class="form-control" id="txt_mod_edit" placeholder="Ingrese el modelo"><br>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4">
+          <div class="col-md-3">
             <div class="form-group">
               <label for="">Numero interno</label>
-              <input type="text" class="form-control" id="txt_int_edit" placeholder="Ingrese el numero interno"><br>
+              <input type="text" class="form-control" id="txt_interno_edit" placeholder="Ingrese el numero interno"><br>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-3">
             <div class="form-group">
-              <label for="">Vencimiento movilizacion</label>
-              <input type="date" class="form-control" id="txt_mov_edit" ><br>
+              <label for="">Placa</label>
+              <input type="text" class="form-control" id="txt_placa_edit" placeholder="Ingrese placa"><br>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-3">
             <div class="form-group">
-              <label for="">Vencimiento soat</label>
-              <input type="date" class="form-control" id="txt_soa_edit" ><br>
+              <label for="">Marca</label>
+              <input type="text" class="form-control" id="txt_marca_edit" placeholder="Ingrese la marca"><br>
             </div>
           </div>
-        </div>
-        <div class="row">
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="">Modelo</label>
+              <input type="text" class="form-control" id="txt_modelo_edit" placeholder="Ingrese el modelo"><br>
+            </div>
+          </div>
           
-          <div class="col-md-4">
+        </div>
+
+        <div class="row">
+          <div class="col-md-3">
             <div class="form-group">
-              <label for="">Propietario</label>
+              <label for="">Chasis</label>
+              <input type="text" class="form-control" id="txt_chasis_edit" ><br>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="">Num Pasajeros</label>
+              <input type="text" class="form-control" id="txt_pasajeros_edit" ><br>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="">Empresa</label>
+              <select class="js-example-basic-single"  name="state" id="sel_empresa_edit" style="width:100%; heigth: 40px;">
+              </select><br><br>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="">Dueño</label>
               <select class="js-example-basic-single"  name="state" id="sel_pro_vehiculo_edit" style="width:100%; heigth: 40px;">   
               </select><br><br>
             </div>
           </div>
-          <div class="col-md-4">
+        </div>
+
+        <div class="row">
+        <div class="col-md-3">
             <div class="form-group">
-              <label for="">Numero Movilizacion</label>
-              <input type="text" class="form-control" id="txt_nmov_edit" placeholder="Ingrese el numero de movilizacion"><br>
+              <label for="">Soat</label>
+              <input type="text" class="form-control" id="txt_soat_edit" ><br>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="">Tecno Mec.</label>
+              <input type="text" class="form-control" id="txt_tecnomecanica_edit" ><br>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="">Póliza Contractual</label>
+              <input type="text" class="form-control" id="txt_poliza_cont_edit" ><br>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="">Póliza Extracontractual</label>
+              <input type="text" class="form-control" id="txt_poliza_ext_edit" ><br>
             </div>
           </div>
         </div>
+
+        <div class="row">
+        <div class="col-md-3">
+            <div class="form-group">
+              <label for="">Vencimiento Soat</label>
+              <input type="date" class="form-control" id="venc_soat_edit" ><br>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="">Vencimiento Tecnomecánica</label>
+              <input type="date" class="form-control" id="venc_tecno_edit" ><br>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="">Vencimiento Póliza Cont.</label>
+              <input type="date" class="form-control" id="venc_poliza_cont_edit" ><br>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="">Vencimiento Póliza Extra.</label>
+              <input type="date" class="form-control" id="venc_poliza_ext_edit" ><br>
+            </div>
+          </div>
+        </div>
+
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-close"><b> </i> Cancelar</button>
@@ -211,6 +317,7 @@
 <script>
   $(document).ready(function(){
     listar_vehiculo();
+    buscar_miscelaneo('Empresa');
     $('.js-example-basic-single').select2();
     listar_pro();
     $("#modal_registro_vehiculo").on('shown.bs.modal',function(){

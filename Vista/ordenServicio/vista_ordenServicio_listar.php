@@ -106,7 +106,7 @@
                       <div class="col-md-4">
                         <div class="form-group">
                           <label for="">Placa</label>
-                          <select class="js-example-basic-single"  name="state" id="sel_placa_vehiculo" style="width:100%; heigth: 40px;" onchange="odometro(this.value);">   
+                          <select class="js-example-basic-single"  name="state" id="sel_placa_vehiculo" style="width:100%; heigth: 40px;">   
                           </select><br><br>
                         </div>
                       </div>
@@ -135,7 +135,7 @@
                         <div class="col-md-4">
                         <div class="form-group">
                             <label for="">Km Gps</label>
-                            <input type="text" class="form-control" id="txt_kmGps" readonly><br>
+                            <input type="text" class="form-control" id="txt_kmGps" placeholder="Ingrese la marca"><br>
                           </div>
                         </div>
                         <div class="col-md-4">
@@ -951,7 +951,7 @@
                       <div class="col-md-2">
                           <div class="form-group">
                             <label for="">Alineacion 1.</label>
-                            <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                            <select class="js-example-basic-single"  name="state" id="sel_alineacion1" style="width:100%; heigth: 40px;">   
                               <option value="0" selected>Seleccionar</option>
                               <option value="1">Si</option>
                               <option value="2">No</option>
@@ -961,7 +961,7 @@
                       <div class="col-md-2">
                           <div class="form-group">
                             <label for="">Alineacion 2.</label>
-                            <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                            <select class="js-example-basic-single"  name="state" id="sel_alineacion2" style="width:100%; heigth: 40px;">   
                               <option value="0" selected>Seleccionar</option>
                               <option value="1">Si</option>
                               <option value="2">No</option>
@@ -971,13 +971,13 @@
                       <div class="col-md-12">
                           <div class="form-group">
                             <label for="">Observaciones</label>
-                            <textarea  class="form-control" id="txt_mar_edit" ></textarea>
+                            <textarea  class="form-control" id="txt_obs3" ></textarea>
                           </div>
                         </div>
                         <div class="col-md-12">
                           <div class="form-group">
                             <label for="">Observaciones de Mejora</label>
-                            <textarea  class="form-control" id="txt_mar_edit" ></textarea>
+                            <textarea  class="form-control" id="txt_obsM3" ></textarea>
                           </div>
                         </div>
                     </div>
@@ -996,19 +996,19 @@
                           <div class="col-md-4">
                             <div class="form-group">
                               <label for="">Fecha</label>
-                              <input type="date" class="form-control" id="txt_pla_edit" placeholder="Ingrese placa"><br>
+                              <input type="date" class="form-control" id="txt_fechaA" placeholder="Ingrese placa"><br>
                             </div>
                           </div>
                           <div class="col-md-4">
                             <div class="form-group">
                               <label for="">Proximo cambio</label>
-                              <input type="date" class="form-control" id="txt_pla_edit" placeholder="Ingrese placa"><br>
+                              <input type="date" class="form-control" id="txt_pCambioA" placeholder="Ingrese placa"><br>
                             </div>
                           </div>
                           <div class="col-md-4">
                             <div class="form-group">
                               <label for="">Kilometraje</label>
-                              <input type="text" class="form-control" id="txt_pla_edit" placeholder="Ingrese placa"><br>
+                              <input type="text" class="form-control" id="txt_kilometraje" placeholder="Ingrese placa"><br>
                             </div>
                           </div>
                         </div>
@@ -1016,7 +1016,7 @@
                           <div class="col-md-4">
                             <div class="form-group">
                               <label for="">Cambio x Kilometraje</label>
-                              <input type="text" class="form-control" id="txt_pla_edit" placeholder="Ingrese placa"><br>
+                              <input type="text" class="form-control" id="txt_ckilometraje" placeholder="Ingrese placa"><br>
                             </div>
                           </div>
                           <div class="col-md-4">
@@ -1038,13 +1038,13 @@
                           <div class="col-md-3">
                             <div class="form-group">
                               <label for="">Cantidad x 1/4</label>
-                              <input type="Number" class="form-control" id="txt_pla_edit" placeholder="Ingrese placa"><br>
+                              <input type="Number" class="form-control" id="txt_cantidad1" placeholder="Ingrese placa"><br>
                             </div>
                           </div>
                           <div class="col-md-3">
                             <div class="form-group">
                               <label for="">presentacion</label>
-                              <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                              <select class="js-example-basic-single"  name="state" id="sel_presentacion1" style="width:100%; heigth: 40px;">   
                                 <option value="0">Seleccionar</option>
                                 <option value="1">Sellado</option>
                                 <option value="2">Granel</option>
@@ -1054,7 +1054,7 @@
                           <div class="col-md-3">
                             <div class="form-group">
                               <label for="">nivelacion</label>
-                              <select class="js-example-basic-single"  name="state" id="" style="width:100%; heigth: 40px;">   
+                              <select class="js-example-basic-single"  name="state" id="sel_nivelacion1" style="width:100%; heigth: 40px;">   
                                 <option value="0">Seleccionar</option>
                                 <option value="1">Si</option>
                                 <option value="2">No</option>
@@ -1064,7 +1064,7 @@
                           <div class="col-md-3">
                             <div class="form-group">
                               <label for="">cantidad nivelada 1/4</label>
-                              <input type="number" class="form-control" id="txt_pla_edit" placeholder="Ingrese placa"><br>
+                              <input type="number" class="form-control" id="txt_cNivelacion1" placeholder="Ingrese placa"><br>
                             </div>
                           </div>
                         </div>

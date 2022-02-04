@@ -36,7 +36,6 @@ function listar_placa(){
         }
     })
 }
-
 function listar_operario(){
     $.ajax({
         "url": "../controlador/ordenServicio/controlador_operario_listar.php",
@@ -366,10 +365,29 @@ function registrar_orden_Servicio(){
     var balanceo5 = $("#sel_bal5").val();
     var balanceo6 = $("#sel_bal6").val();
     var oBalanceo = $("#txt_oBalanceo").val();
-    var alineacion1 = $("#sel_profundidad1").val();
-    var alineacion2 = $("#sel_operario").val();
-    var bateria = $("#sel_bateria").val();
-    var tipoBateria = $("#sel_tipoBateria").val();
+    var alineacion1 = $("#sel_alineacion1").val();
+    var alineacion2 = $("#sel_alineacion2").val();
+    var observacionG3 = $("#txt_obs3").val();
+    var observacionM3 = $("#txt_obsM3").val();
+
+    var fecha = $("#txt_fechaA").val();
+    var pCambioA = $("#txt_pCambioA").val();
+    var kilometraje = $("#txt_kilometraje").val();
+    var cKilometraje = $("#txt_ckilometraje").val();
+    var tipoAceite = $("#sel_tipo_aceite").val();
+    var marca = $("#sel_marca_aceite").val();
+    var cantidad1 = $("#txt_cantidad1").val();
+    var presentacion1 = $("#sel_presentacion1").val();
+    var nivelacion = $("#sel_nivelacion1").val();
+    var cNivelacion = $("#txt_cNivelacion1").val();
+    var fAceite = $("#sel_filtro_aceite").val();
+    var fCombustible = $("#sel_filtro_combustible").val();
+    var fAire = $("#sel_filtro_aire").val();
+    var serial = $("#txt_serial").val();
+    var fVenta = $("#txt_fVenta").val();
+    var marca = $("#sel_marca").val();
+    var serial = $("#txt_serial").val();
+    var fVenta = $("#txt_fVenta").val();
     var marca = $("#sel_marca").val();
     var serial = $("#txt_serial").val();
     var fVenta = $("#txt_fVenta").val();

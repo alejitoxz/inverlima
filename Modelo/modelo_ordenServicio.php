@@ -16,15 +16,7 @@ session_start();
             $Rol = $_SESSION['ROL'];
             $idUsuario = $_SESSION['S_ID'];
 
-            if ($Rol == 2) {
-                $wr = "and con.idUsuario = $idUsuario";
-            }else if ($Rol == 1) {
-                $com = "";
-                $wr = "";
-            }else{
-                $wr = "";
-                $com = "and con.idCompany = $idCompany";
-            }
+
             $sql  = "SELECT
                     con.id,
                     p.id as idPersonaC,
@@ -54,7 +46,7 @@ session_start();
                     INNER JOIN vehiculo AS v ON ( con.idVehiculo = v.id )
                     INNER JOIN persona AS p ON ( con.idPersona = p.id ) 
                     INNER JOIN company AS c ON ( c.id = con.idCompany ) 
-                    WHERE con.estatus = 1 $com $wr
+                    WHERE con.estatus = 1 
             ";
             $resp = sqlsrv_query($conn, $sql);
             if( $resp === false) {
@@ -83,16 +75,7 @@ session_start();
             $Rol = $_SESSION['ROL'];
             $idUsuario = $_SESSION['S_ID'];
     
-            if ($Rol == 2) {
-                $wr = "and pro.idUsuario = $idUsuario";
-                $com = "pro.idCompany = $idCompany";
-            }else if ($Rol == 1) {
-                $com = "";
-                $wr = "";
-            }else{
-                $com = "pro.idCompany = $idCompany";
-                $wr = "";
-            }
+
             $sql  = "SELECT 
             o.id,
             (p.nombre + ' ' +p.apellido) as operario
@@ -100,7 +83,7 @@ session_start();
             operario as o
             INNER JOIN persona AS p ON (o.idPersona = p.id)
             INNER JOIN company AS c ON ( c.id = o.idCompany ) 
-            where o.estatus = 1 $com $wr";
+            where o.estatus = 1 ";
             $resp = sqlsrv_query($conn, $sql);
             if( $resp === false) {
                 return 0;
@@ -127,20 +110,12 @@ session_start();
             $Rol = $_SESSION['ROL'];
             $idUsuario = $_SESSION['S_ID'];
 
-            if ($Rol == 2) {
-                $wr = "and v.idUsuario = $idUsuario";
-            }else if ($Rol == 1) {
-                $com = "";
-                $wr = "";
-            }else{
-                $wr = "";
-                $com = "and c.id = $idCompany";
-            }
 
-            $sql  = "SELECT v.id, v.placa 
+
+            $sql  = "SELECT v.id, v.placa , v.cod_interno
             from vehiculo as v
             INNER JOIN company AS c ON ( c.id = v.idCompany ) 
-            where v.estatus = 1 $com $wr";
+            where v.estatus = 1";
             $resp = sqlsrv_query($conn, $sql);
             if( $resp === false) {
                 return 0;
@@ -167,15 +142,7 @@ session_start();
             $Rol = $_SESSION['ROL'];
             $idUsuario = $_SESSION['S_ID'];
 
-            if ($Rol == 2) {
-                $wr = "and v.idUsuario = $idUsuario";
-            }else if ($Rol == 1) {
-                $com = "";
-                $wr = "";
-            }else{
-                $wr = "";
-                $com = "and c.id = $idCompany";
-            }
+
 
             $sql  = "SELECT 
             m.id, 
@@ -183,7 +150,7 @@ session_start();
             from 
             miscelaneos_detalle as m
             INNER JOIN miscelaneos AS mi ON ( mi.id = m.id_miscelaneo ) 
-            where m.estatus = 1 $com $wr AND m.id_miscelaneo = 11";
+            where m.estatus = 1  AND m.id_miscelaneo = 11";
             $resp = sqlsrv_query($conn, $sql);
             if( $resp === false) {
                 return 0;
@@ -209,15 +176,7 @@ session_start();
             $Rol = $_SESSION['ROL'];
             $idUsuario = $_SESSION['S_ID'];
 
-            if ($Rol == 2) {
-                $wr = "and v.idUsuario = $idUsuario";
-            }else if ($Rol == 1) {
-                $com = "";
-                $wr = "";
-            }else{
-                $wr = "";
-                $com = "and c.id = $idCompany";
-            }
+
 
             $sql  = "SELECT 
             m.id, 
@@ -225,7 +184,7 @@ session_start();
             from 
             miscelaneos_detalle as m
             INNER JOIN miscelaneos AS mi ON ( mi.id = m.id_miscelaneo ) 
-            where m.estatus = 1 $com $wr AND m.id_miscelaneo = 18";
+            where m.estatus = 1  AND m.id_miscelaneo = 18";
             $resp = sqlsrv_query($conn, $sql);
             if( $resp === false) {
                 return 0;
@@ -251,15 +210,7 @@ session_start();
             $Rol = $_SESSION['ROL'];
             $idUsuario = $_SESSION['S_ID'];
 
-            if ($Rol == 2) {
-                $wr = "and v.idUsuario = $idUsuario";
-            }else if ($Rol == 1) {
-                $com = "";
-                $wr = "";
-            }else{
-                $wr = "";
-                $com = "and c.id = $idCompany";
-            }
+
 
             $sql  = "SELECT 
             m.id, 
@@ -267,7 +218,7 @@ session_start();
             from 
             miscelaneos_detalle as m
             INNER JOIN miscelaneos AS mi ON ( mi.id = m.id_miscelaneo ) 
-            where m.estatus = 1 $com $wr AND m.id_miscelaneo = 19";
+            where m.estatus = 1 AND m.id_miscelaneo = 19";
             $resp = sqlsrv_query($conn, $sql);
             if( $resp === false) {
                 return 0;
@@ -293,15 +244,7 @@ session_start();
             $Rol = $_SESSION['ROL'];
             $idUsuario = $_SESSION['S_ID'];
 
-            if ($Rol == 2) {
-                $wr = "and v.idUsuario = $idUsuario";
-            }else if ($Rol == 1) {
-                $com = "";
-                $wr = "";
-            }else{
-                $wr = "";
-                $com = "and c.id = $idCompany";
-            }
+ 
 
             $sql  = "SELECT 
             m.id, 
@@ -309,7 +252,7 @@ session_start();
             from 
             miscelaneos_detalle as m
             INNER JOIN miscelaneos AS mi ON ( mi.id = m.id_miscelaneo ) 
-            where m.estatus = 1 $com $wr AND m.id_miscelaneo = 9";
+            where m.estatus = 1 AND m.id_miscelaneo = 9";
             $resp = sqlsrv_query($conn, $sql);
             if( $resp === false) {
                 return 0;
@@ -335,23 +278,14 @@ session_start();
             $Rol = $_SESSION['ROL'];
             $idUsuario = $_SESSION['S_ID'];
 
-            if ($Rol == 2) {
-                $wr = "and v.idUsuario = $idUsuario";
-            }else if ($Rol == 1) {
-                $com = "";
-                $wr = "";
-            }else{
-                $wr = "";
-                $com = "and c.id = $idCompany";
-            }
-
+  
             $sql  = "SELECT 
             m.id, 
             m.descripcion as tipo_aceite
             from 
             miscelaneos_detalle as m
             INNER JOIN miscelaneos AS mi ON ( mi.id = m.id_miscelaneo ) 
-            where m.estatus = 1 $com $wr AND m.id_miscelaneo = 16";
+            where m.estatus = 1  AND m.id_miscelaneo = 16";
             $resp = sqlsrv_query($conn, $sql);
             if( $resp === false) {
                 return 0;
@@ -377,15 +311,7 @@ session_start();
             $Rol = $_SESSION['ROL'];
             $idUsuario = $_SESSION['S_ID'];
 
-            if ($Rol == 2) {
-                $wr = "and v.idUsuario = $idUsuario";
-            }else if ($Rol == 1) {
-                $com = "";
-                $wr = "";
-            }else{
-                $wr = "";
-                $com = "and c.id = $idCompany";
-            }
+
 
             $sql  = "SELECT 
             m.id, 
@@ -393,7 +319,7 @@ session_start();
             from 
             miscelaneos_detalle as m
             INNER JOIN miscelaneos AS mi ON ( mi.id = m.id_miscelaneo ) 
-            where m.estatus = 1 $com $wr AND m.id_miscelaneo = 14";
+            where m.estatus = 1  AND m.id_miscelaneo = 14";
             $resp = sqlsrv_query($conn, $sql);
             if( $resp === false) {
                 return 0;
@@ -420,15 +346,7 @@ session_start();
             $Rol = $_SESSION['ROL'];
             $idUsuario = $_SESSION['S_ID'];
 
-            if ($Rol == 2) {
-                $wr = "and v.idUsuario = $idUsuario";
-            }else if ($Rol == 1) {
-                $com = "";
-                $wr = "";
-            }else{
-                $wr = "";
-                $com = "and c.id = $idCompany";
-            }
+   
 
             $sql  = "SELECT 
             m.id, 
@@ -436,7 +354,7 @@ session_start();
             from 
             miscelaneos_detalle as m
             INNER JOIN miscelaneos AS mi ON ( mi.id = m.id_miscelaneo ) 
-            where m.estatus = 1 $com $wr AND m.id_miscelaneo = 20";
+            where m.estatus = 1  AND m.id_miscelaneo = 20";
             $resp = sqlsrv_query($conn, $sql);
             if( $resp === false) {
                 return 0;
@@ -462,15 +380,6 @@ session_start();
             $Rol = $_SESSION['ROL'];
             $idUsuario = $_SESSION['S_ID'];
 
-            if ($Rol == 2) {
-                $wr = "and v.idUsuario = $idUsuario";
-            }else if ($Rol == 1) {
-                $com = "";
-                $wr = "";
-            }else{
-                $wr = "";
-                $com = "and c.id = $idCompany";
-            }
 
             $sql  = "SELECT 
             m.id, 
@@ -478,7 +387,7 @@ session_start();
             from 
             miscelaneos_detalle as m
             INNER JOIN miscelaneos AS mi ON ( mi.id = m.id_miscelaneo ) 
-            where m.estatus = 1 $com $wr AND m.id_miscelaneo = 21";
+            where m.estatus = 1  AND m.id_miscelaneo = 21";
             $resp = sqlsrv_query($conn, $sql);
             if( $resp === false) {
                 return 0;
@@ -504,15 +413,6 @@ session_start();
             $Rol = $_SESSION['ROL'];
             $idUsuario = $_SESSION['S_ID'];
 
-            if ($Rol == 2) {
-                $wr = "and v.idUsuario = $idUsuario";
-            }else if ($Rol == 1) {
-                $com = "";
-                $wr = "";
-            }else{
-                $wr = "";
-                $com = "and c.id = $idCompany";
-            }
 
             $sql  = "SELECT 
             m.id, 
@@ -520,7 +420,7 @@ session_start();
             from 
             miscelaneos_detalle as m
             INNER JOIN miscelaneos AS mi ON ( mi.id = m.id_miscelaneo ) 
-            where m.estatus = 1 $com $wr AND m.id_miscelaneo = 22";
+            where m.estatus = 1 AND m.id_miscelaneo = 22";
             $resp = sqlsrv_query($conn, $sql);
             if( $resp === false) {
                 return 0;
@@ -652,18 +552,8 @@ session_start();
             $Rol = $_SESSION['ROL'];
             $idUsuario = $_SESSION['S_ID'];
 
-            if ($Rol == 2) {
-                $wr = "idUsuario = $idUsuario";
-                $com = "AND idCompany = $idCompany";
-            }else if ($Rol == 1) {
-                $com = "";
-                $wr = "";
-            }else{
-                $com = "AND idCompany = $idCompany";
-                $wr = "";
-            }
             $sql  = "SELECT COUNT(id) as contadorConductor from conductor
-            where estatus = 1 $wr $com";
+            where estatus = 1 ";
            //echo $sql;
             $resp = sqlsrv_query($conn, $sql);
             if( $resp === false) {

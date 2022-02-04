@@ -104,6 +104,43 @@ session_start();
         
         $this->conexion->conectar();
     }
+
+    function odometro($id){
+        $conn = $this->conexion->conectar();
+        $idCompany = $_SESSION['COMPANY'];
+        $Rol = $_SESSION['ROL'];
+        $idUsuario = $_SESSION['S_ID'];
+
+
+        $sql  = "SELECT
+        vwo.Odometer/1000 as Odometer
+        FROM
+        vehiculo AS v
+        left JOIN company AS co ON (v.idCompany = co.id)
+        left JOIN [Visualsat.Avl.Database_col].dbo.vw_Vehicles AS vw ON (vw.Plate = v.placa)
+        left JOIN [Visualsat.Avl.Database_col].dbo.vw_VehiclesOdometer AS vwo ON (vw.Id = vwo.VehicleId)
+        WHERE v.estatus = 1 and co.Id = $idCompany and v.id = $id;
+        ";
+        //echo $sql;
+        $resp = sqlsrv_query($conn, $sql);
+        if( $resp === false) {
+            return 0;
+        }
+        $i = 0;
+        $data = [];
+        while($row = sqlsrv_fetch_array( $resp, SQLSRV_FETCH_ASSOC))
+        {
+            $data[$i] = $row;
+            $i++;
+        }
+        if($data>0){
+            return $data;
+        }else{
+            return 0;
+        }
+        
+        $this->conexion->conectar();
+    }
     
     function registrar_vehiculo($txt_interno,$txt_placa,$txt_marca,$txt_modelo,$txt_chasis,$txt_pasajeros,$sel_empresa,$sel_pro_vehiculo,$txt_soat,$txt_tecnomecanica,$txt_poliza_cont,$txt_poliza_ext,$venc_soat,$venc_tecno,$venc_poliza_cont,$venc_poliza_ext){
         $conn = $this->conexion->conectar();

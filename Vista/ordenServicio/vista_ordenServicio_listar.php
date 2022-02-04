@@ -106,7 +106,7 @@
                       <div class="col-md-4">
                         <div class="form-group">
                           <label for="">Placa</label>
-                          <select class="js-example-basic-single"  name="state" id="sel_placa_vehiculo" style="width:100%; heigth: 40px;">   
+                          <select class="js-example-basic-single"  name="state" id="sel_placa_vehiculo" style="width:100%; heigth: 40px;" onchange="odometro(this.value)">    
                           </select><br><br>
                         </div>
                       </div>
@@ -135,7 +135,7 @@
                         <div class="col-md-4">
                         <div class="form-group">
                             <label for="">Km Gps</label>
-                            <input type="text" class="form-control" id="txt_kmGps" placeholder="Ingrese la marca"><br>
+                            <input type="text" class="form-control" id="txt_kmGps"readonly><br>
                           </div>
                         </div>
                         <div class="col-md-4">

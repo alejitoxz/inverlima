@@ -1,10 +1,9 @@
 <div class="col-md-12">
     <div class="card card-success">
             <div class="card-header">
-            <h3 class="card-title">Bienvenido al contenido de la compañia</h3>
+            <h3 class="card-title">Bienvenido al contenido de Ordenes de Servicio</h3>
 
             <div class="card-tools">
-            <button type="button" class="btn btn-tool" data-card-widget="card-refresh" data-source="/pages/widgets.html" data-source-selector="#card-refresh-content"><i class="fas fa-sync-alt"></i></button>
             <button type="button" class="btn btn-tool" data-card-widget="maximize"><i class="fas fa-expand"></i></button>
             <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i></button>
             <button type="button" class="btn btn-tool" data-card-widget="remove"><i class="fas fa-times"></i></button>
@@ -25,12 +24,12 @@
                         <tr>
                           <th>Orden</th>
                           <th>Placa</th>
-                          <th>N. Interno</th>
+                          <th>N° Interno</th>
                           <th>Registradora</th>
                           <th>Operario</th>
-                          <th>Creacion</th>
-                          <th>Observacion</th>
-                          <th>Acciones</th>
+                          <th>Fech. Creación</th>
+                          <th>Observación</th>
+                          <th>Editar</th>
                         </tr>
                     </thead>
                     <tbody id="ListadoOrden">
@@ -87,7 +86,7 @@
                     <div class="step" data-target="#llanta-part" onclick="stepper.to(3)">
                       <button type="button" class="step-trigger" role="tab" aria-controls="llanta-part" id="llanta-trigger" aria-selected="false" >
                         <span class="bs-stepper-circle"><i class="fas fa-ring"></i></span>
-                        <span class="bs-stepper-label">Llanta</span>
+                        <span class="bs-stepper-label">Llantas</span>
                       </button>
                     </div>
 
@@ -116,7 +115,7 @@
                       </div>
                       <div class="col-md-4">
                           <div class="form-group">
-                            <label for="">Revision bimestral Cotrautol</label>
+                            <label for="">Revisión Bimestral Cotrautol</label>
                             <select class="js-example-basic-single"  name="state" id="txt_revb" style="width:100%; heigth: 40px;">   
                               <option value="0">Seleccionar</option>
                               <option value="1">Si</option>
@@ -126,7 +125,7 @@
                         </div>
                         <div class="col-md-4">
                           <div class="form-group">
-                            <label for="">Revision registradora</label>
+                            <label for="">Revisión de Registradora</label>
                             <select class="js-example-basic-single"  name="state" id="sel_rReg" style="width:100%; heigth: 40px;">   
                               <option value="0">Seleccionar</option>
                               <option value="1">Si</option>
@@ -138,19 +137,19 @@
                       <div class="row">
                         <div class="col-md-4">
                         <div class="form-group">
-                            <label for="">Km Gps</label>
+                            <label for="">KM-GPS</label>
                             <input type="text" class="form-control" id="txt_kmGps"readonly><br>
                           </div>
                         </div>
                         <div class="col-md-4">
                           <div class="form-group">
-                            <label for="">Vencimiento del extintor</label>
+                            <label for="">Vencimiento del Extintor</label>
                             <input type="date" class="form-control" id="txt_vExtintor" style="width:100%; heigth: 40px;"><br>
                           </div>
                         </div>
                         <div class="col-md-4">
                           <div class="form-group">
-                            <label for="">Observaciones de la registradora</label>
+                            <label for="">Observaciones de Registradora</label>
                             <input type="text" class="form-control" id="txt_oReg" placeholder="Ingrese la observacion"><br>
                           </div>
                         </div>
@@ -193,7 +192,7 @@
                       </div>
                       <div class="col-md-4">
                           <div class="form-group">
-                            <label for="">marca</label>
+                            <label for="">Marca</label>
                             <select class="js-example-basic-single"  name="state" id="sel_marca" style="width:100%; heigth: 40px;">   
                             </select><br><br>
                           </div>
@@ -202,19 +201,19 @@
                     <div class="row">  
                         <div class="col-md-4">
                           <div class="form-group">
-                            <label for="">serial</label>
+                            <label for="">Serial</label>
                             <input type="text" class="form-control" id="txt_serial" placeholder="Ingrese el serial"><br>
                           </div>
                         </div>
                         <div class="col-md-4">
                           <div class="form-group">
-                            <label for="">Fecha de venta</label>
+                            <label for="">Fecha de Venta</label>
                             <input type="date" class="form-control" id="txt_fVenta" style="width:100%; heigth: 40px;"><br>
                           </div>
                         </div>
                         <div class="col-md-4">
                           <div class="form-group">
-                            <label for="">Fecha de instalacion</label>
+                            <label for="">Fecha de Instalación</label>
                             <input type="date" class="form-control" id="txt_fIntalacion" style="width:100%; heigth: 40px;"><br>
                           </div>
                         </div>
@@ -222,27 +221,27 @@
                     <div class="row"> 
                         <div class="col-md-4">
                           <div class="form-group">
-                            <label for="">Tiempo de uso</label>
+                            <label for="">Tiempo de Uso</label>
                             <input type="text" class="form-control" id="txt_tUso" placeholder="Registre el tiempo de uso"><br>
                           </div>
                         </div>
                         <div class="col-md-4">
                           <div class="form-group">
-                            <label for="">Proximo cambio</label>
+                            <label for="">Proximo Cambio</label>
                             <input type="date" class="form-control" id="txt_pCambio" style="width:100%; heigth: 40px;"><br>
                           </div>
                         </div>
                         <div class="col-md-4">
                           <div class="form-group">
-                            <label for="">Proximo mantenimiento</label>
+                            <label for="">Proximo Mantenimiento</label>
                             <input type="date" class="form-control" id="txt_pMantenimiento" style="width:100%; heigth: 40px;"><br>
                           </div>
                         </div>
                     </div>
                     <div class="col-md-13">
                           <div class="form-group">
-                            <label for="">Oportunidades de mejora</label>
-                            <textarea class="form-control" id="txt_oMejora" placeholder="Ingrese la marca"></textarea><br>
+                            <label for="">Oportunidades de Mejora</label>
+                            <textarea class="form-control" id="txt_oMejora" placeholder="Observaciones"></textarea><br>
                           </div>
                         </div>  
                       <button class="btn btn-primary" onclick="stepper.previous()">Anterior</button>
@@ -261,8 +260,8 @@
                       <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                              <label for="">serial</label>
-                              <input type="text" class="form-control" id="txt_llantaSerial1" placeholder="Ingrese el serial" ><br>
+                              <label for="">Serial</label>
+                              <input type="text" class="form-control" id="txt_llantaSerial1" placeholder="Ingrese Serial" ><br>
                             </div>
                           </div>
                           <div class="col-md-6">
@@ -307,7 +306,7 @@
                             <label for="">Tipo</label>
                             <select class="js-example-basic-single"  name="state" id="sel_tipoMarca1" style="width:100%; heigth: 40px;">   
                               <option value="0" selected>Seleccionar</option>
-                              <option value="1">Traccion</option>
+                              <option value="1">Tracción</option>
                               <option value="2">Direccional</option>
                             </select><br><br>
                           </div>
@@ -328,7 +327,7 @@
                         
                         <div class="col-md-3">
                           <div class="form-group">
-                            <label for="">F.Instalacion</label>
+                            <label for="">F.Instalación</label>
                             <input type="date" class="form-control" id="txt_fInstalacion1" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
@@ -346,7 +345,7 @@
                         </div>
                         <div class="col-md-3">
                           <div class="form-group">
-                            <label for="">F. Rotacion</label>
+                            <label for="">F.Rotación</label>
                             <input type="date" class="form-control" id="txt_fRotacion1" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
@@ -358,8 +357,8 @@
                       <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                              <label for="">serial</label>
-                              <input type="text" class="form-control" id="txt_mar_edit2" placeholder="Ingrese el serial" ><br>
+                              <label for="">Serial</label>
+                              <input type="text" class="form-control" id="txt_mar_edit2" placeholder="Ingrese Serial" ><br>
                             </div>
                           </div>
                           <div class="col-md-6">
@@ -404,7 +403,7 @@
                             <label for="">Tipo</label>
                             <select class="js-example-basic-single"  name="state" id="sel_tipoMarca2" style="width:100%; heigth: 40px;">   
                               <option value="0">Seleccionar</option>
-                              <option value="1">Traccion</option>
+                              <option value="1">Tracción</option>
                               <option value="2">Direccional</option>
                             </select><br><br>
                           </div>
@@ -425,7 +424,7 @@
                         
                         <div class="col-md-3">
                           <div class="form-group">
-                            <label for="">F.Instalacion</label>
+                            <label for="">F.Instalación</label>
                             <input type="date" class="form-control" id="sel_fInstalacion2" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
@@ -443,7 +442,7 @@
                         </div>
                         <div class="col-md-3">
                           <div class="form-group">
-                            <label for="">F. Rotacion</label>
+                            <label for="">F.Rotación</label>
                             <input type="date" class="form-control" id="txt_fRotacion2" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
@@ -455,8 +454,8 @@
                       <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                              <label for="">serial</label>
-                              <input type="text" class="form-control" id="txt_llantaSerial3" placeholder="Ingrese el serial" ><br>
+                              <label for="">Serial</label>
+                              <input type="text" class="form-control" id="txt_llantaSerial3" placeholder="Ingrese Serial" ><br>
                             </div>
                           </div>
                           <div class="col-md-6">
@@ -501,7 +500,7 @@
                             <label for="">Tipo</label>
                             <select class="js-example-basic-single"  name="state" id="sel_tipoMarca3" style="width:100%; heigth: 40px;">   
                               <option value="0" selected>Seleccionar</option>
-                              <option value="1">Traccion</option>
+                              <option value="1">Tracción</option>
                               <option value="2">Direccional</option>
                             </select><br><br>
                           </div>
@@ -522,7 +521,7 @@
                         
                         <div class="col-md-3">
                           <div class="form-group">
-                            <label for="">F.Instalacion</label>
+                            <label for="">F.Instalación</label>
                             <input type="date" class="form-control" id="sel_fInstalacion3" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
@@ -540,7 +539,7 @@
                         </div>
                         <div class="col-md-3">
                           <div class="form-group">
-                            <label for="">F. Rotacion</label>
+                            <label for="">F.Rotación</label>
                             <input type="date" class="form-control" id="txt_fRotacion3" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
@@ -552,8 +551,8 @@
                       <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                              <label for="">serial</label>
-                              <input type="text" class="form-control" id="txt_llantaSerial4" placeholder="Ingrese el serial" ><br>
+                              <label for="">Serial</label>
+                              <input type="text" class="form-control" id="txt_llantaSerial4" placeholder="Ingrese Serial" ><br>
                             </div>
                           </div>
                           <div class="col-md-6">
@@ -598,7 +597,7 @@
                             <label for="">Tipo</label>
                             <select class="js-example-basic-single"  name="state" id="sel_tipoMarca4" style="width:100%; heigth: 40px;">   
                               <option value="0" selected>Seleccionar</option>
-                              <option value="1">Traccion</option>
+                              <option value="1">Tracción</option>
                               <option value="2">Direccional</option>
                             </select><br><br>
                           </div>
@@ -619,7 +618,7 @@
                         
                         <div class="col-md-3">
                           <div class="form-group">
-                            <label for="">F.Instalacion</label>
+                            <label for="">F.Instalación</label>
                             <input type="date" class="form-control" id="sel_fInstalacion4" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
@@ -637,7 +636,7 @@
                         </div>
                         <div class="col-md-3">
                           <div class="form-group">
-                            <label for="">F. Rotacion</label>
+                            <label for="">F.Rotación</label>
                             <input type="date" class="form-control" id="txt_fRotacion4" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
@@ -649,8 +648,8 @@
                       <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                              <label for="">serial</label>
-                              <input type="text" class="form-control" id="txt_llantaSerial5" placeholder="Ingrese el serial" ><br>
+                              <label for="">Serial</label>
+                              <input type="text" class="form-control" id="txt_llantaSerial5" placeholder="Ingrese Serial" ><br>
                             </div>
                           </div>
                           <div class="col-md-6">
@@ -695,7 +694,7 @@
                             <label for="">Tipo</label>
                             <select class="js-example-basic-single"  name="state" id="sel_tipoMarca5" style="width:100%; heigth: 40px;">   
                               <option value="0" selected>Seleccionar</option>
-                              <option value="1">Traccion</option>
+                              <option value="1">Tracción</option>
                               <option value="2">Direccional</option>
                             </select><br><br>
                           </div>
@@ -716,7 +715,7 @@
                         
                         <div class="col-md-3">
                           <div class="form-group">
-                            <label for="">F.Instalacion</label>
+                            <label for="">F.Instalación</label>
                             <input type="date" class="form-control" id="sel_fInstalacion5" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
@@ -734,7 +733,7 @@
                         </div>
                         <div class="col-md-3">
                           <div class="form-group">
-                            <label for="">F. Rotacion</label>
+                            <label for="">F.Rotación</label>
                             <input type="date" class="form-control" id="txt_fRotacion5" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
@@ -746,8 +745,8 @@
                       <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                              <label for="">serial</label>
-                              <input type="text" class="form-control" id="txt_llantaSerial6" placeholder="Ingrese el serial" ><br>
+                              <label for="">Serial</label>
+                              <input type="text" class="form-control" id="txt_llantaSerial6" placeholder="Ingrese Serial" ><br>
                             </div>
                           </div>
                           <div class="col-md-6">
@@ -792,7 +791,7 @@
                             <label for="">Tipo</label>
                             <select class="js-example-basic-single"  name="state" id="sel_tipoMarca6" style="width:100%; heigth: 40px;">   
                               <option value="0" selected>Seleccionar</option>
-                              <option value="1">Traccion</option>
+                              <option value="1">Tracción</option>
                               <option value="2">Direccional</option>
                             </select><br><br>
                           </div>
@@ -813,7 +812,7 @@
                         
                         <div class="col-md-3">
                           <div class="form-group">
-                            <label for="">F.Instalacion</label>
+                            <label for="">F.Instalación</label>
                             <input type="date" class="form-control" id="sel_fInstalacion6" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
@@ -831,12 +830,12 @@
                         </div>
                         <div class="col-md-3">
                           <div class="form-group">
-                            <label for="">F. Rotacion</label>
+                            <label for="">F.Rotación</label>
                             <input type="date" class="form-control" id="txt_fRotacion6" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
                     </div>
-                    <h5>Calibracion:</h5>
+                    <h5>Calibración:</h5>
                     <div class="row">
                         <div class="col-md-2">
                           <div class="form-group">
@@ -878,7 +877,7 @@
                     <div class="row">
                     <div class="col-md-12">
                           <div class="form-group">
-                            <label for="">Observaciones de calibracion</label>
+                            <label for="">Observaciones de Calibración</label>
                             <textarea  class="form-control" id="txt_oCalibracion" ></textarea>
                           </div>
                         </div>
@@ -954,7 +953,7 @@
                     <div class="row">
                       <div class="col-md-2">
                           <div class="form-group">
-                            <label for="">Alineacion 1.</label>
+                            <label for="">Alineación 1.</label>
                             <select class="js-example-basic-single"  name="state" id="sel_alineacion1" style="width:100%; heigth: 40px;">   
                               <option value="0" selected>Seleccionar</option>
                               <option value="1">Si</option>
@@ -995,7 +994,7 @@
 
                       <!-- FORMULARIO ACCEITE-->
                       <div id="aceite-part" class="content" role="tabpanel" aria-labelledby="aceite-trigger">
-                        <h5>Cambio de aceite del motor</h5>
+                        <h5>Cambio de Aceite del Motor</h5>
                         <div class="row">
                           <div class="col-md-4">
                             <div class="form-group">
@@ -1005,7 +1004,7 @@
                           </div>
                           <div class="col-md-4">
                             <div class="form-group">
-                              <label for="">Proximo cambio</label>
+                              <label for="">Proximo Cambio</label>
                               <input type="date" class="form-control" id="txt_pCambioA" placeholder="Ingrese el proximo cambio"><br>
                             </div>
                           </div>
@@ -1025,7 +1024,7 @@
                           </div>
                           <div class="col-md-4">
                             <div class="form-group">
-                              <label for="">Tipo de aceite</label>
+                              <label for="">Tipo de Aceite</label>
                               <select class="js-example-basic-single"  name="state" id="sel_tipo_aceite" style="width:100%; heigth: 40px;">   
                               </select><br><br>
                             </div>
@@ -1047,7 +1046,7 @@
                           </div>
                           <div class="col-md-3">
                             <div class="form-group">
-                              <label for="">presentacion</label>
+                              <label for="">Presentación</label>
                               <select class="js-example-basic-single"  name="state" id="sel_presentacion1" style="width:100%; heigth: 40px;">   
                                 <option value="0">Seleccionar</option>
                                 <option value="1">Sellado</option>
@@ -1057,7 +1056,7 @@
                           </div>
                           <div class="col-md-3">
                             <div class="form-group">
-                              <label for="">nivelacion</label>
+                              <label for="">Nivelación</label>
                               <select class="js-example-basic-single"  name="state" id="sel_nivelacion1" style="width:100%; heigth: 40px;">   
                                 <option value="0">Seleccionar</option>
                                 <option value="1">Si</option>
@@ -1067,7 +1066,7 @@
                           </div>
                           <div class="col-md-3">
                             <div class="form-group">
-                              <label for="">cantidad nivelada 1/4</label>
+                              <label for="">Cantidad Nivelada 1/4</label>
                               <input type="number"value="0" class="form-control" id="txt_cNivelacion1" placeholder="Ingrese datos"><br>
                             </div>
                           </div>
@@ -1075,21 +1074,21 @@
                         <div class="row">
                         <div class="col-md-4">
                             <div class="form-group">
-                              <label for="">Filtro aceite</label>
+                              <label for="">Filtro Aceite</label>
                               <select class="js-example-basic-single"  name="state" id="sel_filtro_aceite" style="width:100%; heigth: 40px;">   
                               </select><br><br>
                             </div>
                           </div>
                           <div class="col-md-4">
                             <div class="form-group">
-                              <label for="">Filtro de combustible</label>
+                              <label for="">Filtro de Combustible</label>
                               <select class="js-example-basic-single"  name="state" id="sel_filtro_combustible" style="width:100%; heigth: 40px;">   
                               </select><br><br>
                             </div>
                           </div>
                           <div class="col-md-4">
                             <div class="form-group">
-                              <label for="">Filtro de aire</label>
+                              <label for="">Filtro de Aire</label>
                               <select class="js-example-basic-single"  name="state" id="sel_filtro_aire" style="width:100%; heigth: 40px;">   
                               </select><br><br>
                             </div>
@@ -1099,7 +1098,7 @@
                         <div class="row">
                         <div class="col-md-3">
                             <div class="form-group">
-                              <label for="">Tipo de aceite</label>
+                              <label for="">Tipo de Aceite</label>
                               <select class="js-example-basic-single"  name="state" id="sel_tipo_aceite1" style="width:100%; heigth: 40px;">   
                               </select><br><br>
                             </div>
@@ -1113,13 +1112,13 @@
                           </div>
                           <div class="col-md-3">
                             <div class="form-group">
-                              <label for="">Ultimo cambio</label>
+                              <label for="">Ultimo Cambio</label>
                               <input type="date" class="form-control" id="txt_uCambio1" placeholder="Ingrese ultimo cambio"><br>
                             </div>
                           </div>
                           <div class="col-md-3">
                             <div class="form-group">
-                              <label for="">Proximo cambio</label>
+                              <label for="">Proximo Cambio</label>
                               <input type="date" class="form-control" id="txt_pCambio1" placeholder="Ingrese proximo cambio"><br>
                             </div>
                           </div>
@@ -1133,7 +1132,7 @@
                             </div>
                             <div class="col-md-3">
                               <div class="form-group">
-                                <label for="">presentacion</label>
+                                <label for="">Presentación</label>
                                 <select class="js-example-basic-single"  name="state" id="sel_presentacion2" style="width:100%; heigth: 40px;">   
                                   <option value="0">Seleccionar</option>
                                   <option value="1">Sellado</option>
@@ -1143,7 +1142,7 @@
                             </div>
                             <div class="col-md-3">
                               <div class="form-group">
-                                <label for="">nivelacion</label>
+                                <label for="">Nivelación</label>
                                 <select class="js-example-basic-single"  name="state" id="sel_nivelacion2" style="width:100%; heigth: 40px;">   
                                   <option value="0">Seleccionar</option>
                                   <option value="1">Si</option>
@@ -1153,16 +1152,16 @@
                             </div>
                             <div class="col-md-3">
                               <div class="form-group">
-                                <label for="">cantidad nivelada 1/4</label>
+                                <label for="">Cantidad nivelada 1/4</label>
                                 <input type="number"value="0" class="form-control" id="txt_nivelacion2" placeholder="Ingrese datos"><br>
                               </div>
                             </div>
                           </div>
-                        <h5>Aceite de la transmision</h5>
+                        <h5>Aceite de la Transmisión</h5>
                         <div class="row">
                         <div class="col-md-3">
                             <div class="form-group">
-                              <label for="">Tipo de aceite</label>
+                              <label for="">Tipo de Aceite</label>
                               <select class="js-example-basic-single"  name="state" id="sel_tipo_aceite2" style="width:100%; heigth: 40px;">   
                               </select><br><br>
                             </div>
@@ -1176,13 +1175,13 @@
                           </div>
                           <div class="col-md-3">
                             <div class="form-group">
-                              <label for="">Ultimo cambio</label>
+                              <label for="">Ultimo Cambio</label>
                               <input type="date" class="form-control" id="txt_uCambio2" placeholder="Ingrese ultimo cambio"><br>
                             </div>
                           </div>
                           <div class="col-md-3">
                             <div class="form-group">
-                              <label for="">Proximo cambio</label>
+                              <label for="">Proximo Cambio</label>
                               <input type="date" class="form-control" id="txt_pCambio2" placeholder="Ingrese proximo cambio"><br>
                             </div>
                           </div>
@@ -1196,7 +1195,7 @@
                             </div>
                             <div class="col-md-3">
                               <div class="form-group">
-                                <label for="">presentacion</label>
+                                <label for="">Presentación</label>
                                 <select class="js-example-basic-single"  name="state" id="sel_presentacion3" style="width:100%; heigth: 40px;">   
                                   <option value="0">Seleccionar</option>
                                   <option value="1">Sellado</option>
@@ -1206,7 +1205,7 @@
                             </div>
                             <div class="col-md-3">
                               <div class="form-group">
-                                <label for="">nivelacion</label>
+                                <label for="">Nivelación</label>
                                 <select class="js-example-basic-single"  name="state" id="sel_nivelacion3" style="width:100%; heigth: 40px;">   
                                   <option value="0">Seleccionar</option>
                                   <option value="1">Si</option>
@@ -1216,7 +1215,7 @@
                             </div>
                             <div class="col-md-3">
                               <div class="form-group">
-                                <label for="">cantidad nivelada 1/4</label>
+                                <label for="">Cantidad Nivelada 1/4</label>
                                 <input type="number"value="0" class="form-control" id="txt_nivelacion3" placeholder="Ingrese datos"><br>
                               </div>
                             </div>
@@ -1225,7 +1224,7 @@
                         <div class="row">
                         <div class="col-md-3">
                             <div class="form-group">
-                              <label for="">Tipo de aceite</label>
+                              <label for="">Tipo de Aceite</label>
                               <select class="js-example-basic-single"  name="state" id="sel_tipo_aceite3" style="width:100%; heigth: 40px;">   
                               </select><br><br>
                             </div>
@@ -1239,13 +1238,13 @@
                           </div>
                           <div class="col-md-3">
                             <div class="form-group">
-                              <label for="">Ultimo cambio</label>
+                              <label for="">Ultimo Cambio</label>
                               <input type="date" class="form-control" id="txt_uCambio3" placeholder="Ingrese ultimo cambio"><br>
                             </div>
                           </div>
                           <div class="col-md-3">
                             <div class="form-group">
-                              <label for="">Proximo cambio</label>
+                              <label for="">Proximo Cambio</label>
                               <input type="date" class="form-control" id="txt_pCambio3" placeholder="Ingrese proximo cambio"><br>
                             </div>
                           </div>
@@ -1254,7 +1253,7 @@
                         <div class="row">
                         <div class="col-md-3">
                             <div class="form-group">
-                              <label for="">Tipo de aceite</label>
+                              <label for="">Tipo de Aceite</label>
                               <select class="js-example-basic-single"  name="state" id="sel_tipo_aceite4" style="width:100%; heigth: 40px;">   
                               </select><br><br>
                             </div>
@@ -1268,22 +1267,22 @@
                           </div>
                           <div class="col-md-3">
                             <div class="form-group">
-                              <label for="">Ultimo cambio</label>
+                              <label for="">Ultimo Cambio</label>
                               <input type="date" class="form-control" id="txt_uCambio4" placeholder="Ingrese ultimo cambio"><br>
                             </div>
                           </div>
                           <div class="col-md-3">
                             <div class="form-group">
-                              <label for="">Proximo cambio</label>
+                              <label for="">Proximo Cambio</label>
                               <input type="date" class="form-control" id="txt_pCambio4" placeholder="Ingrese proximo cambio"><br>
                             </div>
                           </div>
                         </div>
-                        <h5>Medicion de liquidos</h5>
+                        <h5>Medición de liquidos</h5>
                         <div class="row">
                         <div class="col-md-4">
                             <div class="form-group">
-                              <label for="">Liquido de frenos</label>
+                              <label for="">Liquido de Frenos</label>
                               <select class="js-example-basic-single"  name="state" id="sel_lFreno" style="width:100%; heigth: 40px;">   
                                 <option value="0">Seleccionar</option>
                                 <option value="1">Si</option>
@@ -1293,7 +1292,7 @@
                           </div>
                           <div class="col-md-4">
                             <div class="form-group">
-                              <label for="">liquido de parabrisas</label>
+                              <label for="">liquido de Parabrisas</label>
                               <select class="js-example-basic-single"  name="state" id="sel_lParabrisa" style="width:100%; heigth: 40px;">   
                                 <option value="0">Seleccionar</option>
                                 <option value="1">Si</option>
@@ -1345,7 +1344,7 @@
                             </div>
                             <div class="col-md-3">
                               <div class="form-group">
-                                <label for="">Transmision</label>
+                                <label for="">Transmisión</label>
                                 <select class="js-example-basic-single"  name="state" id="sel_lTransmision" style="width:100%; heigth: 40px;">   
                                   <option value="0">Seleccionar</option>
                                   <option value="1">Si</option>
@@ -1358,7 +1357,7 @@
                           <div class="row">
                           <div class="col-md-3">
                               <div class="form-group">
-                                <label for="">Limpieza de frenos</label>
+                                <label for="">Limpieza de Frenos</label>
                                 <select class="js-example-basic-single"  name="state" id="sel_lFrenos1" style="width:100%; heigth: 40px;">   
                                   <option value="0">Seleccionar</option>
                                   <option value="1">Si</option>
@@ -1388,7 +1387,7 @@
                             </div>
                             <div class="col-md-3">
                               <div class="form-group">
-                                <label for="">Sopleteo filtro de aire</label>
+                                <label for="">Sopleteo Filtro de Aire</label>
                                 <select class="js-example-basic-single"  name="state" id="sel_sFiltroAire" style="width:100%; heigth: 40px;">   
                                   <option value="0">Seleccionar</option>
                                   <option value="1">Si</option>

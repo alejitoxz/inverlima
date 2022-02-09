@@ -1,10 +1,9 @@
 <div class="col-md-12">
     <div class="card card-success">
             <div class="card-header">
-            <h3 class="card-title">Bienvenido al contenido del vehiculo</h3>
+            <h3 class="card-title">Bienvenido al contenido del Vehiculo</h3>
 
             <div class="card-tools">
-            <button type="button" class="btn btn-tool" data-card-widget="card-refresh" data-source="/pages/widgets.html" data-source-selector="#card-refresh-content"><i class="fas fa-sync-alt"></i></button>
             <button type="button" class="btn btn-tool" data-card-widget="maximize"><i class="fas fa-expand"></i></button>
             <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i></button>
             <button type="button" class="btn btn-tool" data-card-widget="remove"><i class="fas fa-times"></i></button>
@@ -26,12 +25,12 @@
                           <th style="display:none"></th>
                           <th>#</th>
                           <th>Placa</th>
-                          <th>Cod Interno</th>
+                          <th>N° Interno</th>
                           <th>Odometro</th>
                           <th>Marca</th>
                           <th>Modelo</th>
                           <th>Empresa</th>
-                          <th>Dueño</th>
+                          <th>Propietario</th>
                           <th align="right" >Acciones</th>
                         </tr>
                     </thead>
@@ -61,14 +60,14 @@
         <div class="row">
           <div class="col-md-3">
             <div class="form-group">
-              <label for="">Numero interno</label>
+              <label for="">N° interno</label>
               <input type="text" class="form-control" id="txt_interno" placeholder="Ingrese el numero interno"><br>
             </div>
           </div>
           <div class="col-md-3">
             <div class="form-group">
               <label for="">Placa</label>
-              <input type="text" class="form-control" id="txt_placa" placeholder="WTN248"><br>
+              <input type="text" class="form-control" id="txt_placa" placeholder="Ingrese la placa"><br>
             </div>
           </div>
           <div class="col-md-3">
@@ -90,13 +89,13 @@
           <div class="col-md-3">
             <div class="form-group">
               <label for="">Chasis</label>
-              <input type="text" class="form-control" id="txt_chasis" ><br>
+              <input type="text" class="form-control" id="txt_chasis" placeholder="N° de chasis"><br>
             </div>
           </div>
           <div class="col-md-3">
             <div class="form-group">
-              <label for="">Num Pasajeros</label>
-              <input type="text" class="form-control" id="txt_pasajeros" ><br>
+              <label for="">Capacidad de Pasajeros</label>
+              <input type="text" class="form-control" id="txt_pasajeros" placeholder="Capacidad de pasajeros"><br>
             </div>
           </div>
           <div class="col-md-3">
@@ -108,7 +107,7 @@
           </div>
           <div class="col-md-3">
             <div class="form-group">
-              <label for="">Dueño</label>
+              <label for="">Propietario</label>
               <select class="js-example-basic-single"  name="state" id="sel_pro_vehiculo" style="width:100%; heigth: 40px;">   
               </select><br><br>
             </div>
@@ -118,26 +117,26 @@
         <div class="row">
         <div class="col-md-3">
             <div class="form-group">
-              <label for="">Soat</label>
-              <input type="text" class="form-control" id="txt_soat" ><br>
+              <label for="">SOAT</label>
+              <input type="text" class="form-control" id="txt_soat" placeholder="N° de poliza SOAT"><br>
             </div>
           </div>
           <div class="col-md-3">
             <div class="form-group">
-              <label for="">Tecno Mec.</label>
-              <input type="text" class="form-control" id="txt_tecnomecanica" ><br>
+              <label for="">Revision Tecnico-mecánica</label>
+              <input type="text" class="form-control" id="txt_tecnomecanica" placeholder="Cert. de emisiones"><br>
             </div>
           </div>
           <div class="col-md-3">
             <div class="form-group">
               <label for="">Póliza Contractual</label>
-              <input type="text" class="form-control" id="txt_poliza_cont" ><br>
+              <input type="text" class="form-control" id="txt_poliza_cont" placeholder="N° de poliza"><br>
             </div>
           </div>
           <div class="col-md-3">
             <div class="form-group">
               <label for="">Póliza Extracontractual</label>
-              <input type="text" class="form-control" id="txt_poliza_ext" ><br>
+              <input type="text" class="form-control" id="txt_poliza_ext" placeholder="N° de poliza"><br>
             </div>
           </div>
         </div>
@@ -145,13 +144,13 @@
         <div class="row">
         <div class="col-md-3">
             <div class="form-group">
-              <label for="">Vencimiento Soat</label>
+              <label for="">Vencimiento SOAT</label>
               <input type="date" class="form-control" id="venc_soat" ><br>
             </div>
           </div>
           <div class="col-md-3">
             <div class="form-group">
-              <label for="">Vencimiento Tecnomecánica</label>
+              <label for="">Vencimiento Tecnico-mecánica</label>
               <input type="date" class="form-control" id="venc_tecno" ><br>
             </div>
           </div>

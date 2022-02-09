@@ -1,10 +1,9 @@
 <div class="col-md-12">
     <div class="card card-success">
             <div class="card-header">
-            <h3 class="card-title">Bienvenido al contenido de los clientes</h3>
+            <h3 class="card-title">Bienvenido al contenido de los Clientes</h3>
 
             <div class="card-tools">
-            <button type="button" class="btn btn-tool" data-card-widget="card-refresh" data-source="/pages/widgets.html" data-source-selector="#card-refresh-content"><i class="fas fa-sync-alt"></i></button>
             <button type="button" class="btn btn-tool" data-card-widget="maximize"><i class="fas fa-expand"></i></button>
             <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i></button>
             <button type="button" class="btn btn-tool" data-card-widget="remove"><i class="fas fa-times"></i></button>
@@ -25,12 +24,12 @@
                         <tr>
                           <th style="display:none"></th>
                           <th>#</th>
-                          <th>nombre</th>
-                          <th>apellido</th>
-                          <th>cedula</th>
-                          <th>telefono</th>
-                          <th>email</th>
-                          <th>direccion</th>
+                          <th>Nombre</th>
+                          <th>Apellido</th>
+                          <th>Cedula</th>
+                          <th>Telefono</th>
+                          <th>E-mail</th>
+                          <th>Direccion</th>
                           <th>Editar</th>
                         </tr>
                     </thead>
@@ -51,7 +50,7 @@
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header modal-primary">
-        <h4 class="modal-title"><b>Registro </b></h4>
+        <h4 class="modal-title"><b>Registro de Clientes</b></h4>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
         <div class="modal-body">
@@ -89,13 +88,13 @@
           </div>
           <div class="col-md-4">
             <div class="form-group">
-              <label for="">Email</label>
-              <input type="text" class="form-control" id="txt_email_cliente" placeholder="Ingrese el email"><br>
+              <label for="">E-mail</label>
+              <input type="text" class="form-control" id="txt_email_cliente" placeholder="Ingrese el E-mail"><br>
             </div>
           </div>
           <div class="col-md-4">
             <div class="form-group">
-              <label for="">Direccion</label>
+              <label for="">Dirección</label>
               <input type="text" class="form-control" id="txt_direccion_cliente" placeholder="Ingrese la direccion"><br>
             </div>
           </div>
@@ -153,13 +152,13 @@
           </div>
           <div class="col-md-4">
             <div class="form-group">
-              <label for="">Email</label>
-              <input type="text" class="form-control" id="txt_email_cliente_edit" placeholder="Ingrese el email"><br>
+              <label for="">E-mail</label>
+              <input type="text" class="form-control" id="txt_email_cliente_edit" placeholder="Ingrese el E-mail"><br>
             </div>
           </div>
           <div class="col-md-4">
             <div class="form-group">
-              <label for="">Direccion</label>
+              <label for="">Dirección</label>
               <input type="text" class="form-control" id="txt_direccion_cliente_edit" placeholder="Ingrese la direccion"><br>
             </div>
           </div>

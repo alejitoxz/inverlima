@@ -71,7 +71,7 @@ if ($Rol == 1 || $Rol == 4) {
 <div class="col-md-12">
     <div class="card card-primary">
         <div class="card-header">
-        <h1 class="card-title"><b>Proximos vencimientos</b></h1>
+        <h1 class="card-title"><b>Proximos Vencimientos</b></h1>
         </div>
         <div class="card-body">
             <!-- /.card-header -->
@@ -88,7 +88,7 @@ if ($Rol == 1 || $Rol == 4) {
                 <tr>
                     <th>Propietario</th>
                     <th>Placa</th>
-                    <th>Email</th>
+                    <th>E-mail</th>
                     <th>Vencimiento</th>
                     <th>Fecha</th>
                     <th>Enviar</th>

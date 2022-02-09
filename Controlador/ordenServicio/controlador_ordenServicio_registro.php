@@ -10,7 +10,7 @@
     $vExtintor = htmlspecialchars($_POST['vExtintor'],ENT_QUOTES,'UTF-8');
     $oReg = htmlspecialchars($_POST['oReg'],ENT_QUOTES,'UTF-8');
     $observacion = htmlspecialchars($_POST['observacion'],ENT_QUOTES,'UTF-8');
-    $operario = htmlspecialchars($_POST['operario'],ENT_QUOTES,'UTF-8');
+    $tecnico = htmlspecialchars($_POST['tecnico'],ENT_QUOTES,'UTF-8');
     $bateria = htmlspecialchars($_POST['bateria'],ENT_QUOTES,'UTF-8');
     $tipoBateria = htmlspecialchars($_POST['tipoBateria'],ENT_QUOTES,'UTF-8');
     $marca = htmlspecialchars($_POST['marca'],ENT_QUOTES,'UTF-8');
@@ -148,7 +148,7 @@
 
     $consulta = $MU->registrar_ordenServicio(
     $id,$placa,$revBimCotrautol,$rRegistradora,$kmGps,$vExtintor,$oReg,
-    $observacion,$operario,$bateria,$tipoBateria,$marca,$serial,
+    $observacion,$tecnico,$bateria,$tipoBateria,$marca,$serial,
     $fVenta,$fIntalacion,$tUso,$pCambio,$pMantenimiento,$oMejora,
     $llantaSerial1,$profundidad1,$opmarca1,$tipoMarca1,$estado1,$fInstalacion1,
     $fReencauche1,$fCambio1,$fRotacion1,$llantaSerial2,$profundidad2,$opmarca2,

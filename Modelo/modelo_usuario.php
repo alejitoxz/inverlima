@@ -127,7 +127,6 @@ session_start();
                     p.email,
                     p.direccion,
                     u.usuario,
-                    u.clave,
                     r.tipoRol,
                     co.entResp,
                     co.id as idEntResp,
@@ -138,9 +137,9 @@ session_start();
                     INNER JOIN company AS co ON (u.idCompany = co.id)
                     INNER JOIN rol AS r ON (u.idRol = r.id)
                     INNER JOIN persona AS p ON (u.idPersona = p.id)
-                    WHERE u.estatus = 1 $com and r.Id not in (1) $wr
+                    WHERE u.estatus = 1 
             ";
-           // echo $sql;
+            echo $sql;
             $resp = sqlsrv_query($conn, $sql);
             if( $resp === false) {
                 return 0;

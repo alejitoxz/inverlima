@@ -17,7 +17,7 @@ session_start();
             $idUsuario = $_SESSION['S_ID'];
 
             $sql = "SELECT
-            ( prop.nombre + ' ' + prop.apellido ) AS operario,
+            ( prop.nombre + ' ' + prop.apellido ) AS tecnico,
             v.placa,
 			v.cod_interno,
             os.id,
@@ -27,8 +27,8 @@ session_start();
             FROM
                 ordenServicio AS os
                 LEFT JOIN vehiculo AS v ON ( os.idVehiculo = v.id )
-                LEFT JOIN operario AS op ON ( op.id = os.idOperario)
-                LEFT JOIN persona AS prop ON ( op.idPersona = prop.id )
+                LEFT JOIN tecnico AS t ON ( t.id = os.idTecnico)
+                LEFT JOIN persona AS prop ON ( t.idPersona = prop.id )
                 INNER JOIN servicio AS s ON ( os.idServicio = s.id )
 								order by os.fecha_creacion asc";
             $resp = sqlsrv_query($conn, $sql);
@@ -111,7 +111,7 @@ session_start();
             $this->conexion->conectar();
         }
 
-        function listar_operario(){
+        function listar_tecnico(){
             $conn = $this->conexion->conectar();
             $idCompany = $_SESSION['COMPANY'];
             $Rol = $_SESSION['ROL'];
@@ -119,13 +119,13 @@ session_start();
     
 
             $sql  = "SELECT 
-            o.id,
-            (p.nombre + ' ' +p.apellido) as operario
+            t.id,
+            (p.nombre + ' ' +p.apellido) as tecnico
             FROM
-            operario as o
-            INNER JOIN persona AS p ON (o.idPersona = p.id)
-            INNER JOIN company AS c ON ( c.id = o.idCompany ) 
-            where o.estatus = 1 ";
+            tecnico as t
+            INNER JOIN persona AS p ON (t.idPersona = p.id)
+            INNER JOIN company AS c ON ( c.id = t.idCompany ) 
+            where t.estatus = 1 ";
             $resp = sqlsrv_query($conn, $sql);
             if( $resp === false) {
                 return 0;
@@ -514,7 +514,7 @@ session_start();
             $this->conexion->conectar();
         }
 
-        function registrar_ordenServicio($id,$placa,$revBimCotrautol,$rRegistradora,$kmGps,$vExtintor,$oReg,$observacion,$operario,$bateria,$tipoBateria,$marca,$serial,$fVenta,$fIntalacion,$tUso,$pCambio,$pMantenimiento,$oMejora,$llantaSerial1,$profundidad1,$opmarca1,$tipoMarca1,$estado1,$fInstalacion1,$fReencauche1,$fCambio1,$fRotacion1,$llantaSerial2,$profundidad2,$opmarca2,$tipoMarca2,$estado2,$fInstalacion2,$fReencauche2,$fCambio2,$fRotacion2,$llantaSerial3,$profundidad3,$opmarca3,$tipoMarca3,$estado3,$fInstalacion3,$fReencauche3,$fCambio3,$fRotacion3,$llantaSerial4,$profundidad4,$opmarca4,$tipoMarca4,$estado4,$fInstalacion4,$fReencauche4,$fCambio4,$fRotacion4,$llantaSerial5,$profundidad5,$opmarca5,$tipoMarca5,$estado5,$fInstalacion5,$fReencauche5,$fCambio5,$fRotacion5,$llantaSerial6,$profundidad6,$opmarca6,$tipoMarca6,$estado6,$fInstalacion6,$fReencauche6,$fCambio6,$fRotacion6,$calibracion1,$calibracion2,$calibracion3,$calibracion4,$calibracion5,$calibracion6,$oCalibracion,$balanceo1,$balanceo2,$balanceo3,$balanceo4,$balanceo5,$balanceo6,$oBalanceo,$alineacion1,$alineacion2,$observacionG3,$observacionM3,$fecha,$pCambioA,$kilometraje,$cKilometraje,$tipoAceite,$marca10,$cantidad1,$presentacion1,$nivelacion,$cNivelacion,$fAceite,$fCombustible,$fAire,$tipoAceite1,$marca1,$uCambio,$pCambio10,$cantidad2,$presentacion2,$nivelacion2,$cNivelacion2,$tipoAceite3,$marca3,$uCambio3,$pCambio3,$cantidad3,$presentacion3,$nivelacion3,$cNivelacion3,$tipoAceite4,$marca4,$uCambio4,$pCambio4,$tipoAceite5,$marca5,$uCambio5,$pCambio5,$lFreno,$lParabrisa,$refrigerante,$hidraulico,$lMotor,$lCaja,$lTransmision,$lFrenos1,$engrase,$sRadiador,$sFiltroAire,$observacionesF){
+        function registrar_ordenServicio($id,$placa,$revBimCotrautol,$rRegistradora,$kmGps,$vExtintor,$oReg,$observacion,$tecnico,$bateria,$tipoBateria,$marca,$serial,$fVenta,$fIntalacion,$tUso,$pCambio,$pMantenimiento,$oMejora,$llantaSerial1,$profundidad1,$opmarca1,$tipoMarca1,$estado1,$fInstalacion1,$fReencauche1,$fCambio1,$fRotacion1,$llantaSerial2,$profundidad2,$opmarca2,$tipoMarca2,$estado2,$fInstalacion2,$fReencauche2,$fCambio2,$fRotacion2,$llantaSerial3,$profundidad3,$opmarca3,$tipoMarca3,$estado3,$fInstalacion3,$fReencauche3,$fCambio3,$fRotacion3,$llantaSerial4,$profundidad4,$opmarca4,$tipoMarca4,$estado4,$fInstalacion4,$fReencauche4,$fCambio4,$fRotacion4,$llantaSerial5,$profundidad5,$opmarca5,$tipoMarca5,$estado5,$fInstalacion5,$fReencauche5,$fCambio5,$fRotacion5,$llantaSerial6,$profundidad6,$opmarca6,$tipoMarca6,$estado6,$fInstalacion6,$fReencauche6,$fCambio6,$fRotacion6,$calibracion1,$calibracion2,$calibracion3,$calibracion4,$calibracion5,$calibracion6,$oCalibracion,$balanceo1,$balanceo2,$balanceo3,$balanceo4,$balanceo5,$balanceo6,$oBalanceo,$alineacion1,$alineacion2,$observacionG3,$observacionM3,$fecha,$pCambioA,$kilometraje,$cKilometraje,$tipoAceite,$marca10,$cantidad1,$presentacion1,$nivelacion,$cNivelacion,$fAceite,$fCombustible,$fAire,$tipoAceite1,$marca1,$uCambio,$pCambio10,$cantidad2,$presentacion2,$nivelacion2,$cNivelacion2,$tipoAceite3,$marca3,$uCambio3,$pCambio3,$cantidad3,$presentacion3,$nivelacion3,$cNivelacion3,$tipoAceite4,$marca4,$uCambio4,$pCambio4,$tipoAceite5,$marca5,$uCambio5,$pCambio5,$lFreno,$lParabrisa,$refrigerante,$hidraulico,$lMotor,$lCaja,$lTransmision,$lFrenos1,$engrase,$sRadiador,$sFiltroAire,$observacionesF){
             $idCompany = $_SESSION['COMPANY'];
             $idUsuario = $_SESSION['S_ID'];
             $cadena = "";
@@ -798,11 +798,11 @@ session_start();
                     rRegistradora,
                     oRegistradora,
                     observacion,
-                    idOperario
+                    idTecnico
 
                 ) 
                 VALUES(
-                    @idServicio,$placa,$revBimCotrautol,1,'$vExtintor',$rRegistradora,'$oReg','$observacion',$operario
+                    @idServicio,$placa,$revBimCotrautol,1,'$vExtintor',$rRegistradora,'$oReg','$observacion',$tecnico
                 )";
             
             
@@ -817,7 +817,7 @@ session_start();
                      BEGIN CATCH
                      ROLLBACK TRAN
                      END CATCH";
-                     echo $sql;
+                     //echo $sql;
             $resp = sqlsrv_query($conn, $sql);
 
             if( $resp === false) {

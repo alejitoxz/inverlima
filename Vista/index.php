@@ -88,7 +88,7 @@ exit;*/
     <ul class="navbar-nav ml-auto">
       
    
-    <!-- Notifications Dropdown Menu 
+    <!-- MODULO DE CAMBIAR ASPECTO AL ADMIN LITE
       <li class="nav-item">
         <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#">
           <i class="fas fa-th-large"></i>

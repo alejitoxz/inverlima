@@ -41,6 +41,8 @@ function AbrirModalRegistroOrdenServicio(){
         // inicimos wizzard
           // BS-Stepper Init
           window.stepper = new Stepper(document.querySelector('.bs-stepper'))
+
+          
           
     
       });
@@ -55,7 +57,7 @@ function AbrirModalEditarOrdenServicio(){
     
         // inicimos wizzard
           // BS-Stepper Init
-          window.stepper = new Stepper(document.querySelector('.bs-stepper'))
+          window.stepper = new Stepper(document.querySelector('.stepper-editar'))
           
     
       });

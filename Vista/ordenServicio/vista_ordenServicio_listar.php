@@ -1451,14 +1451,14 @@
           <div class="col-md-12">
             <div class="card">
               <div class="card-body p-0">
-                <div class="bs-stepper linear">
+                <div class="bs-stepper stepper-editar linear">
 
 
                   <div class="bs-stepper-header" role="tablist">
 
                     <!-- DATOS DEL VEHICULO -->
-                    <div class="step active" data-target="#datos-part" onclick="stepper.to(1)">
-                      <button type="button" class="step-trigger" role="tab" aria-controls="datos-part" id="datos-trigger" aria-selected="true">
+                    <div class="step active" data-target="#datos-part-edit" onclick="stepper.to(1)">
+                      <button type="button" class="step-trigger" role="tab" aria-controls="datos-part-edit" id="datos-trigger-edit" aria-selected="true">
                         <span class="bs-stepper-circle"><i class="fas fa-bus"></i></span>
                         <span class="bs-stepper-label">Datos del Vehículo</span>
                       </button>
@@ -1466,8 +1466,8 @@
 
                     <!-- DATOS DE BATERIAS -->
                     <div class="line"></div>
-                    <div class="step" data-target="#bateria-part" onclick="stepper.to(2)">
-                      <button type="button" class="step-trigger" role="tab" aria-controls="bateria-part" id="bateria-trigger" aria-selected="false">
+                    <div class="step" data-target="#bateria-part-edit" onclick="stepper.to(2)">
+                      <button type="button" class="step-trigger" role="tab" aria-controls="bateria-part-edit" id="bateria-trigger-edit" aria-selected="false">
                         <span class="bs-stepper-circle"><i class="fas fa-car-battery"></i></span>
                         <span class="bs-stepper-label">Batería</span>
                       </button>
@@ -1475,8 +1475,8 @@
 
                     <!-- DATOS DE LLANTAS -->
                     <div class="line"></div>
-                    <div class="step" data-target="#llanta-part" onclick="stepper.to(3)">
-                      <button type="button" class="step-trigger" role="tab" aria-controls="llanta-part" id="llanta-trigger" aria-selected="false" >
+                    <div class="step" data-target="#llanta-part-edit" onclick="stepper.to(3)">
+                      <button type="button" class="step-trigger" role="tab" aria-controls="llanta-part-edit" id="llanta-trigger-edit" aria-selected="false" >
                         <span class="bs-stepper-circle"><i class="fas fa-ring"></i></span>
                         <span class="bs-stepper-label">Llanta</span>
                       </button>
@@ -1484,8 +1484,8 @@
 
                     <!-- DATOS DE ACEITES -->
                     <div class="line"></div>
-                    <div class="step" data-target="#aceite-part" onclick="stepper.to(4)">
-                      <button type="button" class="step-trigger" role="tab" aria-controls="aceite-part" id="aceite-trigger" aria-selected="false" >
+                    <div class="step" data-target="#aceite-part-edit" onclick="stepper.to(4)">
+                      <button type="button" class="step-trigger" role="tab" aria-controls="aceite-part-edit" id="aceite-trigger-edit" aria-selected="false" >
                         <span class="bs-stepper-circle"><i class="fas fa-oil-can"></i></span>
                         <span class="bs-stepper-label">Aceites</span>
                       </button>
@@ -1496,7 +1496,7 @@
 
 
                     <!-- FORMULARIO DATOIS-->
-                    <div id="datos-part" class="content active dstepper-block" role="tabpanel" aria-labelledby="datos-trigger">
+                    <div id="datos-part-edit" class="content active dstepper-block" role="tabpanel" aria-labelledby="datos-trigger-edit">
                     <div class="row"> 
                       <div class="col-md-4">
                         <div class="form-group">
@@ -1566,7 +1566,7 @@
 
                     
                     <!-- FORMULARIO BATERIA-->
-                    <div id="bateria-part" class="content" role="tabpanel" aria-labelledby="bateria-trigger">
+                    <div id="bateria-part-edit" class="content" role="tabpanel" aria-labelledby="bateria-trigger-edit">
                     <div class="row">
                       <div class="col-md-4">
                           <div class="form-group">
@@ -1644,7 +1644,7 @@
 
 
                      <!-- FORMULARIO llanta-->
-                    <div id="llanta-part" class="content" role="tabpanel" aria-labelledby="llanta-trigger">
+                    <div id="llanta-part-edit" class="content" role="tabpanel" aria-labelledby="llanta-trigger-edit">
                     <h5>Llanta 1</h5>
                     <div class="row">
 
@@ -2385,7 +2385,7 @@
 
 
                       <!-- FORMULARIO ACCEITE-->
-                      <div id="aceite-part" class="content" role="tabpanel" aria-labelledby="aceite-trigger">
+                      <div id="aceite-part-edit" class="content" role="tabpanel" aria-labelledby="aceite-trigger-edit">
                         <h5>Cambio de aceite del motor</h5>
                         <div class="row">
                           <div class="col-md-4">

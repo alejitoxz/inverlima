@@ -26,17 +26,10 @@
                           <th>Placa</th>
                           <th>N° Interno</th>
                           <th>Registradora</th>
-<<<<<<< Updated upstream
-                          <th>Operario</th>
-                          <th>Fech. Creación</th>
-                          <th>Observación</th>
-                          <th>Editar</th>
-=======
                           <th>tecnico</th>
                           <th>Creacion</th>
                           <th>Observacion</th>
                           <th>Acciones</th>
->>>>>>> Stashed changes
                         </tr>
                     </thead>
                     <tbody id="ListadoOrden">

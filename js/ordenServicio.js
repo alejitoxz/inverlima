@@ -18,7 +18,7 @@ function listar_orden(){
             { "data": "placa" },
             { "data": "cod_interno" },
             { "data": "rRegistradora" },
-            { "data": "operario" },
+            { "data": "tecnico" },
             { "data": "fecha_creacion" },
             { "data": "observacion" },
             {"defaultContent":
@@ -67,9 +67,9 @@ function listar_placa(){
         }
     })
 }
-function listar_operario(){
+function listar_tecnico(){
     $.ajax({
-        "url": "../controlador/ordenServicio/controlador_operario_listar.php",
+        "url": "../controlador/ordenServicio/controlador_tecnico_listar.php",
         "type": "POST"
     }).done(function(resp){
         var data = JSON.parse(resp);
@@ -78,9 +78,9 @@ function listar_operario(){
         if(data.length>0){
             cadena+="<option value='0'>Seleccionar</option>"; 
             for(var i=0; i < data.length; i++){
-                cadena+="<option value ='"+data[i]['id']+"'>"+data[i]['operario']+"</option>";
+                cadena+="<option value ='"+data[i]['id']+"'>"+data[i]['tecnico']+"</option>";
             }
-            $("#sel_operario").html(cadena);
+            $("#sel_tecnico").html(cadena);
             $("#sel_placa_vehiculo_edit").html(cadena);
         }else{
             cadena+="<option value =''>No se encontraron registros</option>"; 
@@ -310,7 +310,7 @@ function registrar_orden_Servicio(){
     var vExtintor = $("#txt_vExtintor").val();
     var oReg = $("#txt_oReg").val();
     var observacion = $("#txt_obs").val();
-    var operario = $("#sel_operario").val();
+    var tecnico = $("#sel_tecnico").val();
     var bateria = $("#sel_bateria").val();
     var tipoBateria = $("#sel_tipoBateria").val();
     var marca = $("#sel_marca").val();
@@ -470,7 +470,7 @@ function registrar_orden_Servicio(){
         vExtintor:vExtintor,
         oReg:oReg,
         observacion:observacion,
-        operario:operario,
+        tecnico:tecnico,
         bateria:bateria,
         tipoBateria:tipoBateria,
         marca:marca,

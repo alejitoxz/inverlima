@@ -214,7 +214,7 @@
                         <div class="col-md-4">
                           <div class="form-group">
                             <label for="">Fecha de Instalación</label>
-                            <input type="date" class="form-control" id="txt_fIntalacion" style="width:100%; heigth: 40px;"><br>
+                            <input type="date" class="form-control" id="txt_fInstalacion" style="width:100%; heigth: 40px;"><br>
                           </div>
                         </div>
                     </div>
@@ -358,7 +358,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                               <label for="">Serial</label>
-                              <input type="text" class="form-control" id="txt_mar_edit2" placeholder="Ingrese Serial" ><br>
+                              <input type="text" class="form-control" id="txt_llantaSerial2" placeholder="Ingrese Serial" ><br>
                             </div>
                           </div>
                           <div class="col-md-6">
@@ -946,7 +946,7 @@
                       <div class="col-md-12">
                           <div class="form-group">
                             <label for="">Observaciones de Balanceo</label>
-                            <textarea  class="form-control" id="txt_mar_edit" ></textarea>
+                            <textarea  class="form-control" id="txt_oBalanceo" ></textarea>
                           </div>
                         </div>
                     </div>
@@ -1501,7 +1501,7 @@
                       <div class="col-md-4">
                         <div class="form-group">
                           <label for="">Placa</label>
-                          <select class="js-example-basic-single"  name="state" id="seleditar__placa_vehiculo" style="width:100%; heigth: 40px;" onchange="odometro(this.value)">    
+                          <select class="js-example-basic-single"  name="state" id="sel_editar_placa_vehiculo" style="width:100%; heigth: 40px;" onchange="odometro(this.value)">    
                           </select><br><br>
                         </div>
                       </div>
@@ -1606,7 +1606,7 @@
                         <div class="col-md-4">
                           <div class="form-group">
                             <label for="">Fecha de instalacion</label>
-                            <input type="date" class="form-control" id="txt_editar_fIntalacion" style="width:100%; heigth: 40px;"><br>
+                            <input type="date" class="form-control" id="txt_editar_fInstalacion" style="width:100%; heigth: 40px;"><br>
                           </div>
                         </div>
                     </div>
@@ -2338,7 +2338,7 @@
                       <div class="col-md-12">
                           <div class="form-group">
                             <label for="">Observaciones de Balanceo</label>
-                            <textarea  class="form-control" id="txt_editar_mar_edit" ></textarea>
+                            <textarea  class="form-control" id="txt_editar_oBalanceo" ></textarea>
                           </div>
                         </div>
                     </div>
@@ -2795,7 +2795,7 @@
                         </div>
                           </div>
                       <button class="btn btn-primary" onclick="stepper.previous()">Anterior</button>
-                      <button type="submit" class="btn btn-primary" onclick="registrar_orden_Servicio()">Guardar</button>
+                      <button type="submit" class="btn btn-primary" onclick="modificar_orden_Servicio()">Guardar</button>
                     </div>
                     
 

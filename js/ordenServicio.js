@@ -77,7 +77,7 @@ function listar_placa(){
                 cadena+="<option value ='"+data[i]['id']+"'>"+data[i]['placa']+" - "+data[i]['cod_interno']+"</option>";
             } 
             $("#sel_placa_vehiculo").html(cadena);
-            $("#sel_placa_vehiculo_edit").html(cadena);
+            $("#sel_editar_placa_vehiculo").html(cadena);
         }else{
             cadena+="<option value =''>No se encontraron registros</option>"; 
         }
@@ -97,7 +97,7 @@ function listar_tecnico(){
                 cadena+="<option value ='"+data[i]['id']+"'>"+data[i]['tecnico']+"</option>";
             }
             $("#sel_tecnico").html(cadena);
-            $("#sel_placa_vehiculo_edit").html(cadena);
+            $("#sel_editar_tecnico").html(cadena);
         }else{
             cadena+="<option value =''>No se encontraron registros</option>"; 
         }
@@ -115,7 +115,7 @@ function odometro(id){
         var cadena="";
         if(data.length>0){            
             $("#txt_kmGps").val(data[0]['Odometer']);
-            $("#txt_kmGps_edit").val(data[0]['Odometer']);
+            $("#txt_editar_kmGps").val(data[0]['Odometer']);
         }else{
             cadena+="<option value =''>No se encontraron registros</option>"; 
         }
@@ -136,7 +136,7 @@ function listar_bateria(){
                 cadena+="<option value ='"+data[i]['id']+"'>"+data[i]['bateria']+"</option>";
             }
             $("#sel_bateria").html(cadena);
-            $("#sel_placa_vehiculo_edit").html(cadena);
+            $("#sel_editar_bateria").html(cadena);
         }else{
             cadena+="<option value =''>No se encontraron registros</option>"; 
         }
@@ -156,7 +156,7 @@ function listar_tipoBateria(){
                 cadena+="<option value ='"+data[i]['id']+"'>"+data[i]['tipoBateria']+"</option>";
             }
             $("#sel_tipoBateria").html(cadena);
-            $("#sel_placa_vehiculo_edit").html(cadena);
+            $("#sel_editar_tipoBateria").html(cadena);
         }else{
             cadena+="<option value =''>No se encontraron registros</option>"; 
         }
@@ -176,7 +176,7 @@ function listar_marca(){
                 cadena+="<option value ='"+data[i]['id']+"'>"+data[i]['marca']+"</option>";
             }
             $("#sel_marca").html(cadena);
-            $("#sel_placa_vehiculo_edit").html(cadena);
+            $("#sel_editar_marca").html(cadena);
         }else{
             cadena+="<option value =''>No se encontraron registros</option>"; 
         }
@@ -201,7 +201,12 @@ function listar_marca_llanta(){
             $("#sel_marca_llanta3").html(cadena);
             $("#sel_marca_llanta4").html(cadena);
             $("#sel_marca_llanta5").html(cadena);
-            $("#sel_placa_vehiculo_edit").html(cadena);
+            $("#sel_editar_marca_llanta").html(cadena);
+            $("#sel_editar_marca_llanta1").html(cadena);
+            $("#sel_editar_marca_llanta2").html(cadena);
+            $("#sel_editar_marca_llanta3").html(cadena);
+            $("#sel_editar_marca_llanta4").html(cadena);
+            $("#sel_editar_marca_llanta5").html(cadena);
         }else{
             cadena+="<option value =''>No se encontraron registros</option>"; 
         }
@@ -225,7 +230,11 @@ function listar_tipo_aceite(){
             $("#sel_tipo_aceite2").html(cadena);
             $("#sel_tipo_aceite3").html(cadena);
             $("#sel_tipo_aceite4").html(cadena);
-            $("#sel_placa_vehiculo_edit").html(cadena);
+            $("#sel_editar_tipo_aceite").html(cadena);
+            $("#sel_editar_tipo_aceite1").html(cadena);
+            $("#sel_editar_tipo_aceite2").html(cadena);
+            $("#sel_editar_tipo_aceite3").html(cadena);
+            $("#sel_editar_tipo_aceite4").html(cadena);
         }else{
             cadena+="<option value =''>No se encontraron registros</option>"; 
         }
@@ -249,7 +258,11 @@ function listar_marca_aceite(){
             $("#sel_marca_aceite2").html(cadena);
             $("#sel_marca_aceite3").html(cadena);
             $("#sel_marca_aceite4").html(cadena);
-            $("#sel_placa_vehiculo_edit").html(cadena);
+            $("#sel_editar_marca_aceite").html(cadena);
+            $("#sel_editar_marca_aceite1").html(cadena);
+            $("#sel_editar_marca_aceite2").html(cadena);
+            $("#sel_editar_marca_aceite3").html(cadena);
+            $("#sel_editar_marca_aceite4").html(cadena);
         }else{
             cadena+="<option value =''>No se encontraron registros</option>"; 
         }
@@ -269,7 +282,7 @@ function listar_filtro_aceite(){
                 cadena+="<option value ='"+data[i]['id']+"'>"+data[i]['filtro_aceite']+"</option>";
             }
             $("#sel_filtro_aceite").html(cadena);
-            $("#sel_placa_vehiculo_edit").html(cadena);
+            $("#sel_editar_filtro_aceite").html(cadena);
         }else{
             cadena+="<option value =''>No se encontraron registros</option>"; 
         }
@@ -289,7 +302,7 @@ function listar_filtro_aire(){
                 cadena+="<option value ='"+data[i]['id']+"'>"+data[i]['filtro_aire']+"</option>";
             }
             $("#sel_filtro_aire").html(cadena);
-            $("#sel_placa_vehiculo_edit").html(cadena);
+            $("#sel_editar_filtro_aire").html(cadena);
         }else{
             cadena+="<option value =''>No se encontraron registros</option>"; 
         }
@@ -309,7 +322,7 @@ function listar_filtro_combustible(){
                 cadena+="<option value ='"+data[i]['id']+"'>"+data[i]['filtro_combustible']+"</option>";
             }
             $("#sel_filtro_combustible").html(cadena);
-            $("#sel_placa_vehiculo_edit").html(cadena);
+            $("#sel_editar_filtro_combustible").html(cadena);
         }else{
             cadena+="<option value =''>No se encontraron registros</option>"; 
         }
@@ -332,7 +345,7 @@ function registrar_orden_Servicio(){
     var marca = $("#sel_marca").val();
     var serial = $("#txt_serial").val();
     var fVenta = $("#txt_fVenta").val();
-    var fIntalacion = $("#txt_fInstalacion").val();
+    var fInstalacion = $("#txt_fInstalacion").val();
     var tUso = $("#txt_tUso").val();
     var pCambio = $("#txt_pCambio").val();
     var pMantenimiento = $("#txt_pMantenimiento").val();
@@ -342,7 +355,7 @@ function registrar_orden_Servicio(){
     var opmarca1 = $("#sel_marca_llanta1").val();
     var tipoMarca1 = $("#sel_tipoMarca1").val();
     var estado1 = $("#sel_estado1").val();
-    var fInstalacion1 = $("#sel_fInstalacion1").val();
+    var fInstalacion1 = $("#txt_fInstalacion1").val();
     var fReencauche1 = $("#txt_fReencauche1").val();
     var fCambio1 = $("#txt_fCambio1").val();
     var fRotacion1 = $("#txt_fRotacion1").val();
@@ -492,7 +505,7 @@ function registrar_orden_Servicio(){
         marca:marca,
         serial:serial,
         fVenta:fVenta,
-        fIntalacion:fIntalacion,
+        fInstalacion:fInstalacion,
         tUso:tUso,
         pCambio:pCambio,
         pMantenimiento:pMantenimiento,
@@ -645,7 +658,6 @@ function registrar_orden_Servicio(){
 
 }
 
-// FUNCION PARA EDITAR REGISTRO
 $('#tabla_orden').on('click','.editar',function(){
 
     if(table.row(this).child.isShown()){
@@ -667,7 +679,7 @@ $('#tabla_orden').on('click','.editar',function(){
     var marca =datosOrden.marca;
     var serial =datosOrden.serial;
     var fVenta =datosOrden.fVenta;
-    var fIntalacion =datosOrden.fIntalacion;
+    var fInstalacion =datosOrden.fInstalacion;
     var tUso =datosOrden.tUso;
     var pCambio =datosOrden.pCambio;
     var pMantenimiento =datosOrden.pMantenimiento;
@@ -825,7 +837,7 @@ $('#tabla_orden').on('click','.editar',function(){
     $("#sel_editar_marca").val(marca).trigger('change');
     $("#txt_editar_serial").val(serial);
     $("#txt_editar_fVenta").val(fVenta);
-    $("#txt_editar_fInstalacion").val(fIntalacion);
+    $("#txt_editar_fInstalacion").val(fInstalacion);
     $("#txt_editar_tUso").val(tUso);
     $("#txt_editar_pCambio").val(pCambio);
     $("#txt_editar_pMantenimiento").val(pMantenimiento);
@@ -969,7 +981,7 @@ $('#tabla_orden').on('click','.editar',function(){
 
 })
 
-function modificar_datos_conductor(){
+function modificar_orden_Servicio(){
  
     var id = $("#idPersonaC").val();
     var placa = $("#sel_editar_placa_vehiculo").val();
@@ -985,7 +997,7 @@ function modificar_datos_conductor(){
     var marca = $("#sel_editar_marca").val();
     var serial = $("#txt_editar_serial").val();
     var fVenta = $("#txt_editar_fVenta").val();
-    var fIntalacion = $("#txt_editar_fInstalacion").val();
+    var fInstalacion = $("#txt_editar_fInstalacion").val();
     var tUso = $("#txt_editar_tUso").val();
     var pCambio = $("#txt_editar_pCambio").val();
     var pMantenimiento = $("#txt_editar_pMantenimiento").val();
@@ -1143,7 +1155,7 @@ function modificar_datos_conductor(){
             marca:marca,
             serial:serial,
             fVenta:fVenta,
-            fIntalacion:fIntalacion,
+            fInstalacion:fInstalacion,
             tUso:tUso,
             pCambio:pCambio,
             pMantenimiento:pMantenimiento,

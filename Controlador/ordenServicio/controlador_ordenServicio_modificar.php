@@ -146,7 +146,7 @@
     $sFiltroAire = htmlspecialchars($_POST['sFiltroAire'],ENT_QUOTES,'UTF-8');
     $observacionesF = htmlspecialchars($_POST['sFiltroAire'],ENT_QUOTES,'UTF-8');
 
-    $consulta = $MU->modificar_datos_ordenServicio(
+    $consulta = $MU->modificar_orden_Servicio(
     $id,$placa,$revBimCotrautol,$rRegistradora,$kmGps,$vExtintor,$oReg,
     $observacion,$tecnico,$bateria,$tipoBateria,$marca,$serial,
     $fVenta,$fIntalacion,$tUso,$pCambio,$pMantenimiento,$oMejora,

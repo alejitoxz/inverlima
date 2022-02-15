@@ -33,7 +33,6 @@
                           <th>E-mail</th>
                           <th>Direccion</th>
                           <th>Usuario</th>
-                          <th>Contraseña</th>
                           <th>Rol</th>
                           <th>Compañia</th>
                           <th>Editar</th>

@@ -139,7 +139,6 @@ session_start();
                     INNER JOIN persona AS p ON (u.idPersona = p.id)
                     WHERE u.estatus = 1 
             ";
-            echo $sql;
             $resp = sqlsrv_query($conn, $sql);
             if( $resp === false) {
                 return 0;
@@ -193,7 +192,7 @@ session_start();
 
         function listar_rol(){
             $conn = $this->conexion->conectar();
-            $sql  = "SELECT id, tipoRol from rol where Id not in (1,6)";
+            $sql  = "SELECT id, tipoRol from rol";
             $resp = sqlsrv_query($conn, $sql);
             if( $resp === false) {
                 return 0;

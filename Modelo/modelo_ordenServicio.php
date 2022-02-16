@@ -20,9 +20,7 @@ session_start();
             ( prop.nombre + ' ' + prop.apellido ) AS tecnico,
             v.placa,
 			v.cod_interno,
-            os.id,
-            os.rRegistradora,
-            os.observacion,
+            os.*,
             CONVERT ( VARCHAR, os.fecha_creacion ) AS fecha_creacion
             FROM
                 ordenServicio AS os

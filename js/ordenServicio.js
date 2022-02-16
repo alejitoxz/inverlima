@@ -15,6 +15,104 @@ function listar_orden(){
         },
         "columns": [
             { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
+            { "data": "id" },
             { "data": "placa" },
             { "data": "cod_interno" },
             { "data": "rRegistradora" },
@@ -665,7 +763,7 @@ $('#tabla_orden').on('click','.editar',function(){
     }else{
         var datosOrden = table.row($(this).parents('tr')).data();
     }
-
+    
     var id =datosOrden.id;
     var placa =datosOrden.placa;
     var revBimCotrautol =datosOrden.revBimCotrautol;
@@ -817,7 +915,7 @@ $('#tabla_orden').on('click','.editar',function(){
     var engrase =datosOrden.engrase;
     var sRadiador =datosOrden.sRadiador;
     var sFiltroAire =datosOrden.sFiltroAire;
-
+    console.log("Datos",datosOrden.sFiltroAire);
     
     var observacionesF =datosOrden.observacionesF;
     //levantar modal
@@ -827,7 +925,7 @@ $('#tabla_orden').on('click','.editar',function(){
     $("#sel_editar_placa_vehiculo").val(placa).trigger('change');
     $("#txt_editar_revb").val(revBimCotrautol);
     $("#sel_editar_rReg").val(rRegistradora).trigger('change');
-    $("#txt_editar_kmGps").val(kmGps);
+    $("#txt_editar_kmGps").val(0);
     $("#txt_editar_vExtintor").val(vExtintor);
     $("#txt_editar_oReg").val(oReg);
     $("#txt_editar_obs").val(observacion);

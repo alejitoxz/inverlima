@@ -12,113 +12,671 @@ function listar_orden(){
         "ajax": {
             "url": "../controlador/ordenServicio/controlador_listar_orden.php",
             "type": "POST"
-        },
+        },"columnDefs": [
+            {
+                "targets": [ 0 ],
+                "visible": false
+            }, 
+            
+            {
+                "targets": [ 1 ],
+                "visible": false
+            },
+            {
+                "targets": [ 2 ],
+                "visible": false
+            },
+            {
+                "targets": [ 3 ],
+                "visible": false
+            },
+            {
+                "targets": [ 4 ],
+                "visible": false
+            },
+            {
+                "targets": [ 5 ],
+                "visible": false
+            },
+            {
+                "targets": [ 6 ],
+                "visible": false
+            },
+            {
+                "targets": [ 7 ],
+                "visible": false
+            },
+            {
+                "targets": [ 8 ],
+                "visible": false
+            },
+            {
+                "targets": [ 9 ],
+                "visible": false
+            },
+            {
+                "targets": [ 10 ],
+                "visible": false
+            },
+            {
+                "targets": [ 11 ],
+                "visible": false
+            },
+            {
+                "targets": [ 12 ],
+                "visible": false
+            },
+            {
+                "targets": [ 13 ],
+                "visible": false
+            },
+            {
+                "targets": [ 14 ],
+                "visible": false
+            },
+            {
+                "targets": [ 15 ],
+                "visible": false
+            },
+            {
+                "targets": [ 16 ],
+                "visible": false
+            },
+            {
+                "targets": [ 17 ],
+                "visible": false
+            },
+            {
+                "targets": [ 18 ],
+                "visible": false
+            },
+            {
+                "targets": [ 19 ],
+                "visible": false
+            },
+            {
+                "targets": [ 20 ],
+                "visible": false
+            },
+            {
+                "targets": [ 21 ],
+                "visible": false
+            },
+            {
+                "targets": [ 22 ],
+                "visible": false
+            },
+            {
+                "targets": [ 23 ],
+                "visible": false
+            },
+            {
+                "targets": [ 24 ],
+                "visible": false
+            },
+            {
+                "targets": [ 25 ],
+                "visible": false
+            },
+            {
+                "targets": [ 26 ],
+                "visible": false
+            },
+            {
+                "targets": [ 27 ],
+                "visible": false
+            },
+            {
+                "targets": [ 28 ],
+                "visible": false
+            },
+            {
+                "targets": [ 29 ],
+                "visible": false
+            },
+            {
+                "targets": [ 30 ],
+                "visible": false
+            },
+            {
+                "targets": [ 31 ],
+                "visible": false
+            },
+            {
+                "targets": [ 32 ],
+                "visible": false
+            },
+            {
+                "targets": [ 33 ],
+                "visible": false
+            },
+            {
+                "targets": [ 34 ],
+                "visible": false
+            },
+            {
+                "targets": [ 35 ],
+                "visible": false
+            },
+            {
+                "targets": [ 36 ],
+                "visible": false
+            },
+            {
+                "targets": [ 37 ],
+                "visible": false
+            },
+            {
+                "targets": [ 38 ],
+                "visible": false
+            },
+            {
+                "targets": [ 39 ],
+                "visible": false
+            },
+            {
+                "targets": [ 40 ],
+                "visible": false
+            },
+            {
+                "targets": [ 41 ],
+                "visible": false
+            },
+            {
+                "targets": [ 42 ],
+                "visible": false
+            },
+            {
+                "targets": [ 43 ],
+                "visible": false
+            },
+            {
+                "targets": [ 44 ],
+                "visible": false
+            },
+            {
+                "targets": [ 45 ],
+                "visible": false
+            },
+            {
+                "targets": [ 46 ],
+                "visible": false
+            },
+            {
+                "targets": [ 47 ],
+                "visible": false
+            },
+            {
+                "targets": [ 48 ],
+                "visible": false
+            },
+            {
+                "targets": [ 49 ],
+                "visible": false
+            },
+            {
+                "targets": [ 50 ],
+                "visible": false
+            },
+            {
+                "targets": [ 51 ],
+                "visible": false
+            },
+            {
+                "targets": [ 52 ],
+                "visible": false
+            },
+            {
+                "targets": [ 53 ],
+                "visible": false
+            },
+            {
+                "targets": [ 54 ],
+                "visible": false
+            },
+            {
+                "targets": [ 55 ],
+                "visible": false
+            },
+            {
+                "targets": [ 56 ],
+                "visible": false
+            },
+            {
+                "targets": [ 57 ],
+                "visible": false
+            },
+            {
+                "targets": [ 58 ],
+                "visible": false
+            },
+            {
+                "targets": [ 59 ],
+                "visible": false
+            },
+            {
+                "targets": [ 60 ],
+                "visible": false
+            },
+            {
+                "targets": [ 61 ],
+                "visible": false
+            },
+            {
+                "targets": [ 62 ],
+                "visible": false
+            },
+            {
+                "targets": [ 63 ],
+                "visible": false
+            },
+            {
+                "targets": [ 64 ],
+                "visible": false
+            },
+            {
+                "targets": [ 65 ],
+                "visible": false
+            },
+            {
+                "targets": [ 66 ],
+                "visible": false
+            },
+            {
+                "targets": [ 67 ],
+                "visible": false
+            },
+            {
+                "targets": [ 68 ],
+                "visible": false
+            },
+            {
+                "targets": [ 69 ],
+                "visible": false
+            },
+            {
+                "targets": [ 70 ],
+                "visible": false
+            },
+            {
+                "targets": [ 71 ],
+                "visible": false
+            },
+            {
+                "targets": [ 72 ],
+                "visible": false
+            },
+            {
+                "targets": [ 73 ],
+                "visible": false
+            },
+            {
+                "targets": [ 74 ],
+                "visible": false
+            },
+            {
+                "targets": [ 75 ],
+                "visible": false
+            },
+            {
+                "targets": [ 76 ],
+                "visible": false
+            },
+            {
+                "targets": [ 77 ],
+                "visible": false
+            },
+            {
+                "targets": [ 78 ],
+                "visible": false
+            },
+            {
+                "targets": [ 79 ],
+                "visible": false
+            },
+            {
+                "targets": [ 80 ],
+                "visible": false
+            },
+            {
+                "targets": [ 81 ],
+                "visible": false
+            },
+            {
+                "targets": [ 82 ],
+                "visible": false
+            },
+            {
+                "targets": [ 83 ],
+                "visible": false
+            },
+            {
+                "targets": [ 84 ],
+                "visible": false
+            },
+            {
+                "targets": [ 85 ],
+                "visible": false
+            },
+            {
+                "targets": [ 86 ],
+                "visible": false
+            },
+            {
+                "targets": [ 87 ],
+                "visible": false
+            },
+            {
+                "targets": [ 88 ],
+                "visible": false
+            },
+            
+            {
+                "targets": [ 89 ],
+                "visible": false
+            },
+            {
+                "targets": [ 90 ],
+                "visible": false
+            },
+            {
+                "targets": [ 91 ],
+                "visible": false
+            },
+            {
+                "targets": [ 92 ],
+                "visible": false
+            },
+            {
+                "targets": [ 93 ],
+                "visible": false
+            },
+            {
+                "targets": [ 94 ],
+                "visible": false
+            },
+            {
+                "targets": [ 95 ],
+                "visible": false
+            },
+            {
+                "targets": [ 96 ],
+                "visible": false
+            },
+            {
+                "targets": [ 97 ],
+                "visible": false
+            },
+            {
+                "targets": [ 98 ],
+                "visible": false
+            },
+            {
+                "targets": [ 99 ],
+                "visible": false
+            },
+            {
+                "targets": [ 100 ],
+                "visible": false
+            },
+            {
+                "targets": [ 101 ],
+                "visible": false
+            },
+            {
+                "targets": [ 102 ],
+                "visible": false
+            },
+            {
+                "targets": [ 103 ],
+                "visible": false
+            },
+            {
+                "targets": [ 104 ],
+                "visible": false
+            },
+            {
+                "targets": [ 105 ],
+                "visible": false
+            },
+            {
+                "targets": [ 106 ],
+                "visible": false
+            },
+            {
+                "targets": [ 107 ],
+                "visible": false
+            },
+            {
+                "targets": [ 108 ],
+                "visible": false
+            },
+            {
+                "targets": [ 109 ],
+                "visible": false
+            },
+            {
+                "targets": [ 110 ],
+                "visible": false
+            },
+            {
+                "targets": [ 111 ],
+                "visible": false
+            },
+            {
+                "targets": [ 112 ],
+                "visible": false
+            },
+            {
+                "targets": [ 113 ],
+                "visible": false
+            },
+            {
+                "targets": [ 114 ],
+                "visible": false
+            },
+            {
+                "targets": [ 115 ],
+                "visible": false
+            },
+            {
+                "targets": [ 116 ],
+                "visible": false
+            },
+            {
+                "targets": [ 117 ],
+                "visible": false
+            },
+            {
+                "targets": [ 118 ],
+                "visible": false
+            },
+            {
+                "targets": [ 119 ],
+                "visible": false
+            },
+            {
+                "targets": [ 120 ],
+                "visible": false
+            },
+            {
+                "targets": [ 121 ],
+                "visible": false
+            },
+            {
+                "targets": [ 123 ],
+                "visible": false
+            },
+            {
+                "targets": [ 124 ],
+                "visible": false
+            },
+            {
+                "targets": [ 125 ],
+                "visible": false
+            },
+            {
+                "targets": [ 126 ],
+                "visible": false
+            },
+            {
+                "targets": [ 127 ],
+                "visible": false
+            },
+            {
+                "targets": [ 128 ],
+                "visible": false
+            },
+            {
+                "targets": [ 129 ],
+                "visible": false
+            },
+            {
+                "targets": [ 130 ],
+                "visible": false
+            }
+        ],
         "columns": [
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
-            { "data": "id" },
+            { "data": "bateria" },
+            { "data": "tipoBateria" },
+            { "data": "marca" },
+            { "data": "serial" },
+            { "data": "fVenta" },
+            { "data": "fInstalacion" },
+            { "data": "tUso" },
+            { "data": "pCambio" },
+            { "data": "pMantenimiento" },
+            { "data": "oMejora" },
+            { "data": "llantaSerial1" },
+            { "data": "profundidad1" },
+            { "data": "opmarca1" },
+            { "data": "tipoMarca1" },
+            { "data": "estado1" },
+            { "data": "fInstalacion1" },
+            { "data": "fReencauche1" },
+            { "data": "fCambio1" },
+            { "data": "fRotacion1" },
+            { "data": "llantaSerial2" },
+            { "data": "profundidad2" },
+            { "data": "opmarca2" },
+            { "data": "tipoMarca2" },
+            { "data": "estado2" },
+            { "data": "fInstalacion2" },
+            { "data": "fReencauche2" },
+            { "data": "fCambio2" },
+            { "data": "fRotacion2" },
+            { "data": "llantaSerial3" },
+            { "data": "profundidad3" },
+            { "data": "opmarca3" },
+            { "data": "tipoMarca3" },
+            { "data": "estado3" },
+            { "data": "fInstalacion3" },
+            { "data": "fReencauche3" },
+            { "data": "fCambio3" },
+            { "data": "fRotacion3" },
+            { "data": "llantaSerial4" },
+            { "data": "profundidad4" },
+            { "data": "opmarca4" },
+            { "data": "tipoMarca4" },
+            { "data": "estado4" },
+            { "data": "fInstalacion4" },
+            { "data": "fReencauche4" },
+            { "data": "fCambio4" },
+            { "data": "fRotacion4" },
+            { "data": "llantaSerial5" },
+            { "data": "profundidad5" },
+            { "data": "opmarca5" },
+            { "data": "tipoMarca5" },
+            { "data": "estado5" },
+            { "data": "fInstalacion5" },
+            { "data": "fReencauche5" },
+            { "data": "fCambio5" },
+            { "data": "fRotacion5" },
+            { "data": "llantaSerial6" },
+            { "data": "profundidad6" },
+            { "data": "opmarca6" },
+            { "data": "tipoMarca6" },
+            { "data": "estado6" },
+            { "data": "fInstalacion6" },
+            { "data": "fReencauche6" },
+            { "data": "fCambio6" },
+            { "data": "fRotacion6" },
+            { "data": "calibracion1" },
+            { "data": "calibracion2" },
+            { "data": "calibracion3" },
+            { "data": "calibracion4" },
+            { "data": "calibracion5" },
+            { "data": "calibracion6" },
+            { "data": "oCalibracion" },
+            { "data": "balanceo1" },
+            { "data": "balanceo2" },
+            { "data": "balanceo3" },
+            { "data": "balanceo4" },
+            { "data": "balanceo5" },
+            { "data": "balanceo6" },
+            { "data": "oBalanceo" },
+            { "data": "alineacion1" },
+            { "data": "alineacion2" },
+            { "data": "observacionG3" },
+            { "data": "observacionM3" },
+            { "data": "fecha" },
+            { "data": "pCambioA" },
+            { "data": "kilometraje" },
+            { "data": "cKilometraje" },
+            { "data": "tipoAceite" },
+            { "data": "marca10" },
+            { "data": "cantidad1" },
+            { "data": "presentacion1" },
+            { "data": "nivelacion" },
+            { "data": "cNivelacion" },
+            { "data": "fAceite" },
+            { "data": "fCombustible" },
+            { "data": "fAire" },
+            { "data": "tipoAceite1" },
+            { "data": "marca1" },
+            { "data": "uCambio" },
+            { "data": "pCambio10" },
+            { "data": "cantidad2" },
+            { "data": "presentacion2" },
+            { "data": "nivelacion2" },
+            { "data": "cNivelacion2" },
+            { "data": "tipoAceite3" },
+            { "data": "marca3" },
+            { "data": "uCambio3" },
+            { "data": "pCambio3" },
+            { "data": "cantidad3" },
+            { "data": "presentacion3" },
+            { "data": "nivelacion3" },
+            { "data": "cNivelacion3" },
+            { "data": "tipoAceite4" },
+            { "data": "marca4" },
+            { "data": "uCambio4" },
+            { "data": "pCambio4" },
+            { "data": "tipoAceite5" },
+            { "data": "marca5" },
+            { "data": "uCambio5" },
+            { "data": "pCambio5" },
+            { "data": "lFreno" },
+            { "data": "lParabrisa" },
+            { "data": "refrigerante" },
+            { "data": "hidraulico" },
+            { "data": "lMotor" },
+            { "data": "lCaja" },
+            { "data": "lTransmision" },
+            { "data": "lFrenos1" },
+            { "data": "engrase" },
+            { "data": "sRadiador" },
+            { "data": "sFiltroAire" },
+            { "data": "observacionesF" },
             { "data": "placa" },
             { "data": "cod_interno" },
+            revBimCotrautol
             { "data": "rRegistradora" },
+            revBimCotrautol
             { "data": "tecnico" },
             { "data": "fecha_creacion" },
             { "data": "observacion" },
+            oReg
             {"defaultContent":
             "<button style='font-size:13px;' type='button' class='eliminar btn btn-danger'><i class='fa fa-trash'></i></button><button style='font-size:13px;' type='button' class='editar btn btn-info'><i class='fa fa-edit'></i></button>"}
         ],

@@ -86,8 +86,7 @@ session_start();
                     INNER JOIN vehiculo AS v ON ( con.idVehiculo = v.id )
                     INNER JOIN persona AS p ON ( con.idPersona = p.id ) 
                     INNER JOIN company AS c ON ( c.id = con.idCompany ) 
-                    WHERE con.estatus = 1 
-            ";
+                    WHERE con.estatus = 1";
             $resp = sqlsrv_query($conn, $sql);
             if( $resp === false) {
                 return 0;

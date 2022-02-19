@@ -1483,7 +1483,7 @@ $('#tabla_orden').on('click','.editar',function(){
     var sFiltroAire =datosOrden.otrosSopleteoFiltroAire;
     
     
-    var observacionesF =datosOrden.observacionesGenerales2;
+    var observacionesF = datosOrden.observacionesGenerales2;
     console.log("Datos",datosOrden);
     //levantar modal
     AbrirModalEditarOrdenServicio();
@@ -1512,7 +1512,7 @@ $('#tabla_orden').on('click','.editar',function(){
     $("#sel_editar_marca_llanta1").val(opmarca1).trigger('change');
     $("#sel_editar_tipoMarca1").val(tipoMarca1).trigger('change');
     $("#sel_editar_estado1").val(estado1).trigger('change');
-    $("#sel_editar_fInstalacion1").val(fInstalacion1).trigger('change');
+    $("#txt_editar_fInstalacion1").val(fInstalacion1);
     $("#txt_editar_fReencauche1").val(fReencauche1);
     $("#txt_editar_fCambio1").val(fCambio1);
     $("#txt_editar_fRotacion1").val(fRotacion1);
@@ -1593,7 +1593,7 @@ $('#tabla_orden').on('click','.editar',function(){
     $("#txt_editar_ckilometraje").val(cKilometraje);
     $("#sel_editar_tipo_aceite").val(tipoAceite).trigger('change');
     $("#sel_editar_marca_aceite").val(marca10).trigger('change');
-    $("#txt_editar_cantidad1").val(cantidad1);
+    $("#txt_editar_cantidad").val(cantidad1);
     $("#sel_editar_presentacion1").val(presentacion1).trigger('change');
     $("#sel_editar_nivelacion1").val(nivelacion).trigger('change');
     $("#txt_editar_cNivelacion1").val(cNivelacion);
@@ -1604,7 +1604,7 @@ $('#tabla_orden').on('click','.editar',function(){
     $("#sel_editar_marca_aceite1").val(marca1).trigger('change');
     $("#txt_editar_uCambio1").val(uCambio);
     $("#txt_editar_pCambio1").val(pCambio10);
-    $("#txt_editar_cantidad2").val(cantidad2);
+    $("#txt_editar_cantidad1").val(cantidad2);
     $("#sel_editar_presentacion2").val(presentacion2).trigger('change');
     $("#sel_editar_nivelacion2").val(nivelacion2).trigger('change');
     $("#txt_editar_nivelacion2").val(cNivelacion2);
@@ -1648,7 +1648,6 @@ $('#tabla_orden').on('click','.editar',function(){
 
 function modificar_orden_Servicio(){
  
-    var id = $("#idPersonaC").val();
     var placa = $("#sel_editar_placa_vehiculo").val();
     var revBimCotrautol = $("#txt_editar_revb").val();
     var rRegistradora = $("#sel_editar_rReg").val();
@@ -1753,7 +1752,7 @@ function modificar_orden_Servicio(){
     var cKilometraje = $("#txt_editar_ckilometraje").val();
     var tipoAceite = $("#sel_editar_tipo_aceite").val();
     var marca10 = $("#sel_editar_marca_aceite").val();
-    var cantidad1 = $("#txt_editar_cantidad1").val();
+    var cantidad1 = $("#txt_editar_cantidad").val();
     var presentacion1 = $("#sel_editar_presentacion1").val();
     var nivelacion = $("#sel_editar_nivelacion1").val();
     var cNivelacion = $("#txt_editar_cNivelacion1").val();
@@ -1764,7 +1763,7 @@ function modificar_orden_Servicio(){
     var marca1 = $("#sel_editar_marca_aceite1").val();
     var uCambio = $("#txt_editar_uCambio1").val();
     var pCambio10 = $("#txt_editar_pCambio1").val();
-    var cantidad2 = $("#txt_editar_cantidad2").val();
+    var cantidad2 = $("#txt_editar_cantidad1").val();
     var presentacion2 = $("#sel_editar_presentacion2").val();
     var nivelacion2 = $("#sel_editar_nivelacion2").val();
     var cNivelacion2 = $("#txt_editar_nivelacion2").val();

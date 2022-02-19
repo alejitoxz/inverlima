@@ -1884,7 +1884,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                               <label for="">serial</label>
-                              <input type="text" class="form-control" id="txt_editar_mar_edit2" placeholder="Ingrese el serial" ><br>
+                              <input type="text" class="form-control" id="txt_editar_llantaSerial2" placeholder="Ingrese el serial" ><br>
                             </div>
                           </div>
                           <div class="col-md-6">
@@ -2404,7 +2404,7 @@
                     <div class="col-md-12">
                           <div class="form-group">
                             <label for="">Observaciones de calibracion</label>
-                            <textarea  class="form-control" id="txt_oCalibracion" ></textarea>
+                            <textarea  class="form-control" id="txt_editar_oCalibracion" ></textarea>
                           </div>
                         </div>
                     </div>
@@ -2567,7 +2567,7 @@
                           <div class="col-md-3">
                             <div class="form-group">
                               <label for="">Cantidad x 1/4</label>
-                              <input type="Number"value="0" class="form-control" id="txt_editar_cantidad1" placeholder="Ingrese datos"><br>
+                              <input type="Number"value="0" class="form-control" id="txt_editar_cantidad" placeholder="Ingrese datos"><br>
                             </div>
                           </div>
                           <div class="col-md-3">
@@ -2653,7 +2653,7 @@
                           <div class="col-md-3">
                               <div class="form-group">
                                 <label for="">Cantidad x 1/4</label>
-                                <input type="number"value="0" class="form-control" id="txt_editar_cantidad2" placeholder="Ingrese datos"><br>
+                                <input type="number"value="0" class="form-control" id="txt_editar_cantidad1" placeholder="Ingrese datos"><br>
                               </div>
                             </div>
                             <div class="col-md-3">
@@ -2924,7 +2924,7 @@
                             <div class="col-md-12">
                           <div class="form-group">
                             <label for="">Observaciones</label>
-                            <textarea class="form-control" id="txt_observacionesF" placeholder="Ingrese las observaciones"></textarea><br>
+                            <textarea class="form-control" id="txt_editar_observacionesF" placeholder="Ingrese las observaciones"></textarea><br>
                           </div>
                         </div>
                           </div>

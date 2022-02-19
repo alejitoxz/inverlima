@@ -1800,6 +1800,8 @@ function modificar_orden_Servicio(){
     var sRadiador = $("#sel_editar_sRadiador").val();
     var sFiltroAire = $("#sel_editar_sFiltroAire").val();
     
+    var observacionesF = $("#txt_editar_observacionesF").val();
+    
 
     $.ajax({
         "url": "../controlador/ordenServicio/controlador_ordenServicio_modificar.php",

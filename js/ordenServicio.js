@@ -12,7 +12,8 @@ function listar_orden(){
         "ajax": {
             "url": "../controlador/ordenServicio/controlador_listar_orden.php",
             "type": "POST"
-        },"columnDefs": [
+        }
+        ,"columnDefs": [
             {
                 "targets": [ 0 ],
                 "visible": false
@@ -534,6 +535,10 @@ function listar_orden(){
             {
                 "targets": [ 130 ],
                 "visible": false
+            },
+            {
+                "targets": [ 131 ],
+                "visible": false
             }
         ],
         "columns": [
@@ -668,15 +673,15 @@ function listar_orden(){
             { "data": "sRadiador" },
             { "data": "sFiltroAire" },
             { "data": "observacionesF" },
+            { "data": "oReg" },
+            { "data": "id" },
             { "data": "placa" },
             { "data": "cod_interno" },
-            revBimCotrautol
+            { "data": "revBimCotrautol" },
             { "data": "rRegistradora" },
-            revBimCotrautol
             { "data": "tecnico" },
             { "data": "fecha_creacion" },
             { "data": "observacion" },
-            oReg
             {"defaultContent":
             "<button style='font-size:13px;' type='button' class='eliminar btn btn-danger'><i class='fa fa-trash'></i></button><button style='font-size:13px;' type='button' class='editar btn btn-info'><i class='fa fa-edit'></i></button>"}
         ],

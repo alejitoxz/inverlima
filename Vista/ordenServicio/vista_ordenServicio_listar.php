@@ -2959,6 +2959,7 @@
 
 <script type="text/javascript" src="../js/ordenServicio.js"></script>
 <script>
+  listar_orden();
   listar_placa();
   listar_tecnico();
   listar_bateria();
@@ -2970,5 +2971,5 @@
   listar_filtro_aceite();
   listar_filtro_combustible();
   listar_filtro_aire();
-  listar_orden();
+  
 </script>

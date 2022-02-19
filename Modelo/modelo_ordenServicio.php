@@ -21,6 +21,7 @@ session_start();
             v.placa,
 			v.cod_interno,
             os.*,
+            s.*,
             CONVERT ( VARCHAR, os.fecha_creacion ) AS fecha_creacion
             FROM
                 ordenServicio AS os

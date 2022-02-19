@@ -1,5 +1,6 @@
 var table;
 function listar_orden(){
+    
     table = $('#tabla_orden').DataTable( {
         "ordering":true,
         "paging": true,
@@ -548,11 +549,11 @@ function listar_orden(){
             { "data": "serial" },
             { "data": "fVenta" },
             { "data": "fInstalacion" },
-            { "data": "tUso" },
-            { "data": "pCambio" },
-            { "data": "pMantenimiento" },
-            { "data": "oMejora" },
-            { "data": "llantaSerial1" },
+            { "data": "tiempoUso" },
+            { "data": "proximoCambio" },
+            { "data": "proximoMantenimiento" },
+            { "data": "oportunidadesMejora" },
+            { "data": "llanta1Serial" },
             { "data": "profundidad1" },
             { "data": "opmarca1" },
             { "data": "tipoMarca1" },
@@ -664,7 +665,7 @@ function listar_orden(){
             { "data": "lFreno" },
             { "data": "lParabrisa" },
             { "data": "refrigerante" },
-            { "data": "hidraulico" },
+            { "data": "liquidoHidraulico" },
             { "data": "lMotor" },
             { "data": "lCaja" },
             { "data": "lTransmision" },
@@ -674,10 +675,10 @@ function listar_orden(){
             { "data": "sFiltroAire" },
             { "data": "observacionesF" },
             { "data": "oReg" },
+
             { "data": "id" },
             { "data": "placa" },
             { "data": "cod_interno" },
-            { "data": "revBimCotrautol" },
             { "data": "rRegistradora" },
             { "data": "tecnico" },
             { "data": "fecha_creacion" },

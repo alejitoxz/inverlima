@@ -554,127 +554,129 @@ function listar_orden(){
             { "data": "proximoMantenimiento" },
             { "data": "oportunidadesMejora" },
             { "data": "llanta1Serial" },
-            { "data": "profundidad1" },
-            { "data": "opmarca1" },
-            { "data": "tipoMarca1" },
-            { "data": "estado1" },
-            { "data": "fInstalacion1" },
-            { "data": "fReencauche1" },
-            { "data": "fCambio1" },
-            { "data": "fRotacion1" },
-            { "data": "llantaSerial2" },
-            { "data": "profundidad2" },
-            { "data": "opmarca2" },
-            { "data": "tipoMarca2" },
-            { "data": "estado2" },
-            { "data": "fInstalacion2" },
-            { "data": "fReencauche2" },
-            { "data": "fCambio2" },
-            { "data": "fRotacion2" },
-            { "data": "llantaSerial3" },
-            { "data": "profundidad3" },
-            { "data": "opmarca3" },
-            { "data": "tipoMarca3" },
-            { "data": "estado3" },
-            { "data": "fInstalacion3" },
-            { "data": "fReencauche3" },
-            { "data": "fCambio3" },
-            { "data": "fRotacion3" },
-            { "data": "llantaSerial4" },
-            { "data": "profundidad4" },
-            { "data": "opmarca4" },
-            { "data": "tipoMarca4" },
-            { "data": "estado4" },
-            { "data": "fInstalacion4" },
-            { "data": "fReencauche4" },
-            { "data": "fCambio4" },
-            { "data": "fRotacion4" },
-            { "data": "llantaSerial5" },
-            { "data": "profundidad5" },
-            { "data": "opmarca5" },
-            { "data": "tipoMarca5" },
-            { "data": "estado5" },
-            { "data": "fInstalacion5" },
-            { "data": "fReencauche5" },
-            { "data": "fCambio5" },
-            { "data": "fRotacion5" },
-            { "data": "llantaSerial6" },
-            { "data": "profundidad6" },
-            { "data": "opmarca6" },
-            { "data": "tipoMarca6" },
-            { "data": "estado6" },
-            { "data": "fInstalacion6" },
-            { "data": "fReencauche6" },
-            { "data": "fCambio6" },
-            { "data": "fRotacion6" },
-            { "data": "calibracion1" },
-            { "data": "calibracion2" },
-            { "data": "calibracion3" },
-            { "data": "calibracion4" },
-            { "data": "calibracion5" },
-            { "data": "calibracion6" },
-            { "data": "oCalibracion" },
-            { "data": "balanceo1" },
-            { "data": "balanceo2" },
-            { "data": "balanceo3" },
-            { "data": "balanceo4" },
-            { "data": "balanceo5" },
-            { "data": "balanceo6" },
+            { "data": "llanta1Profundidad" },
+            { "data": "llanta1Marca" },
+            { "data": "llanta1Tipo" },
+            { "data": "llanta1Estado" },
+            { "data": "llanta1Instalacion" },
+            { "data": "llanta1Reencauche" },
+            { "data": "llanta1Cambio" },
+            { "data": "llanta1Rotacion" },
+            { "data": "llanta2Serial" },
+            { "data": "llanta2Profundidad" },
+            { "data": "llanta2Marca" },
+            { "data": "llanta2Tipo" },
+            { "data": "llanta2Estado" },
+            { "data": "llanta2Instalacion" },
+            { "data": "llanta2Reencauche" },
+            { "data": "llanta2Cambio" },
+            { "data": "llanta2Rotacion" },
+            { "data": "llanta3Serial" },
+            { "data": "llanta3Profundidad" },
+            { "data": "llanta3Marca" },
+            { "data": "llanta3Tipo" },
+            { "data": "llanta3Estado" },
+            { "data": "llanta3Instalacion" },
+            { "data": "llanta3Reencauche" },
+            { "data": "llanta3Cambio" },
+            { "data": "llanta3Rotacion" },
+            { "data": "llanta4Serial" },
+            { "data": "llanta4Profundidad" },
+            { "data": "llanta4Marca" },
+            { "data": "llanta4Tipo" },
+            { "data": "llanta4Estado" },
+            { "data": "llanta4Instalacion" },
+            { "data": "llanta4Reencauche" },
+            { "data": "llanta4Cambio" },
+            { "data": "llanta4Rotacion" },
+            { "data": "llanta5Serial" },
+            { "data": "llanta5Profundidad" },
+            { "data": "llanta5Marca" },
+            { "data": "llanta5Tipo" },
+            { "data": "llanta5Estado" },
+            { "data": "llanta5Instalacion" },
+            { "data": "llanta5Reencauche" },
+            { "data": "llanta5Cambio" },
+            { "data": "llanta5Rotacion" },
+            { "data": "llanta6Serial" },
+            { "data": "llanta6Profundidad" },
+            { "data": "llanta6Marca" },
+            { "data": "llanta6Tipo" },
+            { "data": "llanta6Estado" },
+            { "data": "llanta6Instalacion" },
+            { "data": "llanta6Reencauche" },
+            { "data": "llanta6Cambio" },
+            { "data": "llanta6Rotacion" },
+            { "data": "calibracionLlanta1" },
+            { "data": "calibracionLlanta2" },
+            { "data": "calibracionLlanta3" },
+            { "data": "calibracionLlanta4" },
+            { "data": "calibracionLlanta5" },
+            { "data": "calibracionLlanta6" },
+            { "data": "observacionCalibracion" },
+            { "data": "Balanceo1" },
+            { "data": "Balanceo2" },
+            { "data": "Balanceo3" },
+            { "data": "Balanceo4" },
+            { "data": "Balanceo5" },
+            { "data": "Balanceo6" },
             { "data": "oBalanceo" },
             { "data": "alineacion1" },
             { "data": "alineacion2" },
-            { "data": "observacionG3" },
-            { "data": "observacionM3" },
-            { "data": "fecha" },
-            { "data": "pCambioA" },
-            { "data": "kilometraje" },
-            { "data": "cKilometraje" },
-            { "data": "tipoAceite" },
-            { "data": "marca10" },
-            { "data": "cantidad1" },
-            { "data": "presentacion1" },
-            { "data": "nivelacion" },
-            { "data": "cNivelacion" },
-            { "data": "fAceite" },
-            { "data": "fCombustible" },
-            { "data": "fAire" },
-            { "data": "tipoAceite1" },
-            { "data": "marca1" },
-            { "data": "uCambio" },
-            { "data": "pCambio10" },
-            { "data": "cantidad2" },
-            { "data": "presentacion2" },
-            { "data": "nivelacion2" },
-            { "data": "cNivelacion2" },
-            { "data": "tipoAceite3" },
-            { "data": "marca3" },
-            { "data": "uCambio3" },
-            { "data": "pCambio3" },
-            { "data": "cantidad3" },
-            { "data": "presentacion3" },
-            { "data": "nivelacion3" },
-            { "data": "cNivelacion3" },
-            { "data": "tipoAceite4" },
-            { "data": "marca4" },
-            { "data": "uCambio4" },
-            { "data": "pCambio4" },
-            { "data": "tipoAceite5" },
-            { "data": "marca5" },
-            { "data": "uCambio5" },
-            { "data": "pCambio5" },
-            { "data": "lFreno" },
-            { "data": "lParabrisa" },
-            { "data": "refrigerante" },
+            { "data": "lObservacionGeneral" },
+            { "data": "lObservacionMejora" },
+            { "data": "motorFecha" },
+            { "data": "motorProximoCambio" },
+            { "data": "motorKilometraje" },
+            { "data": "motorCambioKilometraje" },
+            { "data": "motorTipoAceite" },
+            { "data": "motorMarca" },
+            { "data": "motorCantidad" },
+            { "data": "motorPresentacion" },
+            { "data": "motorNivelacion" },
+            { "data": "motorCantidadNivelada" },
+            { "data": "motorFiltroAceite" },
+            { "data": "motorfiltroCombustible" },
+            { "data": "motorFiltroAire" },
+            { "data": "cajaTipoAceite" },
+            { "data": "cajaMarca" },
+            { "data": "cajaUltimoCambio" },
+            { "data": "cajaProximoCambio" },
+            { "data": "cajaCantidad" },
+            { "data": "cajaPresentacion" },
+            { "data": "cajaNivelacion" },
+            { "data": "cajaCantidadNivelada" },
+            { "data": "transmicionTipoAceite" },
+            { "data": "transmicionMarca" },
+            { "data": "transmicionUltimoCambio" },
+            { "data": "transmicionProximoCambio" },
+            { "data": "transmicionCantidad" },
+            { "data": "transmicionPresentacion" },
+            { "data": "transmicionNivelacion" },
+            { "data": "transmicionCantidadNivelada" },
+            { "data": "refrigeranteTipoAceite" },
+            { "data": "refrigeranteMarca" },
+            { "data": "refrigeranteUltimoCambio" },
+            { "data": "refrigeranteProximoCambio" },
+            { "data": "hidraulicoTipoAceite" },
+            { "data": "hidraulicoMarca" },
+            { "data": "hidraulicoUltimoCambio" },
+            { "data": "hidraulicoProximoCambio" },
+            { "data": "liquidoFrenos" },
+            { "data": "liquidoParabrisas" },
+            { "data": "liquidoRefrigerantes" },
             { "data": "liquidoHidraulico" },
-            { "data": "lMotor" },
-            { "data": "lCaja" },
-            { "data": "lTransmision" },
-            { "data": "lFrenos1" },
-            { "data": "engrase" },
-            { "data": "sRadiador" },
-            { "data": "sFiltroAire" },
-            { "data": "observacionesF" },
-            { "data": "oReg" },
+            { "data": "liquidoMotor" },
+            { "data": "liquidoCaja" },
+            { "data": "liquidoTransmision" },
+            { "data": "otrosLimpiezaFrenos" },
+            { "data": "otrosEngrase" },
+            { "data": "otrosSopleteoRadiador" },
+            { "data": "otrosSopleteoFiltroAire" },
+            { "data": "observacionesGenerales2" },
+            { "data": "oRegistradora" },
+            { "data": "vExtintor" },
+
 
             { "data": "id" },
             { "data": "placa" },
@@ -1302,7 +1304,7 @@ function registrar_orden_Servicio(){
         observacionesF:observacionesF
         }
     }).done(function(resp){
-        console.log(resp);
+        
         if(resp > 0){
             if(resp==1){
             $("#modal_registro_ordenServicio").modal('hide');
@@ -1329,159 +1331,160 @@ $('#tabla_orden').on('click','.editar',function(){
     }
     
     var id =datosOrden.id;
-    var placa =datosOrden.placa;
+    var placa =datosOrden.idVehiculo;
     var revBimCotrautol =datosOrden.revBimCotrautol;
     var rRegistradora =datosOrden.rRegistradora;
     var vExtintor =datosOrden.vExtintor;
-    var oReg =datosOrden.oReg;
+    var oReg =datosOrden.oRegistradora;
     var observacion =datosOrden.observacion;     
-    var tecnico =datosOrden.tecnico;
+    var tecnico =datosOrden.idTecnico;
     var bateria =datosOrden.bateria;
     var tipoBateria =datosOrden.tipoBateria;
     var marca =datosOrden.marca;
     var serial =datosOrden.serial;
     var fVenta =datosOrden.fVenta;
     var fInstalacion =datosOrden.fInstalacion;
-    var tUso =datosOrden.tUso;
-    var pCambio =datosOrden.pCambio;
-    var pMantenimiento =datosOrden.pMantenimiento;
-    var oMejora =datosOrden.oMejora;
-    var llantaSerial1 =datosOrden.llantaSerial1;
-    var profundidad1 =datosOrden.profundidad1;
-    var opmarca1 =datosOrden.opmarca1;
-    var tipoMarca1 =datosOrden.tipoMarca1;
-    var estado1 =datosOrden.estado1;
-    var fInstalacion1 =datosOrden.fInstalacion1;
-    var fReencauche1 =datosOrden.fReencauche1;
-    var fCambio1 =datosOrden.fCambio1;
-    var fRotacion1 =datosOrden.fRotacion1;
+    var tUso =datosOrden.tiempoUso;
+    var pCambio =datosOrden.proximoCambio;
+    var pMantenimiento =datosOrden.proximoMantenimiento;
+    var oMejora =datosOrden.oportunidadesMejora;
+    var llantaSerial1 =datosOrden.llanta1Serial;
+    var profundidad1 =datosOrden.llanta1Profundidad;
+    var opmarca1 =datosOrden.llanta1Marca;
+    var tipoMarca1 =datosOrden.llanta1Tipo;
+    var estado1 =datosOrden.llanta1Estado;
+    var fInstalacion1 =datosOrden.llanta1Instalacion;
+    var fReencauche1 =datosOrden.llanta1Reencauche;
+    var fCambio1 =datosOrden.llanta1Cambio;
+    var fRotacion1 =datosOrden.llanta1Rotacion;
 
-    var llantaSerial2 =datosOrden.llantaSerial2;
-    var profundidad2 =datosOrden.profundidad2;
-    var opmarca2 =datosOrden.opmarca2;
-    var tipoMarca2 =datosOrden.tipoMarca2;
-    var estado2 =datosOrden.estado2;
-    var fInstalacion2 =datosOrden.fInstalacion2;
-    var fReencauche2 =datosOrden.fReencauche2;
-    var fCambio2 =datosOrden.fCambio2;
-    var fRotacion2 =datosOrden.fRotacion2;
+    var llantaSerial2 =datosOrden.llanta2Serial;
+    var profundidad2 =datosOrden.llanta2Profundidad;
+    var opmarca2 =datosOrden.llanta2Marca;
+    var tipoMarca2 =datosOrden.llanta2Tipo;
+    var estado2 =datosOrden.llanta2Estado;
+    var fInstalacion2 =datosOrden.llanta2Instalacion;
+    var fReencauche2 =datosOrden.llanta2Reencauche;
+    var fCambio2 =datosOrden.llanta2Cambio;
+    var fRotacion2 =datosOrden.llanta2Rotacion;
 
-    var llantaSerial3 =datosOrden.llantaSerial3;
-    var profundidad3 =datosOrden.profundidad3;
-    var opmarca3 =datosOrden.opmarca3;
-    var tipoMarca3 =datosOrden.tipoMarca3;
-    var estado3 =datosOrden.estado3;
-    var fInstalacion3 =datosOrden.fInstalacion3;
-    var fReencauche3 =datosOrden.fReencauche3;
-    var fCambio3 =datosOrden.fCambio3;
-    var fRotacion3 =datosOrden.fRotacion3;
+    var llantaSerial3 =datosOrden.llanta3Serial;
+    var profundidad3 =datosOrden.llanta3Profundidad;
+    var opmarca3 =datosOrden.llanta3Marca;
+    var tipoMarca3 =datosOrden.llanta3Tipo;
+    var estado3 =datosOrden.llanta3Estado;
+    var fInstalacion3 =datosOrden.llanta3Instalacion;
+    var fReencauche3 =datosOrden.llanta3Reencauche;
+    var fCambio3 =datosOrden.llanta3Cambio;
+    var fRotacion3 =datosOrden.llanta3Rotacion;
 
-    var llantaSerial4 =datosOrden.llantaSerial4;
-    var profundidad4 =datosOrden.profundidad4;
-    var opmarca4 =datosOrden.opmarca4;
-    var tipoMarca4 =datosOrden.tipoMarca4;
-    var estado4 =datosOrden.estado4;
-    var fInstalacion4 =datosOrden.fInstalacion4;
-    var fReencauche4 =datosOrden.fReencauche4;
-    var fCambio4 =datosOrden.fCambio4;
-    var fRotacion4 =datosOrden.fRotacion4;
+    var llantaSerial4 =datosOrden.llanta4Serial;
+    var profundidad4 =datosOrden.llanta4Profundidad;
+    var opmarca4 =datosOrden.llanta4Marca;
+    var tipoMarca4 =datosOrden.llanta4Tipo;
+    var estado4 =datosOrden.llanta4Estado;
+    var fInstalacion4 =datosOrden.llanta4Instalacion;
+    var fReencauche4 =datosOrden.llanta4Reencauche;
+    var fCambio4 =datosOrden.llanta4Cambio;
+    var fRotacion4 =datosOrden.llanta4Rotacion;
 
-    var llantaSerial5 =datosOrden.llantaSerial5;
-    var profundidad5 =datosOrden.profundidad5;
-    var opmarca5 =datosOrden.opmarca5;
-    var tipoMarca5 =datosOrden.tipoMarca5;
-    var estado5 =datosOrden.estado5;
-    var fInstalacion5 =datosOrden.fInstalacion5;
-    var fReencauche5 =datosOrden.fReencauche5;
-    var fCambio5 =datosOrden.fCambio5;
-    var fRotacion5 =datosOrden.fRotacion5;
+    var llantaSerial5 =datosOrden.llanta5Serial;
+    var profundidad5 =datosOrden.llanta5Profundidad;
+    var opmarca5 =datosOrden.llanta5Marca;
+    var tipoMarca5 =datosOrden.llanta5Tipo;
+    var estado5 =datosOrden.llanta5Estado;
+    var fInstalacion5 =datosOrden.llanta5Instalacion;
+    var fReencauche5 =datosOrden.llanta5Reencauche;
+    var fCambio5 =datosOrden.llanta5Cambio;
+    var fRotacion5 =datosOrden.llanta5Rotacion;
 
-    var llantaSerial6 =datosOrden.llantaSerial6;
-    var profundidad6 =datosOrden.profundidad6;
-    var opmarca6 =datosOrden.opmarca6;
-    var tipoMarca6 =datosOrden.tipoMarca6;
-    var estado6 =datosOrden.estado6;
-    var fInstalacion6 =datosOrden.fInstalacion6;
-    var fReencauche6 =datosOrden.fReencauche6;
-    var fCambio6 =datosOrden.fCambio6;
-    var fRotacion6 =datosOrden.fRotacion6;
+    var llantaSerial6 =datosOrden.llanta6Serial;
+    var profundidad6 =datosOrden.llanta6Profundidad;
+    var opmarca6 =datosOrden.llanta6Marca;
+    var tipoMarca6 =datosOrden.llanta6Tipo;
+    var estado6 =datosOrden.llanta6Estado;
+    var fInstalacion6 =datosOrden.llanta6Instalacion;
+    var fReencauche6 =datosOrden.llanta6Reencauche;
+    var fCambio6 =datosOrden.llanta6Cambio;
+    var fRotacion6 =datosOrden.llanta6Rotacion;
 
 
-    var calibracion1 =datosOrden.calibracion1;
-    var calibracion2 =datosOrden.calibracion2;
-    var calibracion3 =datosOrden.calibracion3;
-    var calibracion4 =datosOrden.calibracion4;
-    var calibracion5 =datosOrden.calibracion5;
-    var calibracion6 =datosOrden.calibracion6;
-    var oCalibracion =datosOrden.oCalibracion;
-    var balanceo1 =datosOrden.balanceo1;
-    var balanceo2 =datosOrden.balanceo2;
-    var balanceo3 =datosOrden.balanceo3;
-    var balanceo4 =datosOrden.balanceo4;
-    var balanceo5 =datosOrden.balanceo5;
-    var balanceo6 =datosOrden.balanceo6;
+    var calibracion1 =datosOrden.calibracionLlanta1;
+    var calibracion2 =datosOrden.calibracionLlanta2;
+    var calibracion3 =datosOrden.calibracionLlanta3;
+    var calibracion4 =datosOrden.calibracionLlanta4;
+    var calibracion5 =datosOrden.calibracionLlanta5;
+    var calibracion6 =datosOrden.calibracionLlanta6;
+    var oCalibracion =datosOrden.observacionCalibracion;
+    var balanceo1 =datosOrden.Balanceo1;
+    var balanceo2 =datosOrden.Balanceo2;
+    var balanceo3 =datosOrden.Balanceo3;
+    var balanceo4 =datosOrden.Balanceo4;
+    var balanceo5 =datosOrden.Balanceo5;
+    var balanceo6 =datosOrden.Balanceo6;
     var oBalanceo =datosOrden.oBalanceo;
     var alineacion1 =datosOrden.alineacion1;
     var alineacion2 =datosOrden.alineacion2;
-    var observacionG3 =datosOrden.observacionG3;
-    var observacionM3 =datosOrden.observacionM3;
+    var observacionG3 =datosOrden.lObservacionGeneral;
+    var observacionM3 =datosOrden.lObservacionMejora;
 
-    var fecha =datosOrden.fecha;
-    var pCambioA =datosOrden.pCambioA;
-    var kilometraje =datosOrden.kilometraje;
-    var cKilometraje =datosOrden.cKilometraje;
-    var tipoAceite =datosOrden.tipoAceite;
-    var marca10 =datosOrden.marca10;
-    var cantidad1 =datosOrden.cantidad1;
-    var presentacion1 =datosOrden.presentacion1;
-    var nivelacion =datosOrden.nivelacion;
-    var cNivelacion =datosOrden.cNivelacion;
-    var fAceite =datosOrden.fAceite;
-    var fCombustible =datosOrden.fCombustible;
-    var fAire =datosOrden.fAire;
-    var tipoAceite1 =datosOrden.tipoAceite1;
-    var marca1 =datosOrden.marca1;
-    var uCambio =datosOrden.uCambio;
-    var pCambio10 =datosOrden.pCambio10;
-    var cantidad2 =datosOrden.cantidad2;
-    var presentacion2 =datosOrden.presentacion2;
-    var nivelacion2 =datosOrden.nivelacion2;
-    var cNivelacion2 =datosOrden.cNivelacion2;
+    var fecha =datosOrden.motorFecha;
+    var pCambioA =datosOrden.motorProximoCambio;
+    var kilometraje =datosOrden.motorKilometraje;
+    var cKilometraje =datosOrden.motorCambioKilometraje;
+    var tipoAceite =datosOrden.motorTipoAceite;
+    var marca10 =datosOrden.motorMarca;
+    var cantidad1 =datosOrden.motorCantidad;
+    var presentacion1 =datosOrden.motorPresentacion;
+    var nivelacion =datosOrden.motorNivelacion;
+    var cNivelacion =datosOrden.motorCantidadNivelada;
+    var fAceite =datosOrden.motorFiltroAceite;
+    var fCombustible =datosOrden.motorfiltroCombustible;
+    var fAire =datosOrden.motorFiltroAire;
+    var tipoAceite1 =datosOrden.cajaTipoAceite;
+    var marca1 =datosOrden.cajaMarca;
+    var uCambio =datosOrden.cajaUltimoCambio;
+    var pCambio10 =datosOrden.cajaProximoCambio;
+    var cantidad2 =datosOrden.cajaCantidad;
+    var presentacion2 =datosOrden.cajaPresentacion;
+    var nivelacion2 =datosOrden.cajaNivelacion;
+    var cNivelacion2 =datosOrden.cajaCantidadNivelada;
 
-    var tipoAceite3 =datosOrden.tipoAceite3;
-    var marca3 =datosOrden.marca3;
-    var uCambio3 =datosOrden.uCambio3;
-    var pCambio3 =datosOrden.pCambio3;
-    var cantidad3 =datosOrden.cantidad3;
-    var presentacion3 =datosOrden.presentacion3;
-    var nivelacion3 =datosOrden.nivelacion3;
-    var cNivelacion3 =datosOrden.cNivelacion3;
+    var tipoAceite3 =datosOrden.transmicionTipoAceite;
+    var marca3 =datosOrden.transmicionMarca;
+    var uCambio3 =datosOrden.transmicionUltimoCambio;
+    var pCambio3 =datosOrden.transmicionProximoCambio;
+    var cantidad3 =datosOrden.transmicionCantidad;
+    var presentacion3 =datosOrden.transmicionPresentacion;
+    var nivelacion3 =datosOrden.transmicionNivelacion;
+    var cNivelacion3 =datosOrden.transmicionCantidadNivelada;
 
-    var tipoAceite4 =datosOrden.tipoAceite4;
-    var marca4 =datosOrden.marca4;
-    var uCambio4 =datosOrden.uCambio4;
-    var pCambio4 =datosOrden.pCambio4;
+    var tipoAceite4 =datosOrden.refrigeranteTipoAceite;
+    var marca4 =datosOrden.refrigeranteMarca;
+    var uCambio4 =datosOrden.refrigeranteUltimoCambio;
+    var pCambio4 =datosOrden.refrigeranteProximoCambio;
 
-    var tipoAceite5 =datosOrden.tipoAceite5;
-    var marca5 =datosOrden.marca5;
-    var uCambio5 =datosOrden.uCambio5;
-    var pCambio5 =datosOrden.pCambio5;
+    var tipoAceite5 =datosOrden.hidraulicoTipoAceite;
+    var marca5 =datosOrden.hidraulicoMarca;
+    var uCambio5 =datosOrden.hidraulicoUltimoCambio;
+    var pCambio5 =datosOrden.hidraulicoProximoCambio;
 
-    var lFreno =datosOrden.lFreno;
-    var lParabrisa =datosOrden.lParabrisa;
-    var refrigerante =datosOrden.refrigerante;
-    var hidraulico =datosOrden.hidraulico;
-    var lMotor =datosOrden.lMotor;
-    var lCaja =datosOrden.lCaja;
-    var lTransmision =datosOrden.lTransmision;
+    var lFreno =datosOrden.liquidoFrenos;
+    var lParabrisa =datosOrden.liquidoParabrisas;
+    var refrigerante =datosOrden.liquidoRefrigerantes;
+    var hidraulico =datosOrden.liquidoHidraulico;
+    var lMotor =datosOrden.liquidoMotor;
+    var lCaja =datosOrden.liquidoCaja;
+    var lTransmision =datosOrden.liquidoTransmision;
 
-    var lFrenos1 =datosOrden.lFrenos1;
-    var engrase =datosOrden.engrase;
-    var sRadiador =datosOrden.sRadiador;
-    var sFiltroAire =datosOrden.sFiltroAire;
-    console.log("Datos",datosOrden.sFiltroAire);
+    var lFrenos1 =datosOrden.otrosLimpiezaFrenos;
+    var engrase =datosOrden.otrosEngrase;
+    var sRadiador =datosOrden.otrosSopleteoRadiador;
+    var sFiltroAire =datosOrden.otrosSopleteoFiltroAire;
     
-    var observacionesF =datosOrden.observacionesF;
+    
+    var observacionesF =datosOrden.observacionesGenerales2;
+    console.log("Datos",datosOrden);
     //levantar modal
     AbrirModalEditarOrdenServicio();
     //ingresas datos modal

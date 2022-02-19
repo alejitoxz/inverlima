@@ -156,15 +156,16 @@
             <th style="display:none"></th>
             <th style="display:none"></th>
             <th style="display:none"></th>
-                          <th>Orden</th>
-                          <th>Placa</th>
-                          <th>N° Interno</th>
-                          <th>Registradora</th>
-                          <th>tecnico</th>
-                          <th>Creacion</th>
-                          <th>Observacion</th>
-                          <th>Acciones</th>
-                        </tr>
+            <th style="display:none"></th>
+            <th>Orden</th>
+            <th>Placa</th>
+            <th>N° Interno</th>
+            <th>Registradora</th>
+            <th>tecnico</th>
+            <th>Creacion</th>
+            <th>Observacion</th>
+            <th>Acciones</th>
+          </tr>
                     </thead>
                     <tbody id="ListadoOrden">
                     </tbody>
@@ -177,6 +178,8 @@
 </div>
 
 <form autocomplete="false" onsubmit="return false">
+
+
 
 <div class="modal fade" id="modal_registro_OrdenServicio" role="dialog">
 
@@ -1571,6 +1574,9 @@
 <form autocomplete="false" onsubmit="return false">
 
 <div class="modal fade" id="modal_editar_OrdenServicio" role="dialog">
+
+    <input type="hidden" id="idOrdenServicio">
+    <input type="hidden" id="idServicio">
 
     <div class="modal-dialog modal-xl">
       <div class="modal-content">

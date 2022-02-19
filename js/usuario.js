@@ -402,7 +402,7 @@ function registrar_usuario(){
 }
 
 function contarOrden(){
-    $("#contadorOrden").html(0);
+    $("#contadorServicio").html(0);
     $.ajax({
         url:'../controlador/ordenServicio/controlador_contador_orden.php',
         type:'post',

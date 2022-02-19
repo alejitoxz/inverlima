@@ -2,7 +2,7 @@ var table;
 function listar_orden(){
     
     table = $('#tabla_orden').DataTable( {
-        "ordering":true,
+        "ordering":false,
         "paging": true,
         "searching": { "regex": true },
         "lengthMenu": [ [10, 25, 50, 100, -1], [10, 25, 50, 100, "All"] ],
@@ -540,6 +540,14 @@ function listar_orden(){
             {
                 "targets": [ 131 ],
                 "visible": false
+            },
+            {
+                "targets": [ 132 ],
+                "visible": false
+            },
+            {
+                "targets": [ 133 ],
+                "visible": false
             }
         ],
         "columns": [
@@ -676,9 +684,8 @@ function listar_orden(){
             { "data": "observacionesGenerales2" },
             { "data": "oRegistradora" },
             { "data": "vExtintor" },
-
-
-            { "data": "id" },
+            { "data": "idServicio" },
+            { "data": "idOrdenServicio" },
             { "data": "placa" },
             { "data": "cod_interno" },
             { "data": "rRegistradora" },
@@ -1307,7 +1314,7 @@ function registrar_orden_Servicio(){
         
         if(resp > 0){
             if(resp==1){
-            $("#modal_registro_ordenServicio").modal('hide');
+            $("#modal_registro_OrdenServicio").modal('hide');
             Swal.fire("Mensaje De Confirmacion",'Registro realizado', "success").then((value)=>{
                 table.ajax.reload();
                 limpiarRegistro();
@@ -1481,14 +1488,17 @@ $('#tabla_orden').on('click','.editar',function(){
     var engrase =datosOrden.otrosEngrase;
     var sRadiador =datosOrden.otrosSopleteoRadiador;
     var sFiltroAire =datosOrden.otrosSopleteoFiltroAire;
-    
-    
     var observacionesF = datosOrden.observacionesGenerales2;
+
+    var idOrdenServicio =datosOrden.idOrdenServicio;
+    var idServicio =datosOrden.idServicio;
+    
     console.log("Datos",datosOrden);
     //levantar modal
     AbrirModalEditarOrdenServicio();
     //ingresas datos modal
-    $("#idPersonaC").val(id);
+    $("#idOrdenServicio").val(idOrdenServicio);
+    $("#idServicio").val(idServicio);
     $("#sel_editar_placa_vehiculo").val(placa).trigger('change');
     $("#txt_editar_revb").val(revBimCotrautol);
     $("#sel_editar_rReg").val(rRegistradora).trigger('change');
@@ -1801,13 +1811,16 @@ function modificar_orden_Servicio(){
     var sFiltroAire = $("#sel_editar_sFiltroAire").val();
     
     var observacionesF = $("#txt_editar_observacionesF").val();
-    
+
+    var idOrdenServicio = $("#idOrdenServicio").val();
+    var idServicio = $("#idServicio").val();
 
     $.ajax({
         "url": "../controlador/ordenServicio/controlador_ordenServicio_modificar.php",
         "type": "POST",
         data:{
-            id:id,
+            idOrdenServicio: idOrdenServicio,
+            idServicio:idServicio,
             placa:placa,
             revBimCotrautol:revBimCotrautol,
             rRegistradora:rRegistradora,

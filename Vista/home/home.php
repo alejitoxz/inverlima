@@ -12,7 +12,7 @@ if ($Rol == 1 || $Rol == 4) {
                 <div class="col-lg-3 col-6">
                 <div class="small-box bg-warning">
                     <div class="inner">
-                    <h3 id="contadorOrden">0</h3>
+                    <h3 id="contadorServicio">0</h3>
 
                     <p>Orden de servicio</p>
                     </div>

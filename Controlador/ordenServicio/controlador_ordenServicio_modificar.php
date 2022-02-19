@@ -2,7 +2,8 @@
     require '../../modelo/modelo_ordenServicio.php';
 
     $MU = new modelo_ordenServicio();
-    $id = htmlspecialchars($_POST['id'],ENT_QUOTES,'UTF-8');
+    $idOrdenServicio = htmlspecialchars($_POST['idOrdenServicio'],ENT_QUOTES,'UTF-8');
+    $idServicio = htmlspecialchars($_POST['idServicio'],ENT_QUOTES,'UTF-8');
     $placa = htmlspecialchars($_POST['placa'],ENT_QUOTES,'UTF-8');
     $revBimCotrautol = htmlspecialchars($_POST['revBimCotrautol'],ENT_QUOTES,'UTF-8');
     $rRegistradora = htmlspecialchars($_POST['rRegistradora'],ENT_QUOTES,'UTF-8');
@@ -146,8 +147,8 @@
     $sFiltroAire = htmlspecialchars($_POST['sFiltroAire'],ENT_QUOTES,'UTF-8');
     $observacionesF = htmlspecialchars($_POST['sFiltroAire'],ENT_QUOTES,'UTF-8');
 
-    $consulta = $MU->modificar_orden_Servicio(
-    $id,$placa,$revBimCotrautol,$rRegistradora,$kmGps,$vExtintor,$oReg,
+    $consulta = $MU->modificar_orden_Servicio($idOrdenServicio,$idServicio,
+    $placa,$revBimCotrautol,$rRegistradora,$kmGps,$vExtintor,$oReg,
     $observacion,$tecnico,$bateria,$tipoBateria,$marca,$serial,
     $fVenta,$fIntalacion,$tUso,$pCambio,$pMantenimiento,$oMejora,
     $llantaSerial1,$profundidad1,$opmarca1,$tipoMarca1,$estado1,$fInstalacion1,

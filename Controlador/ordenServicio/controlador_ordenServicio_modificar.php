@@ -17,7 +17,7 @@
     $marca = htmlspecialchars($_POST['marca'],ENT_QUOTES,'UTF-8');
     $serial = htmlspecialchars($_POST['serial'],ENT_QUOTES,'UTF-8');
     $fVenta = htmlspecialchars($_POST['fVenta'],ENT_QUOTES,'UTF-8');
-    $fIntalacion = htmlspecialchars($_POST['fIntalacion'],ENT_QUOTES,'UTF-8');
+    $fInstalacion = htmlspecialchars($_POST['fInstalacion'],ENT_QUOTES,'UTF-8');
     $tUso = htmlspecialchars($_POST['tUso'],ENT_QUOTES,'UTF-8');
     $pCambio = htmlspecialchars($_POST['pCambio'],ENT_QUOTES,'UTF-8');
     $pMantenimiento = htmlspecialchars($_POST['pMantenimiento'],ENT_QUOTES,'UTF-8');
@@ -145,12 +145,12 @@
     $engrase = htmlspecialchars($_POST['engrase'],ENT_QUOTES,'UTF-8');
     $sRadiador = htmlspecialchars($_POST['sRadiador'],ENT_QUOTES,'UTF-8');
     $sFiltroAire = htmlspecialchars($_POST['sFiltroAire'],ENT_QUOTES,'UTF-8');
-    $observacionesF = htmlspecialchars($_POST['sFiltroAire'],ENT_QUOTES,'UTF-8');
+    $observacionesF = htmlspecialchars($_POST['observacionesF'],ENT_QUOTES,'UTF-8');
 
     $consulta = $MU->modificar_orden_Servicio($idOrdenServicio,$idServicio,
     $placa,$revBimCotrautol,$rRegistradora,$kmGps,$vExtintor,$oReg,
     $observacion,$tecnico,$bateria,$tipoBateria,$marca,$serial,
-    $fVenta,$fIntalacion,$tUso,$pCambio,$pMantenimiento,$oMejora,
+    $fVenta,$fInstalacion,$tUso,$pCambio,$pMantenimiento,$oMejora,
     $llantaSerial1,$profundidad1,$opmarca1,$tipoMarca1,$estado1,$fInstalacion1,
     $fReencauche1,$fCambio1,$fRotacion1,$llantaSerial2,$profundidad2,$opmarca2,
     $tipoMarca2,$estado2,$fInstalacion2,$fReencauche2,$fCambio2,$fRotacion2,
@@ -172,5 +172,4 @@
     $lMotor,$lCaja,$lTransmision,$lFrenos1,$engrase,$sRadiador,
     $sFiltroAire,$observacionesF
     );
-    $qr = $MU->generarqr(false);
     echo $consulta;

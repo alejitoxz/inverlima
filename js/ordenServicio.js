@@ -4,6 +4,7 @@ function listar_orden(){
     table = $('#tabla_orden').DataTable( {
         "ordering":false,
         "paging": true,
+        "tabIndex": 0,
         "searching": { "regex": true },
         "lengthMenu": [ [10, 25, 50, 100, -1], [10, 25, 50, 100, "All"] ],
         "pageLength": 10,
@@ -1678,10 +1679,10 @@ function modificar_orden_Servicio(){
     var oMejora = $("#txt_editar_oMejora").val();
     var llantaSerial1 = $("#txt_editar_llantaSerial1").val();
     var profundidad1 = $("#sel_editar_profundidad1").val();
-    var opmarca1 = $("#sel_marca_editar_llanta1").val();
+    var opmarca1 = $("#sel_editar_marca_llanta1").val();
     var tipoMarca1 = $("#sel_editar_tipoMarca1").val();
     var estado1 = $("#sel_editar_estado1").val();
-    var fInstalacion1 = $("#sel_editar_fInstalacion1").val();
+    var fInstalacion1 = $("#txt_editar_fInstalacion1").val();
     var fReencauche1 = $("#txt_editar_fReencauche1").val();
     var fCambio1 = $("#txt_editar_fCambio1").val();
     var fRotacion1 = $("#txt_editar_fRotacion1").val();
@@ -1792,7 +1793,7 @@ function modificar_orden_Servicio(){
     var uCambio4 = $("#txt_editar_uCambio3").val();
     var pCambio4 = $("#txt_editar_pCambio3").val();
 
-    var tipoAceite5 = $("#seleditar__tipo_aceite4").val();
+    var tipoAceite5 = $("#sel_editar_tipo_aceite4").val();
     var marca5 = $("#sel_editar_marca_aceite4").val();
     var uCambio5 = $("#txt_editar_uCambio4").val();
     var pCambio5 = $("#txt_editar_pCambio4").val();

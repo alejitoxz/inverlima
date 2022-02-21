@@ -1249,7 +1249,7 @@
                           <div class="col-md-3">
                             <div class="form-group">
                               <label for="">Ultimo Cambio</label>
-                              <input type="date" class="form-control" id="txt_uCambio1" placeholder="Ingrese ultimo cambio"><br>
+                              <input type="date" class="form-control" id="txt_uCambio1" placeholder="Ingrese ultimo cambio" value="<?php echo date("Y-m-d");?>"><br>
                             </div>
                           </div>
                           <div class="col-md-3">
@@ -1312,7 +1312,7 @@
                           <div class="col-md-3">
                             <div class="form-group">
                               <label for="">Ultimo Cambio</label>
-                              <input type="date" class="form-control" id="txt_uCambio2" placeholder="Ingrese ultimo cambio"><br>
+                              <input type="date" class="form-control" id="txt_uCambio2" placeholder="Ingrese ultimo cambio" value="<?php echo date("Y-m-d");?>"><br>
                             </div>
                           </div>
                           <div class="col-md-3">
@@ -1375,7 +1375,7 @@
                           <div class="col-md-3">
                             <div class="form-group">
                               <label for="">Ultimo Cambio</label>
-                              <input type="date" class="form-control" id="txt_uCambio3" placeholder="Ingrese ultimo cambio"><br>
+                              <input type="date" class="form-control" id="txt_uCambio3" placeholder="Ingrese ultimo cambio" value="<?php echo date("Y-m-d");?>"><br>
                             </div>
                           </div>
                           <div class="col-md-3">
@@ -1404,7 +1404,7 @@
                           <div class="col-md-3">
                             <div class="form-group">
                               <label for="">Ultimo Cambio</label>
-                              <input type="date" class="form-control" id="txt_uCambio4" placeholder="Ingrese ultimo cambio"><br>
+                              <input type="date" class="form-control" id="txt_uCambio4" placeholder="Ingrese ultimo cambio" value="<?php echo date("Y-m-d");?>"><br>
                             </div>
                           </div>
                           <div class="col-md-3">
@@ -1745,7 +1745,7 @@
                         <div class="col-md-4">
                           <div class="form-group">
                             <label for="">Fecha de instalacion</label>
-                            <input type="date" class="form-control" id="txt_editar_fInstalacion" style="width:100%; heigth: 40px;"><br>
+                            <input type="date" class="form-control" id="txt_editar_fInstalacion" style="width:100%; heigth: 40px;" ><br>
                           </div>
                         </div>
                     </div>

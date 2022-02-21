@@ -280,7 +280,7 @@
                         <div class="col-md-4">
                           <div class="form-group">
                             <label for="">Vencimiento del Extintor</label>
-                            <input type="date" class="form-control" id="txt_vExtintor" style="width:100%; heigth: 40px;"><br>
+                            <input type="date" class="form-control" id="txt_vExtintor" style="width:100%; heigth: 40px;" value="<?php echo date("Y-m-d");?>"><br>
                           </div>
                         </div>
                         <div class="col-md-4">
@@ -344,13 +344,13 @@
                         <div class="col-md-4">
                           <div class="form-group">
                             <label for="">Fecha de Venta</label>
-                            <input type="date" class="form-control" id="txt_fVenta" style="width:100%; heigth: 40px;"><br>
+                            <input type="date" class="form-control" id="txt_fVenta" style="width:100%; heigth: 40px;" value="<?php echo date("Y-m-d");?>"><br>
                           </div>
                         </div>
                         <div class="col-md-4">
                           <div class="form-group">
                             <label for="">Fecha de Instalación</label>
-                            <input type="date" class="form-control" id="txt_fInstalacion" style="width:100%; heigth: 40px;"><br>
+                            <input type="date" class="form-control" id="txt_fInstalacion" style="width:100%; heigth: 40px;" value="<?php echo date("Y-m-d");?>"><br>
                           </div>
                         </div>
                     </div>
@@ -364,13 +364,13 @@
                         <div class="col-md-4">
                           <div class="form-group">
                             <label for="">Proximo Cambio</label>
-                            <input type="date" class="form-control" id="txt_pCambio" style="width:100%; heigth: 40px;"><br>
+                            <input type="date" class="form-control" id="txt_pCambio" style="width:100%; heigth: 40px;" value="<?php echo date("Y-m-d");?>"><br>
                           </div>
                         </div>
                         <div class="col-md-4">
                           <div class="form-group">
                             <label for="">Proximo Mantenimiento</label>
-                            <input type="date" class="form-control" id="txt_pMantenimiento" style="width:100%; heigth: 40px;"><br>
+                            <input type="date" class="form-control" id="txt_pMantenimiento" style="width:100%; heigth: 40px;" value="<?php echo date("Y-m-d");?>"><br>
                           </div>
                         </div>
                     </div>
@@ -464,25 +464,25 @@
                         <div class="col-md-3">
                           <div class="form-group">
                             <label for="">F.Instalación</label>
-                            <input type="date" class="form-control" id="txt_fInstalacion1" style="width:100%; heigth: 40px;">
+                            <input type="date" class="form-control" id="txt_fInstalacion1" style="width:100%; heigth: 40px;" value="<?php echo date("Y-m-d");?>">
                           </div>
                         </div>
                         <div class="col-md-3">
                           <div class="form-group">
                             <label for="">F.Reencauche</label>
-                            <input type="date" class="form-control" id="txt_fReencauche1" style="width:100%; heigth: 40px;">
+                            <input type="date" class="form-control" id="txt_fReencauche1" style="width:100%; heigth: 40px;" value="<?php echo date("Y-m-d");?>">
                           </div>
                         </div>
                         <div class="col-md-3">
                           <div class="form-group">
                             <label for="">F.Cambio</label>
-                            <input type="date" class="form-control" id="txt_fCambio1" style="width:100%; heigth: 40px;">
+                            <input type="date" class="form-control" id="txt_fCambio1" style="width:100%; heigth: 40px;" value="<?php echo date("Y-m-d");?>">
                           </div>
                         </div>
                         <div class="col-md-3">
                           <div class="form-group">
                             <label for="">F.Rotación</label>
-                            <input type="date" class="form-control" id="txt_fRotacion1" style="width:100%; heigth: 40px;">
+                            <input type="date" class="form-control" id="txt_fRotacion1" style="width:100%; heigth: 40px;" value="<?php echo date("Y-m-d");?>">
                           </div>
                         </div>
                     </div>
@@ -561,25 +561,25 @@
                         <div class="col-md-3">
                           <div class="form-group">
                             <label for="">F.Instalación</label>
-                            <input type="date" class="form-control" id="sel_fInstalacion2" style="width:100%; heigth: 40px;">
+                            <input type="date" class="form-control" id="sel_fInstalacion2" style="width:100%; heigth: 40px;" value="<?php echo date("Y-m-d");?>">
                           </div>
                         </div>
                         <div class="col-md-3">
                           <div class="form-group">
                             <label for="">F.Reencauche</label>
-                            <input type="date" class="form-control" id="txt_fReencauche2" style="width:100%; heigth: 40px;">
+                            <input type="date" class="form-control" id="txt_fReencauche2" style="width:100%; heigth: 40px;" value="<?php echo date("Y-m-d");?>">
                           </div>
                         </div>
                         <div class="col-md-3">
                           <div class="form-group">
                             <label for="">F.Cambio</label>
-                            <input type="date" class="form-control" id="txt_fCambio2" style="width:100%; heigth: 40px;">
+                            <input type="date" class="form-control" id="txt_fCambio2" style="width:100%; heigth: 40px;" value="<?php echo date("Y-m-d");?>">
                           </div>
                         </div>
                         <div class="col-md-3">
                           <div class="form-group">
                             <label for="">F.Rotación</label>
-                            <input type="date" class="form-control" id="txt_fRotacion2" style="width:100%; heigth: 40px;">
+                            <input type="date" class="form-control" id="txt_fRotacion2" style="width:100%; heigth: 40px;" value="<?php echo date("Y-m-d");?>">
                           </div>
                         </div>
                     </div>
@@ -658,25 +658,25 @@
                         <div class="col-md-3">
                           <div class="form-group">
                             <label for="">F.Instalación</label>
-                            <input type="date" class="form-control" id="sel_fInstalacion3" style="width:100%; heigth: 40px;">
+                            <input type="date" class="form-control" id="sel_fInstalacion3" style="width:100%; heigth: 40px;" value="<?php echo date("Y-m-d");?>">
                           </div>
                         </div>
                         <div class="col-md-3">
                           <div class="form-group">
                             <label for="">F.Reencauche</label>
-                            <input type="date" class="form-control" id="txt_fReencauche3" style="width:100%; heigth: 40px;">
+                            <input type="date" class="form-control" id="txt_fReencauche3" style="width:100%; heigth: 40px;" value="<?php echo date("Y-m-d");?>">
                           </div>
                         </div>
                         <div class="col-md-3">
                           <div class="form-group">
                             <label for="">F.Cambio</label>
-                            <input type="date" class="form-control" id="txt_fCambio3" style="width:100%; heigth: 40px;">
+                            <input type="date" class="form-control" id="txt_fCambio3" style="width:100%; heigth: 40px;" value="<?php echo date("Y-m-d");?>">
                           </div>
                         </div>
                         <div class="col-md-3">
                           <div class="form-group">
                             <label for="">F.Rotación</label>
-                            <input type="date" class="form-control" id="txt_fRotacion3" style="width:100%; heigth: 40px;">
+                            <input type="date" class="form-control" id="txt_fRotacion3" style="width:100%; heigth: 40px;" value="<?php echo date("Y-m-d");?>">
                           </div>
                         </div>
                     </div>
@@ -755,25 +755,25 @@
                         <div class="col-md-3">
                           <div class="form-group">
                             <label for="">F.Instalación</label>
-                            <input type="date" class="form-control" id="sel_fInstalacion4" style="width:100%; heigth: 40px;">
+                            <input type="date" class="form-control" id="sel_fInstalacion4" style="width:100%; heigth: 40px;" value="<?php echo date("Y-m-d");?>">
                           </div>
                         </div>
                         <div class="col-md-3">
                           <div class="form-group">
                             <label for="">F.Reencauche</label>
-                            <input type="date" class="form-control" id="txt_fReencauche4" style="width:100%; heigth: 40px;">
+                            <input type="date" class="form-control" id="txt_fReencauche4" style="width:100%; heigth: 40px;" value="<?php echo date("Y-m-d");?>">
                           </div>
                         </div>
                         <div class="col-md-3">
                           <div class="form-group">
                             <label for="">F.Cambio</label>
-                            <input type="date" class="form-control" id="txt_fCambio4" style="width:100%; heigth: 40px;">
+                            <input type="date" class="form-control" id="txt_fCambio4" style="width:100%; heigth: 40px;" value="<?php echo date("Y-m-d");?>">
                           </div>
                         </div>
                         <div class="col-md-3">
                           <div class="form-group">
                             <label for="">F.Rotación</label>
-                            <input type="date" class="form-control" id="txt_fRotacion4" style="width:100%; heigth: 40px;">
+                            <input type="date" class="form-control" id="txt_fRotacion4" style="width:100%; heigth: 40px;" value="<?php echo date("Y-m-d");?>">
                           </div>
                         </div>
                     </div>
@@ -852,25 +852,25 @@
                         <div class="col-md-3">
                           <div class="form-group">
                             <label for="">F.Instalación</label>
-                            <input type="date" class="form-control" id="sel_fInstalacion5" style="width:100%; heigth: 40px;">
+                            <input type="date" class="form-control" id="sel_fInstalacion5" style="width:100%; heigth: 40px;" value="<?php echo date("Y-m-d");?>">
                           </div>
                         </div>
                         <div class="col-md-3">
                           <div class="form-group">
                             <label for="">F.Reencauche</label>
-                            <input type="date" class="form-control" id="txt_fReencauche5" style="width:100%; heigth: 40px;">
+                            <input type="date" class="form-control" id="txt_fReencauche5" style="width:100%; heigth: 40px;" value="<?php echo date("Y-m-d");?>">
                           </div>
                         </div>
                         <div class="col-md-3">
                           <div class="form-group">
                             <label for="">F.Cambio</label>
-                            <input type="date" class="form-control" id="txt_fCambio5" style="width:100%; heigth: 40px;">
+                            <input type="date" class="form-control" id="txt_fCambio5" style="width:100%; heigth: 40px;" value="<?php echo date("Y-m-d");?>">
                           </div>
                         </div>
                         <div class="col-md-3">
                           <div class="form-group">
                             <label for="">F.Rotación</label>
-                            <input type="date" class="form-control" id="txt_fRotacion5" style="width:100%; heigth: 40px;">
+                            <input type="date" class="form-control" id="txt_fRotacion5" style="width:100%; heigth: 40px;" value="<?php echo date("Y-m-d");?>">
                           </div>
                         </div>
                     </div>
@@ -949,25 +949,25 @@
                         <div class="col-md-3">
                           <div class="form-group">
                             <label for="">F.Instalación</label>
-                            <input type="date" class="form-control" id="sel_fInstalacion6" style="width:100%; heigth: 40px;">
+                            <input type="date" class="form-control" id="sel_fInstalacion6" style="width:100%; heigth: 40px;" value="<?php echo date("Y-m-d");?>">
                           </div>
                         </div>
                         <div class="col-md-3">
                           <div class="form-group">
                             <label for="">F.Reencauche</label>
-                            <input type="date" class="form-control" id="txt_fReencauche6" style="width:100%; heigth: 40px;">
+                            <input type="date" class="form-control" id="txt_fReencauche6" style="width:100%; heigth: 40px;" value="<?php echo date("Y-m-d");?>">
                           </div>
                         </div>
                         <div class="col-md-3">
                           <div class="form-group">
                             <label for="">F.Cambio</label>
-                            <input type="date" class="form-control" id="txt_fCambio6" style="width:100%; heigth: 40px;">
+                            <input type="date" class="form-control" id="txt_fCambio6" style="width:100%; heigth: 40px;" value="<?php echo date("Y-m-d");?>">
                           </div>
                         </div>
                         <div class="col-md-3">
                           <div class="form-group">
                             <label for="">F.Rotación</label>
-                            <input type="date" class="form-control" id="txt_fRotacion6" style="width:100%; heigth: 40px;">
+                            <input type="date" class="form-control" id="txt_fRotacion6" style="width:100%; heigth: 40px;" value="<?php echo date("Y-m-d");?>">
                           </div>
                         </div>
                     </div>
@@ -1135,13 +1135,13 @@
                           <div class="col-md-4">
                             <div class="form-group">
                               <label for="">Fecha</label>
-                              <input type="date" class="form-control" id="txt_fechaA" placeholder="Ingrese la fecha"><br>
+                              <input type="date" class="form-control" id="txt_fechaA"  value="<?php echo date("Y-m-d");?>"><br>
                             </div>
                           </div>
                           <div class="col-md-4">
                             <div class="form-group">
                               <label for="">Proximo Cambio</label>
-                              <input type="date" class="form-control" id="txt_pCambioA" placeholder="Ingrese el proximo cambio"><br>
+                              <input type="date" class="form-control" id="txt_pCambioA"><br>
                             </div>
                           </div>
                           <div class="col-md-4">

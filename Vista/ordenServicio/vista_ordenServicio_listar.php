@@ -389,7 +389,9 @@
 
                      <!-- FORMULARIO llanta-->
                     <div id="llanta-part" class="content" role="tabpanel" aria-labelledby="llanta-trigger">
-                    <h5>Llanta 1</h5>
+
+                  <div class="callout callout-danger">
+                    <h5 class="text-danger">Llanta 1</h5>
                     <div class="row">
 
                       <div class="col-md-3">
@@ -486,7 +488,10 @@
                           </div>
                         </div>
                     </div>
-                    <h5>Llanta 2</h5>
+                  </div>
+
+                  <div class="callout callout-danger">
+                    <h5 class="text-danger">Llanta 2</h5>
                     <div class="row">
 
                       <div class="col-md-3">
@@ -583,7 +588,10 @@
                           </div>
                         </div>
                     </div>
-                    <h5>Llanta 3</h5>
+                  </div>
+
+                  <div class="callout callout-danger">
+                    <h5 class="text-danger">Llanta 3</h5>
                     <div class="row">
 
                       <div class="col-md-3">
@@ -680,7 +688,10 @@
                           </div>
                         </div>
                     </div>
-                    <h5>Llanta 4</h5>
+                  </div>
+
+                  <div class="callout callout-danger">
+                    <h5 class="text-danger">Llanta 4</h5>
                     <div class="row">
 
                       <div class="col-md-3">
@@ -777,7 +788,10 @@
                           </div>
                         </div>
                     </div>
-                    <h5>Llanta 5</h5>
+                  </div>
+
+                  <div class="callout callout-danger">
+                    <h5 class="text-danger">Llanta 5</h5>
                     <div class="row">
 
                       <div class="col-md-3">
@@ -874,7 +888,10 @@
                           </div>
                         </div>
                     </div>
-                    <h5>Llanta 6</h5>
+                  </div>
+
+                  <div class="callout callout-danger">
+                    <h5 class="text-danger">Llanta 6</h5>
                     <div class="row">
 
                       <div class="col-md-3">
@@ -971,7 +988,10 @@
                           </div>
                         </div>
                     </div>
-                    <h5>Calibración:</h5>
+                  </div>
+
+                  <div class="callout callout-danger">
+                    <h5 class="text-danger">Calibración</h5>
                     <div class="row">
                         <div class="col-md-2">
                           <div class="form-group">
@@ -1120,6 +1140,7 @@
                           </div>
                         </div>
                     </div>
+                   </div>
                      
                     <button class="btn btn-primary" onclick="stepper.previous()">Anterior</button>
                     <button class="btn btn-primary" onclick="stepper.next()">Siguiente</button>
@@ -1130,18 +1151,21 @@
 
                       <!-- FORMULARIO ACCEITE-->
                       <div id="aceite-part" class="content" role="tabpanel" aria-labelledby="aceite-trigger">
-                        <h5>Cambio de Aceite del Motor</h5>
+
+
+                      <div class="callout callout-danger">
+                        <h5 class="text-danger">Cambio de Aceite del Motor</h5>
                         <div class="row">
                           <div class="col-md-4">
                             <div class="form-group">
                               <label for="">Fecha</label>
-                              <input type="date" class="form-control" id="txt_fechaA"  value="<?php echo date("Y-m-d");?>"><br>
+                              <input type="date" class="form-control" id="txt_fechaA" onchange="fechaCuarenta(this.value)"  value="<?php echo date("Y-m-d");?>"><br>
                             </div>
                           </div>
                           <div class="col-md-4">
                             <div class="form-group">
                               <label for="">Proximo Cambio</label>
-                              <input type="date" class="form-control" id="txt_pCambioA"><br>
+                              <input type="date" class="form-control"  id="txt_pCambioA" ><br>
                             </div>
                           </div>
                           <div class="col-md-4">
@@ -1229,8 +1253,11 @@
                               </select><br><br>
                             </div>
                           </div>
-                        </div>
-                        <h5>Aceite de caja</h5>
+                        </div>         
+                      </div>
+
+                      <div class="callout callout-danger">
+                        <h5 class="text-danger">Aceite de caja</h5>
                         <div class="row">
                         <div class="col-md-3">
                             <div class="form-group">
@@ -1249,13 +1276,13 @@
                           <div class="col-md-3">
                             <div class="form-group">
                               <label for="">Ultimo Cambio</label>
-                              <input type="date" class="form-control" id="txt_uCambio1" placeholder="Ingrese ultimo cambio"><br>
+                              <input type="date" class="form-control" id="txt_uCambio1" onchange="fechaCochenta(this.value,'txt_pCambio1')" value="<?php echo date("Y-m-d");?>" placeholder="Ingrese ultimo cambio"><br>
                             </div>
                           </div>
                           <div class="col-md-3">
                             <div class="form-group">
                               <label for="">Proximo Cambio</label>
-                              <input type="date" class="form-control" id="txt_pCambio1" placeholder="Ingrese proximo cambio"><br>
+                              <input type="date" class="form-control cochenta" id="txt_pCambio1" placeholder="Ingrese proximo cambio"><br>
                             </div>
                           </div>
                         </div>
@@ -1293,7 +1320,10 @@
                               </div>
                             </div>
                           </div>
-                        <h5>Aceite de la Transmisión</h5>
+                        </div>
+
+                      <div class="callout callout-danger">
+                        <h5 class="text-danger">Aceite de la Transmisión</h5>
                         <div class="row">
                         <div class="col-md-3">
                             <div class="form-group">
@@ -1312,13 +1342,13 @@
                           <div class="col-md-3">
                             <div class="form-group">
                               <label for="">Ultimo Cambio</label>
-                              <input type="date" class="form-control" id="txt_uCambio2" placeholder="Ingrese ultimo cambio"><br>
+                              <input type="date" class="form-control" id="txt_uCambio2" onchange="fechaCochenta(this.value,'txt_pCambio2')" value="<?php echo date("Y-m-d");?>" placeholder="Ingrese ultimo cambio"><br>
                             </div>
                           </div>
                           <div class="col-md-3">
                             <div class="form-group">
                               <label for="">Proximo Cambio</label>
-                              <input type="date" class="form-control" id="txt_pCambio2" placeholder="Ingrese proximo cambio"><br>
+                              <input type="date" class="form-control cochenta" id="txt_pCambio2" placeholder="Ingrese proximo cambio"><br>
                             </div>
                           </div>
                         </div>
@@ -1356,7 +1386,10 @@
                               </div>
                             </div>
                           </div>
-                        <h5>Refrigerante</h5>
+                        </div>
+
+                      <div class="callout callout-danger">
+                        <h5 class="text-danger">Refrigerante</h5>
                         <div class="row">
                         <div class="col-md-3">
                             <div class="form-group">
@@ -1375,17 +1408,20 @@
                           <div class="col-md-3">
                             <div class="form-group">
                               <label for="">Ultimo Cambio</label>
-                              <input type="date" class="form-control" id="txt_uCambio3" placeholder="Ingrese ultimo cambio"><br>
+                              <input type="date" class="form-control" id="txt_uCambio3" value="<?php echo date("Y-m-d");?>" placeholder="Ingrese ultimo cambio"><br>
                             </div>
                           </div>
                           <div class="col-md-3">
                             <div class="form-group">
                               <label for="">Proximo Cambio</label>
-                              <input type="date" class="form-control" id="txt_pCambio3" placeholder="Ingrese proximo cambio"><br>
+                              <input type="date" class="form-control" id="txt_pCambio3" value="<?php echo date("Y-m-d");?>" placeholder="Ingrese proximo cambio"><br>
                             </div>
                           </div>
                         </div>
-                        <h5>Hidraulico</h5>
+                      </div>
+
+                      <div class="callout callout-danger">
+                        <h5 class="text-danger">Hidraulico</h5>
                         <div class="row">
                         <div class="col-md-3">
                             <div class="form-group">
@@ -1404,17 +1440,20 @@
                           <div class="col-md-3">
                             <div class="form-group">
                               <label for="">Ultimo Cambio</label>
-                              <input type="date" class="form-control" id="txt_uCambio4" placeholder="Ingrese ultimo cambio"><br>
+                              <input type="date" class="form-control" id="txt_uCambio4" value="<?php echo date("Y-m-d");?>" placeholder="Ingrese ultimo cambio"><br>
                             </div>
                           </div>
                           <div class="col-md-3">
                             <div class="form-group">
                               <label for="">Proximo Cambio</label>
-                              <input type="date" class="form-control" id="txt_pCambio4" placeholder="Ingrese proximo cambio"><br>
+                              <input type="date" class="form-control" id="txt_pCambio4" value="<?php echo date("Y-m-d");?>" placeholder="Ingrese proximo cambio"><br>
                             </div>
                           </div>
                         </div>
-                        <h5>Medición de liquidos</h5>
+                      </div>
+
+                      <div class="callout callout-danger">
+                        <h5 class="text-danger">Medición de liquidos</h5>
                         <div class="row">
                         <div class="col-md-4">
                             <div class="form-group">
@@ -1489,7 +1528,10 @@
                               </div>
                             </div>
                           </div>
-                          <h5>Otros</h5>
+                        </div>
+
+                        <div class="callout callout-danger">
+                          <h5 class="text-danger">Otros</h5>
                           <div class="row">
                           <div class="col-md-3">
                               <div class="form-group">
@@ -1536,6 +1578,7 @@
                             <label for="">Observaciones</label>
                             <textarea class="form-control" id="txt_observacionesF" placeholder="Ingrese las observaciones"></textarea><br>
                           </div>
+                        </div>
                         </div>
                           </div>
                       <button class="btn btn-primary" onclick="stepper.previous()">Anterior</button>
@@ -2536,7 +2579,7 @@
                           <div class="col-md-4">
                             <div class="form-group">
                               <label for="">Proximo cambio</label>
-                              <input type="date" class="form-control" id="txt_editar_pCambioA" placeholder="Ingrese el proximo cambio"><br>
+                              <input type="date" class="form-control " id="txt_editar_pCambioA" placeholder="Ingrese el proximo cambio"><br>
                             </div>
                           </div>
                           <div class="col-md-4">
@@ -2978,4 +3021,5 @@
   listar_filtro_combustible();
   listar_filtro_aire();
   
+  fechaCochenta();
 </script>

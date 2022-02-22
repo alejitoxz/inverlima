@@ -1984,3 +1984,37 @@ function modificar_orden_Servicio(){
     })
 
 }
+
+function fechaCuarenta(dias){
+    var Init = new Date(dias);
+    Init.setDate(Init.getDate() + 40);
+    mes = '' + (Init.getMonth() + 1),
+    dia = '' + Init.getDate(),
+    anio = Init.getFullYear();
+
+    if (mes.length < 2) 
+        mes = '0' + mes;
+    if (dia.length < 2) 
+        dia = '0' + dia;
+
+    var fec = [anio, mes, dia].join('-');
+    console.log("log",fec)
+    $("#txt_pCambioA").val(fec);
+}
+
+function fechaCochenta(dias,id){
+    var Init = new Date(dias);
+    Init.setDate(Init.getDate() + 180);
+    mes = '' + (Init.getMonth() + 1),
+    dia = '' + Init.getDate(),
+    anio = Init.getFullYear();
+
+    if (mes.length < 2) 
+        mes = '0' + mes;
+    if (dia.length < 2) 
+        dia = '0' + dia;
+
+    var fec = [anio, mes, dia].join('-');
+    $("#"+id).val(fec);
+    
+}

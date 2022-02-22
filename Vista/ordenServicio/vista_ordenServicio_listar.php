@@ -1788,7 +1788,7 @@
                         <div class="col-md-4">
                           <div class="form-group">
                             <label for="">Fecha de instalacion</label>
-                            <input type="date" class="form-control" id="txt_editar_fInstalacion" style="width:100%; heigth: 40px;"><br>
+                            <input type="date" class="form-control" id="txt_editar_fInstalacion" style="width:100%; heigth: 40px;" ><br>
                           </div>
                         </div>
                     </div>

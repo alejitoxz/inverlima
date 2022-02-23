@@ -156,6 +156,8 @@
                       <th style="display:none"></th>
                       <th style="display:none"></th>
                       <th style="display:none"></th>
+                      <th style="display:none"></th>
+                      <th style="display:none"></th>
                       <th>Orden</th>
                       <th>Placa</th>
                       <th>N° Interno</th>
@@ -1247,6 +1249,20 @@
                             </div>
                           </div>
                           <div class="col-md-4">
+                            <div class="form-group">
+                              <label for="">Filtro de Combustible</label>
+                              <select class="js-example-basic-single"  name="state" id="sel_filtro_combustible2" style="width:100%; heigth: 40px;">   
+                              </select><br><br>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <label for="">Filtro de Combustible</label>
+                              <select class="js-example-basic-single"  name="state" id="sel_filtro_combustible3" style="width:100%; heigth: 40px;">   
+                              </select><br><br>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
                             <div class="form-group">
                               <label for="">Filtro de Aire</label>
                               <select class="js-example-basic-single"  name="state" id="sel_filtro_aire" style="width:100%; heigth: 40px;">   
@@ -2657,6 +2673,20 @@
                             <div class="form-group">
                               <label for="">Filtro de combustible</label>
                               <select class="js-example-basic-single"  name="state" id="sel_editar_filtro_combustible" style="width:100%; heigth: 40px;">   
+                              </select><br><br>
+                            </div>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="form-group">
+                              <label for="">Filtro de combustible</label>
+                              <select class="js-example-basic-single"  name="state" id="sel_editar_filtro_combustible2" style="width:100%; heigth: 40px;">   
+                              </select><br><br>
+                            </div>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="form-group">
+                              <label for="">Filtro de combustible</label>
+                              <select class="js-example-basic-single"  name="state" id="sel_editar_filtro_combustible3" style="width:100%; heigth: 40px;">   
                               </select><br><br>
                             </div>
                           </div>

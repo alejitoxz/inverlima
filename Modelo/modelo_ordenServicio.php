@@ -71,7 +71,8 @@ session_start();
                 LEFT JOIN tecnico AS t ON ( t.id = os.idTecnico)
                 LEFT JOIN persona AS prop ON ( t.idPersona = prop.id )
                 INNER JOIN servicio AS s ON ( os.idServicio = s.id )
-								order by os.fecha_creacion desc";
+				WHERE os.estatus = 1
+                order by os.fecha_creacion desc " ;
             $resp = sqlsrv_query($conn, $sql);
             if( $resp === false) {
                 return 0;
@@ -554,7 +555,7 @@ session_start();
             $this->conexion->conectar();
         }
 
-        function registrar_ordenServicio($placa,$revBimCotrautol,$rRegistradora,$kmGps,$vExtintor,$oReg,$observacion,$tecnico,$bateria,$tipoBateria,$marca,$serial,$fVenta,$fInstalacion,$tUso,$pCambio,$pMantenimiento,$oMejora,$llantaSerial1,$profundidad1,$opmarca1,$tipoMarca1,$estado1,$fInstalacion1,$fReencauche1,$fCambio1,$fRotacion1,$llantaSerial2,$profundidad2,$opmarca2,$tipoMarca2,$estado2,$fInstalacion2,$fReencauche2,$fCambio2,$fRotacion2,$llantaSerial3,$profundidad3,$opmarca3,$tipoMarca3,$estado3,$fInstalacion3,$fReencauche3,$fCambio3,$fRotacion3,$llantaSerial4,$profundidad4,$opmarca4,$tipoMarca4,$estado4,$fInstalacion4,$fReencauche4,$fCambio4,$fRotacion4,$llantaSerial5,$profundidad5,$opmarca5,$tipoMarca5,$estado5,$fInstalacion5,$fReencauche5,$fCambio5,$fRotacion5,$llantaSerial6,$profundidad6,$opmarca6,$tipoMarca6,$estado6,$fInstalacion6,$fReencauche6,$fCambio6,$fRotacion6,$calibracion1,$calibracion2,$calibracion3,$calibracion4,$calibracion5,$calibracion6,$oCalibracion,$balanceo1,$balanceo2,$balanceo3,$balanceo4,$balanceo5,$balanceo6,$oBalanceo,$alineacion1,$alineacion2,$observacionG3,$observacionM3,$fecha,$pCambioA,$kilometraje,$cKilometraje,$tipoAceite,$marca10,$cantidad1,$presentacion1,$nivelacion,$cNivelacion,$fAceite,$fCombustible,$fAire,$tipoAceite1,$marca1,$uCambio,$pCambio10,$cantidad2,$presentacion2,$nivelacion2,$cNivelacion2,$tipoAceite3,$marca3,$uCambio3,$pCambio3,$cantidad3,$presentacion3,$nivelacion3,$cNivelacion3,$tipoAceite4,$marca4,$uCambio4,$pCambio4,$tipoAceite5,$marca5,$uCambio5,$pCambio5,$lFreno,$lParabrisa,$refrigerante,$hidraulico,$lMotor,$lCaja,$lTransmision,$lFrenos1,$engrase,$sRadiador,$sFiltroAire,$observacionesF){
+        function registrar_ordenServicio($placa,$revBimCotrautol,$rRegistradora,$kmGps,$vExtintor,$oReg,$observacion,$tecnico,$bateria,$tipoBateria,$marca,$serial,$fVenta,$fInstalacion,$tUso,$pCambio,$pMantenimiento,$oMejora,$llantaSerial1,$profundidad1,$opmarca1,$tipoMarca1,$estado1,$fInstalacion1,$fReencauche1,$fCambio1,$fRotacion1,$llantaSerial2,$profundidad2,$opmarca2,$tipoMarca2,$estado2,$fInstalacion2,$fReencauche2,$fCambio2,$fRotacion2,$llantaSerial3,$profundidad3,$opmarca3,$tipoMarca3,$estado3,$fInstalacion3,$fReencauche3,$fCambio3,$fRotacion3,$llantaSerial4,$profundidad4,$opmarca4,$tipoMarca4,$estado4,$fInstalacion4,$fReencauche4,$fCambio4,$fRotacion4,$llantaSerial5,$profundidad5,$opmarca5,$tipoMarca5,$estado5,$fInstalacion5,$fReencauche5,$fCambio5,$fRotacion5,$llantaSerial6,$profundidad6,$opmarca6,$tipoMarca6,$estado6,$fInstalacion6,$fReencauche6,$fCambio6,$fRotacion6,$calibracion1,$calibracion2,$calibracion3,$calibracion4,$calibracion5,$calibracion6,$oCalibracion,$balanceo1,$balanceo2,$balanceo3,$balanceo4,$balanceo5,$balanceo6,$oBalanceo,$alineacion1,$alineacion2,$observacionG3,$observacionM3,$fecha,$pCambioA,$kilometraje,$cKilometraje,$tipoAceite,$marca10,$cantidad1,$presentacion1,$nivelacion,$cNivelacion,$fAceite,$fCombustible,$fAire,$tipoAceite1,$marca1,$uCambio,$pCambio10,$cantidad2,$presentacion2,$nivelacion2,$cNivelacion2,$tipoAceite3,$marca3,$uCambio3,$pCambio3,$cantidad3,$presentacion3,$nivelacion3,$cNivelacion3,$tipoAceite4,$marca4,$uCambio4,$pCambio4,$tipoAceite5,$marca5,$uCambio5,$pCambio5,$lFreno,$lParabrisa,$refrigerante,$hidraulico,$lMotor,$lCaja,$lTransmision,$lFrenos1,$engrase,$sRadiador,$sFiltroAire,$observacionesF,$fCombustible2,$fCombustible3){
             $idCompany = $_SESSION['COMPANY'];
             $idUsuario = $_SESSION['S_ID'];
             $date=@date('Y-m-d H:i:s');
@@ -693,8 +694,9 @@ session_start();
                             otrosEngrase,
                             otrosSopleteoRadiador,
                             otrosSopleteoFiltroAire,
-                            observacionesGenerales2
-                    
+                            observacionesGenerales2,
+                            motorfiltroCombustible2,
+                            motorfiltroCombustible3
                                     )
                 VALUES(
                     $bateria,
@@ -827,7 +829,9 @@ session_start();
                     $engrase,
                     $sRadiador,
                     $sFiltroAire,
-                    '$observacionesF'
+                    '$observacionesF',
+                    $fCombustible3,
+                    $fCombustible2
                 )
                 SET @idServicio = SCOPE_IDENTITY()
                 INSERT INTO ordenServicio(
@@ -841,7 +845,6 @@ session_start();
                     observacion,
                     idTecnico,
                     fecha_creacion
-
                 ) 
                 VALUES(
                     @idServicio,$placa,$revBimCotrautol,1,'$vExtintor',$rRegistradora,'$oReg','$observacion',$tecnico,'$date'
@@ -859,7 +862,6 @@ session_start();
                      BEGIN CATCH
                      ROLLBACK TRAN
                      END CATCH";
-                     //echo $sql;exit;
             $resp = sqlsrv_query($conn, $sql);
 
             if( $resp === false) {
@@ -973,7 +975,7 @@ session_start();
         $pCambio3,$cantidad3,$presentacion3,$nivelacion3,$cNivelacion3,$tipoAceite4,$marca4,$uCambio4,$pCambio4,$tipoAceite5,$marca5,
         $uCambio5,$pCambio5,$lFreno,$lParabrisa,$refrigerante,$hidraulico,
         $lMotor,$lCaja,$lTransmision,$lFrenos1,$engrase,$sRadiador,
-        $sFiltroAire,$observacionesF){
+        $sFiltroAire,$observacionesF,$fCombustible2,$fCombustible3){
             $conn = $this->conexion->conectar();
             $idCompany = $_SESSION['COMPANY'];
             $cadena = "UPDATE servicio SET
@@ -1107,7 +1109,9 @@ session_start();
                             otrosEngrase = $engrase,
                             otrosSopleteoRadiador = $sRadiador,
                             otrosSopleteoFiltroAire = $sFiltroAire,
-                            observacionesGenerales2 = '$observacionesF'
+                            observacionesGenerales2 = '$observacionesF',
+                            motorfiltroCombustible2 = $fCombustible2,
+                            motorfiltroCombustible3 = $fCombustible3
                             where id = $idServicio
                     
                 
@@ -1180,6 +1184,21 @@ session_start();
         }
         
 
+        function modificar_ordenServicio($id,$estatus){
+            $conn = $this->conexion->conectar();
+            $sql  = "UPDATE ordenServicio set estatus= $estatus
+                    WHERE id='$id'
+                    ";
+            $resp = sqlsrv_query($conn, $sql);
+            
+            if( $resp === false) {
+                return 0;
+            }else{
+                return 1;
+            }
+            
+            $this->conexion->conectar();
+        }
 
 
 

@@ -549,7 +549,16 @@ function listar_orden(){
             {
                 "targets": [ 133 ],
                 "visible": false
+            },
+            {
+                "targets": [ 134 ],
+                "visible": false
+            },
+            {
+                "targets": [ 135 ],
+                "visible": false
             }
+            
         ],
         "columns": [
             { "data": "bateria" },
@@ -683,9 +692,12 @@ function listar_orden(){
             { "data": "otrosSopleteoRadiador" },
             { "data": "otrosSopleteoFiltroAire" },
             { "data": "observacionesGenerales2" },
+            { "data": "motorfiltroCombustible2" },
+            { "data": "motorfiltroCombustible3" },
             { "data": "oRegistradora" },
             { "data": "vExtintor" },
             { "data": "idServicio" },
+
             { "data": "idOrdenServicio" },
             { "data": "placa" },
             { "data": "cod_interno" },
@@ -994,7 +1006,11 @@ function listar_filtro_combustible(){
                 cadena+="<option value ='"+data[i]['id']+"'>"+data[i]['filtro_combustible']+"</option>";
             }
             $("#sel_filtro_combustible").html(cadena);
+            $("#sel_filtro_combustible2").html(cadena);
+            $("#sel_filtro_combustible3").html(cadena);
             $("#sel_editar_filtro_combustible").html(cadena);
+            $("#sel_editar_filtro_combustible2").html(cadena);
+            $("#sel_editar_filtro_combustible3").html(cadena);
         }else{
             cadena+="<option value =''>No se encontraron registros</option>"; 
         }
@@ -1158,6 +1174,8 @@ function registrar_orden_Servicio(){
 
     
     var observacionesF = $("#txt_observacionesF").val();
+    var fCombustible2 = $("#sel_filtro_combustible2").val();
+    var fCombustible3 = $("#sel_filtro_combustible3").val();
 
     $.ajax({
         "url": "../controlador/ordenServicio/controlador_ordenServicio_registro.php",
@@ -1309,7 +1327,9 @@ function registrar_orden_Servicio(){
         engrase:engrase,
         sRadiador:sRadiador,
         sFiltroAire:sFiltroAire,
-        observacionesF:observacionesF
+        observacionesF:observacionesF,
+        fCombustible2:fCombustible2,
+        fCombustible3:fCombustible3,
         }
     }).done(function(resp){
         
@@ -1493,8 +1513,11 @@ $('#tabla_orden').on('click','.editar',function(){
 
     var idOrdenServicio =datosOrden.idOrdenServicio;
     var idServicio =datosOrden.idServicio;
+
+    var fCombustible2 =datosOrden.motorfiltroCombustible2;
+    var fCombustible3 =datosOrden.motorfiltroCombustible3;
     
-    console.log("Datos",datosOrden);
+
     //levantar modal
     AbrirModalEditarOrdenServicio();
     //ingresas datos modal
@@ -1654,6 +1677,9 @@ $('#tabla_orden').on('click','.editar',function(){
 
     
     $("#txt_editar_observacionesF").val(observacionesF);
+
+    $("#sel_editar_filtro_combustible2").val(fCombustible2).trigger('change');
+    $("#sel_editar_filtro_combustible3").val(fCombustible3).trigger('change');
 
 })
 
@@ -1816,6 +1842,9 @@ function modificar_orden_Servicio(){
     var idOrdenServicio = $("#idOrdenServicio").val();
     var idServicio = $("#idServicio").val();
 
+    var fCombustible2 = $("#sel_editar_filtro_combustible2").val();
+    var fCombustible3 = $("#sel_editar_filtro_combustible3").val();
+
     $.ajax({
         "url": "../controlador/ordenServicio/controlador_ordenServicio_modificar.php",
         "type": "POST",
@@ -1967,7 +1996,9 @@ function modificar_orden_Servicio(){
             engrase:engrase,
             sRadiador:sRadiador,
             sFiltroAire:sFiltroAire,
-            observacionesF:observacionesF
+            observacionesF:observacionesF,
+            fCombustible2:fCombustible2,
+            fCombustible3:fCombustible3
         }
     }).done(function(resp){
         console.log(resp);
@@ -2016,5 +2047,209 @@ function fechaCochenta(dias,id){
 
     var fec = [anio, mes, dia].join('-');
     $("#"+id).val(fec);
+}
+function limpiarRegistro(){
+    $("#sel_placa_vehiculo").val(0);
+    $("#txt_revb").val("");
+    $("#sel_rReg").val(0);
+    $("#txt_kmGps").val("");
+    $("#txt_vExtintor").val("");
+    $("#txt_oReg").val("");
+    $("#txt_obs").val("");
+    $("#sel_tecnico").val(0);
+    $("#sel_bateria").val(0);
+    $("#sel_tipoBateria").val(0);
+    $("#sel_marca").val(0);
+    $("#txt_serial").val("");
+    $("#txt_fVenta").val("");
+    $("#txt_fInstalacion").val("");
+    $("#txt_tUso").val("");
+    $("#txt_pCambio").val("");
+    $("#txt_pMantenimiento").val("");
+    $("#txt_oMejora").val("");
+    $("#txt_llantaSerial1").val("");
+    $("#sel_profundidad1").val(0);
+    $("#sel_marca_llanta1").val(0);
+    $("#sel_tipoMarca1").val(0);
+    $("#sel_estado1").val(0);
+    $("#txt_fInstalacion1").val("");
+    $("#txt_fReencauche1").val("");
+    $("#txt_fCambio1").val("");
+    $("#txt_fRotacion1").val("");
+
+    $("#txt_llantaSerial2").val("");
+    $("#sel_profundidad2").val(0);
+    $("#sel_marca_llanta2").val(0);
+    $("#sel_tipoMarca2").val(0);
+    $("#sel_estado2").val(0);
+    $("#sel_fInstalacion2").val(0);
+    $("#txt_fReencauche2").val("");
+    $("#txt_fCambio2").val("");
+    $("#txt_fRotacion2").val("");
+
+    $("#txt_llantaSerial3").val("");
+    $("#sel_profundidad3").val(0);
+    $("#sel_marca_llanta3").val(0);
+    $("#sel_tipoMarca3").val(0);
+    $("#sel_estado3").val(0);
+    $("#sel_fInstalacion3").val(0);
+    $("#txt_fReencauche3").val(0);
+    $("#txt_fCambio3").val("");
+    $("#txt_fRotacion3").val("");
+
+    $("#txt_llantaSerial4").val("");
+    $("#sel_profundidad4").val(0);
+    $("#sel_marca_llanta4").val(0);
+    $("#sel_tipoMarca4").val(0);
+    $("#sel_estado4").val(0);
+    $("#sel_fInstalacion4").val(0);
+    $("#txt_fReencauche4").val("");
+    $("#txt_fCambio4").val("");
+    $("#txt_fRotacion4").val("");
+
+    $("#txt_llantaSerial5").val("");
+    $("#sel_profundidad5").val(0);
+    $("#sel_marca_llanta5").val(0);
+    $("#sel_tipoMarca5").val(0);
+    $("#sel_estado5").val(0);
+    $("#sel_fInstalacion5").val(0);
+    $("#txt_fReencauche5").val("");
+    $("#txt_fCambio5").val("");
+    $("#txt_fRotacion5").val("");
+
+    $("#txt_llantaSerial6").val("");
+    $("#sel_profundidad6").val(0);
+    $("#sel_marca_llanta").val(0);
+    $("#sel_tipoMarca6").val(0);
+    $("#sel_estado6").val(0);
+    $("#sel_fInstalacion6").val(0);
+    $("#txt_fReencauche6").val("");
+    $("#txt_fCambio6").val("");
+    $("#txt_fRotacion6").val("");
+
+
+    $("#txt_cal1").val("");
+    $("#txt_cal2").val("");
+    $("#txt_cal3").val("");
+    $("#txt_cal4").val("");
+    $("#txt_cal5").val("");
+    $("#txt_cal6").val("");
+    $("#txt_oCalibracion").val("");
+    $("#sel_bal1").val(0);
+    $("#sel_bal2").val(0);
+    $("#sel_bal3").val(0);
+    $("#sel_bal4").val(0);
+    $("#sel_bal5").val(0);
+    $("#sel_bal6").val(0);
+    $("#txt_oBalanceo").val("");
+    $("#sel_alineacion1").val(0);
+    $("#sel_alineacion2").val(0);
+    $("#txt_obs3").val("");
+    $("#txt_obsM3").val("");
+
+    $("#txt_fechaA").val("");
+    $("#txt_pCambioA").val("");
+    $("#txt_kilometraje").val("");
+    $("#txt_ckilometraje").val("");
+    $("#sel_tipo_aceite").val(0);
+    $("#sel_marca_aceite").val(0);
+    $("#txt_cantidad1").val("");
+    $("#sel_presentacion1").val(0);
+    $("#sel_nivelacion1").val(0);
+    $("#txt_cNivelacion1").val("");
+    $("#sel_filtro_aceite").val(0);
+    $("#sel_filtro_combustible").val(0);
+    $("#sel_filtro_aire").val(0);
+    $("#sel_tipo_aceite1").val(0);
+    $("#sel_marca_aceite1").val(0);
+    $("#txt_uCambio1").val("");
+    $("#txt_pCambio1").val("");
+    $("#txt_cantidad2").val("");
+    $("#sel_presentacion2").val(0);
+    $("#sel_nivelacion2").val(0);
+    $("#txt_nivelacion2").val("");
+
+    $("#sel_tipo_aceite2").val(0);
+    $("#sel_marca_aceite2").val(0);
+    $("#txt_uCambio2").val("");
+    $("#txt_pCambio2").val("");
+    $("#txt_cantidad2").val("");
+    $("#sel_presentacion3").val(0);
+    $("#sel_nivelacion3").val(0);
+    $("#txt_nivelacion3").val("");
+
+    $("#sel_tipo_aceite3").val(0);
+    $("#sel_marca_aceite3").val(0);
+    $("#txt_uCambio3").val("");
+    $("#txt_pCambio3").val("");
+
+    $("#sel_tipo_aceite4").val(0);
+    $("#sel_marca_aceite4").val(0);
+    $("#txt_uCambio4").val("");
+    $("#txt_pCambio4").val("");
+
+    $("#sel_lFreno").val(0);
+    $("#sel_lParabrisa").val(0);
+    $("#sel_refrigerante").val(0);
+    $("#sel_hidraulico").val(0);
+    $("#sel_lMotor").val(0);
+    $("#sel_lCaja").val(0);
+    $("#sel_lTransmision").val(0);
+
+    $("#sel_lFrenos1").val(0);
+    $("#sel_engrase").val(0);
+    $("#sel_sRadiador").val(0);
+    $("#sel_sFiltroAire").val(0);
+
     
+    $("#txt_observacionesF").val("");
+}
+
+// FUNCION PARA ELIMINAR (ANULAR) REGISTRO
+$('#tabla_orden').on('click','.eliminar',function(){
+    if(table.row(this).child.isShown()){
+        var idOrdenServicio = table.row(this).data().idOrdenServicio;
+    }else{
+        var idOrdenServicio = table.row($(this).parents('tr')).data().idOrdenServicio;
+    }
+    Swal.fire({
+        title: '¿Seguro desea eliminar el registro?',
+        text: "Una vez hecho esto, se eliminara del sistema",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Aceptar',
+        cancelButtonText: 'Cancelar'
+      }).then((result) => {
+          console.log(result);
+        if (result.value) {
+        modificar_estatus(idOrdenServicio,0);
+          Swal.fire(
+            'Eliminado',
+            '¡Tu registro ha sido eliminado!',
+            'success'
+          )
+        }
+      })
+    
+})
+function modificar_estatus(id,estatus){
+    $.ajax({
+        "url": "../controlador/ordenServicio/controlador_modificar_ordenServicio_estatus.php",
+        type: "POST",
+        data:{
+        id:id,
+        estatus:estatus
+        }
+    }).done(function(resp){
+        if(resp>0){
+            if(resp==1){
+                    listar_orden();
+                
+            }else{
+                Swal.fire("Mensaje De Advertencia",'No se pudo borrar el archivo', "warning")
+            }
+        }
+    })
 }

@@ -1,4 +1,3 @@
-<button onclick='limpiarRegistro()'>Hola</button>
 <div class="col-md-12">
     <div class="card card-success">
             <div class="card-header">
@@ -244,6 +243,7 @@
 
                     <!-- FORMULARIO DATOIS-->
                     <div id="datos-part" class="content active dstepper-block" role="tabpanel" aria-labelledby="datos-trigger">
+                    <div class="callout callout-danger">
                     <div class="row"> 
                       <div class="col-md-4">
                         <div class="form-group">
@@ -306,6 +306,7 @@
                             </select><br><br>
                           </div>
                         </div>
+                        </div>
                       <button class="btn btn-primary" onclick="stepper.next()">Siguiente</button>
                     </div>
 
@@ -314,6 +315,7 @@
                     
                     <!-- FORMULARIO BATERIA-->
                     <div id="bateria-part" class="content" role="tabpanel" aria-labelledby="bateria-trigger">
+                    <div class="callout callout-danger">
                     <div class="row">
                       <div class="col-md-4">
                           <div class="form-group">
@@ -383,6 +385,7 @@
                             <textarea class="form-control" id="txt_oMejora" placeholder="Observaciones"></textarea><br>
                           </div>
                         </div>  
+                      </div>
                       <button class="btn btn-primary" onclick="stepper.previous()">Anterior</button>
                       <button class="btn btn-primary" onclick="stepper.next()">Siguiente</button>
                     </div>
@@ -394,7 +397,7 @@
                     <div id="llanta-part" class="content" role="tabpanel" aria-labelledby="llanta-trigger">
 
                   <div class="callout callout-danger">
-                    <h5 class="text-danger">Llanta 1</h5>
+                    <h5 class="text-danger">LLANTA 1</h5>
                     <div class="row">
 
                       <div class="col-md-3">
@@ -494,7 +497,7 @@
                   </div>
 
                   <div class="callout callout-danger">
-                    <h5 class="text-danger">Llanta 2</h5>
+                    <h5 class="text-danger">LLANTA 2</h5>
                     <div class="row">
 
                       <div class="col-md-3">
@@ -594,7 +597,7 @@
                   </div>
 
                   <div class="callout callout-danger">
-                    <h5 class="text-danger">Llanta 3</h5>
+                    <h5 class="text-danger">LLANTA 3</h5>
                     <div class="row">
 
                       <div class="col-md-3">
@@ -694,7 +697,7 @@
                   </div>
 
                   <div class="callout callout-danger">
-                    <h5 class="text-danger">Llanta 4</h5>
+                    <h5 class="text-danger">LLANTA 4</h5>
                     <div class="row">
 
                       <div class="col-md-3">
@@ -794,7 +797,7 @@
                   </div>
 
                   <div class="callout callout-danger">
-                    <h5 class="text-danger">Llanta 5</h5>
+                    <h5 class="text-danger">LLANTA 5</h5>
                     <div class="row">
 
                       <div class="col-md-3">
@@ -894,7 +897,7 @@
                   </div>
 
                   <div class="callout callout-danger">
-                    <h5 class="text-danger">Llanta 6</h5>
+                    <h5 class="text-danger">LLANTA 6</h5>
                     <div class="row">
 
                       <div class="col-md-3">
@@ -994,7 +997,7 @@
                   </div>
 
                   <div class="callout callout-danger">
-                    <h5 class="text-danger">Calibración</h5>
+                    <h5 class="text-danger">CALIBRACIÓN:</h5>
                     <div class="row">
                         <div class="col-md-2">
                           <div class="form-group">
@@ -1157,7 +1160,7 @@
 
 
                       <div class="callout callout-danger">
-                        <h5 class="text-danger">Cambio de Aceite del Motor</h5>
+                        <h5 class="text-danger">CAMBIO DE ACEITE DEL MOTOR</h5>
                         <div class="row">
                           <div class="col-md-4">
                             <div class="form-group">
@@ -1274,7 +1277,7 @@
                       </div>
 
                       <div class="callout callout-danger">
-                        <h5 class="text-danger">Aceite de caja</h5>
+                        <h5 class="text-danger">ACEITE DE CAJA</h5>
                         <div class="row">
                         <div class="col-md-3">
                             <div class="form-group">
@@ -1340,7 +1343,7 @@
                         </div>
 
                       <div class="callout callout-danger">
-                        <h5 class="text-danger">Aceite de la Transmisión</h5>
+                        <h5 class="text-danger">ACEITE DE LA TRANSMICIÓN</h5>
                         <div class="row">
                         <div class="col-md-3">
                             <div class="form-group">
@@ -1406,7 +1409,7 @@
                         </div>
 
                       <div class="callout callout-danger">
-                        <h5 class="text-danger">Refrigerante</h5>
+                        <h5 class="text-danger">REFRIGERANTE</h5>
                         <div class="row">
                         <div class="col-md-3">
                             <div class="form-group">
@@ -1438,7 +1441,7 @@
                       </div>
 
                       <div class="callout callout-danger">
-                        <h5 class="text-danger">Hidraulico</h5>
+                        <h5 class="text-danger">HIDRAULICO</h5>
                         <div class="row">
                         <div class="col-md-3">
                             <div class="form-group">
@@ -1470,7 +1473,7 @@
                       </div>
 
                       <div class="callout callout-danger">
-                        <h5 class="text-danger">Medición de liquidos</h5>
+                        <h5 class="text-danger">MEDICION DE LIQUIDOS</h5>
                         <div class="row">
                         <div class="col-md-4">
                             <div class="form-group">
@@ -1548,7 +1551,7 @@
                         </div>
 
                         <div class="callout callout-danger">
-                          <h5 class="text-danger">Otros</h5>
+                          <h5 class="text-danger">OTROS</h5>
                           <div class="row">
                           <div class="col-md-3">
                               <div class="form-group">
@@ -1699,6 +1702,7 @@
 
                     <!-- FORMULARIO DATOIS-->
                     <div id="datos-part-edit" class="content active dstepper-block" role="tabpanel" aria-labelledby="datos-trigger-edit">
+                    <div class="callout callout-danger">
                     <div class="row"> 
                       <div class="col-md-4">
                         <div class="form-group">
@@ -1761,6 +1765,7 @@
                             </select><br><br>
                           </div>
                         </div>
+                        </div>
                       <button class="btn btn-primary" onclick="stepper.next()">Siguiente</button>
                     </div>
 
@@ -1769,6 +1774,7 @@
                     
                     <!-- FORMULARIO BATERIA-->
                     <div id="bateria-part-edit" class="content" role="tabpanel" aria-labelledby="bateria-trigger-edit">
+                    <div class="callout callout-danger">
                     <div class="row">
                       <div class="col-md-4">
                           <div class="form-group">
@@ -1837,7 +1843,8 @@
                             <label for="">Oportunidades de mejora</label>
                             <textarea class="form-control" id="txt_editar_oMejora" placeholder="Ingrese la marca"></textarea><br>
                           </div>
-                        </div>  
+                        </div> 
+                      </div> 
                       <button class="btn btn-primary" onclick="stepper.previous()">Anterior</button>
                       <button class="btn btn-primary" onclick="stepper.next()">Siguiente</button>
                     </div>
@@ -1847,7 +1854,8 @@
 
                      <!-- FORMULARIO llanta-->
                     <div id="llanta-part-edit" class="content" role="tabpanel" aria-labelledby="llanta-trigger-edit">
-                    <h5>Llanta 1</h5>
+                    <div class="callout callout-danger">
+                    <h5 class="text-danger">LLANTA 1</h5>
                     <div class="row">
 
                       <div class="col-md-3">
@@ -1944,7 +1952,9 @@
                           </div>
                         </div>
                     </div>
-                    <h5>Llanta 2</h5>
+                    </div>
+                    <div class="callout callout-danger">
+                    <h5 class="text-danger">LLANTA 2</h5>
                     <div class="row">
 
                       <div class="col-md-3">
@@ -2041,7 +2051,9 @@
                           </div>
                         </div>
                     </div>
-                    <h5>Llanta 3</h5>
+                    </div>
+                    <div class="callout callout-danger">
+                    <h5 class="text-danger">LLANTA 3</h5>
                     <div class="row">
 
                       <div class="col-md-3">
@@ -2138,7 +2150,9 @@
                           </div>
                         </div>
                     </div>
-                    <h5>Llanta 4</h5>
+                    </div>
+                    <div class="callout callout-danger">
+                    <h5 class="text-danger">LLANTA 4</h5>
                     <div class="row">
 
                       <div class="col-md-3">
@@ -2235,7 +2249,9 @@
                           </div>
                         </div>
                     </div>
-                    <h5>Llanta 5</h5>
+                    </div>
+                    <div class="callout callout-danger">
+                    <h5 class="text-danger">LLANTA 5</h5>
                     <div class="row">
 
                       <div class="col-md-3">
@@ -2332,7 +2348,9 @@
                           </div>
                         </div>
                     </div>
-                    <h5>Llanta 6</h5>
+                    </div>
+                    <div class="callout callout-danger">
+                    <h5 class="text-danger">LLANTA 6</h5>
                     <div class="row">
 
                       <div class="col-md-3">
@@ -2429,7 +2447,9 @@
                           </div>
                         </div>
                     </div>
-                    <h5>Calibracion:</h5>
+                    </div>
+                    <div class="callout callout-danger">
+                    <h5 class="text-danger">CALIBRACION:</h5>
                     <div class="row">
                         <div class="col-md-2">
                           <div class="form-group">
@@ -2578,6 +2598,7 @@
                           </div>
                         </div>
                     </div>
+                    </div>
                      
                     <button class="btn btn-primary" onclick="stepper.previous()">Anterior</button>
                     <button class="btn btn-primary" onclick="stepper.next()">Siguiente</button>
@@ -2588,7 +2609,8 @@
 
                       <!-- FORMULARIO ACCEITE-->
                       <div id="aceite-part-edit" class="content" role="tabpanel" aria-labelledby="aceite-trigger-edit">
-                        <h5>Cambio de aceite del motor</h5>
+                    <div class="callout callout-danger">
+                    <h5 class="text-danger">CAMBIO DE ACEITE DEL MOTOR</h5>
                         <div class="row">
                           <div class="col-md-4">
                             <div class="form-group">
@@ -2702,7 +2724,9 @@
                             </div>
                           </div>
                         </div>
-                        <h5>Aceite de caja</h5>
+                        </div>
+                    <div class="callout callout-danger">
+                    <h5 class="text-danger">ACEITE DE CAJA</h5>
                         <div class="row">
                         <div class="col-md-3">
                             <div class="form-group">
@@ -2765,7 +2789,9 @@
                               </div>
                             </div>
                           </div>
-                        <h5>Aceite de la transmision</h5>
+                          </div>
+                    <div class="callout callout-danger">
+                    <h5 class="text-danger">ACEITE DE LA TRANSMICIÓN</h5>
                         <div class="row">
                         <div class="col-md-3">
                             <div class="form-group">
@@ -2828,7 +2854,9 @@
                               </div>
                             </div>
                           </div>
-                        <h5>Refrigerante</h5>
+                          </div>
+                    <div class="callout callout-danger">
+                    <h5 class="text-danger">REFRIGERANTE</h5>
                         <div class="row">
                         <div class="col-md-3">
                             <div class="form-group">
@@ -2857,7 +2885,9 @@
                             </div>
                           </div>
                         </div>
-                        <h5>Hidraulico</h5>
+                        </div>
+                    <div class="callout callout-danger">
+                    <h5 class="text-danger">HIDRAULICO</h5>
                         <div class="row">
                         <div class="col-md-3">
                             <div class="form-group">
@@ -2886,7 +2916,9 @@
                             </div>
                           </div>
                         </div>
-                        <h5>Medicion de liquidos</h5>
+                        </div>
+                    <div class="callout callout-danger">
+                    <h5 class="text-danger">MEDICION DE LIQUIDOS</h5>
                         <div class="row">
                         <div class="col-md-4">
                             <div class="form-group">
@@ -2961,7 +2993,9 @@
                               </div>
                             </div>
                           </div>
-                          <h5>Otros</h5>
+                          </div>
+                    <div class="callout callout-danger">
+                    <h5 class="text-danger">OTROS</h5>
                           <div class="row">
                           <div class="col-md-3">
                               <div class="form-group">
@@ -3009,6 +3043,7 @@
                             <textarea class="form-control" id="txt_editar_observacionesF" placeholder="Ingrese las observaciones"></textarea><br>
                           </div>
                         </div>
+                          </div>
                           </div>
                       <button class="btn btn-primary" onclick="stepper.previous()">Anterior</button>
                       <button type="submit" class="btn btn-primary" onclick="modificar_orden_Servicio()">Guardar</button>
@@ -3111,6 +3146,7 @@
 
                     <!-- FORMULARIO DATOIS-->
                     <div id="datos-part-ver" class="content active dstepper-block" role="tabpanel" aria-labelledby="datos-trigger-ver">
+                    <div class="callout callout-danger">
                     <div class="row"> 
                       <div class="col-md-4">
                         <div class="form-group">
@@ -3150,7 +3186,7 @@
                         <div class="col-md-4">
                           <div class="form-group">
                             <label for="">Vencimiento del extintor</label>
-                            <input type="date" class="form-control" id="txt_ver_vExtintor" style="width:100%; heigth: 40px;"><br>
+                            <input readonly type="date" class="form-control" id="txt_ver_vExtintor" style="width:100%; heigth: 40px;"><br>
                           </div>
                         </div>
                         <div class="col-md-4">
@@ -3163,7 +3199,7 @@
                       <div class="col-md-13">
                           <div class="form-group">
                             <label for="">Observaciones</label>
-                            <textarea class="form-control" id="txt_ver_obs" placeholder="Ingrese las observaciones"></textarea><br>
+                            <textarea readonly class="form-control" id="txt_ver_obs" placeholder="Ingrese las observaciones"></textarea><br>
                           </div>
                         </div>
                         <div class="col-md-4">
@@ -3173,14 +3209,16 @@
                             </select><br><br>
                           </div>
                         </div>
+                        </div>
                       <button class="btn btn-primary" onclick="stepper.next()">Siguiente</button>
                     </div>
-
+                    
 
 
                     
                     <!-- FORMULARIO BATERIA-->
                     <div id="bateria-part-ver" class="content" role="tabpanel" aria-labelledby="bateria-trigger-ver">
+                    <div class="callout callout-danger">
                     <div class="row">
                       <div class="col-md-4">
                           <div class="form-group">
@@ -3208,19 +3246,19 @@
                         <div class="col-md-4">
                           <div class="form-group">
                             <label for="">serial</label>
-                            <input type="text" class="form-control" id="txt_ver_serial" placeholder="Ingrese el serial"><br>
+                            <input readonly type="text" class="form-control" id="txt_ver_serial" placeholder="Ingrese el serial"><br>
                           </div>
                         </div>
                         <div class="col-md-4">
                           <div class="form-group">
                             <label for="">Fecha de venta</label>
-                            <input type="date" class="form-control" id="txt_ver_fVenta" style="width:100%; heigth: 40px;"><br>
+                            <input readonly type="date" class="form-control" id="txt_ver_fVenta" style="width:100%; heigth: 40px;"><br>
                           </div>
                         </div>
                         <div class="col-md-4">
                           <div class="form-group">
                             <label for="">Fecha de instalacion</label>
-                            <input type="date" class="form-control" id="txt_ver_fInstalacion" style="width:100%; heigth: 40px;" ><br>
+                            <input readonly type="date" class="form-control" id="txt_ver_fInstalacion" style="width:100%; heigth: 40px;" ><br>
                           </div>
                         </div>
                     </div>
@@ -3228,28 +3266,29 @@
                         <div class="col-md-4">
                           <div class="form-group">
                             <label for="">Tiempo de uso</label>
-                            <input type="text" class="form-control" id="txt_ver_tUso" placeholder="Registre el tiempo de uso"><br>
+                            <input readonly type="text" class="form-control" id="txt_ver_tUso" placeholder="Registre el tiempo de uso"><br>
                           </div>
                         </div>
                         <div class="col-md-4">
                           <div class="form-group">
                             <label for="">Proximo cambio</label>
-                            <input type="date" class="form-control" id="txt_ver_pCambio" style="width:100%; heigth: 40px;"><br>
+                            <input readonly type="date" class="form-control" id="txt_ver_pCambio" style="width:100%; heigth: 40px;"><br>
                           </div>
                         </div>
                         <div class="col-md-4">
                           <div class="form-group">
                             <label for="">Proximo mantenimiento</label>
-                            <input type="date" class="form-control" id="txt_ver_pMantenimiento" style="width:100%; heigth: 40px;"><br>
+                            <input readonly type="date" class="form-control" id="txt_ver_pMantenimiento" style="width:100%; heigth: 40px;"><br>
                           </div>
                         </div>
                     </div>
                     <div class="col-md-13">
                           <div class="form-group">
                             <label for="">Oportunidades de mejora</label>
-                            <textarea class="form-control" id="txt_ver_oMejora" placeholder="Ingrese la marca"></textarea><br>
+                            <textarea readonly class="form-control" id="txt_ver_oMejora" placeholder="Ingrese la marca"></textarea><br>
                           </div>
-                        </div>  
+                        </div>
+                      </div>  
                       <button class="btn btn-primary" onclick="stepper.previous()">Anterior</button>
                       <button class="btn btn-primary" onclick="stepper.next()">Siguiente</button>
                     </div>
@@ -3259,7 +3298,8 @@
 
                      <!-- FORMULARIO llanta-->
                     <div id="llanta-part-ver" class="content" role="tabpanel" aria-labelledby="llanta-trigger-ver">
-                    <h5>Llanta 1</h5>
+                    <div class="callout callout-danger">
+                    <h5 class="text-danger">LLANTA 1</h5>
                     <div class="row">
 
                       <div class="col-md-3">
@@ -3267,7 +3307,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                               <label for="">serial</label>
-                              <input type="text" class="form-control" id="txt_ver_llantaSerial1" placeholder="Ingrese el serial" ><br>
+                              <input readonly type="text" class="form-control" id="txt_ver_llantaSerial1" placeholder="Ingrese el serial" ><br>
                             </div>
                           </div>
                           <div class="col-md-6">
@@ -3303,7 +3343,7 @@
                       <div class="col-md-3">
                           <div class="form-group">
                             <label for="">Marca</label>
-                            <select class="js-example-basic-single"  name="state" id="sel_ver_marca_llanta1" style="width:100%; heigth: 40px;">   
+                            <select disabled class="js-example-basic-single"  name="state" id="sel_ver_marca_llanta1" style="width:100%; heigth: 40px;">   
                             </select><br><br>
                           </div>
                       </div>
@@ -3334,29 +3374,31 @@
                         <div class="col-md-3">
                           <div class="form-group">
                             <label for="">F.Instalacion</label>
-                            <input type="date" class="form-control" id="txt_ver_fInstalacion1" style="width:100%; heigth: 40px;">
+                            <input readonly type="date" class="form-control" id="txt_ver_fInstalacion1" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
                         <div class="col-md-3">
                           <div class="form-group">
                             <label for="">F.Reencauche</label>
-                            <input type="date" class="form-control" id="txt_ver_fReencauche1" style="width:100%; heigth: 40px;">
+                            <input readonly type="date" class="form-control" id="txt_ver_fReencauche1" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
                         <div class="col-md-3">
                           <div class="form-group">
                             <label for="">F.Cambio</label>
-                            <input type="date" class="form-control" id="txt_ver_fCambio1" style="width:100%; heigth: 40px;">
+                            <input readonly type="date" class="form-control" id="txt_ver_fCambio1" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
                         <div class="col-md-3">
                           <div class="form-group">
                             <label for="">F. Rotacion</label>
-                            <input type="date" class="form-control" id="txt_ver_fRotacion1" style="width:100%; heigth: 40px;">
+                            <input readonly type="date" class="form-control" id="txt_ver_fRotacion1" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
                     </div>
-                    <h5>Llanta 2</h5>
+                    </div>
+                    <div class="callout callout-danger">
+                    <h5 class="text-danger">LLANTA 2</h5>
                     <div class="row">
 
                       <div class="col-md-3">
@@ -3364,7 +3406,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                               <label for="">serial</label>
-                              <input type="text" class="form-control" id="txt_ver_llantaSerial2" placeholder="Ingrese el serial" ><br>
+                              <input readonly type="text" class="form-control" id="txt_ver_llantaSerial2" placeholder="Ingrese el serial" ><br>
                             </div>
                           </div>
                           <div class="col-md-6">
@@ -3431,29 +3473,31 @@
                         <div class="col-md-3">
                           <div class="form-group">
                             <label for="">F.Instalacion</label>
-                            <input type="date" class="form-control" id="txt_ver_fInstalacion2" style="width:100%; heigth: 40px;">
+                            <input readonly type="date" class="form-control" id="txt_ver_fInstalacion2" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
                         <div class="col-md-3">
                           <div class="form-group">
                             <label for="">F.Reencauche</label>
-                            <input type="date" class="form-control" id="txt_ver_fReencauche2" style="width:100%; heigth: 40px;">
+                            <input readonly type="date" class="form-control" id="txt_ver_fReencauche2" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
                         <div class="col-md-3">
                           <div class="form-group">
                             <label for="">F.Cambio</label>
-                            <input type="date" class="form-control" id="txt_ver_fCambio2" style="width:100%; heigth: 40px;">
+                            <input readonly type="date" class="form-control" id="txt_ver_fCambio2" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
                         <div class="col-md-3">
                           <div class="form-group">
                             <label for="">F. Rotacion</label>
-                            <input type="date" class="form-control" id="txt_ver_fRotacion2" style="width:100%; heigth: 40px;">
+                            <input readonly type="date" class="form-control" id="txt_ver_fRotacion2" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
                     </div>
-                    <h5>Llanta 3</h5>
+                    </div>
+                    <div class="callout callout-danger">
+                    <h5 class="text-danger">LlLANTA 3</h5>
                     <div class="row">
 
                       <div class="col-md-3">
@@ -3461,7 +3505,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                               <label for="">serial</label>
-                              <input type="text" class="form-control" id="txt_ver_llantaSerial3" placeholder="Ingrese el serial" ><br>
+                              <input readonly type="text" class="form-control" id="txt_ver_llantaSerial3" placeholder="Ingrese el serial" ><br>
                             </div>
                           </div>
                           <div class="col-md-6">
@@ -3528,29 +3572,31 @@
                         <div class="col-md-3">
                           <div class="form-group">
                             <label for="">F.Instalacion</label>
-                            <input type="date" class="form-control" id="txt_ver_fInstalacion3" style="width:100%; heigth: 40px;">
+                            <input readonly type="date" class="form-control" id="txt_ver_fInstalacion3" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
                         <div class="col-md-3">
                           <div class="form-group">
                             <label for="">F.Reencauche</label>
-                            <input type="date" class="form-control" id="txt_ver_fReencauche3" style="width:100%; heigth: 40px;">
+                            <input readonly type="date" class="form-control" id="txt_ver_fReencauche3" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
                         <div class="col-md-3">
                           <div class="form-group">
                             <label for="">F.Cambio</label>
-                            <input type="date" class="form-control" id="txt_ver_fCambio3" style="width:100%; heigth: 40px;">
+                            <input readonly type="date" class="form-control" id="txt_ver_fCambio3" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
                         <div class="col-md-3">
                           <div class="form-group">
                             <label for="">F. Rotacion</label>
-                            <input type="date" class="form-control" id="txt_ver_fRotacion3" style="width:100%; heigth: 40px;">
+                            <input readonly type="date" class="form-control" id="txt_ver_fRotacion3" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
                     </div>
-                    <h5>Llanta 4</h5>
+                  </div>
+                    <div class="callout callout-danger">
+                    <h5 class="text-danger">LLANTA 4</h5>
                     <div class="row">
 
                       <div class="col-md-3">
@@ -3558,7 +3604,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                               <label for="">serial</label>
-                              <input type="text" class="form-control" id="txt_ver_llantaSerial4" placeholder="Ingrese el serial" ><br>
+                              <input readonly type="text" class="form-control" id="txt_ver_llantaSerial4" placeholder="Ingrese el serial" ><br>
                             </div>
                           </div>
                           <div class="col-md-6">
@@ -3625,29 +3671,31 @@
                         <div class="col-md-3">
                           <div class="form-group">
                             <label for="">F.Instalacion</label>
-                            <input type="date" class="form-control" id="txt_ver_fInstalacion4" style="width:100%; heigth: 40px;">
+                            <input readonly type="date" class="form-control" id="txt_ver_fInstalacion4" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
                         <div class="col-md-3">
                           <div class="form-group">
                             <label for="">F.Reencauche</label>
-                            <input type="date" class="form-control" id="txt_ver_fReencauche4" style="width:100%; heigth: 40px;">
+                            <input readonly type="date" class="form-control" id="txt_ver_fReencauche4" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
                         <div class="col-md-3">
                           <div class="form-group">
                             <label for="">F.Cambio</label>
-                            <input type="date" class="form-control" id="txt_ver_fCambio4" style="width:100%; heigth: 40px;">
+                            <input readonly type="date" class="form-control" id="txt_ver_fCambio4" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
                         <div class="col-md-3">
                           <div class="form-group">
                             <label for="">F. Rotacion</label>
-                            <input type="date" class="form-control" id="txt_ver_fRotacion4" style="width:100%; heigth: 40px;">
+                            <input readonly type="date" class="form-control" id="txt_ver_fRotacion4" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
                     </div>
-                    <h5>Llanta 5</h5>
+                    </div>
+                    <div class="callout callout-danger">
+                    <h5 class="text-danger">LLANTA 5</h5>
                     <div class="row">
 
                       <div class="col-md-3">
@@ -3655,7 +3703,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                               <label for="">serial</label>
-                              <input type="text" class="form-control" id="txt_ver_llantaSerial5" placeholder="Ingrese el serial" ><br>
+                              <input readonly type="text" class="form-control" id="txt_ver_llantaSerial5" placeholder="Ingrese el serial" ><br>
                             </div>
                           </div>
                           <div class="col-md-6">
@@ -3722,29 +3770,31 @@
                         <div class="col-md-3">
                           <div class="form-group">
                             <label for="">F.Instalacion</label>
-                            <input type="date" class="form-control" id="txt_ver_fInstalacion5" style="width:100%; heigth: 40px;">
+                            <input readonly type="date" class="form-control" id="txt_ver_fInstalacion5" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
                         <div class="col-md-3">
                           <div class="form-group">
                             <label for="">F.Reencauche</label>
-                            <input type="date" class="form-control" id="txt_ver_fReencauche5" style="width:100%; heigth: 40px;">
+                            <input readonly type="date" class="form-control" id="txt_ver_fReencauche5" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
                         <div class="col-md-3">
                           <div class="form-group">
                             <label for="">F.Cambio</label>
-                            <input type="date" class="form-control" id="txt_ver_fCambio5" style="width:100%; heigth: 40px;">
+                            <input readonly type="date" class="form-control" id="txt_ver_fCambio5" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
                         <div class="col-md-3">
                           <div class="form-group">
                             <label for="">F. Rotacion</label>
-                            <input type="date" class="form-control" id="txt_ver_fRotacion5" style="width:100%; heigth: 40px;">
+                            <input readonly type="date" class="form-control" id="txt_ver_fRotacion5" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
                     </div>
-                    <h5>Llanta 6</h5>
+                    </div>
+                    <div class="callout callout-danger">
+                    <h5 class="text-danger">LLANTA 6</h5>
                     <div class="row">
 
                       <div class="col-md-3">
@@ -3752,7 +3802,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                               <label for="">serial</label>
-                              <input type="text" class="form-control" id="txt_ver_llantaSerial6" placeholder="Ingrese el serial" ><br>
+                              <input readonly type="text" class="form-control" id="txt_ver_llantaSerial6" placeholder="Ingrese el serial" ><br>
                             </div>
                           </div>
                           <div class="col-md-6">
@@ -3819,64 +3869,66 @@
                         <div class="col-md-3">
                           <div class="form-group">
                             <label for="">F.Instalacion</label>
-                            <input type="date" class="form-control" id="txt_ver_fInstalacion6" style="width:100%; heigth: 40px;">
+                            <input readonly type="date" class="form-control" id="txt_ver_fInstalacion6" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
                         <div class="col-md-3">
                           <div class="form-group">
                             <label for="">F.Reencauche</label>
-                            <input type="date" class="form-control" id="txt_ver_fReencauche6" style="width:100%; heigth: 40px;">
+                            <input readonly type="date" class="form-control" id="txt_ver_fReencauche6" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
                         <div class="col-md-3">
                           <div class="form-group">
                             <label for="">F.Cambio</label>
-                            <input type="date" class="form-control" id="txt_ver_fCambio6" style="width:100%; heigth: 40px;">
+                            <input readonly type="date" class="form-control" id="txt_ver_fCambio6" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
                         <div class="col-md-3">
                           <div class="form-group">
                             <label for="">F. Rotacion</label>
-                            <input type="date" class="form-control" id="txt_ver_fRotacion6" style="width:100%; heigth: 40px;">
+                            <input readonly type="date" class="form-control" id="txt_ver_fRotacion6" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
                     </div>
-                    <h5>Calibracion:</h5>
+                    </div>
+                    <div class="callout callout-danger">
+                    <h5 class="text-danger">CALIBRACIÓN:</h5>
                     <div class="row">
                         <div class="col-md-2">
                           <div class="form-group">
                             <label for="">llanta 1/Lbs.</label>
-                            <input type="number" value="0" class="form-control" id="txt_ver_cal1" style="width:100%; heigth: 40px;">
+                            <input readonly type="number" value="0" class="form-control" id="txt_ver_cal1" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
                         <div class="col-md-2">
                           <div class="form-group">
                             <label for="">llanta 2/Lbs.</label>
-                            <input type="number"value="0" class="form-control" id="txt_ver_cal2" style="width:100%; heigth: 40px;">
+                            <input readonly type="number"value="0" class="form-control" id="txt_ver_cal2" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
                         <div class="col-md-2">
                           <div class="form-group">
                             <label for="">llanta 3/Lbs.</label>
-                            <input type="number"value="0" class="form-control" id="txt_ver_cal3" style="width:100%; heigth: 40px;">
+                            <input readonly type="number"value="0" class="form-control" id="txt_ver_cal3" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
                         <div class="col-md-2">
                           <div class="form-group">
                             <label for="">llanta 4/Lbs.</label>
-                            <input type="number"value="0" class="form-control" id="txt_ver_cal4" style="width:100%; heigth: 40px;">
+                            <input readonly type="number"value="0" class="form-control" id="txt_ver_cal4" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
                         <div class="col-md-2">
                           <div class="form-group">
                             <label for="">llanta 5/Lbs.</label>
-                            <input type="number"value="0" class="form-control" id="txt_ver_cal5" style="width:100%; heigth: 40px;">
+                            <input readonly type="number"value="0" class="form-control" id="txt_ver_cal5" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
                         <div class="col-md-2">
                           <div class="form-group">
                             <label for="">llanta 6/Lbs.</label>
-                            <input type="number"value="0" class="form-control" id="txt_ver_cal6" style="width:100%; heigth: 40px;">
+                            <input readonly type="number"value="0" class="form-control" id="txt_ver_cal6" style="width:100%; heigth: 40px;">
                           </div>
                         </div>
                     </div>
@@ -3884,7 +3936,7 @@
                     <div class="col-md-12">
                           <div class="form-group">
                             <label for="">Observaciones de calibracion</label>
-                            <textarea  class="form-control" id="txt_ver_oCalibracion" ></textarea>
+                            <textarea readonly class="form-control" id="txt_ver_oCalibracion" ></textarea>
                           </div>
                         </div>
                     </div>
@@ -3952,7 +4004,7 @@
                       <div class="col-md-12">
                           <div class="form-group">
                             <label for="">Observaciones de Balanceo</label>
-                            <textarea  class="form-control" id="txt_ver_oBalanceo" ></textarea>
+                            <textarea readonly class="form-control" id="txt_ver_oBalanceo" ></textarea>
                           </div>
                         </div>
                     </div>
@@ -3980,17 +4032,17 @@
                       <div class="col-md-12">
                           <div class="form-group">
                             <label for="">Observaciones</label>
-                            <textarea  class="form-control" id="txt_ver_obs3" ></textarea>
+                            <textarea readonly  class="form-control" id="txt_ver_obs3" ></textarea>
                           </div>
                         </div>
                         <div class="col-md-12">
                           <div class="form-group">
                             <label for="">Observaciones de Mejora</label>
-                            <textarea  class="form-control" id="txt_ver_obsM3" ></textarea>
+                            <textarea readonly class="form-control" id="txt_ver_obsM3" ></textarea>
                           </div>
                         </div>
                     </div>
-                     
+                    </div>
                     <button class="btn btn-primary" onclick="stepper.previous()">Anterior</button>
                     <button class="btn btn-primary" onclick="stepper.next()">Siguiente</button>
                     </div>
@@ -4000,24 +4052,26 @@
 
                       <!-- FORMULARIO ACCEITE-->
                       <div id="aceite-part-ver" class="content" role="tabpanel" aria-labelledby="aceite-trigger-ver">
-                        <h5>Cambio de aceite del motor</h5>
+                      
+                    <div class="callout callout-danger">
+                    <h5 class="text-danger">CAMBIO DE ACEITE DEL MOTOR</h5>
                         <div class="row">
                           <div class="col-md-4">
                             <div class="form-group">
                               <label for="">Fecha</label>
-                              <input type="date" class="form-control" id="txt_ver_fechaA" placeholder="Ingrese la fecha"><br>
+                              <input readonly type="date" class="form-control" id="txt_ver_fechaA" placeholder="Ingrese la fecha"><br>
                             </div>
                           </div>
                           <div class="col-md-4">
                             <div class="form-group">
                               <label for="">Proximo cambio</label>
-                              <input type="date" class="form-control " id="txt_ver_pCambioA" placeholder="Ingrese el proximo cambio"><br>
+                              <input readonly type="date" class="form-control " id="txt_ver_pCambioA" placeholder="Ingrese el proximo cambio"><br>
                             </div>
                           </div>
                           <div class="col-md-4">
                             <div class="form-group">
                               <label for="">Kilometraje</label>
-                              <input type="text" class="form-control" id="txt_ver_kilometraje" placeholder="Ingrese el Kilometraje"><br>
+                              <input readonly type="text" class="form-control" id="txt_ver_kilometraje" placeholder="Ingrese el Kilometraje"><br>
                             </div>
                           </div>
                         </div>
@@ -4025,7 +4079,7 @@
                           <div class="col-md-4">
                             <div class="form-group">
                               <label for="">Cambio x Kilometraje</label>
-                              <input type="text" class="form-control" id="txt_ver_ckilometraje" placeholder="Ingrese datos"><br>
+                              <input readonly type="text" class="form-control" id="txt_ver_ckilometraje" placeholder="Ingrese datos"><br>
                             </div>
                           </div>
                           <div class="col-md-4">
@@ -4047,7 +4101,7 @@
                           <div class="col-md-3">
                             <div class="form-group">
                               <label for="">Cantidad x 1/4</label>
-                              <input type="Number"value="0" class="form-control" id="txt_ver_cantidad" placeholder="Ingrese datos"><br>
+                              <input readonly type="Number"value="0" class="form-control" id="txt_ver_cantidad" placeholder="Ingrese datos"><br>
                             </div>
                           </div>
                           <div class="col-md-3">
@@ -4073,7 +4127,7 @@
                           <div class="col-md-3">
                             <div class="form-group">
                               <label for="">cantidad nivelada 1/4</label>
-                              <input type="number"value="0" class="form-control" id="txt_ver_cNivelacion1" placeholder="Ingrese datos"><br>
+                              <input readonly type="number"value="0" class="form-control" id="txt_ver_cNivelacion1" placeholder="Ingrese datos"><br>
                             </div>
                           </div>
                         </div>
@@ -4114,7 +4168,9 @@
                             </div>
                           </div>
                         </div>
-                        <h5>Aceite de caja</h5>
+                        </div>
+                        <div class="callout callout-danger">
+                        <h5 class="text-danger">ACEITE DE CAJA</h5>
                         <div class="row">
                         <div class="col-md-3">
                             <div class="form-group">
@@ -4133,13 +4189,13 @@
                           <div class="col-md-3">
                             <div class="form-group">
                               <label for="">Ultimo cambio</label>
-                              <input type="date" class="form-control" id="txt_ver_uCambio1" placeholder="Ingrese ultimo cambio"><br>
+                              <input readonly type="date" class="form-control" id="txt_ver_uCambio1" placeholder="Ingrese ultimo cambio"><br>
                             </div>
                           </div>
                           <div class="col-md-3">
                             <div class="form-group">
                               <label for="">Proximo cambio</label>
-                              <input type="date" class="form-control" id="txt_ver_pCambio1" placeholder="Ingrese proximo cambio"><br>
+                              <input readonly type="date" class="form-control" id="txt_ver_pCambio1" placeholder="Ingrese proximo cambio"><br>
                             </div>
                           </div>
                         </div>
@@ -4147,7 +4203,7 @@
                           <div class="col-md-3">
                               <div class="form-group">
                                 <label for="">Cantidad x 1/4</label>
-                                <input type="number"value="0" class="form-control" id="txt_ver_cantidad1" placeholder="Ingrese datos"><br>
+                                <input readonly type="number"value="0" class="form-control" id="txt_ver_cantidad1" placeholder="Ingrese datos"><br>
                               </div>
                             </div>
                             <div class="col-md-3">
@@ -4173,11 +4229,13 @@
                             <div class="col-md-3">
                               <div class="form-group">
                                 <label for="">cantidad nivelada 1/4</label>
-                                <input type="number"value="0" class="form-control" id="txt_ver_nivelacion2" placeholder="Ingrese datos"><br>
+                                <input readonly type="number"value="0" class="form-control" id="txt_ver_nivelacion2" placeholder="Ingrese datos"><br>
                               </div>
                             </div>
                           </div>
-                        <h5>Aceite de la transmision</h5>
+                          </div>
+                        <div class="callout callout-danger">
+                        <h5 class="text-danger">ACEITE DE TRANSMISION</h5>
                         <div class="row">
                         <div class="col-md-3">
                             <div class="form-group">
@@ -4196,13 +4254,13 @@
                           <div class="col-md-3">
                             <div class="form-group">
                               <label for="">Ultimo cambio</label>
-                              <input type="date" class="form-control" id="txt_ver_uCambio2" placeholder="Ingrese ultimo cambio"><br>
+                              <input readonly type="date" class="form-control" id="txt_ver_uCambio2" placeholder="Ingrese ultimo cambio"><br>
                             </div>
                           </div>
                           <div class="col-md-3">
                             <div class="form-group">
                               <label for="">Proximo cambio</label>
-                              <input type="date" class="form-control" id="txt_ver_pCambio2" placeholder="Ingrese proximo cambio"><br>
+                              <input readonly type="date" class="form-control" id="txt_ver_pCambio2" placeholder="Ingrese proximo cambio"><br>
                             </div>
                           </div>
                         </div>
@@ -4210,7 +4268,7 @@
                           <div class="col-md-3">
                               <div class="form-group">
                                 <label for="">Cantidad x 1/4</label>
-                                <input type="number"value="0" class="form-control" id="txt_ver_cantidad2" placeholder="Ingrese datos"><br>
+                                <input readonly type="number"value="0" class="form-control" id="txt_ver_cantidad2" placeholder="Ingrese datos"><br>
                               </div>
                             </div>
                             <div class="col-md-3">
@@ -4236,11 +4294,13 @@
                             <div class="col-md-3">
                               <div class="form-group">
                                 <label for="">cantidad nivelada 1/4</label>
-                                <input type="number"value="0" class="form-control" id="txt_ver_nivelacion3" placeholder="Ingrese datos"><br>
+                                <input readonly type="number"value="0" class="form-control" id="txt_ver_nivelacion3" placeholder="Ingrese datos"><br>
                               </div>
                             </div>
                           </div>
-                        <h5>Refrigerante</h5>
+                          </div>
+                    <div class="callout callout-danger">
+                    <h5 class="text-danger">REFRIGERANTE</h5>
                         <div class="row">
                         <div class="col-md-3">
                             <div class="form-group">
@@ -4259,17 +4319,19 @@
                           <div class="col-md-3">
                             <div class="form-group">
                               <label for="">Ultimo cambio</label>
-                              <input type="date" class="form-control" id="txt_ver_uCambio3" placeholder="Ingrese ultimo cambio"><br>
+                              <input readonly type="date" class="form-control" id="txt_ver_uCambio3" placeholder="Ingrese ultimo cambio"><br>
                             </div>
                           </div>
                           <div class="col-md-3">
                             <div class="form-group">
                               <label for="">Proximo cambio</label>
-                              <input type="date" class="form-control" id="txt_ver_pCambio3" placeholder="Ingrese proximo cambio"><br>
+                              <input readonly type="date" class="form-control" id="txt_ver_pCambio3" placeholder="Ingrese proximo cambio"><br>
                             </div>
                           </div>
                         </div>
-                        <h5>Hidraulico</h5>
+                        </div>
+                    <div class="callout callout-danger">
+                    <h5 class="text-danger">HIDRAULICO</h5>
                         <div class="row">
                         <div class="col-md-3">
                             <div class="form-group">
@@ -4288,17 +4350,19 @@
                           <div class="col-md-3">
                             <div class="form-group">
                               <label for="">Ultimo cambio</label>
-                              <input type="date" class="form-control" id="txt_ver_uCambio4" placeholder="Ingrese ultimo cambio"><br>
+                              <input readonly type="date" class="form-control" id="txt_ver_uCambio4" placeholder="Ingrese ultimo cambio"><br>
                             </div>
                           </div>
                           <div class="col-md-3">
                             <div class="form-group">
                               <label for="">Proximo cambio</label>
-                              <input type="date" class="form-control" id="txt_ver_pCambio4" placeholder="Ingrese proximo cambio"><br>
+                              <input readonly type="date" class="form-control" id="txt_ver_pCambio4" placeholder="Ingrese proximo cambio"><br>
                             </div>
                           </div>
                         </div>
-                        <h5>Medicion de liquidos</h5>
+                        </div>
+                    <div class="callout callout-danger">
+                    <h5 class="text-danger">MEDICION DE LIQUIDOS</h5>
                         <div class="row">
                         <div class="col-md-4">
                             <div class="form-group">
@@ -4373,7 +4437,9 @@
                               </div>
                             </div>
                           </div>
-                          <h5>Otros</h5>
+                          </div>
+                    <div class="callout callout-danger">
+                    <h5 class="text-danger">OTROS</h5>
                           <div class="row">
                           <div class="col-md-3">
                               <div class="form-group">
@@ -4418,9 +4484,10 @@
                             <div class="col-md-12">
                           <div class="form-group">
                             <label for="">Observaciones</label>
-                            <textarea class="form-control" id="txt_ver_observacionesF" placeholder="Ingrese las observaciones"></textarea><br>
+                            <textarea readonly class="form-control" id="txt_ver_observacionesF" placeholder="Ingrese las observaciones"></textarea><br>
                           </div>
                         </div>
+                          </div>
                           </div>
                       <button class="btn btn-primary" onclick="stepper.previous()">Anterior</button>
                       

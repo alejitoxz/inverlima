@@ -847,7 +847,7 @@ session_start();
                     fecha_creacion
                 ) 
                 VALUES(
-                    @idServicio,$placa,$revBimCotrautol,1,'$vExtintor',$rRegistradora,'$oReg','$observacion',$tecnico,'$date'
+                    @idServicio,$placa,1,$revBimCotrautol,'$vExtintor',$rRegistradora,'$oReg','$observacion',$tecnico,'$date'
                 )";
             
             
@@ -862,6 +862,7 @@ session_start();
                      BEGIN CATCH
                      ROLLBACK TRAN
                      END CATCH";
+                     
             $resp = sqlsrv_query($conn, $sql);
 
             if( $resp === false) {

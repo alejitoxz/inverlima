@@ -4532,6 +4532,8 @@
   listar_filtro_aceite();
   listar_filtro_combustible();
   listar_filtro_aire();
+
+  fechaCuarenta();
   
   fechaCochenta();
 </script>

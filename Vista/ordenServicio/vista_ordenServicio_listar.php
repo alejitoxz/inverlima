@@ -158,6 +158,7 @@
                       <th style="display:none"></th>
                       <th style="display:none"></th>
                       <th style="display:none"></th>
+                      <th style="display:none"></th>
                       <th>Orden</th>
                       <th>Placa</th>
                       <th>N° Interno</th>

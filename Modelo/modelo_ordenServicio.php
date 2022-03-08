@@ -1,4 +1,7 @@
 <?php
+
+use PHPMailer\PHPMailer\PHPMailer;
+use  PHPMailer\PHPMailer\Exception;
 session_start();
     class modelo_ordenServicio{
         private $conexion;
@@ -7,6 +10,10 @@ session_start();
         function __construct(){
             require_once 'modelo_conexion.php';
             require  'phpqrcode/qrlib.php';
+            require  'PHPMailer/Exception.php';
+            require  'PHPMailer/PHPMailer.php';
+            require  'PHPMailer/SMTP.php';
+            $this->mail = new PHPMailer();
             $this->conexion = new conexion();
         }
 
@@ -17,7 +24,9 @@ session_start();
             $idUsuario = $_SESSION['S_ID'];
 
             $sql = "SELECT
-            ( prop.nombre + ' ' + prop.apellido ) AS tecnico,
+            ( tec.nombre + ' ' + tec.apellido ) AS tecnico,
+            ( prop.nombre + ' ' + prop.apellido ) AS propietario,
+            prop.email AS email,
             v.placa,
 			v.cod_interno,
             os.*,
@@ -69,7 +78,9 @@ session_start();
                 ordenServicio AS os
                 LEFT JOIN vehiculo AS v ON ( os.idVehiculo = v.id )
                 LEFT JOIN tecnico AS t ON ( t.id = os.idTecnico)
-                LEFT JOIN persona AS prop ON ( t.idPersona = prop.id )
+                LEFT JOIN persona AS tec ON ( t.idPersona = tec.id )
+                LEFT JOIN propietario as p ON ( p.id = v.idPropietario )
+	            LEFT JOIN persona AS prop ON ( prop.id = p.idPersona )
                 INNER JOIN servicio AS s ON ( os.idServicio = s.id )
 				WHERE os.estatus = 1
                 order by os.fecha_creacion desc " ;
@@ -1201,7 +1212,73 @@ session_start();
             $this->conexion->conectar();
         }
 
+        function enviarVencimiento($email,$placa,$revBimCotrautol,$rRegistradora,$vExtintor,$oReg,
+        $observacion,$tecnico,$bateria,$tipoBateria,$marca,$serial,
+        $fVenta,$fInstalacion,$tUso,$pCambio,$pMantenimiento,$oMejora,
+        $llantaSerial1,$profundidad1,$opmarca1,$tipoMarca1,$estado1,$fInstalacion1,
+        $fReencauche1,$fCambio1,$fRotacion1,$llantaSerial2,$profundidad2,$opmarca2,
+        $tipoMarca2,$estado2,$fInstalacion2,$fReencauche2,$fCambio2,$fRotacion2,
+        $llantaSerial3,$profundidad3,$opmarca3,$tipoMarca3,$estado3,$fInstalacion3,
+        $fReencauche3,$fCambio3,$fRotacion3,$llantaSerial4,$profundidad4,$opmarca4,
+        $tipoMarca4,$estado4,$fInstalacion4,$fReencauche4,$fCambio4,$fRotacion4,
+        $llantaSerial5,$profundidad5,$opmarca5,$tipoMarca5,$estado5,$fInstalacion5,
+        $fReencauche5,$fCambio5,$fRotacion5,$llantaSerial6,$profundidad6,$opmarca6,
+        $tipoMarca6,$estado6,$fInstalacion6,$fReencauche6,$fCambio6,$fRotacion6,
+        $calibracion1,$calibracion2,$calibracion3,$calibracion4,$calibracion5,$calibracion6,
+        $oCalibracion,$balanceo1,$balanceo2,$balanceo3,$balanceo4,$balanceo5,
+        $balanceo6,$oBalanceo,$alineacion1,$alineacion2,$observacionG3,$observacionM3,
+        $fecha,$pCambioA,$kilometraje,$cKilometraje,$tipoAceite,$marca10,
+        $cantidad1,$presentacion1,$nivelacion,$cNivelacion,$fAceite,$fCombustible,
+        $fAire,$tipoAceite1,$marca1,$uCambio,$pCambio10,$cantidad2,
+        $presentacion2,$nivelacion2,$cNivelacion2,$tipoAceite3,$marca3,$uCambio3,
+        $pCambio3,$cantidad3,$presentacion3,$nivelacion3,$cNivelacion3,$tipoAceite4,$marca4,$uCambio4,$pCambio4,$tipoAceite5,$marca5,
+        $uCambio5,$pCambio5,$lFreno,$lParabrisa,$refrigerante,$hidraulico,
+        $lMotor,$lCaja,$lTransmision,$lFrenos1,$engrase,$sRadiador,
+        $sFiltroAire,$observacionesF,$fCombustible2,$fCombustible3){
+        
+            $revBimCotrautolr = '';
+            // echo $Email;
+            if($revBimCotrautol == 1){
+                $revBimCotrautolr = "Si se realizo";
+            }
+            else{
+                $revBimCotrautolr = "No se realizo";
+            }
 
+            try {
+            
+            $cuerpoMail = utf8_decode("
+            <b><h4><center>Inverlima</center></h4><b>
+            <center><img width='450' height='150' src='https://www.visualsaturbano.com/inverlima/Vista/imagenes/logo_administracion.png'></center>
+            <b><h4><center>Hola, Inverlima te informa:</center></h4><b>
+            <b><h4><center>Se realizaron las siguientes funciones a el vehiculo de placas $placa bajo el cargo del tecnico $tecnico :</center></h4><b>
+            <b><h4>Revision bimestral de Cotrautol: $revBimCotrautolr</h4><b><b><h4>Revision de la registradora:$rRegistradora</h4><b>
+            <h4><center>Por favor, debe estar al día</center></h4>
+            
+                ");	 
+
+
+            $this->mail->IsSMTP();
+            $this->mail->SMTPAuth = true;
+            $this->mail->SMTPSecure = "ssl";
+            $this->mail->Host = "smtp.gmail.com";
+            $this->mail->Port = 465;
+            $this->mail->Username = "pruebahost19@gmail.com";
+            $this->mail->Password = "123456789-a";									
+            $this->mail->setFrom( 'pruebahost19@gmail.com'  );
+            $this->mail->addAddress ( $email );									
+            $this->mail->Subject='INVERLIMA';
+            $this->mail->From ="pruebahost19@gmail.com";
+            $this->mail->FromName = "INVERLIMA"; 
+            $this->mail->MsgHTML($cuerpoMail);
+            $this->mail->IsHTML(true);
+            $this->mail->Send();
+            echo 1 ;
+            }catch( Exception  $e ) {
+            echo 0 ;
+            }
+
+        }
 
 
 }

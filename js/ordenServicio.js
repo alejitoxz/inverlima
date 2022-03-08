@@ -557,10 +557,15 @@ function listar_orden(){
             {
                 "targets": [ 135 ],
                 "visible": false
+            },
+            {
+                "targets": [ 136],
+                "visible": false
             }
             
         ],
         "columns": [
+            { "data": "email" },
             { "data": "bateria" },
             { "data": "tipoBateria" },
             { "data": "marca" },
@@ -706,7 +711,7 @@ function listar_orden(){
             { "data": "fecha_creacion" },
             { "data": "observacion" },
             {"defaultContent":
-            "<button style='font-size:13px;' type='button' class='eliminar btn btn-danger'><i class='fa fa-trash'></i></button><button style='font-size:13px;' type='button' class='editar btn btn-info'><i class='fa fa-edit'></i></button><button style='font-size:13px;' type='button' class='ver btn btn-primary'><i class='fa fa-eye'></i></button><button style='font-size:13px;' type='button' class='editar btn btn-success'><i class='fa fa-envelope'></i></button>"}
+            "<button style='font-size:13px;' type='button' class='eliminar btn btn-danger'><i class='fa fa-trash'></i></button><button style='font-size:13px;' type='button' class='editar btn btn-info'><i class='fa fa-edit'></i></button><button style='font-size:13px;' type='button' class='ver btn btn-primary'><i class='fa fa-eye'></i></button><button style='font-size:13px;' type='button' class='enviarCorreo btn btn-success'><i class='fa fa-envelope'></i></button>"}
         ],
         "language":idioma_espanol,
        select: true
@@ -2643,4 +2648,350 @@ $('#tabla_orden').on('click','.ver',function(){
     $("#sel_ver_filtro_combustible2").val(fCombustible2).trigger('change');
     $("#sel_ver_filtro_combustible3").val(fCombustible3).trigger('change');
 
-})
+});
+
+// FUNCION PARA EDITAR REGISTRO
+$('#tabla_orden').on('click','.enviarCorreo',function(){
+
+    if(table.row(this).child.isShown()){
+        var datosOrden = table.row(this).data();
+    }else{
+        var datosOrden = table.row($(this).parents('tr')).data();
+    }
+    console.log("entra");
+    var email =datosOrden.email;
+    var placa =datosOrden.placa;
+    var revBimCotrautol =datosOrden.revBimCotrautol;
+    var rRegistradora =datosOrden.rRegistradora;
+    var vExtintor =datosOrden.vExtintor;
+    var oReg =datosOrden.oRegistradora;
+    var observacion =datosOrden.observacion;     
+    var tecnico =datosOrden.tecnico;
+    var bateria =datosOrden.bateria;
+    var tipoBateria =datosOrden.tipoBateria;
+    var marca =datosOrden.marca;
+    var serial =datosOrden.serial;
+    var fVenta =datosOrden.fVenta;
+    var fInstalacion =datosOrden.fInstalacion;
+    var tUso =datosOrden.tiempoUso;
+    var pCambio =datosOrden.proximoCambio;
+    var pMantenimiento =datosOrden.proximoMantenimiento;
+    var oMejora =datosOrden.oportunidadesMejora;
+    var llantaSerial1 =datosOrden.llanta1Serial;
+    var profundidad1 =datosOrden.llanta1Profundidad;
+    var opmarca1 =datosOrden.llanta1Marca;
+    var tipoMarca1 =datosOrden.llanta1Tipo;
+    var estado1 =datosOrden.llanta1Estado;
+    var fInstalacion1 =datosOrden.llanta1Instalacion;
+    var fReencauche1 =datosOrden.llanta1Reencauche;
+    var fCambio1 =datosOrden.llanta1Cambio;
+    var fRotacion1 =datosOrden.llanta1Rotacion;
+
+    var llantaSerial2 =datosOrden.llanta2Serial;
+    var profundidad2 =datosOrden.llanta2Profundidad;
+    var opmarca2 =datosOrden.llanta2Marca;
+    var tipoMarca2 =datosOrden.llanta2Tipo;
+    var estado2 =datosOrden.llanta2Estado;
+    var fInstalacion2 =datosOrden.llanta2Instalacion;
+    var fReencauche2 =datosOrden.llanta2Reencauche;
+    var fCambio2 =datosOrden.llanta2Cambio;
+    var fRotacion2 =datosOrden.llanta2Rotacion;
+
+    var llantaSerial3 =datosOrden.llanta3Serial;
+    var profundidad3 =datosOrden.llanta3Profundidad;
+    var opmarca3 =datosOrden.llanta3Marca;
+    var tipoMarca3 =datosOrden.llanta3Tipo;
+    var estado3 =datosOrden.llanta3Estado;
+    var fInstalacion3 =datosOrden.llanta3Instalacion;
+    var fReencauche3 =datosOrden.llanta3Reencauche;
+    var fCambio3 =datosOrden.llanta3Cambio;
+    var fRotacion3 =datosOrden.llanta3Rotacion;
+
+    var llantaSerial4 =datosOrden.llanta4Serial;
+    var profundidad4 =datosOrden.llanta4Profundidad;
+    var opmarca4 =datosOrden.llanta4Marca;
+    var tipoMarca4 =datosOrden.llanta4Tipo;
+    var estado4 =datosOrden.llanta4Estado;
+    var fInstalacion4 =datosOrden.llanta4Instalacion;
+    var fReencauche4 =datosOrden.llanta4Reencauche;
+    var fCambio4 =datosOrden.llanta4Cambio;
+    var fRotacion4 =datosOrden.llanta4Rotacion;
+
+    var llantaSerial5 =datosOrden.llanta5Serial;
+    var profundidad5 =datosOrden.llanta5Profundidad;
+    var opmarca5 =datosOrden.llanta5Marca;
+    var tipoMarca5 =datosOrden.llanta5Tipo;
+    var estado5 =datosOrden.llanta5Estado;
+    var fInstalacion5 =datosOrden.llanta5Instalacion;
+    var fReencauche5 =datosOrden.llanta5Reencauche;
+    var fCambio5 =datosOrden.llanta5Cambio;
+    var fRotacion5 =datosOrden.llanta5Rotacion;
+
+    var llantaSerial6 =datosOrden.llanta6Serial;
+    var profundidad6 =datosOrden.llanta6Profundidad;
+    var opmarca6 =datosOrden.llanta6Marca;
+    var tipoMarca6 =datosOrden.llanta6Tipo;
+    var estado6 =datosOrden.llanta6Estado;
+    var fInstalacion6 =datosOrden.llanta6Instalacion;
+    var fReencauche6 =datosOrden.llanta6Reencauche;
+    var fCambio6 =datosOrden.llanta6Cambio;
+    var fRotacion6 =datosOrden.llanta6Rotacion;
+
+
+    var calibracion1 =datosOrden.calibracionLlanta1;
+    var calibracion2 =datosOrden.calibracionLlanta2;
+    var calibracion3 =datosOrden.calibracionLlanta3;
+    var calibracion4 =datosOrden.calibracionLlanta4;
+    var calibracion5 =datosOrden.calibracionLlanta5;
+    var calibracion6 =datosOrden.calibracionLlanta6;
+    var oCalibracion =datosOrden.observacionCalibracion;
+    var balanceo1 =datosOrden.Balanceo1;
+    var balanceo2 =datosOrden.Balanceo2;
+    var balanceo3 =datosOrden.Balanceo3;
+    var balanceo4 =datosOrden.Balanceo4;
+    var balanceo5 =datosOrden.Balanceo5;
+    var balanceo6 =datosOrden.Balanceo6;
+    var oBalanceo =datosOrden.oBalanceo;
+    var alineacion1 =datosOrden.alineacion1;
+    var alineacion2 =datosOrden.alineacion2;
+    var observacionG3 =datosOrden.lObservacionGeneral;
+    var observacionM3 =datosOrden.lObservacionMejora;
+
+    var fecha =datosOrden.motorFecha;
+    var pCambioA =datosOrden.motorProximoCambio;
+    var kilometraje =datosOrden.motorKilometraje;
+    var cKilometraje =datosOrden.motorCambioKilometraje;
+    var tipoAceite =datosOrden.motorTipoAceite;
+    var marca10 =datosOrden.motorMarca;
+    var cantidad1 =datosOrden.motorCantidad;
+    var presentacion1 =datosOrden.motorPresentacion;
+    var nivelacion =datosOrden.motorNivelacion;
+    var cNivelacion =datosOrden.motorCantidadNivelada;
+    var fAceite =datosOrden.motorFiltroAceite;
+    var fCombustible =datosOrden.motorfiltroCombustible;
+    var fAire =datosOrden.motorFiltroAire;
+    var tipoAceite1 =datosOrden.cajaTipoAceite;
+    var marca1 =datosOrden.cajaMarca;
+    var uCambio =datosOrden.cajaUltimoCambio;
+    var pCambio10 =datosOrden.cajaProximoCambio;
+    var cantidad2 =datosOrden.cajaCantidad;
+    var presentacion2 =datosOrden.cajaPresentacion;
+    var nivelacion2 =datosOrden.cajaNivelacion;
+    var cNivelacion2 =datosOrden.cajaCantidadNivelada;
+
+    var tipoAceite3 =datosOrden.transmicionTipoAceite;
+    var marca3 =datosOrden.transmicionMarca;
+    var uCambio3 =datosOrden.transmicionUltimoCambio;
+    var pCambio3 =datosOrden.transmicionProximoCambio;
+    var cantidad3 =datosOrden.transmicionCantidad;
+    var presentacion3 =datosOrden.transmicionPresentacion;
+    var nivelacion3 =datosOrden.transmicionNivelacion;
+    var cNivelacion3 =datosOrden.transmicionCantidadNivelada;
+
+    var tipoAceite4 =datosOrden.refrigeranteTipoAceite;
+    var marca4 =datosOrden.refrigeranteMarca;
+    var uCambio4 =datosOrden.refrigeranteUltimoCambio;
+    var pCambio4 =datosOrden.refrigeranteProximoCambio;
+
+    var tipoAceite5 =datosOrden.hidraulicoTipoAceite;
+    var marca5 =datosOrden.hidraulicoMarca;
+    var uCambio5 =datosOrden.hidraulicoUltimoCambio;
+    var pCambio5 =datosOrden.hidraulicoProximoCambio;
+
+    var lFreno =datosOrden.liquidoFrenos;
+    var lParabrisa =datosOrden.liquidoParabrisas;
+    var refrigerante =datosOrden.liquidoRefrigerantes;
+    var hidraulico =datosOrden.liquidoHidraulico;
+    var lMotor =datosOrden.liquidoMotor;
+    var lCaja =datosOrden.liquidoCaja;
+    var lTransmision =datosOrden.liquidoTransmision;
+
+    var lFrenos1 =datosOrden.otrosLimpiezaFrenos;
+    var engrase =datosOrden.otrosEngrase;
+    var sRadiador =datosOrden.otrosSopleteoRadiador;
+    var sFiltroAire =datosOrden.otrosSopleteoFiltroAire;
+    var observacionesF = datosOrden.observacionesGenerales2;
+
+    var idOrdenServicio =datosOrden.idOrdenServicio;
+    var idServicio =datosOrden.idServicio;
+
+    var fCombustible2 =datosOrden.motorfiltroCombustible2;
+    var fCombustible3 =datosOrden.motorfiltroCombustible3;
+
+    Swal.fire({
+        title: '¿Seguro desea enviar un email?',
+        text: "Una vez hecho esto, se enviará un email con los datos de vencimiento del registro",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Aceptar',
+        cancelButtonText: 'Cancelar'
+      }).then((result) => {
+        if (result.value) {
+            $.ajax({
+                "url": "../Controlador/ordenServicio/controlador_ordenServicio_enviar_vencimiento.php",
+                "type": "POST",
+                data:{
+                    email:email,
+                    idOrdenServicio: idOrdenServicio,
+                    idServicio:idServicio,
+                    placa:placa,
+                    revBimCotrautol:revBimCotrautol,
+                    rRegistradora:rRegistradora,
+                    vExtintor:vExtintor,
+                    oReg:oReg,
+                    observacion:observacion,
+                    tecnico:tecnico,
+                    bateria:bateria,
+                    tipoBateria:tipoBateria,
+                    marca:marca,
+                    serial:serial,
+                    fVenta:fVenta,
+                    fInstalacion:fInstalacion,
+                    tUso:tUso,
+                    pCambio:pCambio,
+                    pMantenimiento:pMantenimiento,
+                    oMejora:oMejora,
+                    llantaSerial1:llantaSerial1,
+                    profundidad1:profundidad1,
+                    opmarca1:opmarca1,
+                    tipoMarca1:tipoMarca1,
+                    estado1:estado1,
+                    fInstalacion1:fInstalacion1,
+            
+                    fReencauche1:fReencauche1,
+                    fCambio1:fCambio1,
+                    fRotacion1:fRotacion1,
+                    llantaSerial2:llantaSerial2,
+                    profundidad2:profundidad2,
+                    opmarca2:opmarca2,
+                    tipoMarca2:tipoMarca2,
+                    estado2:estado2,
+                    fInstalacion2:fInstalacion2,
+                    fReencauche2:fReencauche2,
+                    fCambio2:fCambio2,
+                    fRotacion2:fRotacion2,
+            
+                    llantaSerial3:llantaSerial3,
+                    profundidad3:profundidad3,
+                    opmarca3:opmarca3,
+                    tipoMarca3:tipoMarca3,
+                    estado3:estado3,
+                    fInstalacion3:fInstalacion3,
+                    fReencauche3:fReencauche3,
+                    fCambio3:fCambio3,
+                    fRotacion3:fRotacion3,
+                    llantaSerial4:llantaSerial4,
+                    profundidad4:profundidad4,
+                    opmarca4:opmarca4,
+                    tipoMarca4:tipoMarca4,
+                    estado4:estado4,
+                    fInstalacion4:fInstalacion4,
+                    fReencauche4:fReencauche4,
+                    fCambio4:fCambio4,
+                    fRotacion4:fRotacion4,
+                    llantaSerial5:llantaSerial5,
+                    profundidad5:profundidad5,
+                    opmarca5:opmarca5,
+                    tipoMarca5:tipoMarca5,
+                    estado5:estado5,
+                    fInstalacion5:fInstalacion5,
+                    fReencauche5:fReencauche5,
+                    fCambio5:fCambio5,
+                    fRotacion5:fRotacion5,
+                    llantaSerial6:llantaSerial6,
+                    profundidad6:profundidad6,
+                    opmarca6:opmarca6,
+                    tipoMarca6:tipoMarca6,
+                    estado6:estado6,
+                    fInstalacion6:fInstalacion6,
+                    fReencauche6:fReencauche6,
+                    fCambio6:fCambio6,
+                    fRotacion6:fRotacion6,
+            
+                    calibracion1:calibracion1,
+                    calibracion2:calibracion2,
+                    calibracion3:calibracion3,
+                    calibracion4:calibracion4,
+                    calibracion5:calibracion5,
+                    calibracion6:calibracion6,
+                    oCalibracion:oCalibracion,
+                    balanceo1:balanceo1,
+                    balanceo2:balanceo2,
+                    balanceo3:balanceo3,
+                    balanceo4:balanceo4,
+                    balanceo5:balanceo5,
+                    balanceo6:balanceo6,
+                    oBalanceo:oBalanceo,
+                    alineacion1:alineacion1,
+                    alineacion2:alineacion2,
+                    observacionG3:observacionG3,
+                    observacionM3:observacionM3,
+            
+                    fecha:fecha,
+                    pCambioA:pCambioA,
+                    kilometraje:kilometraje,
+                    cKilometraje:cKilometraje,
+                    tipoAceite:tipoAceite,
+                    marca10:marca10,
+                    cantidad1:cantidad1,
+                    presentacion1:presentacion1,
+                    nivelacion:nivelacion,
+                    cNivelacion:cNivelacion,
+                    fAceite:fAceite,
+                    fCombustible:fCombustible,
+                    fAire:fAire,
+                    tipoAceite1:tipoAceite1,
+                    marca1:marca1,
+                    uCambio:uCambio,
+                    pCambio10:pCambio10,
+                    cantidad2:cantidad2,
+                    presentacion2:presentacion2,
+                    nivelacion2:nivelacion2,
+                    cNivelacion2:cNivelacion2,
+            
+                    tipoAceite3:tipoAceite3,
+                    marca3:marca3,
+                    uCambio3:uCambio3,
+                    pCambio3:pCambio3,
+                    cantidad3:cantidad3,
+                    presentacion3:presentacion3,
+                    nivelacion3:nivelacion3,
+                    cNivelacion3:cNivelacion3,
+            
+                    tipoAceite4:tipoAceite4,
+                    marca4:marca4,
+                    uCambio4:uCambio4,
+                    pCambio4:pCambio4,
+                    tipoAceite5:tipoAceite5,
+                    marca5:marca5,
+                    uCambio5:uCambio5,
+                    pCambio5:pCambio5,
+            
+                    lFreno:lFreno,
+                    lParabrisa:lParabrisa,
+                    refrigerante:refrigerante,
+                    hidraulico:hidraulico,
+                    lMotor:lMotor,
+                    lCaja:lCaja,
+                    lTransmision:lTransmision,
+                    lFrenos1:lFrenos1,
+                    engrase:engrase,
+                    sRadiador:sRadiador,
+                    sFiltroAire:sFiltroAire,
+                    observacionesF:observacionesF,
+                    fCombustible2:fCombustible2,
+                    fCombustible3:fCombustible3
+                }
+            }).done(function(resp){
+                if(resp > 0){
+                    Swal.fire("¡Email enviado con exito!",'Pronto recibira el email', "success")
+                }else{
+                    Swal.fire("Error",'No se pudo enviar el email, revise su conexion', "error");
+                }
+            })
+        }
+      })
+
+});

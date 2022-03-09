@@ -1239,21 +1239,88 @@ session_start();
             $revBimCotrautolr = '';
             // echo $Email;
             if($revBimCotrautol == 1){
-                $revBimCotrautolr = "Si se realizo";
+                $revBimCotrautolr = "Si se realiza la revision";
             }
             else{
-                $revBimCotrautolr = "No se realizo";
+                $revBimCotrautolr = "No se realiza la revision";
             }
 
+            $rRegistradora = '';
+            if($rRegistradora=1){
+                $rRegistradorar = "Se realiza la revision";
+            }
+            else{
+                $rRegistradorar = "No se realiza la revision";
+            }
+
+            $oMejorar ='';
+            if($oMejora != NULL){
+                    $oMejorar = $oMejora;
+            }
+            else{
+                $oMejorar = "No se le realizaron cambios a la bateria";
+            }
+
+            $observacionG3r ='';
+            if($observacionG3r != NULL){
+                    $observacionG3r = $observacionG3;
+            }
+            else{
+                $observacionG3r = "No se le realizaron cambios a las llantas";
+            }
+            
+            $observacionesFr ='';
+            if($observacionesFr != NULL){
+                    $observacionesFr = $observacionesF;
+            }
+            else{
+                $observacionesFr = "No se le realizaron cambios a las llantas";
+            }
             try {
             
             $cuerpoMail = utf8_decode("
             <b><h4><center>Inverlima</center></h4><b>
             <center><img width='450' height='150' src='https://www.visualsaturbano.com/inverlima/Vista/imagenes/logo_administracion.png'></center>
-            <b><h4><center>Hola, Inverlima te informa:</center></h4><b>
-            <b><h4><center>Se realizaron las siguientes funciones a el vehiculo de placas $placa bajo el cargo del tecnico $tecnico :</center></h4><b>
-            <b><h4>Revision bimestral de Cotrautol: $revBimCotrautolr</h4><b><b><h4>Revision de la registradora:$rRegistradora</h4><b>
-            <h4><center>Por favor, debe estar al día</center></h4>
+            <b><h4><center>Inverlima te informa que se realizaron las siguientes funciones a el vehiculo de placas $placa bajo el cargo del tecnico $tecnico :</center></h4><b>
+            
+            <table>
+            <thead>
+            <th>Descripción</th>
+            <th>Resultado</th>
+            </thead>
+            <tr>
+            <td><b><h4>Revision bimestral de Cotrautol:</h4><b> </td>
+            <td>$revBimCotrautolr</td>
+            </tr>
+            <tr>
+            <td><b><h4>Revision de la registradora:</h4><b></td>
+            <td>$rRegistradorar</td>
+            </tr>
+            <tr>
+            <td><b><h4>Venciminto del extintor:</h4><b></td>
+            <td>$vExtintor</td>
+            </tr>
+            <tr>
+            <td><b><h4>Observaciones al revisar la registradora:</h4><b></td>
+            <td>$oReg</td>
+            </tr>
+            <tr>
+            <td><b><h4>Observaciones:</h4><b></td>
+            <td>$observacion</td>
+            </tr>
+            <tr>
+            <td><b><h4>Se realizan los siguientes cambios a la bateria:</h4><b></td>
+            <td>$oMejorar</td>
+            </tr>
+            <tr>
+            <td><b><h4>Se realizan los siguientes cambios en las llantas:</h4><b></td>
+            <td>$observacionG3r</td>
+            </tr>
+            <tr>
+            <td><b><h4>Se realizan los siguientes cambios de aceite:</h4><b></td>
+            <td>$observacionesFr</td>
+            </tr>
+            </table>
             
                 ");	 
 

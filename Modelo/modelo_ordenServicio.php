@@ -1283,42 +1283,42 @@ session_start();
             <center><img width='450' height='150' src='https://www.visualsaturbano.com/inverlima/Vista/imagenes/logo_administracion.png'></center>
             <b><h4><center>Inverlima te informa que se realizaron las siguientes funciones a el vehiculo de placas $placa bajo el cargo del tecnico $tecnico :</center></h4><b>
             
-            <table>
-            <thead>
-            <th>Descripción</th>
-            <th>Resultado</th>
+            <table style='text-align:left; width:600px; border-collapse:collapse; margin-left:10%; margin-top:40px; border:solid 2px black;'>
+            <thead style='background-color:#5CB4F9; border-bottom: solid 2px black'>
+            <th style='padding:5px; '><center><b style='color:white;'>DESCRIPCIÓN<b></center></th>
+            <th style='padding:5px;'><center><b style='color:white;'>RESULTADO</center><b></th>
             </thead>
-            <tr>
-            <td><b><h4>Revision bimestral de Cotrautol:</h4><b> </td>
-            <td>$revBimCotrautolr</td>
+            <tr style='background-color: white;'>
+            <td style='padding:5px;'><b><h4 style='marguin-left:10px;'>Revision bimestral de Cotrautol:</h4><b> </td>
+            <td style='padding:5px;'><b><h4 style='marguin-left:10px;'>$revBimCotrautolr</h4><b></td>
             </tr>
-            <tr>
-            <td><b><h4>Revision de la registradora:</h4><b></td>
-            <td>$rRegistradorar</td>
+            <tr style=' background-color:#ddd;'>
+            <td style='padding:5px;'><b><h4 style='marguin-left:10px;'>Revision de la registradora:</h4><b></td>
+            <td style='padding:5px; background-color:#ddd;'><b><h4 style='marguin-left:10px;'>$rRegistradorar</h4><b></td>
             </tr>
-            <tr>
-            <td><b><h4>Venciminto del extintor:</h4><b></td>
-            <td>$vExtintor</td>
+            <tr style='background-color: white;'>
+            <td style='padding:5px;'><b><h4 style='marguin-left:10px;'>Venciminto del extintor:</h4><b></td>
+            <td style='padding:5px;'><b><h4 style='marguin-left:10px;'>$vExtintor</h4><b></td>
             </tr>
-            <tr>
-            <td><b><h4>Observaciones al revisar la registradora:</h4><b></td>
-            <td>$oReg</td>
+            <tr style=' background-color:#ddd;'>
+            <td style='padding:5px;'><b><h4 style='marguin-left:10px;'>Observaciones al revisar la registradora:</h4><b></td>
+            <td style='padding:5px;'><b><h4 style='marguin-left:10px;'>$oReg</h4><b></td>
             </tr>
-            <tr>
-            <td><b><h4>Observaciones:</h4><b></td>
-            <td>$observacion</td>
+            <tr style='background-color: white;'>
+            <td style='padding:5px;'><b><h4 style='marguin-left:10px;'>Observaciones:</h4><b></td>
+            <td style='padding:5px;'><b><h4 style='marguin-left:10px;'>$observacion</h4><b></td>
             </tr>
-            <tr>
-            <td><b><h4>Se realizan los siguientes cambios a la bateria:</h4><b></td>
-            <td>$oMejorar</td>
+            <tr style=' background-color:#ddd;'>
+            <td style='padding:5px;'><b><h4 style='marguin-left:10px;'>Se realizan los siguientes cambios a la bateria:</h4><b></td>
+            <td style='padding:5px;'><b><h4 style='marguin-left:10px;'>$oMejorar</h4><b></td>
             </tr>
-            <tr>
-            <td><b><h4>Se realizan los siguientes cambios en las llantas:</h4><b></td>
-            <td>$observacionG3r</td>
+            <tr style='background-color: white;'>
+            <td style='padding:5px;'><b><h4 style='marguin-left:10px;'>Se realizan los siguientes cambios en las llantas:</h4><b></td>
+            <td style='padding:5px;'><b><h4 style='marguin-left:10px;'>$observacionG3r</h4><b></td>
             </tr>
-            <tr>
-            <td><b><h4>Se realizan los siguientes cambios de aceite:</h4><b></td>
-            <td>$observacionesFr</td>
+            <tr style=' background-color:#ddd;'>
+            <td style='padding:5px;'><b><h4 style='marguin-left:10px;'>Se realizan los siguientes cambios de aceite:</h4><b></td>
+            <td style='padding:5px;'><b><h4 style='marguin-left:10px;'>$observacionesFr</h4><b></td>
             </tr>
             </table>
             

@@ -719,6 +719,12 @@ function listar_orden(){
     
 }
 
+// FUNCION PARA EXPORTAR REPORTE
+function exportarReporte(){
+    var url = "../controlador/ordenServicio/controlador_exportar_reporte.php"
+    window.open(url,'_blank');
+}
+
 function AbrirModalRegistroOrdenServicio(){
     $("#modal_registro_OrdenServicio").modal({backdrop:'static',keyboard:false})
     $("#modal_registro_OrdenServicio").modal('show');

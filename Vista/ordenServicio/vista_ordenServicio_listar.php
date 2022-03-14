@@ -16,6 +16,7 @@
                 <div class="col-lg-10">
                     <div class="col-lg-2">
                     <button type="button" class="btn btn-primary"  onclick="AbrirModalRegistroOrdenServicio()"><i class="fas fa-plus"> </i> Registrar</button>
+                    <button type="button" class="btn btn-primary"  onclick="exportarReporte()"><i class="fas fa-file-pdf"> </i> Reporte</button>
                     </div> 
                 </div>
             </div>

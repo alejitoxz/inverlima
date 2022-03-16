@@ -1182,7 +1182,7 @@ function registrar_orden_Servicio(){
     var marca3 = $("#sel_marca_aceite2").val();
     var uCambio3 = $("#txt_uCambio2").val();
     var pCambio3 = $("#txt_pCambio2").val();
-    var cantidad3 = $("#txt_cantidad2").val();
+    var cantidad3 = $("#txt_cantidad3").val();
     var presentacion3 = $("#sel_presentacion3").val();
     var nivelacion3 = $("#sel_nivelacion3").val();
     var cNivelacion3 = $("#txt_nivelacion3").val();
@@ -2100,7 +2100,7 @@ function limpiarRegistro(){
     var fec = [anio, mes, dia].join('-');
 
     $("#sel_placa_vehiculo").val(0);
-    $("#txt_revb").val("");
+    $("#txt_revb").val(0);
     $("#sel_rReg").val(0);
     $("#txt_kmGps").val("");
     $("#txt_vExtintor").val(fec);
@@ -2203,10 +2203,10 @@ function limpiarRegistro(){
     $("#txt_ckilometraje").val("");
     $("#sel_tipo_aceite").val(0);
     $("#sel_marca_aceite").val(0);
-    $("#txt_cantidad1").val("");
+    $("#txt_cantidad1").val(0);
     $("#sel_presentacion1").val(0);
     $("#sel_nivelacion1").val(0);
-    $("#txt_cNivelacion1").val("");
+    $("#txt_cNivelacion1").val(0);
     $("#sel_filtro_aceite").val(0);
     $("#sel_filtro_combustible").val(0);
     $("#sel_filtro_combustible2").val(0);
@@ -2216,19 +2216,19 @@ function limpiarRegistro(){
     $("#sel_marca_aceite1").val(0);
     $("#txt_uCambio1").val(fec);
     $("#txt_pCambio1").val();
-    $("#txt_cantidad2").val("");
+    $("#txt_cantidad2").val(0);
     $("#sel_presentacion2").val(0);
     $("#sel_nivelacion2").val(0);
-    $("#txt_nivelacion2").val("");
+    $("#txt_nivelacion2").val(0);
 
     $("#sel_tipo_aceite2").val(0);
     $("#sel_marca_aceite2").val(0);
     $("#txt_uCambio2").val(fec);
     $("#txt_pCambio2").val();
-    $("#txt_cantidad2").val("");
+    $("#txt_cantidad3").val(0);
     $("#sel_presentacion3").val(0);
     $("#sel_nivelacion3").val(0);
-    $("#txt_nivelacion3").val("");
+    $("#txt_nivelacion3").val(0);
 
     $("#sel_tipo_aceite3").val(0);
     $("#sel_marca_aceite3").val(0);

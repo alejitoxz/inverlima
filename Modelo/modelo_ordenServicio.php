@@ -873,7 +873,6 @@ session_start();
                      BEGIN CATCH
                      ROLLBACK TRAN
                      END CATCH";
-                     
             $resp = sqlsrv_query($conn, $sql);
 
             if( $resp === false) {

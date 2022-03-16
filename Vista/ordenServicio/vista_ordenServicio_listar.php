@@ -1235,7 +1235,7 @@
                           <div class="col-md-3">
                             <div class="form-group">
                               <label for="">Cantidad Nivelada 1/4</label>
-                              <input type="number"value="0" class="form-control" id="txt_cNivelacion1" placeholder="Ingrese datos"><br>
+                              <input type="number" value="0" class="form-control" id="txt_cNivelacion1" placeholder="Ingrese datos"><br>
                             </div>
                           </div>
                         </div>
@@ -1378,7 +1378,7 @@
                           <div class="col-md-3">
                               <div class="form-group">
                                 <label for="">Cantidad x 1/4</label>
-                                <input type="number"value="0" class="form-control" id="txt_cantidad2" placeholder="Ingrese datos"><br>
+                                <input type="number"value="0" class="form-control" id="txt_cantidad3" placeholder="Ingrese datos"><br>
                               </div>
                             </div>
                             <div class="col-md-3">

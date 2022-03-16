@@ -1356,52 +1356,69 @@ session_start();
             
             //cabecera
             $pdf->SetFont('Arial','B',12);
-            $pdf->Image('../../vista/imagenes/logo-alcaldia.png' , 18 ,6, 0 , 30,'png');
+            $pdf->Image('../../vista/imagenes/logo_administracion.png' , 15 ,8, 0 , 25,'png');
+            $pdf->SetFont('Arial','B',10);
+            $pdf->Cell(105);
+            $pdf->Cell(38,8,'Fecha de generacion: ',0,0,'R');
+            $pdf->Cell(22,8,$date,0,1,'R');
+            $pdf->Cell(105);
+            $pdf->Cell(38,8,'Nit: ',0,0,'R');
+            $pdf->Cell(22,8,'1234645047',0,1,'R');
+            $pdf->Cell(105);
+            $pdf->Cell(38,8,'Direccion: ',0,0,'R');
+            $pdf->Cell(22,8,'1234645047',0,1,'R');
+            $pdf->Cell(105);
+            $pdf->Cell(38,8,'correo: ',0,0,'R');
+            $pdf->Cell(50,8,'inverlima-sas@hotmail.com',0,1,'R');
             $pdf->SetFont('Arial','B',15);
-            $pdf->Cell(200,10,'ALCALDIA DE IBAGUE',0,1,'C');
-            $pdf->SetFont('Arial','B',10);
-            $pdf->Cell(200,6,'SECRETARIA DE TRANSITO Y TRANSPORTE DE LA MOVILIDAD',0,1,'C');
-            $pdf->SetFont('Arial','B',10);
-            $pdf->SetTextColor(2,8,4);
-            $pdf->Cell(200,6,'Tarjeta de Control Numero',0,1,'C');
-            $pdf->Image('../../vista/imagenes/musical.png' , 170 ,6, 0 , 30,'png');
-            $pdf->ln(10);
-
+            $pdf->Cell(200,30,'Reporte de unidades',0,1,'C');
+            
+            
             //info
-            $pdf->SetFont('Arial','B',10);
-            $pdf->Cell(8);
-            $pdf->Cell(15,8,'Fecha: ',0,0,'L');
-            $pdf->Cell(30,8,$date,0,1,'L');
+            
             $pdf->SetFont('Arial','B',12);
-            $pdf->Cell(0,8,'Historial de vencimiento a los proximos 15 dias ',0,0,'C');
+            $pdf->Cell(0,8,'Ordenes realizadas ',0,0,'C');
             $pdf->ln(15);
 
             $pdf->SetFont('Arial','B',10);
-            $pdf->Cell(8);
+            $pdf->Cell(1);
             $pdf->SetFillColor(200,200,200);
-            $pdf->Cell(53,8,'Propietario',1,0,'C',true);
-            $pdf->Cell(53,8,'Conductor',1,0,'C',true);
-            $pdf->Cell(23,8,'Placa',1,0,'C',true);
-            $pdf->Cell(23,8,'Vencimiento',1,0,'C',true);
-            $pdf->Cell(23,8,'Fecha',1,1,'C',true);
+            $pdf->Cell(15,8,'Placa',1,0,'C',true);
+            $pdf->Cell(20,8,'# Interno',1,0,'C',true);
+            $pdf->Cell(50,8,'Tecnico',1,0,'C',true);
+            $pdf->Cell(35,8,'Creacion',1,0,'C',true);
+            $pdf->Cell(35,8,'V. Extintor',1,0,'C',true);
+            $pdf->Cell(35,8,'Rev. Cotrautol',1,1,'C',true);
+
+            
             //datos
             foreach ($datos as $item) {
-                $Propietario    = $item['propietario'];
-                $Conductor      = $item['conductor'];
-                $Placa          = $item['placa'];
-                $Vencimiento    = $item['Vencimiento'];
-                $Fecha          = $item['Fecha'];
+                
+                $placa             = $item['placa'];
+                $cod_interno       = $item['cod_interno'];
+                $tecnico           = $item['tecnico'];
+                $fecha_creacion    = $item['fecha_creacion'];
+                $vExtintor         = $item['vExtintor'];
+                $revBimCotrautolr   = $item['revBimCotrautol'];
+
+                $revBimCotrautola = '';
+                if($revBimCotrautolr == 1){
+                $revBimCotrautola = "Se realiza";
+                }
+                else{
+                $revBimCotrautola = "No se realiza";
+                }
 
                 $pdf->SetFont('Arial','',9);
-                $pdf->Cell(8);
-                $pdf->Cell(53,8,$Propietario,1,0,'L');
-                $pdf->Cell(53,8,$Conductor,1,0,'L');
-                $pdf->Cell(23,8,$Placa,1,0,'C');
-                $pdf->Cell(23,8,$Vencimiento,1,0,'C');
-                $pdf->Cell(23,8,$Fecha,1,1,'C');
-
-
+                $pdf->Cell(1);
+                $pdf->Cell(15,8,$placa,1,0,'L');
+                $pdf->Cell(20,8,$cod_interno,1,0,'C');
+                $pdf->Cell(50,8,$tecnico,1,0,'C');
+                $pdf->Cell(35,8,$fecha_creacion,1,0,'C');
+                $pdf->Cell(35,8,$vExtintor,1,0,'C');
+                $pdf->Cell(35,8,$revBimCotrautola,1,1,'C');
             }
+            
             
             $pdf->Output();
             $this->conexion->conectar();

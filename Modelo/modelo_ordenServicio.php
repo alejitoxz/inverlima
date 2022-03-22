@@ -1275,6 +1275,13 @@ session_start();
             else{
                 $observacionesFr = "No se le realizaron cambios a las llantas";
             }
+            $bateriar ='';
+            if($bateriar != NULL){
+                    $bateriar = $bateria;
+            }
+            else{
+                $bateriar = "No se realizaron cambios";
+            }
             try {
             
             $cuerpoMail = utf8_decode("
@@ -1284,41 +1291,27 @@ session_start();
             
             <table style='text-align:left; width:600px; border-collapse:collapse; margin-left:10%; margin-top:40px; border:solid 2px black;'>
             <thead style='background-color:#5CB4F9; border-bottom: solid 2px black'>
-            <th style='padding:5px; '><center><b style='color:white;'>DESCRIPCIÓN<b></center></th>
-            <th style='padding:5px;'><center><b style='color:white;'>RESULTADO</center><b></th>
+            <th style='padding:1px; '><center><b style='color:white;'>DESCRIPCIÓN<b></center></th>
+            <th style='padding:1px;'><center><b style='color:white;'>RESULTADO</center><b></th>
             </thead>
             <tr style='background-color: white;'>
-            <td style='padding:5px;'><b><h4 style='marguin-left:10px;'>Revision bimestral de Cotrautol:</h4><b> </td>
-            <td style='padding:5px;'><b><h4 style='marguin-left:10px;'>$revBimCotrautolr</h4><b></td>
+            <td style=''><b><h4 style='marguin-left:10px;'>Revision bimestral de Cotrautol:</h4><b> </td>
+            <td style=''><b><h4 style='marguin-left:10px;'>$revBimCotrautolr</h4><b></td>
             </tr>
             <tr style=' background-color:#ddd;'>
-            <td style='padding:5px;'><b><h4 style='marguin-left:10px;'>Revision de la registradora:</h4><b></td>
-            <td style='padding:5px; background-color:#ddd;'><b><h4 style='marguin-left:10px;'>$rRegistradorar</h4><b></td>
+            <td style=''><b><h4 style='marguin-left:10px;'>Revision de la registradora:</h4><b></td>
+            <td style=' background-color:#ddd;'><b><h4 style='marguin-left:10px;'>$rRegistradorar</h4><b></td>
             </tr>
             <tr style='background-color: white;'>
-            <td style='padding:5px;'><b><h4 style='marguin-left:10px;'>Venciminto del extintor:</h4><b></td>
-            <td style='padding:5px;'><b><h4 style='marguin-left:10px;'>$vExtintor</h4><b></td>
+            <td style=''><b><h4 style='marguin-left:10px;'>Observaciones:</h4><b></td>
+            <td style=''><b><h4 style='marguin-left:10px;'>$observacion</h4><b></td>
             </tr>
             <tr style=' background-color:#ddd;'>
-            <td style='padding:5px;'><b><h4 style='marguin-left:10px;'>Observaciones al revisar la registradora:</h4><b></td>
-            <td style='padding:5px;'><b><h4 style='marguin-left:10px;'>$oReg</h4><b></td>
+            <td style=''><b><h4 style='marguin-left:10px;'>Bateria:</h4><b></td>
+            <td style=' background-color:#ddd;'><b><h4 style='marguin-left:10px;'>$bateriar</h4><b></td>
             </tr>
-            <tr style='background-color: white;'>
-            <td style='padding:5px;'><b><h4 style='marguin-left:10px;'>Observaciones:</h4><b></td>
-            <td style='padding:5px;'><b><h4 style='marguin-left:10px;'>$observacion</h4><b></td>
-            </tr>
-            <tr style=' background-color:#ddd;'>
-            <td style='padding:5px;'><b><h4 style='marguin-left:10px;'>Se realizan los siguientes cambios a la bateria:</h4><b></td>
-            <td style='padding:5px;'><b><h4 style='marguin-left:10px;'>$oMejorar</h4><b></td>
-            </tr>
-            <tr style='background-color: white;'>
-            <td style='padding:5px;'><b><h4 style='marguin-left:10px;'>Se realizan los siguientes cambios en las llantas:</h4><b></td>
-            <td style='padding:5px;'><b><h4 style='marguin-left:10px;'>$observacionG3r</h4><b></td>
-            </tr>
-            <tr style=' background-color:#ddd;'>
-            <td style='padding:5px;'><b><h4 style='marguin-left:10px;'>Se realizan los siguientes cambios de aceite:</h4><b></td>
-            <td style='padding:5px;'><b><h4 style='marguin-left:10px;'>$observacionesFr</h4><b></td>
-            </tr>
+            
+            
             </table>
             
                 ");	 

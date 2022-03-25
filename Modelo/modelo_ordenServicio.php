@@ -1282,6 +1282,35 @@ session_start();
             else{
                 $bateriar = "No se realizaron cambios";
             }
+            $tipoBateriar ='';
+            if($tipoBateriar != NULL){
+                    $tipoBateriar = $tipoBateria;
+            }
+            else{
+                $tipoBateriar = "No se realizaron cambios";
+            }
+            $marcar ='';
+            if($marcar != NULL){
+                    $marcar = $marca;
+            }
+            else{
+                $marcar = "No se realizaron cambios";
+            }
+            $llantaSerial1r ='';
+            if($llantaSerial1r != NULL){
+                    $llantaSerial1r = $llantaSerial1;
+            }
+            else{
+                $llantaSerial1r = "No se realizaron cambios";
+            }
+            $profundidad1r ='';
+            if($profundidad1r != NULL){
+                    $profundidad1r = $profundidad1;
+            }
+            else{
+                $profundidad1r = "No se realizaron cambios";
+            }
+            
             try {
             
             $cuerpoMail = utf8_decode("
@@ -1309,6 +1338,26 @@ session_start();
             <tr style=' background-color:#ddd;'>
             <td style=''><b><h4 style='marguin-left:10px;'>Bateria:</h4><b></td>
             <td style=' background-color:#ddd;'><b><h4 style='marguin-left:10px;'>$bateriar</h4><b></td>
+            </tr>
+            <tr style='background-color: white;'>
+            <td style=''><b><h4 style='marguin-left:10px;'>Tipo de bateria:</h4><b></td>
+            <td style=''><b><h4 style='marguin-left:10px;'>$tipoBateriar</h4><b></td>
+            </tr>
+            <tr style=' background-color:#ddd;'>
+            <td style=''><b><h4 style='marguin-left:10px;'>Marca:</h4><b></td>
+            <td style=' background-color:#ddd;'><b><h4 style='marguin-left:10px;'>$marcar</h4><b></td>
+            </tr>
+            <thead style='background-color:#5CB4F9; border-bottom: solid 2px black'>
+            <th style='padding:1px;'><b style='color:white; margin-left:250px;'>LLANTA #1<b></th>
+            <th style='padding:1px;'><b style='color:white;'><b></th>
+            </thead>
+            <tr style=' background-color: white;'>
+            <td style=''><b><h4 style='marguin-left:10px;'>Serial:</h4><b></td>
+            <td style=''><b><h4 style='marguin-left:10px;'>$llantaSerial1r</h4><b></td>
+            </tr>
+            <tr style=' background-color:#ddd;'>
+            <td style=''><b><h4 style='marguin-left:10px;'>Profundidad:</h4><b></td>
+            <td style=' background-color:#ddd;'><b><h4 style='marguin-left:10px;'>$profundidad1r</h4><b></td>
             </tr>
             
             

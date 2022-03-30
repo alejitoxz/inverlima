@@ -23,7 +23,23 @@
             <table id="tabla_orden" class="display responsive nowrap" style="width:100%">
                     <thead>
                         <tr>
-                        <th style="display:none"></th>
+                      <th style="display:none"></th>
+                      <th style="display:none"></th>
+                      <th style="display:none"></th>
+                      <th style="display:none"></th>
+                      <th style="display:none"></th>
+                      <th style="display:none"></th>
+                      <th style="display:none"></th>
+                      <th style="display:none"></th>
+                      <th style="display:none"></th>
+                      <th style="display:none"></th>
+                      <th style="display:none"></th>
+                      <th style="display:none"></th>
+                      <th style="display:none"></th>
+                      <th style="display:none"></th>
+                      <th style="display:none"></th>
+                      <th style="display:none"></th>
+                      <th style="display:none"></th>
                       <th style="display:none"></th>
                       <th style="display:none"></th>
                       <th style="display:none"></th>

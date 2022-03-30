@@ -72,8 +72,25 @@ session_start();
             CONVERT ( VARCHAR, s.refrigeranteUltimoCambio ) AS refrigeranteUltimoCambio,
             CONVERT ( VARCHAR, s.refrigeranteProximoCambio ) AS refrigeranteProximoCambio,
             CONVERT ( VARCHAR, s.hidraulicoUltimoCambio ) AS hidraulicoUltimoCambio,
-            CONVERT ( VARCHAR, s.hidraulicoProximoCambio ) AS hidraulicoProximoCambio
-            
+            CONVERT ( VARCHAR, s.hidraulicoProximoCambio ) AS hidraulicoProximoCambio,
+            ta.descripcion as txttipoAceite,
+            tab.descripcion as txtbateria,
+            tatb.descripcion as txttipoBateria,
+            tam.descripcion as txtmarca,
+            tal1.descripcion as txtllanta1Marca,
+            tal2.descripcion as txtllanta2Marca,
+            tal3.descripcion as txtllanta3Marca,
+            tal4.descripcion as txtllanta4Marca,
+            tal5.descripcion as txtllanta5Marca,
+            tal6.descripcion as txtllanta6Marca,
+            tafa.descripcion as txtmotorMarca,
+            tafac.descripcion as txtmotorFiltroAceite,
+            tafc.descripcion as txtmotorfiltroCombustible,
+            tafc2.descripcion as txtmotorfiltroCombustible2,
+            tafc.descripcion as txtmotorfiltroCombustible3,
+            tafai.descripcion as txtmotorFiltroAire
+
+
             FROM
                 ordenServicio AS os
                 LEFT JOIN vehiculo AS v ON ( os.idVehiculo = v.id )
@@ -82,8 +99,25 @@ session_start();
                 LEFT JOIN propietario as p ON ( p.id = v.idPropietario )
 	            LEFT JOIN persona AS prop ON ( prop.id = p.idPersona )
                 INNER JOIN servicio AS s ON ( os.idServicio = s.id )
+                LEFT JOIN miscelaneos_detalle AS ta ON ( ta.id = s.motorTipoAceite and ta.estatus=1)
+                LEFT JOIN miscelaneos_detalle AS tab ON ( tab.id = s.bateria and tab.estatus=1)
+                LEFT JOIN miscelaneos_detalle AS tatb ON ( tatb.id = s.tipoBateria and tatb.estatus=1)
+                LEFT JOIN miscelaneos_detalle AS tam ON ( tam.id = s.marca and tam.estatus=1)
+                LEFT JOIN miscelaneos_detalle AS tal1 ON ( tal1.id = s.llanta1Marca and tal1.estatus=1)
+                LEFT JOIN miscelaneos_detalle AS tal2 ON ( tal2.id = s.llanta2Marca and tal2.estatus=1)
+                LEFT JOIN miscelaneos_detalle AS tal3 ON ( tal3.id = s.llanta3Marca and tal3.estatus=1)
+                LEFT JOIN miscelaneos_detalle AS tal4 ON ( tal4.id = s.llanta4Marca and tal4.estatus=1)
+                LEFT JOIN miscelaneos_detalle AS tal5 ON ( tal5.id = s.llanta5Marca and tal5.estatus=1)
+                LEFT JOIN miscelaneos_detalle AS tal6 ON ( tal6.id = s.llanta6Marca and tal6.estatus=1)
+                LEFT JOIN miscelaneos_detalle AS tafa ON ( tafa.id = s.motorMarca and tafa.estatus=1)
+                LEFT JOIN miscelaneos_detalle AS tafac ON ( tafac.id = s.motorFiltroAceite and tafac.estatus=1)
+                LEFT JOIN miscelaneos_detalle AS tafc ON ( tafc.id = s.motorfiltroCombustible and tafc.estatus=1)
+                LEFT JOIN miscelaneos_detalle AS tafc2 ON ( tafc2.id = s.motorfiltroCombustible2 and tafc2.estatus=1)
+                LEFT JOIN miscelaneos_detalle AS tafc3 ON ( tafc3.id = s.motorfiltroCombustible3 and tafc3.estatus=1)
+                LEFT JOIN miscelaneos_detalle AS tafai ON ( tafai.id = s.motorFiltroAire and tafai.estatus=1)
 				WHERE os.estatus = 1
                 order by os.fecha_creacion desc " ;
+              
             $resp = sqlsrv_query($conn, $sql);
             if( $resp === false) {
                 return 0;
@@ -1245,7 +1279,7 @@ session_start();
             }
 
             $rRegistradora = '';
-            if($rRegistradora=1){
+            if($rRegistradora==1){
                 $rRegistradorar = "Se realiza la revision";
             }
             else{
@@ -1253,7 +1287,7 @@ session_start();
             }
 
             $oMejorar ='';
-            if($oMejora != NULL){
+            if($oMejora != 0){
                     $oMejorar = $oMejora;
             }
             else{
@@ -1261,7 +1295,7 @@ session_start();
             }
 
             $observacionG3r ='';
-            if($observacionG3r != NULL){
+            if($observacionG3r != 0){
                     $observacionG3r = $observacionG3;
             }
             else{
@@ -1269,48 +1303,347 @@ session_start();
             }
             
             $observacionesFr ='';
-            if($observacionesFr != NULL){
+            if($observacionesFr != 0){
                     $observacionesFr = $observacionesF;
             }
             else{
                 $observacionesFr = "No se le realizaron cambios a las llantas";
             }
             $bateriar ='';
-            if($bateriar != NULL){
+            if($bateria != null){
                     $bateriar = $bateria;
             }
             else{
                 $bateriar = "No se realizaron cambios";
             }
             $tipoBateriar ='';
-            if($tipoBateriar != NULL){
+            if($tipoBateria != 0){
                     $tipoBateriar = $tipoBateria;
             }
             else{
                 $tipoBateriar = "No se realizaron cambios";
             }
             $marcar ='';
-            if($marcar != NULL){
+            if($marca != null){
                     $marcar = $marca;
             }
             else{
                 $marcar = "No se realizaron cambios";
             }
             $llantaSerial1r ='';
-            if($llantaSerial1r != NULL){
+            if($llantaSerial1 != 0){
                     $llantaSerial1r = $llantaSerial1;
             }
             else{
                 $llantaSerial1r = "No se realizaron cambios";
             }
             $profundidad1r ='';
-            if($profundidad1r != NULL){
-                    $profundidad1r = $profundidad1;
+            if($profundidad1 != 0){
+                    $profundidad1r = $profundidad1 ."CM";
             }
             else{
                 $profundidad1r = "No se realizaron cambios";
             }
+            $opmarca1r ='';
+            if($opmarca1 != null){
+                    $opmarca1r = $opmarca1;
+            }
+            else{
+                $opmarca1r = "No se realizaron cambios";
+            }
+            $tipoMarca1r ='';
+            if($tipoMarca1 == 1){
+                    $tipoMarca1r = "Traccion";
+            }
+            if($tipoMarca1 == 2){
+                $tipoMarca1r = "Direccional";
+            }
+            else{
+                $tipoMarca1r = "No se realizaron cambios";
+            }
+
+            $estado1r ='';
+            if($estado1 == 1){
+                    $estado1r = "Nueva";
+            }
+            if($estado1 == 2){
+                $estado1r = "Reencauchada";
+            }
+            else{
+                $estado1r = "No se realizaron cambios";
+            }
+            $llantaSerial2r ='';
+            if($llantaSerial2 != 0){
+                    $llantaSerial2r = $llantaSerial2;
+            }
+            else{
+                $llantaSerial2r = "No se realizaron cambios";
+            }
+            $profundidad2r ='';
+            if($profundidad2 != 0){
+                    $profundidad2r = $profundidad2 ."CM";
+            }
+            else{
+                $profundidad2r = "No se realizaron cambios";
+            }
+            $opmarca2r ='';
+            if($opmarca2 != null){
+                    $opmarca2r = $opmarca2;
+            }
+            else{
+                $opmarca2r = "No se realizaron cambios";
+            }
+            $tipoMarca2r ='';
+            if($tipoMarca2 == 1){
+                    $tipoMarca2r = "Traccion";
+            }
+            if($tipoMarca2 == 2){
+                $tipoMarca2r = "Direccional";
+            }
+            else{
+                $tipoMarca2r = "No se realizaron cambios";
+            }
+
+            $estado2r ='';
+            if($estado2 == 1){
+                    $estado2r = "Nueva";
+            }
+            if($estado2 == 2){
+                $estado2r = "Reencauchada";
+            }
+            else{
+                $estado2r = "No se realizaron cambios";
+            }
+
+            $llantaSerial3r ='';
+            if($llantaSerial3 != 0){
+                    $llantaSerial3r = $llantaSerial3;
+            }
+            else{
+                $llantaSerial3r = "No se realizaron cambios";
+            }
+            $profundidad3r ='';
+            if($profundidad3 != 0){
+                    $profundidad3r = $profundidad3 ."CM";
+            }
+            else{
+                $profundidad3r = "No se realizaron cambios";
+            }
+            $opmarca3r ='';
+            if($opmarca3 != null){
+                    $opmarca3r = $opmarca3;
+            }
+            else{
+                $opmarca3r = "No se realizaron cambios";
+            }
+            $tipoMarca3r ='';
+            if($tipoMarca3 == 1){
+                    $tipoMarca3r = "Traccion";
+            }
+            if($tipoMarca3 == 2){
+                $tipoMarca3r = "Direccional";
+            }
+            else{
+                $tipoMarca3r = "No se realizaron cambios";
+            }
+
+            $estado3r ='';
+            if($estado3 == 1){
+                    $estado3r = "Nueva";
+            }
+            if($estado3 == 2){
+                $estado3r = "Reencauchada";
+            }
+            else{
+                $estado3r = "No se realizaron cambios";
+            }
+
+            $llantaSerial4r ='';
+            if($llantaSerial4 != 0){
+                    $llantaSerial4r = $llantaSerial4;
+            }
+            else{
+                $llantaSerial4r = "No se realizaron cambios";
+            }
+            $profundidad4r ='';
+            if($profundidad4 != 0){
+                    $profundidad4r = $profundidad4 ."CM";
+            }
+            else{
+                $profundidad4r = "No se realizaron cambios";
+            }
+            $opmarca4r ='';
+            if($opmarca4 != null){
+                    $opmarca4r = $opmarca4;
+            }
+            else{
+                $opmarca4r = "No se realizaron cambios";
+            }
+            $tipoMarca4r ='';
+            if($tipoMarca4 == 1){
+                    $tipoMarca4r = "Traccion";
+            }
+            if($tipoMarca4 == 2){
+                $tipoMarca4r = "Direccional";
+            }
+            else{
+                $tipoMarca4r = "No se realizaron cambios";
+            }
+
+            $estado4r ='';
+            if($estado4 == 1){
+                    $estado4r = "Nueva";
+            }
+            if($estado4 == 2){
+                $estado4r = "Reencauchada";
+            }
+            else{
+                $estado4r = "No se realizaron cambios";
+            }
+
+            $llantaSerial5r ='';
+            if($llantaSerial5 != 0){
+                    $llantaSerial5r = $llantaSerial5;
+            }
+            else{
+                $llantaSerial5r = "No se realizaron cambios";
+            }
+            $profundidad5r ='';
+            if($profundidad5 != 0){
+                    $profundidad5r = $profundidad5 ."CM";
+            }
+            else{
+                $profundidad5r = "No se realizaron cambios";
+            }
+            $opmarca5r ='';
+            if($opmarca5 != null){
+                    $opmarca5r = $opmarca5;
+            }
+            else{
+                $opmarca5r = "No se realizaron cambios";
+            }
+            $tipoMarca5r ='';
+            if($tipoMarca5 == 1){
+                    $tipoMarca5r = "Traccion";
+            }
+            if($tipoMarca5 == 2){
+                $tipoMarca5r = "Direccional";
+            }
+            else{
+                $tipoMarca5r = "No se realizaron cambios";
+            }
+
+            $estado5r ='';
+            if($estado5 == 1){
+                    $estado5r = "Nueva";
+            }
+            if($estado5 == 2){
+                $estado5r = "Reencauchada";
+            }
+            else{
+                $estado5r = "No se realizaron cambios";
+            }
+
+            $llantaSerial6r ='';
+            if($llantaSerial6 != 0){
+                    $llantaSerial6r = $llantaSerial6;
+            }
+            else{
+                $llantaSerial6r = "No se realizaron cambios";
+            }
+            $profundidad6r ='';
+            if($profundidad6 != 0){
+                    $profundidad6r = $profundidad6 ."CM";
+            }
+            else{
+                $profundidad6r = "No se realizaron cambios";
+            }
+            $opmarca6r ='';
+            if($opmarca6 != null){
+                    $opmarca6r = $opmarca6;
+            }
+            else{
+                $opmarca6r = "No se realizaron cambios";
+            }
+            $tipoMarca6r ='';
+            if($tipoMarca6 == 1){
+                    $tipoMarca6r = "Traccion";
+            }
+            if($tipoMarca6 == 2){
+                $tipoMarca6r = "Direccional";
+            }
+            else{
+                $tipoMarca6r = "No se realizaron cambios";
+            }
+
+            $estado6r ='';
+            if($estado6 == 1){
+                    $estado6r = "Nueva";
+            }
+            if($estado6 == 2){
+                $estado6r = "Reencauchada";
+            }
+            else{
+                $estado6r = "No se realizaron cambios";
+            }
             
+
+            $tipoAceiter ='';
+            if($tipoAceite != 0){
+                    $tipoAceiter = $tipoAceite;
+            }
+            else{
+                $tipoAceiter = "No se realizaron cambios";
+            }
+
+            $marca10r ='';
+            if($marca10 != null){
+                    $marca10r = $marca10;
+            }
+            else{
+                $marca10r = "No se realizaron cambios";
+            }
+
+            $fAceiter ='';
+            if($fAceite != null){
+                    $fAceiter = $fAceite;
+            }
+            else{
+                $fAceiter = "No se realizaron cambios";
+            }
+
+            $fCombustibler ='';
+            if($fCombustible != null){
+                    $fCombustibler = $fCombustible;
+            }
+            else{
+                $fCombustibler = "No se realizaron cambios";
+            }
+
+            $fCombustible2r ='';
+            if($fCombustible2 != null){
+                    $fCombustible2r = $fCombustible2;
+            }
+            else{
+                $fCombustible2r = "No se realizaron cambios";
+            }
+
+            $fCombustible3r ='';
+            if($fCombustible2 != null){
+                    $fCombustible3r = $fCombustible3;
+            }
+            else{
+                $fCombustible3r = "No se realizaron cambios";
+            }
+
+            $fAirer ='';
+            if($fAire != null){
+                    $fAirer = $fAire;
+            }
+            else{
+                $fAirer = "No se realizaron cambios";
+            }
+
             try {
             
             $cuerpoMail = utf8_decode("
@@ -1318,49 +1651,257 @@ session_start();
             <center><img width='450' height='150' src='https://www.visualsaturbano.com/inverlima/Vista/imagenes/logo_administracion.png'></center>
             <b><h4><center>Inverlima te informa que se realizaron las siguientes funciones a el vehiculo de placas $placa bajo el cargo del tecnico $tecnico :</center></h4><b>
             
-            <table style='text-align:left; width:600px; border-collapse:collapse; margin-left:10%; margin-top:40px; border:solid 2px black;'>
-            <thead style='background-color:#5CB4F9; border-bottom: solid 2px black'>
-            <th style='padding:1px; '><center><b style='color:white;'>DESCRIPCIÓN<b></center></th>
-            <th style='padding:1px;'><center><b style='color:white;'>RESULTADO</center><b></th>
-            </thead>
-            <tr style='background-color: white;'>
-            <td style=''><b><h4 style='marguin-left:10px;'>Revision bimestral de Cotrautol:</h4><b> </td>
-            <td style=''><b><h4 style='marguin-left:10px;'>$revBimCotrautolr</h4><b></td>
-            </tr>
-            <tr style=' background-color:#ddd;'>
-            <td style=''><b><h4 style='marguin-left:10px;'>Revision de la registradora:</h4><b></td>
-            <td style=' background-color:#ddd;'><b><h4 style='marguin-left:10px;'>$rRegistradorar</h4><b></td>
-            </tr>
-            <tr style='background-color: white;'>
-            <td style=''><b><h4 style='marguin-left:10px;'>Observaciones:</h4><b></td>
-            <td style=''><b><h4 style='marguin-left:10px;'>$observacion</h4><b></td>
-            </tr>
-            <tr style=' background-color:#ddd;'>
-            <td style=''><b><h4 style='marguin-left:10px;'>Bateria:</h4><b></td>
-            <td style=' background-color:#ddd;'><b><h4 style='marguin-left:10px;'>$bateriar</h4><b></td>
-            </tr>
-            <tr style='background-color: white;'>
-            <td style=''><b><h4 style='marguin-left:10px;'>Tipo de bateria:</h4><b></td>
-            <td style=''><b><h4 style='marguin-left:10px;'>$tipoBateriar</h4><b></td>
-            </tr>
-            <tr style=' background-color:#ddd;'>
-            <td style=''><b><h4 style='marguin-left:10px;'>Marca:</h4><b></td>
-            <td style=' background-color:#ddd;'><b><h4 style='marguin-left:10px;'>$marcar</h4><b></td>
-            </tr>
-            <thead style='background-color:#5CB4F9; border-bottom: solid 2px black'>
-            <th style='padding:1px;'><b style='color:white; margin-left:250px;'>LLANTA #1<b></th>
-            <th style='padding:1px;'><b style='color:white;'><b></th>
-            </thead>
-            <tr style=' background-color: white;'>
-            <td style=''><b><h4 style='marguin-left:10px;'>Serial:</h4><b></td>
-            <td style=''><b><h4 style='marguin-left:10px;'>$llantaSerial1r</h4><b></td>
-            </tr>
-            <tr style=' background-color:#ddd;'>
-            <td style=''><b><h4 style='marguin-left:10px;'>Profundidad:</h4><b></td>
-            <td style=' background-color:#ddd;'><b><h4 style='marguin-left:10px;'>$profundidad1r</h4><b></td>
-            </tr>
-            
-            
+            <table style='width:600px; border-collapse:collapse; border:solid 1px black;margin:auto'>
+                <thead style='background-color:#005395; border: solid 1px black'>
+                    <th style='color:white;'>DESCRIPCIÓN</th>
+                    <th style='color:white;'>RESULTADO</th>
+                </thead>
+                <tbody>
+                
+                    <tr style='background-color: white;padding:5px;'>
+                        <td align='left'><span style='margin-left:5px;'>Revision bimestral de Cotrautol:<span></td>
+                        <td align='left'><span style='margin-left:5px;'>$revBimCotrautolr<span></td>
+                    </tr>
+
+                    <tr style=' background-color:#ddd;padding:5px;'>
+                        <td align='left'><span style='margin-left:5px;'>Revision de la registradora:</span></td>
+                        <td align='left'><span style='margin-left:5px;'>$rRegistradorar</span></td>
+                    </tr>
+
+                    <tr style='background-color: white;'>
+                        <td align='left'><span style='margin-left:5px;'>Observaciones:<span></td>
+                        <td align='left'><span style='margin-left:5px;'>$observacion<span></td>
+                    </tr>
+
+                    <tr style=' background-color:#ddd;'>
+                        <td align='left'><span style='margin-left:5px;'>Bateria:<span></td>
+                        <td align='left'><span style='margin-left:5px;'>$bateriar<span></td>
+                    </tr>
+
+                    <tr style='background-color: white;'>
+                        <td align='left'><span style='margin-left:5px;'>Tipo de bateria:<span></td>
+                        <td align='left'><span style='margin-left:5px;'>$tipoBateriar<span></td>
+                    </tr>
+
+                    <tr style=' background-color:#ddd;'>
+                        <td align='left'><span style='margin-left:5px;'>Marca:<span></td>
+                        <td align='left'><span style='margin-left:5px;'>$marcar<span></td>
+                    </tr>
+
+                    <tr style='background-color:#005395; border: solid 1px black;' >
+                        <td colspan='2' style='color:white;text-align: center;'>LLANTA NUM. 1</td>
+                    </tr>
+                    
+                    <tr style=' background-color: white;'>
+                        <td align='left'><span style='margin-left:5px;'>Serial de la llanta:<span></td>
+                        <td align='left'><span style='margin-left:5px;'>$llantaSerial1r<span></td>
+                    </tr>
+
+                    <tr style=' background-color:#ddd;'>
+                        <td align='left'><span style='margin-left:5px;'>Profundidad de la llanta:<span></td>
+                        <td align='left'><span style='margin-left:5px;'>$profundidad1r <span></td>
+                    </tr>
+
+                    <tr style=' background-color: white;'>
+                        <td align='left'><span style='margin-left:5px;'>Marca de la llanta:<span></td>
+                        <td align='left'><span style='margin-left:5px;'>$opmarca1r<span></td>
+                    </tr>
+
+                    <tr style=' background-color:#ddd;'>
+                        <td align='left'><span style='margin-left:5px;'>Tipo de llanta:<span></td>
+                        <td align='left'><span style='margin-left:5px;'>$tipoMarca1r <span></td>
+                    </tr>
+
+                    <tr style=' background-color: white;'>
+                        <td align='left'><span style='margin-left:5px;'>Estado de la llanta:<span></td>
+                        <td align='left'><span style='margin-left:5px;'>$estado1r<span></td>
+                    </tr>
+
+                    <tr style='background-color:#005395; border: solid 1px black;' >
+                        <td colspan='2' style='color:white;text-align: center;'>LLANTA NUM. 2</td>
+                    </tr>
+
+                    <tr style=' background-color: white;'>
+                        <td align='left'><span style='margin-left:5px;'>Serial de la llanta:<span></td>
+                        <td align='left'><span style='margin-left:5px;'>$llantaSerial2r<span></td>
+                    </tr>
+
+                    <tr style=' background-color:#ddd;'>
+                        <td align='left'><span style='margin-left:5px;'>Profundidad de la llanta:<span></td>
+                        <td align='left'><span style='margin-left:5px;'>$profundidad2r <span></td>
+                    </tr>
+
+                    <tr style=' background-color: white;'>
+                        <td align='left'><span style='margin-left:5px;'>Marca de la llanta:<span></td>
+                        <td align='left'><span style='margin-left:5px;'>$opmarca2r<span></td>
+                    </tr>
+
+                    <tr style=' background-color:#ddd;'>
+                        <td align='left'><span style='margin-left:5px;'>Tipo de llanta:<span></td>
+                        <td align='left'><span style='margin-left:5px;'>$tipoMarca2r <span></td>
+                    </tr>
+
+                    <tr style=' background-color: white;'>
+                        <td align='left'><span style='margin-left:5px;'>Estado de la llanta:<span></td>
+                        <td align='left'><span style='margin-left:5px;'>$estado2r<span></td>
+                    </tr>
+
+                    <tr style='background-color:#005395; border: solid 1px black;' >
+                        <td colspan='2' style='color:white;text-align: center;'>LLANTA NUM. 3</td>
+                    </tr>
+
+                    <tr style=' background-color: white;'>
+                        <td align='left'><span style='margin-left:5px;'>Serial de la llanta:<span></td>
+                        <td align='left'><span style='margin-left:5px;'>$llantaSerial3r<span></td>
+                    </tr>
+
+                    <tr style=' background-color:#ddd;'>
+                        <td align='left'><span style='margin-left:5px;'>Profundidad de la llanta:<span></td>
+                        <td align='left'><span style='margin-left:5px;'>$profundidad3r <span></td>
+                    </tr>
+
+                    <tr style=' background-color: white;'>
+                        <td align='left'><span style='margin-left:5px;'>Marca de la llanta:<span></td>
+                        <td align='left'><span style='margin-left:5px;'>$opmarca3r<span></td>
+                    </tr>
+
+                    <tr style=' background-color:#ddd;'>
+                        <td align='left'><span style='margin-left:5px;'>Tipo de llanta:<span></td>
+                        <td align='left'><span style='margin-left:5px;'>$tipoMarca3r <span></td>
+                    </tr>
+
+                    <tr style=' background-color: white;'>
+                        <td align='left'><span style='margin-left:5px;'>Estado de la llanta:<span></td>
+                        <td align='left'><span style='margin-left:5px;'>$estado3r<span></td>
+                    </tr>
+
+                    <tr style='background-color:#005395; border: solid 1px black;' >
+                        <td colspan='2' style='color:white;text-align: center;'>LLANTA NUM. 4</td>
+                    </tr>
+
+                    <tr style=' background-color: white;'>
+                        <td align='left'><span style='margin-left:5px;'>Serial de la llanta:<span></td>
+                        <td align='left'><span style='margin-left:5px;'>$llantaSerial4r<span></td>
+                    </tr>
+
+                    <tr style=' background-color:#ddd;'>
+                        <td align='left'><span style='margin-left:5px;'>Profundidad de la llanta:<span></td>
+                        <td align='left'><span style='margin-left:5px;'>$profundidad4r <span></td>
+                    </tr>
+
+                    <tr style=' background-color: white;'>
+                        <td align='left'><span style='margin-left:5px;'>Marca de la llanta:<span></td>
+                        <td align='left'><span style='margin-left:5px;'>$opmarca4r<span></td>
+                    </tr>
+
+                    <tr style=' background-color:#ddd;'>
+                        <td align='left'><span style='margin-left:5px;'>Tipo de llanta:<span></td>
+                        <td align='left'><span style='margin-left:5px;'>$tipoMarca4r <span></td>
+                    </tr>
+
+                    <tr style=' background-color: white;'>
+                        <td align='left'><span style='margin-left:5px;'>Estado de la llanta:<span></td>
+                        <td align='left'><span style='margin-left:5px;'>$estado4r<span></td>
+                    </tr>
+
+                    <tr style='background-color:#005395; border: solid 1px black;' >
+                        <td colspan='2' style='color:white;text-align: center;'>LLANTA NUM. 5</td>
+                    </tr>
+
+                    <tr style=' background-color: white;'>
+                        <td align='left'><span style='margin-left:5px;'>Serial de la llanta:<span></td>
+                        <td align='left'><span style='margin-left:5px;'>$llantaSerial5r<span></td>
+                    </tr>
+
+                    <tr style=' background-color:#ddd;'>
+                        <td align='left'><span style='margin-left:5px;'>Profundidad de la llanta:<span></td>
+                        <td align='left'><span style='margin-left:5px;'>$profundidad5r <span></td>
+                    </tr>
+
+                    <tr style=' background-color: white;'>
+                        <td align='left'><span style='margin-left:5px;'>Marca de la llanta:<span></td>
+                        <td align='left'><span style='margin-left:5px;'>$opmarca5r<span></td>
+                    </tr>
+
+                    <tr style=' background-color:#ddd;'>
+                        <td align='left'><span style='margin-left:5px;'>Tipo de llanta:<span></td>
+                        <td align='left'><span style='margin-left:5px;'>$tipoMarca5r <span></td>
+                    </tr>
+
+                    <tr style=' background-color: white;'>
+                        <td align='left'><span style='margin-left:5px;'>Estado de la llanta:<span></td>
+                        <td align='left'><span style='margin-left:5px;'>$estado5r<span></td>
+                    </tr>
+
+                    <tr style='background-color:#005395; border: solid 1px black;' >
+                        <td colspan='2' style='color:white;text-align: center;'>LLANTA NUM. 6</td>
+                    </tr>
+
+                    <tr style=' background-color: white;'>
+                        <td align='left'><span style='margin-left:5px;'>Serial de la llanta:<span></td>
+                        <td align='left'><span style='margin-left:5px;'>$llantaSerial6r<span></td>
+                    </tr>
+
+                    <tr style=' background-color:#ddd;'>
+                        <td align='left'><span style='margin-left:5px;'>Profundidad de la llanta:<span></td>
+                        <td align='left'><span style='margin-left:5px;'>$profundidad6r <span></td>
+                    </tr>
+
+                    <tr style=' background-color: white;'>
+                        <td align='left'><span style='margin-left:5px;'>Marca de la llanta:<span></td>
+                        <td align='left'><span style='margin-left:5px;'>$opmarca6r<span></td>
+                    </tr>
+
+                    <tr style=' background-color:#ddd;'>
+                        <td align='left'><span style='margin-left:5px;'>Tipo de llanta:<span></td>
+                        <td align='left'><span style='margin-left:5px;'>$tipoMarca6r <span></td>
+                    </tr>
+
+                    <tr style=' background-color: white;'>
+                        <td align='left'><span style='margin-left:5px;'>Estado de la llanta:<span></td>
+                        <td align='left'><span style='margin-left:5px;'>$estado6r<span></td>
+                    </tr>
+
+                    <tr style='background-color:#005395; border: solid 1px black;' >
+                        <td colspan='2' style='color:white;text-align: center;'>MOTOR</td>
+                    </tr>
+
+                    <tr style=' background-color: white;'>
+                        <td align='left'><span style='margin-left:5px;'>Tipo de aceite:<span></td>
+                        <td align='left'><span style='margin-left:5px;'>$tipoAceiter<span></td>
+                    </tr>
+
+                    <tr style=' background-color:#ddd;'>
+                        <td align='left'><span style='margin-left:5px;'>Marca del aceite:<span></td>
+                        <td align='left'><span style='margin-left:5px;'>$marca10r <span></td>
+                    </tr>
+
+                    <tr style=' background-color: white;'>
+                        <td align='left'><span style='margin-left:5px;'>Filtro de aceite:<span></td>
+                        <td align='left'><span style='margin-left:5px;'>$fAceiter<span></td>
+                    </tr>
+
+                    <tr style=' background-color:#ddd;'>
+                        <td align='left'><span style='margin-left:5px;'>Filtro de combustible:<span></td>
+                        <td align='left'><span style='margin-left:5px;'>$fCombustibler <span></td>
+                    </tr>
+
+                    <tr style=' background-color: white;'>
+                        <td align='left'><span style='margin-left:5px;'>Filtro de combustible:<span></td>
+                        <td align='left'><span style='margin-left:5px;'>$fCombustible2r<span></td>
+                    </tr>
+
+                    <tr style=' background-color:#ddd;'>
+                        <td align='left'><span style='margin-left:5px;'>Filtro de combustible:<span></td>
+                        <td align='left'><span style='margin-left:5px;'>$fCombustible3r <span></td>
+                    </tr>
+
+                    <tr style=' background-color: white;'>
+                        <td align='left'><span style='margin-left:5px;'>Filtro de aire:<span></td>
+                        <td align='left'><span style='margin-left:5px;'>$fAirer<span></td>
+                    </tr>
+
+                </tbody>    
             </table>
             
                 ");	 

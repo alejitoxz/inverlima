@@ -561,10 +561,90 @@ function listar_orden(){
             {
                 "targets": [ 136],
                 "visible": false
+            },
+            {
+                "targets": [ 137],
+                "visible": false
+            },
+            {
+                "targets": [ 138],
+                "visible": false
+            },
+            {
+                "targets": [ 139],
+                "visible": false
+            },
+            {
+                "targets": [ 140],
+                "visible": false
+            },
+            {
+                "targets": [ 141],
+                "visible": false
+            },
+            {
+                "targets": [ 142],
+                "visible": false
+            },
+            {
+                "targets": [ 143],
+                "visible": false
+            },
+            {
+                "targets": [ 144],
+                "visible": false
+            },
+            {
+                "targets": [ 145],
+                "visible": false
+            },
+            {
+                "targets": [ 146],
+                "visible": false
+            },
+            {
+                "targets": [ 147],
+                "visible": false
+            },
+            {
+                "targets": [ 148],
+                "visible": false
+            },
+            {
+                "targets": [ 149],
+                "visible": false
+            },
+            {
+                "targets": [ 150],
+                "visible": false
+            },
+            {
+                "targets": [ 151],
+                "visible": false
+            },
+            {
+                "targets": [ 152],
+                "visible": false
             }
             
         ],
         "columns": [
+            { "data": "txtmotorFiltroAire" },
+            { "data": "txtmotorFiltroAceite" },
+            { "data": "txtmotorfiltroCombustible" },
+            { "data": "txtmotorfiltroCombustible2" },
+            { "data": "txtmotorfiltroCombustible3" },
+            { "data": "txtmotorMarca" },
+            { "data": "txtllanta6Marca" },
+            { "data": "txtllanta5Marca" },
+            { "data": "txtllanta4Marca" },
+            { "data": "txtllanta3Marca" },
+            { "data": "txtllanta2Marca" },
+            { "data": "txtllanta1Marca" },
+            { "data": "txtmarca" },
+            { "data": "txttipoBateria" },
+            { "data": "txtbateria" },
+            { "data": "txttipoAceite" },
             { "data": "email" },
             { "data": "bateria" },
             { "data": "tipoBateria" },
@@ -1499,6 +1579,7 @@ $('#tabla_orden').on('click','.editar',function(){
     var kilometraje =datosOrden.motorKilometraje;
     var cKilometraje =datosOrden.motorCambioKilometraje;
     var tipoAceite =datosOrden.motorTipoAceite;
+
     var marca10 =datosOrden.motorMarca;
     var cantidad1 =datosOrden.motorCantidad;
     var presentacion1 =datosOrden.motorPresentacion;
@@ -2673,9 +2754,9 @@ $('#tabla_orden').on('click','.enviarCorreo',function(){
     var oReg =datosOrden.oRegistradora;
     var observacion =datosOrden.observacion;     
     var tecnico =datosOrden.tecnico;
-    var bateria =datosOrden.bateria;
-    var tipoBateria =datosOrden.tipoBateria;
-    var marca =datosOrden.marca;
+    var bateria =datosOrden.txtbateria;
+    var tipoBateria =datosOrden.txttipoBateria;
+    var marca =datosOrden.txtmarca;
     var serial =datosOrden.serial;
     var fVenta =datosOrden.fVenta;
     var fInstalacion =datosOrden.fInstalacion;
@@ -2685,7 +2766,7 @@ $('#tabla_orden').on('click','.enviarCorreo',function(){
     var oMejora =datosOrden.oportunidadesMejora;
     var llantaSerial1 =datosOrden.llanta1Serial;
     var profundidad1 =datosOrden.llanta1Profundidad;
-    var opmarca1 =datosOrden.llanta1Marca;
+    var opmarca1 =datosOrden.txtllanta1Marca;
     var tipoMarca1 =datosOrden.llanta1Tipo;
     var estado1 =datosOrden.llanta1Estado;
     var fInstalacion1 =datosOrden.llanta1Instalacion;
@@ -2695,7 +2776,7 @@ $('#tabla_orden').on('click','.enviarCorreo',function(){
 
     var llantaSerial2 =datosOrden.llanta2Serial;
     var profundidad2 =datosOrden.llanta2Profundidad;
-    var opmarca2 =datosOrden.llanta2Marca;
+    var opmarca2 =datosOrden.txtllanta2Marca;
     var tipoMarca2 =datosOrden.llanta2Tipo;
     var estado2 =datosOrden.llanta2Estado;
     var fInstalacion2 =datosOrden.llanta2Instalacion;
@@ -2705,7 +2786,7 @@ $('#tabla_orden').on('click','.enviarCorreo',function(){
 
     var llantaSerial3 =datosOrden.llanta3Serial;
     var profundidad3 =datosOrden.llanta3Profundidad;
-    var opmarca3 =datosOrden.llanta3Marca;
+    var opmarca3 =datosOrden.txtllanta3Marca;
     var tipoMarca3 =datosOrden.llanta3Tipo;
     var estado3 =datosOrden.llanta3Estado;
     var fInstalacion3 =datosOrden.llanta3Instalacion;
@@ -2715,7 +2796,7 @@ $('#tabla_orden').on('click','.enviarCorreo',function(){
 
     var llantaSerial4 =datosOrden.llanta4Serial;
     var profundidad4 =datosOrden.llanta4Profundidad;
-    var opmarca4 =datosOrden.llanta4Marca;
+    var opmarca4 =datosOrden.txtllanta4Marca;
     var tipoMarca4 =datosOrden.llanta4Tipo;
     var estado4 =datosOrden.llanta4Estado;
     var fInstalacion4 =datosOrden.llanta4Instalacion;
@@ -2725,7 +2806,7 @@ $('#tabla_orden').on('click','.enviarCorreo',function(){
 
     var llantaSerial5 =datosOrden.llanta5Serial;
     var profundidad5 =datosOrden.llanta5Profundidad;
-    var opmarca5 =datosOrden.llanta5Marca;
+    var opmarca5 =datosOrden.txtllanta5Marca;
     var tipoMarca5 =datosOrden.llanta5Tipo;
     var estado5 =datosOrden.llanta5Estado;
     var fInstalacion5 =datosOrden.llanta5Instalacion;
@@ -2735,7 +2816,7 @@ $('#tabla_orden').on('click','.enviarCorreo',function(){
 
     var llantaSerial6 =datosOrden.llanta6Serial;
     var profundidad6 =datosOrden.llanta6Profundidad;
-    var opmarca6 =datosOrden.llanta6Marca;
+    var opmarca6 =datosOrden.txtllanta6Marca;
     var tipoMarca6 =datosOrden.llanta6Tipo;
     var estado6 =datosOrden.llanta6Estado;
     var fInstalacion6 =datosOrden.llanta6Instalacion;
@@ -2767,15 +2848,18 @@ $('#tabla_orden').on('click','.enviarCorreo',function(){
     var pCambioA =datosOrden.motorProximoCambio;
     var kilometraje =datosOrden.motorKilometraje;
     var cKilometraje =datosOrden.motorCambioKilometraje;
-    var tipoAceite =datosOrden.motorTipoAceite;
-    var marca10 =datosOrden.motorMarca;
+    var tipoAceite =datosOrden.txttipoAceite;
+
+
+
+    var marca10 =datosOrden.txtmotorMarca;
     var cantidad1 =datosOrden.motorCantidad;
     var presentacion1 =datosOrden.motorPresentacion;
     var nivelacion =datosOrden.motorNivelacion;
     var cNivelacion =datosOrden.motorCantidadNivelada;
-    var fAceite =datosOrden.motorFiltroAceite;
-    var fCombustible =datosOrden.motorfiltroCombustible;
-    var fAire =datosOrden.motorFiltroAire;
+    var fAceite =datosOrden.txtmotorFiltroAceite;
+    var fCombustible =datosOrden.txtmotorfiltroCombustible;
+    var fAire =datosOrden.txtmotorFiltroAire;
     var tipoAceite1 =datosOrden.cajaTipoAceite;
     var marca1 =datosOrden.cajaMarca;
     var uCambio =datosOrden.cajaUltimoCambio;
@@ -2821,8 +2905,8 @@ $('#tabla_orden').on('click','.enviarCorreo',function(){
     var idOrdenServicio =datosOrden.idOrdenServicio;
     var idServicio =datosOrden.idServicio;
 
-    var fCombustible2 =datosOrden.motorfiltroCombustible2;
-    var fCombustible3 =datosOrden.motorfiltroCombustible3;
+    var fCombustible2 =datosOrden.txtmotorfiltroCombustible2;
+    var fCombustible3 =datosOrden.txtmotorfiltroCombustible3;
 
     Swal.fire({
         title: '¿Seguro desea enviar un email?',

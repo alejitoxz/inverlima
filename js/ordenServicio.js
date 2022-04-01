@@ -626,7 +626,6 @@ function listar_orden(){
                 "targets": [ 152],
                 "visible": false
             }
-            
         ],
         "columns": [
             { "data": "txtmotorFiltroAire" },

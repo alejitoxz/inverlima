@@ -198,6 +198,67 @@ session_start();
            
         }
 
+        function listar_grafico_orden(){
+            $conn = $this->conexion->conectar();
+          
+            $sql  = " SELECT COUNT
+                            ( * ) AS cantidad,
+                            --YEAR ( s.fecha_creacion ) YEAR,
+                            MONTH ( s.fecha_creacion ) MONTH 
+                        FROM
+                            ordenServicio AS s 
+                           where s.estatus = 1
+
+                        GROUP BY
+                            --YEAR ( s.fecha_creacion ),
+                            MONTH ( s.fecha_creacion )
+            ";
+            $resp = sqlsrv_query($conn, $sql);
+            if( $resp === false) {
+                return 0;
+            }
+            $i = 0;
+            $data = [];
+            while($row = sqlsrv_fetch_array( $resp, SQLSRV_FETCH_ASSOC))
+            {
+                $orden[$i] = $row;
+                $i++;
+            }
+               
+            $arrayData      = [];
+            $arrayDatax     = [];
+            for($j=1; $j<=12; $j++){
+                $mes    = $j;
+                $cant   = 0;
+                if($j<=9) {
+                    $mes = '0'.$j;   
+                }             
+                for($x=0; $x<count($orden);$x++){              
+                    if($mes==$orden[$x]["MONTH"] ){
+                        $cant = $orden[$x]["cantidad"];
+                    }
+                }
+                    
+                array_push($arrayDatax,$cant);
+                    
+                if($j==12){          
+                    array_push($data,$arrayDatax); 
+                }            
+            }
+           
+
+            
+                  
+            if($data>0){
+                return $data;
+            }else{
+                return 0;
+            }
+            
+            $this->conexion->conectar();
+           
+        }
+
         function enviarVencimiento($Propietario,$Placa,$Vencimiento,$Fecha,$Email){
             
             //echo $Email;

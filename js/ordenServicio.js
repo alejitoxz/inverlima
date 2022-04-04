@@ -2,7 +2,7 @@ var table;
 function listar_orden(){
     
     table = $('#tabla_orden').DataTable( {
-        "ordering":false,
+        "ordering":true,
         "paging": true,
         "tabIndex": 0,
         "searching": { "regex": true },

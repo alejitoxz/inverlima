@@ -1351,14 +1351,14 @@ session_start();
             else{
                 $opmarca1r = "No se realizaron cambios";
             }
-            $tipoMarca1r ='';
+            
             if($tipoMarca1 == 1){
-                    $tipoMarca1r = "Traccion";
+                $tipoMarca1r = "Traccion";
             }
             if($tipoMarca1 == 2){
                 $tipoMarca1r = "Direccional";
             }
-            else{
+            if($tipoMarca1 == 0){
                 $tipoMarca1r = "No se realizaron cambios";
             }
 
@@ -1369,7 +1369,7 @@ session_start();
             if($estado1 == 2){
                 $estado1r = "Reencauchada";
             }
-            else{
+            if($estado1 == 0){
                 $estado1r = "No se realizaron cambios";
             }
             $llantaSerial2r ='';
@@ -1400,7 +1400,7 @@ session_start();
             if($tipoMarca2 == 2){
                 $tipoMarca2r = "Direccional";
             }
-            else{
+            if($tipoMarca2 == 0){
                 $tipoMarca2r = "No se realizaron cambios";
             }
 
@@ -1411,7 +1411,7 @@ session_start();
             if($estado2 == 2){
                 $estado2r = "Reencauchada";
             }
-            else{
+            if($estado2 == 0){
                 $estado2r = "No se realizaron cambios";
             }
 
@@ -1443,7 +1443,7 @@ session_start();
             if($tipoMarca3 == 2){
                 $tipoMarca3r = "Direccional";
             }
-            else{
+            if($tipoMarca3 == 0){
                 $tipoMarca3r = "No se realizaron cambios";
             }
 
@@ -1454,7 +1454,7 @@ session_start();
             if($estado3 == 2){
                 $estado3r = "Reencauchada";
             }
-            else{
+            if($estado3 == 0){
                 $estado3r = "No se realizaron cambios";
             }
 
@@ -1486,7 +1486,7 @@ session_start();
             if($tipoMarca4 == 2){
                 $tipoMarca4r = "Direccional";
             }
-            else{
+            if($tipoMarca4 == 0){
                 $tipoMarca4r = "No se realizaron cambios";
             }
 
@@ -1497,7 +1497,7 @@ session_start();
             if($estado4 == 2){
                 $estado4r = "Reencauchada";
             }
-            else{
+            if($estado4 == 0){
                 $estado4r = "No se realizaron cambios";
             }
 
@@ -1529,7 +1529,7 @@ session_start();
             if($tipoMarca5 == 2){
                 $tipoMarca5r = "Direccional";
             }
-            else{
+            if($tipoMarca5 == 0){
                 $tipoMarca5r = "No se realizaron cambios";
             }
 
@@ -1540,7 +1540,7 @@ session_start();
             if($estado5 == 2){
                 $estado5r = "Reencauchada";
             }
-            else{
+            if($estado5 == 0){
                 $estado5r = "No se realizaron cambios";
             }
 
@@ -1572,7 +1572,7 @@ session_start();
             if($tipoMarca6 == 2){
                 $tipoMarca6r = "Direccional";
             }
-            else{
+            if($tipoMarca6 == 0){
                 $tipoMarca6r = "No se realizaron cambios";
             }
 
@@ -1583,13 +1583,13 @@ session_start();
             if($estado6 == 2){
                 $estado6r = "Reencauchada";
             }
-            else{
+            if($estado6 == 0){
                 $estado6r = "No se realizaron cambios";
             }
             
 
             $tipoAceiter ='';
-            if($tipoAceite != 0){
+            if($tipoAceite != null){
                     $tipoAceiter = $tipoAceite;
             }
             else{

@@ -99,8 +99,8 @@ function graficaOrdenes(){
         datasets: [
             {
             label               : 'Ordenes registradas',
-            backgroundColor     : 'rgba(0,83,149,0.8)',
-            borderColor         : 'rgba(0,83,149)',
+            backgroundColor     : 'rgba(17,61,40,0.8)',
+            borderColor         : 'rgba(17,61,40)',
             pointRadius          : false,
             pointColor          : '#3b8bba',
             pointStrokeColor    : 'rgba(60,141,188,1)',
@@ -133,7 +133,7 @@ function graficaOrdenes(){
 
     // This will get the first returned node in the jQuery collection.
     new Chart(areaChartCanvas, {
-      type: 'line',
+      type: 'bar',
       data: areaChartData,
       options: areaChartOptions
     })

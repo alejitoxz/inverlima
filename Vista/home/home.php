@@ -72,7 +72,7 @@ if ($Rol == 1 || $Rol == 4) {
 <div class="col-md-12">
   <div class="card card-primary">
       <div class="card-header">
-        <h3 class="card-title">Area Chart</h3>
+        <h3 class="card-title">Numero de Ordenes mensuales</h3>
 
         <div class="card-tools">
           <button type="button" class="btn btn-tool" data-card-widget="collapse">

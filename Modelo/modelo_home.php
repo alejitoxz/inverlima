@@ -259,9 +259,178 @@ session_start();
            
         }
 
+        function listar_grafico_tecnico(){
+            $conn = $this->conexion->conectar();
+          
+            $sql  = "SELECT COUNT ( os.idTecnico ) AS cantidad,
+                     (p.nombre + ' ' + p.apellido) as tecnico
+                     FROM ordenServicio AS os
+                     INNER JOIN tecnico as t ON (t.id = os.idTecnico)
+                     INNER JOIN persona AS p ON ( p.id = t.idPersona )
+                     WHERE os.estatus = 1 
+                     GROUP BY os.idTecnico, p.nombre, p.apellido
+            ";
+            $resp = sqlsrv_query($conn, $sql);
+            if( $resp === false) {
+                return 0;
+            }
+            $i = 0;
+            $data = [];
+            while($row = sqlsrv_fetch_array( $resp, SQLSRV_FETCH_ASSOC))
+            {
+                $orden[$i] = $row;
+                $i++;
+            }
+               
+            $arrayData      = [];
+            $arrayDatax     = [];
+            for($j=1; $j<=12; $j++){
+                $mes    = $j;
+                $cant   = 0;
+                if($j<=9) {
+                    $mes = '0'.$j;   
+                }             
+                for($x=0; $x<count($orden);$x++){              
+                    if($mes==$orden[$x]["MONTH"] ){
+                        $cant = $orden[$x]["cantidad"];
+                    }
+                }
+                    
+                array_push($arrayDatax,$cant);
+                    
+                if($j==12){          
+                    array_push($data,$arrayDatax); 
+                }            
+            } 
+            if($data>0){
+                return $data;
+            }else{
+                return 0;
+            }
+            
+            $this->conexion->conectar();
+           
+        }
+
+        function listar_grafico_llanta(){
+            $conn = $this->conexion->conectar();
+          
+            $sql  = "SELECT COUNT
+                        ( * ) AS cantidad,
+                        m.descripcion	as detalle 
+                    FROM
+                        ordenServicio AS os
+                        INNER JOIN servicio AS s ON ( s.id = os.idServicio )
+                        INNER JOIN miscelaneos_detalle AS m ON ( m.id = s.llanta1Marca ) 
+                    WHERE
+                        os.estatus = 1 
+                    GROUP BY
+                        m.descripcion
+            ";
+            $resp = sqlsrv_query($conn, $sql);
+            if( $resp === false) {
+                return 0;
+            }
+            $i = 0;
+            $data = [];
+            while($row = sqlsrv_fetch_array( $resp, SQLSRV_FETCH_ASSOC))
+            {
+                $orden[$i] = $row;
+                $i++;
+            }
+               
+            $arrayData      = [];
+            $arrayDatax     = [];
+            for($j=1; $j<=12; $j++){
+                $mes    = $j;
+                $cant   = 0;
+                if($j<=9) {
+                    $mes = '0'.$j;   
+                }             
+                for($x=0; $x<count($orden);$x++){              
+                    if($mes==$orden[$x]["MONTH"] ){
+                        $cant = $orden[$x]["cantidad"];
+                    }
+                }
+                    
+                array_push($arrayDatax,$cant);
+                    
+                if($j==12){          
+                    array_push($data,$arrayDatax); 
+                }            
+            } 
+            if($data>0){
+                return $data;
+            }else{
+                return 0;
+            }
+            
+            $this->conexion->conectar();
+           
+        }
+
+        function listar_grafico_bateria(){
+            $conn = $this->conexion->conectar();
+          
+            $sql  = "SELECT COUNT
+                        ( * ) AS cantidad,
+                        m.descripcion	as detalle 
+                    FROM
+                        ordenServicio AS os
+                        INNER JOIN servicio AS s ON (s.id = os.idServicio)
+                        INNER JOIN miscelaneos_detalle AS m ON (m.id = s.bateria) 
+                    WHERE
+                        os.estatus = 1 
+                    GROUP BY
+                        m.descripcion
+            ";
+            $resp = sqlsrv_query($conn, $sql);
+            if( $resp === false) {
+                return 0;
+            }
+            $i = 0;
+            $data = [];
+            while($row = sqlsrv_fetch_array( $resp, SQLSRV_FETCH_ASSOC))
+            {
+                $orden[$i] = $row;
+                $i++;
+            }
+               
+            $arrayData      = [];
+            $arrayDatax     = [];
+            for($j=1; $j<=12; $j++){
+                $mes    = $j;
+                $cant   = 0;
+                if($j<=9) {
+                    $mes = '0'.$j;   
+                }             
+                for($x=0; $x<count($orden);$x++){              
+                    if($mes==$orden[$x]["MONTH"] ){
+                        $cant = $orden[$x]["cantidad"];
+                    }
+                }
+                    
+                array_push($arrayDatax,$cant);
+                    
+                if($j==12){          
+                    array_push($data,$arrayDatax); 
+                }            
+            } 
+            if($data>0){
+                return $data;
+            }else{
+                return 0;
+            }
+            
+            $this->conexion->conectar();
+           
+        }
+        
+
         function enviarVencimiento($Propietario,$Placa,$Vencimiento,$Fecha,$Email){
             
             //echo $Email;
+
             try {
             $cuerpoMail = utf8_decode("
             <b><h4><center>Inverlima</center></h4><b>
@@ -291,7 +460,7 @@ session_start();
             }catch( Exception  $e ) {
             echo 0 ;
             }
-
+        
         }
 
         function VencimientoPDF($datos){
@@ -353,5 +522,44 @@ session_start();
             $pdf->Output();
             $this->conexion->conectar();
         } 
+
+        function enviarVencimientoA($Propietario,$Placa,$Vencimiento,$Fecha,$Email,$datosVen){
+            
+            //echo $Email;
+            foreach ($datosVen as $datos) {
+                # code...
+            
+            try {
+            $cuerpoMail = utf8_decode("
+            <b><h4><center>Inverlima</center></h4><b>
+            <center><img width='450' height='150' src='https://www.visualsaturbano.com/inverlima/Vista/imagenes/logo_administracion.png'></center>
+            <b><h4><center>Hola $Propietario, Inverlima te informa:</center></h4><b>
+            <b><h4><center>Le indicamos que su vehículo de placa $Placa, esta próximo a su vencimiento :</center></h4><b>
+            <b><h4><center>$Vencimiento  $Fecha</center></h4><b>
+            <h4><center>Por favor, debe estar al día</center></h4>
+            
+                ");	 
+            $this->mail->IsSMTP();
+            $this->mail->SMTPAuth = true;
+            $this->mail->SMTPSecure = "ssl";
+            $this->mail->Host = "smtp.gmail.com";
+            $this->mail->Port = 465;
+            $this->mail->Username = "pruebahost19@gmail.com";
+            $this->mail->Password = "123456789-a";									
+            $this->mail->setFrom( 'pruebahost19@gmail.com'  );
+            $this->mail->addAddress ( $Email );									
+            $this->mail->Subject='INVERLIMA';
+            $this->mail->From ="pruebahost19@gmail.com";
+            $this->mail->FromName = "INVERLIMA"; 
+            $this->mail->MsgHTML($cuerpoMail);
+            $this->mail->IsHTML(true);
+            $this->mail->Send();
+            echo 1 ;
+            }catch( Exception  $e ) {
+            echo 0 ;
+            }
+        }
+        }
+
 
 }

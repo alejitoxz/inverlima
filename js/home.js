@@ -84,7 +84,6 @@ function reporte(){
 
 // funcion para charts de ordenbes de servicio por meses
 function graficaOrdenes(){
-    console.log("Hola");
     $.ajax({
         "url": "../Controlador/home/controlador_grafico_orden.php",
         "type": "POST",
@@ -139,4 +138,270 @@ function graficaOrdenes(){
     })
 
     })
+}
+
+// funcion para charts de ordenbes de servicio por meses
+function graficaBateria(){
+  $.ajax({
+      "url": "../Controlador/home/controlador_grafico_orden.php",
+      "type": "POST",
+  }).done(function(resp){
+  
+      var resultado = eval("(" + resp + ")");
+      console.log("Prueba",resultado['cantidad']);
+
+      var areaChartCanvas = $('#areaChart').get(0).getContext('2d')
+      var areaChartData = {
+      labels  : ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'],
+      datasets: [
+          {
+          label               : 'Ordenes registradas',
+          backgroundColor     : 'rgba(17,61,40,0.8)',
+          borderColor         : 'rgba(17,61,40)',
+          pointRadius          : false,
+          pointColor          : '#3b8bba',
+          pointStrokeColor    : 'rgba(60,141,188,1)',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(60,141,188,1)',
+          data                : resultado[0]
+          }
+      ]
+      }
+
+  var areaChartOptions = {
+    maintainAspectRatio : false,
+    responsive : true,
+    legend: {
+      display: false
+    },
+    scales: {
+      xAxes: [{
+        gridLines : {
+          display : false,
+        }
+      }],
+      yAxes: [{
+        gridLines : {
+          display : false,
+        }
+      }]
+    }
+  }
+
+  // This will get the first returned node in the jQuery collection.
+  new Chart(areaChartCanvas, {
+    type: 'bar',
+    data: areaChartData,
+    options: areaChartOptions
+  })
+
+  })
+}
+
+// funcion para charts de ordenbes de servicio por meses
+function graficaAceite(){
+  $.ajax({
+      "url": "../Controlador/home/controlador_grafico_orden.php",
+      "type": "POST",
+  }).done(function(resp){
+  
+      var resultado = eval("(" + resp + ")");
+      console.log("Prueba",resultado['cantidad']);
+
+      var areaChartCanvas = $('#areaChart').get(0).getContext('2d')
+      var areaChartData = {
+      labels  : ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'],
+      datasets: [
+          {
+          label               : 'Ordenes registradas',
+          backgroundColor     : 'rgba(17,61,40,0.8)',
+          borderColor         : 'rgba(17,61,40)',
+          pointRadius          : false,
+          pointColor          : '#3b8bba',
+          pointStrokeColor    : 'rgba(60,141,188,1)',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(60,141,188,1)',
+          data                : resultado[0]
+          }
+      ]
+      }
+
+  var areaChartOptions = {
+    maintainAspectRatio : false,
+    responsive : true,
+    legend: {
+      display: false
+    },
+    scales: {
+      xAxes: [{
+        gridLines : {
+          display : false,
+        }
+      }],
+      yAxes: [{
+        gridLines : {
+          display : false,
+        }
+      }]
+    }
+  }
+
+  // This will get the first returned node in the jQuery collection.
+  new Chart(areaChartCanvas, {
+    type: 'bar',
+    data: areaChartData,
+    options: areaChartOptions
+  })
+
+  })
+}
+
+// funcion para charts de ordenbes de servicio por meses
+function graficaLlanta(){
+  $.ajax({
+      "url": "../Controlador/home/controlador_grafico_llanta.php",
+      "type": "POST",
+  }).done(function(resp){
+  
+      var resultado = eval("(" + resp + ")");
+      console.log("Prueba",resultado['cantidad']);
+
+      var areaChartCanvas = $('#areaChartLlanta').get(0).getContext('2d')
+      var areaChartData = {
+      labels  : ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'],
+      datasets: [
+          {
+          label               : 'Ordenes registradas',
+          backgroundColor     : 'rgba(17,61,40,0.8)',
+          borderColor         : 'rgba(17,61,40)',
+          pointRadius          : false,
+          pointColor          : '#3b8bba',
+          pointStrokeColor    : 'rgba(60,141,188,1)',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(60,141,188,1)',
+          data                : resultado[0]
+          }
+      ]
+      }
+
+  var areaChartOptions = {
+    maintainAspectRatio : false,
+    responsive : true,
+    legend: {
+      display: false
+    },
+    scales: {
+      xAxes: [{
+        gridLines : {
+          display : false,
+        }
+      }],
+      yAxes: [{
+        gridLines : {
+          display : false,
+        }
+      }]
+    }
+  }
+
+  // This will get the first returned node in the jQuery collection.
+  new Chart(areaChartCanvas, {
+    type: 'bar',
+    data: areaChartData,
+    options: areaChartOptions
+  })
+
+  })
+}
+
+// funcion para charts de ordenbes de servicio por meses
+function graficaTecnico(){
+  $.ajax({
+      "url": "../Controlador/home/controlador_grafico_tecnico.php",
+      "type": "POST",
+  }).done(function(resp){
+  
+      var resultado = eval("(" + resp + ")");
+      console.log("Prueba",resultado['cantidad']);
+
+      var areaChartCanvas = $('#areaChartTecnico').get(0).getContext('2d')
+      var areaChartData = {
+      labels  : ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'],
+      datasets: [
+          {
+          label               : 'Ordenes registradas',
+          backgroundColor     : 'rgba(17,61,40,0.8)',
+          borderColor         : 'rgba(17,61,40)',
+          pointRadius          : false,
+          pointColor          : '#3b8bba',
+          pointStrokeColor    : 'rgba(60,141,188,1)',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(60,141,188,1)',
+          data                : resultado[0]
+          }
+      ]
+      }
+
+  var areaChartOptions = {
+    maintainAspectRatio : false,
+    responsive : true,
+    legend: {
+      display: false
+    },
+    scales: {
+      xAxes: [{
+        gridLines : {
+          display : false,
+        }
+      }],
+      yAxes: [{
+        gridLines : {
+          display : false,
+        }
+      }]
+    }
+  }
+
+  // This will get the first returned node in the jQuery collection.
+  new Chart(areaChartCanvas, {
+    type: 'bar',
+    data: areaChartData,
+    options: areaChartOptions
+  })
+
+  })
+}
+
+
+function enviarCorreoA(){
+
+
+    $.ajax({
+      "url": "../Controlador/home/controlador_home_enviar_vencimientoA.php",
+      "type": "POST"
+    })
+}
+/*
+window.onload = function EnviarCorreoA(){
+  setTimeout('FuncionProgramada', horaEnvio());
+}
+function horaEnvio(){
+  horaActual = new Date();
+  horaProgramada = new Date();
+  horaProgramada.setHours(9);
+  horaProgramada.setMinutes(22);
+  horaProgramada.setSeconds(0);
+  return horaProgramada.getTime() - horaActual.getTime();
+
+}
+
+function FuncionProgramada(){
+  alert('este es el ejemplo 2')
+}*/
+window.onload = function EnviarCorreoAs(){
+  setInterval('FuncionProgramada',100);
+}
+
+function enviarAlerta(){
+  alert('chinga')
 }

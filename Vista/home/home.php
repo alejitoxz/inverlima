@@ -92,6 +92,84 @@ if ($Rol == 1 || $Rol == 4) {
   </div>
 </div>
 
+<div class="row">
+<div class="col-md-6">
+  <div class="card card-primary">
+      <div class="card-header">
+        <h3 class="card-title">Numero de ordenes por tecnico</h3>
+      </div>
+      <div class="card-body">
+        <div class="chart">
+          <div class="chartjs-size-monitor">
+            <div class="chartjs-size-monitor-expand">
+              <div class=""></div>
+            </div>
+            <div class="chartjs-size-monitor-shrink">
+              <div class=""></div>
+            </div>
+          </div>
+          <canvas id="areaChartTecnico" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%; display: block; width: 487px;" width="487" height="250" class="chartjs-render-monitor">
+        </canvas>
+        </div>
+      </div>
+      <!-- /.card-body -->
+  </div>
+</div>
+<div class="col-md-6">
+  <div class="card card-primary">
+      <div class="card-header">
+        <h3 class="card-title">Baterias por orden </h3>
+      </div>
+      <div class="card-body">
+        <div class="chart"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+          <canvas id="areaChartBateria" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%; display: block; width: 487px;" width="487" height="250" class="chartjs-render-monitor"></canvas>
+        </div>
+      </div>
+      <!-- /.card-body -->
+  </div>
+</div>
+</div>
+
+
+<div class="row">
+<div class="col-md-6">
+  <div class="card card-primary">
+      <div class="card-header">
+        <h3 class="card-title">Llantas por orden</h3>
+      </div>
+      <div class="card-body">
+        <div class="chart">
+          <div class="chartjs-size-monitor">
+            <div class="chartjs-size-monitor-expand">
+              <div class=""></div>
+            </div>
+            <div class="chartjs-size-monitor-shrink">
+              <div class=""></div>
+            </div>
+          </div>
+          <canvas id="areaChartLlanta" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%; display: block; width: 487px;" width="487" height="250" class="chartjs-render-monitor">
+        </canvas>
+        </div>
+      </div>
+      <!-- /.card-body -->
+  </div>
+</div>
+<div class="col-md-6">
+  <div class="card card-primary">
+      <div class="card-header">
+        <h3 class="card-title">Aceites por orden</h3>
+      </div>
+      <div class="card-body">
+        <div class="chart"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+          <canvas id="areaChartAceite" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%; display: block; width: 487px;" width="487" height="250" class="chartjs-render-monitor"></canvas>
+        </div>
+      </div>
+      <!-- /.card-body -->
+  </div>
+</div>
+</div>
+
+
 <div class="col-md-12">
     <div class="card card-primary">
         <div class="card-header">
@@ -103,7 +181,7 @@ if ($Rol == 1 || $Rol == 4) {
             <div class="form-group">
                 <div class="col-lg-10">
                     <div class="col-lg-2">
-                    <!--<button type="button" class="btn btn-primary"  onclick="reporte()" ><i class='fa fa-file-pdf'></i>Exportar</button>-->
+                    <button type="button" class="btn btn-primary"  onclick="enviarCorreoA()" ><i class='fa fa-file-pdf'></i>Exportar</button>
                     </div> 
                 </div>
             </div>
@@ -128,6 +206,8 @@ if ($Rol == 1 || $Rol == 4) {
     </div>
 </div>
 
+
+
 <script src="../js/home.js"></script>
 <script>
   $(document).ready(function(){
@@ -143,6 +223,11 @@ if ($Rol == 1 || $Rol == 4) {
     contarVehiculo();
     contarPropietario();
     graficaOrdenes();
+    graficaBateria();
+    graficaAceite();
+    graficaLlanta();
+    graficaTecnico();
+    enviarCorreoA();
     //contarConductor();
 </script>
 <script src="../Vista/plugins/chart.js/Chart.min.js"></script>

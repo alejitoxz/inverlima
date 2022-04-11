@@ -523,42 +523,49 @@ session_start();
             $this->conexion->conectar();
         } 
 
-        function enviarVencimientoA($Propietario,$Placa,$Vencimiento,$Fecha,$Email,$datosVen){
-            
-            //echo $Email;
-            foreach ($datosVen as $datos) {
-                # code...
-            
-            try {
-            $cuerpoMail = utf8_decode("
-            <b><h4><center>Inverlima</center></h4><b>
-            <center><img width='450' height='150' src='https://www.visualsaturbano.com/inverlima/Vista/imagenes/logo_administracion.png'></center>
-            <b><h4><center>Hola $Propietario, Inverlima te informa:</center></h4><b>
-            <b><h4><center>Le indicamos que su vehículo de placa $Placa, esta próximo a su vencimiento :</center></h4><b>
-            <b><h4><center>$Vencimiento  $Fecha</center></h4><b>
-            <h4><center>Por favor, debe estar al día</center></h4>
-            
-                ");	 
-            $this->mail->IsSMTP();
-            $this->mail->SMTPAuth = true;
-            $this->mail->SMTPSecure = "ssl";
-            $this->mail->Host = "smtp.gmail.com";
-            $this->mail->Port = 465;
-            $this->mail->Username = "pruebahost19@gmail.com";
-            $this->mail->Password = "123456789-a";									
-            $this->mail->setFrom( 'pruebahost19@gmail.com'  );
-            $this->mail->addAddress ( $Email );									
-            $this->mail->Subject='INVERLIMA';
-            $this->mail->From ="pruebahost19@gmail.com";
-            $this->mail->FromName = "INVERLIMA"; 
-            $this->mail->MsgHTML($cuerpoMail);
-            $this->mail->IsHTML(true);
-            $this->mail->Send();
-            echo 1 ;
-            }catch( Exception  $e ) {
-            echo 0 ;
+        function enviarVencimientoA($datos){
+
+            for ($i=0; $i < count($datos['data']); $i++) { 
+                
+                var_dump($datos['data'][$i]["propietario"]);
+                $Propietario = $datos['data'][$i]["propietario"];
+                $telefono = $datos['data'][$i]["telefono"];
+                $email = $datos['data'][$i]["email"];
+                $Placa = $datos['data'][$i]["placa"];
+                $Fecha = $datos['data'][$i]["Fecha"];
+                $Vencimiento = $datos['data'][$i]["Vencimiento"];
+                $FechaActual = $datos['data'][$i]["FechaActual"];
+                
+                try {
+                $cuerpoMail = utf8_decode("
+                <b><h4><center>Inverlima</center></h4><b>
+                <center><img width='450' height='150' src='https://www.visualsaturbano.com/inverlima/Vista/imagenes/logo_administracion.png'></center>
+                <b><h4><center>Hola $Propietario, Inverlima te informa:</center></h4><b>
+                <b><h4><center>Le indicamos que su vehículo de placa $Placa, esta próximo a su vencimiento :</center></h4><b>
+                <b><h4><center>$Vencimiento  $Fecha</center></h4><b>
+                <h4><center>Por favor, debe estar al día</center></h4>
+                
+                    ");	 
+                $this->mail->IsSMTP();
+                $this->mail->SMTPAuth = true;
+                $this->mail->SMTPSecure = "ssl";
+                $this->mail->Host = "smtp.gmail.com";
+                $this->mail->Port = 465;
+                $this->mail->Username = "pruebahost19@gmail.com";
+                $this->mail->Password = "123456789-a";									
+                $this->mail->setFrom( 'pruebahost19@gmail.com'  );
+                $this->mail->addAddress ('tony@visualsat.com' );									
+                $this->mail->Subject='INVERLIMA';
+                $this->mail->From ="pruebahost19@gmail.com";
+                $this->mail->FromName = "INVERLIMA"; 
+                $this->mail->MsgHTML($cuerpoMail);
+                $this->mail->IsHTML(true);
+                $this->mail->Send();
+                    echo 1 ;
+                }catch( Exception  $e ) {
+                    echo 0 ;
+                }
             }
-        }
         }
 
 

@@ -6,8 +6,7 @@
 
 
     $datosVen = $MU->listar_home();
-    
-    $consulta = $MU->enviarVencimientoA($datosVen['propietario'],$datosVen['placa'],$datosVen['vencimiento'],$datosVen['fecha'],$datosVen['email']); 
+    $consulta = $MU->enviarVencimientoA($datosVen); 
     
     if($consulta){
         return 1;

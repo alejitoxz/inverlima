@@ -554,7 +554,7 @@ session_start();
                 $this->mail->Username = "pruebahost19@gmail.com";
                 $this->mail->Password = "123456789-a";									
                 $this->mail->setFrom( 'pruebahost19@gmail.com'  );
-                $this->mail->addAddress ('tony@visualsat.com' );									
+                $this->mail->addAddress ('dacaycedo2@misena.edu.co' );									
                 $this->mail->Subject='INVERLIMA';
                 $this->mail->From ="pruebahost19@gmail.com";
                 $this->mail->FromName = "INVERLIMA"; 

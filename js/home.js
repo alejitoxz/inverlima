@@ -372,7 +372,7 @@ function graficaTecnico(){
   })
 }
 
-
+//setInterval(enviarCorreoA(),3600000)
 function enviarCorreoA(){
 
 
@@ -381,27 +381,6 @@ function enviarCorreoA(){
       "type": "POST"
     })
 }
-/*
-window.onload = function EnviarCorreoA(){
-  setTimeout('FuncionProgramada', horaEnvio());
-}
-function horaEnvio(){
-  horaActual = new Date();
-  horaProgramada = new Date();
-  horaProgramada.setHours(9);
-  horaProgramada.setMinutes(22);
-  horaProgramada.setSeconds(0);
-  return horaProgramada.getTime() - horaActual.getTime();
 
-}
 
-function FuncionProgramada(){
-  alert('este es el ejemplo 2')
-}*/
-window.onload = function EnviarCorreoAs(){
-  setInterval('FuncionProgramada',100);
-}
 
-function enviarAlerta(){
-  alert('chinga')
-}

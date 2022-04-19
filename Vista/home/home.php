@@ -181,7 +181,7 @@ if ($Rol == 1 || $Rol == 4) {
             <div class="form-group">
                 <div class="col-lg-10">
                     <div class="col-lg-2">
-                    <button type="button" class="btn btn-primary"  onclick="enviarCorreoA()" ><i class='fa fa-file-pdf'></i>Exportar</button>
+                    <button type="button" id="enviarC" class="btn btn-primary"  onclick="enviarCorreoA()" ><i class='fa fa-file-pdf'></i>Exportar</button>
                     </div> 
                 </div>
             </div>

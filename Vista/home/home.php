@@ -35,7 +35,7 @@ if ($Rol == 1 || $Rol == 4) {
                         <div class="icon">
                         <i class="fas fa-taxi"></i>
                         </div>
-                        <a onclick="cargar_contenido('contenido_principal','vehiculo/vista_vehiculo_listar.php')" class="small-box-footer">Vehículos Registrados 
+                        <a onclick="cargar_contenido('contenido_principal','vehiculo/vista_vehiculo_listar.php')" class="small-box-footer">Vehículos registrados 
                             <i class="fas fa-arrow-circle-right"></i>
                         </a>
                     </div>
@@ -51,7 +51,7 @@ if ($Rol == 1 || $Rol == 4) {
                     <div class="icon">
                         <i class="fas fa-user-tie"></i>
                     </div>
-                        <a onclick="cargar_contenido('contenido_principal','propietario/vista_propietario_listar.php')" class="small-box-footer">Propietarios Registrados 
+                        <a onclick="cargar_contenido('contenido_principal','propietario/vista_propietario_listar.php')" class="small-box-footer">Propietarios registrados 
                             <i class="fas fa-arrow-circle-right"></i>
                         </a>
                     </div>
@@ -72,7 +72,7 @@ if ($Rol == 1 || $Rol == 4) {
 <div class="col-md-12">
   <div class="card card-primary">
       <div class="card-header">
-        <h3 class="card-title">Numero de Ordenes mensuales</h3>
+        <h3 class="card-title">Numero de ordenes mensuales</h3>
 
         <div class="card-tools">
           <button type="button" class="btn btn-tool" data-card-widget="collapse">
@@ -173,7 +173,7 @@ if ($Rol == 1 || $Rol == 4) {
 <div class="col-md-12">
     <div class="card card-primary">
         <div class="card-header">
-        <h1 class="card-title"><b>Proximos Vencimientos</b></h1>
+        <h1 class="card-title"><b>Proximos vencimientos</b></h1>
         </div>
         <div class="card-body">
             <!-- /.card-header -->
@@ -227,7 +227,7 @@ if ($Rol == 1 || $Rol == 4) {
     graficaAceite();
     graficaLlanta();
     graficaTecnico();
-    enviarCorreoA();
+ // enviarCorreoA();
     //contarConductor();
 </script>
 <script src="../Vista/plugins/chart.js/Chart.min.js"></script>

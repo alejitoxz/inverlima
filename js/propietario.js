@@ -1,7 +1,7 @@
 var table;
 function listar_propietario(){
     table = $('#tabla_propietario').DataTable( {
-        "ordering":true,
+        "ordering":false,
         "paging": true,
         "searching": { "regex": true },
         "lengthMenu": [ [10, 25, 50, 100, -1], [10, 25, 50, 100, "All"] ],

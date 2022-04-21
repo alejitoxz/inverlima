@@ -1,7 +1,7 @@
 <div class="col-md-12">
     <div class="card card-success">
             <div class="card-header">
-            <h3 class="card-title">Bienvenido al contenido del Vehiculo</h3>
+            <h3 class="card-title">Bienvenido al contenido del vehiculo</h3>
 
             <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="maximize"><i class="fas fa-expand"></i></button>
@@ -25,7 +25,7 @@
                           <th style="display:none"></th>
                           <th>#</th>
                           <th>Placa</th>
-                          <th>N° Interno</th>
+                          <th>N° interno</th>
                           <th>Odometro</th>
                           <th>Marca</th>
                           <th>Modelo</th>
@@ -94,7 +94,7 @@
           </div>
           <div class="col-md-3">
             <div class="form-group">
-              <label for="">Capacidad de Pasajeros</label>
+              <label for="">Capacidad de pasajeros</label>
               <input type="text" class="form-control" id="txt_pasajeros" placeholder="Capacidad de pasajeros"><br>
             </div>
           </div>
@@ -123,19 +123,19 @@
           </div>
           <div class="col-md-3">
             <div class="form-group">
-              <label for="">Revision Tecnico-mecánica</label>
+              <label for="">Revision tecnico-mecánica</label>
               <input type="text" class="form-control" id="txt_tecnomecanica" placeholder="Cert. de emisiones"><br>
             </div>
           </div>
           <div class="col-md-3">
             <div class="form-group">
-              <label for="">Póliza Contractual</label>
+              <label for="">Póliza contractual</label>
               <input type="text" class="form-control" id="txt_poliza_cont" placeholder="N° de poliza"><br>
             </div>
           </div>
           <div class="col-md-3">
             <div class="form-group">
-              <label for="">Póliza Extracontractual</label>
+              <label for="">Póliza extracontractual</label>
               <input type="text" class="form-control" id="txt_poliza_ext" placeholder="N° de poliza"><br>
             </div>
           </div>
@@ -150,19 +150,19 @@
           </div>
           <div class="col-md-3">
             <div class="form-group">
-              <label for="">Vencimiento Tecnico-mecánica</label>
+              <label for="">Vencimiento tecnico-mecánica</label>
               <input type="date" class="form-control" id="venc_tecno" ><br>
             </div>
           </div>
           <div class="col-md-3">
             <div class="form-group">
-              <label for="">Vencimiento Póliza Cont.</label>
+              <label for="">Vencimiento póliza cont.</label>
               <input type="date" class="form-control" id="venc_poliza_cont" ><br>
             </div>
           </div>
           <div class="col-md-3">
             <div class="form-group">
-              <label for="">Vencimiento Póliza Extra.</label>
+              <label for="">Vencimiento póliza extra.</label>
               <input type="date" class="form-control" id="venc_poliza_ext" ><br>
             </div>
           </div>
@@ -229,7 +229,7 @@
           </div>
           <div class="col-md-3">
             <div class="form-group">
-              <label for="">Num Pasajeros</label>
+              <label for="">Num pasajeros</label>
               <input type="text" class="form-control" id="txt_pasajeros_edit" ><br>
             </div>
           </div>
@@ -258,19 +258,19 @@
           </div>
           <div class="col-md-3">
             <div class="form-group">
-              <label for="">Tecno Mec.</label>
+              <label for="">Tecno mec.</label>
               <input type="text" class="form-control" id="txt_tecnomecanica_edit" ><br>
             </div>
           </div>
           <div class="col-md-3">
             <div class="form-group">
-              <label for="">Póliza Contractual</label>
+              <label for="">Póliza contractual</label>
               <input type="text" class="form-control" id="txt_poliza_cont_edit" ><br>
             </div>
           </div>
           <div class="col-md-3">
             <div class="form-group">
-              <label for="">Póliza Extracontractual</label>
+              <label for="">Póliza extracontractual</label>
               <input type="text" class="form-control" id="txt_poliza_ext_edit" ><br>
             </div>
           </div>
@@ -279,25 +279,25 @@
         <div class="row">
         <div class="col-md-3">
             <div class="form-group">
-              <label for="">Vencimiento Soat</label>
+              <label for="">Vencimiento SOAT</label>
               <input type="date" class="form-control" id="venc_soat_edit" ><br>
             </div>
           </div>
           <div class="col-md-3">
             <div class="form-group">
-              <label for="">Vencimiento Tecnomecánica</label>
+              <label for="">Vencimiento tecnomecánica</label>
               <input type="date" class="form-control" id="venc_tecno_edit" ><br>
             </div>
           </div>
           <div class="col-md-3">
             <div class="form-group">
-              <label for="">Vencimiento Póliza Cont.</label>
+              <label for="">Vencimiento póliza cont.</label>
               <input type="date" class="form-control" id="venc_poliza_cont_edit" ><br>
             </div>
           </div>
           <div class="col-md-3">
             <div class="form-group">
-              <label for="">Vencimiento Póliza Extra.</label>
+              <label for="">Vencimiento póliza extra.</label>
               <input type="date" class="form-control" id="venc_poliza_ext_edit" ><br>
             </div>
           </div>

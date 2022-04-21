@@ -93,7 +93,7 @@ function buscarPersona(valor){
 var table;
 function listar_usuario(){
     table = $('#tabla_usuario').DataTable( {
-        "ordering":true,
+        "ordering":false,
         "paging": true,
         "searching": { "regex": true },
         "lengthMenu": [ [10, 25, 50, 100, -1], [10, 25, 50, 100, "All"] ],

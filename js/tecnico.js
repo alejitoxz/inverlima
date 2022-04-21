@@ -1,14 +1,14 @@
 var table;
 function listar_tecnico(){
     table = $('#tabla_tecnico').DataTable( {
-        "ordering":true,
+        "ordering":false,
         "paging": true,
         "searching": { "regex": true },
         "lengthMenu": [ [10, 25, 50, 100, -1], [10, 25, 50, 100, "All"] ],
         "pageLength": 10,
         "destroy":true,
         "async": true ,
-        "processing": true,
+        "processing": false,
         "ajax": {
             "url": "../controlador/tecnico/controlador_tecnico_listar.php",
             "type": "POST"

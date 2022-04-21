@@ -1,7 +1,7 @@
 var tabla_vehiculo;
 function listar_vehiculo(){
     tabla_vehiculo = $('#tabla_vehiculos').DataTable( {
-        "ordering":true,
+        "ordering":false,
         "paging": true,
         "searching": { "regex": true },
         "lengthMenu": [ [10, 25, 50, 100, -1], [10, 25, 50, 100, "All"] ],

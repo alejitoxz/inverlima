@@ -45,7 +45,7 @@
     <div class="modal-dialog modal-sm">
       <div class="modal-content">
         <div class="modal-header modal-primary">
-        <h4 class="modal-title"><b>Registro de Miscelaneo detalle</b></h4>
+        <h4 class="modal-title"><b>Registro de miscelaneo detalle</b></h4>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
         <div class="modal-body">
@@ -56,11 +56,11 @@
           <div class="col-md-12">
             <div class="form-group">
               <label for="">Descripcion</label>
-              <input type="text" class="form-control" id="txt_descripcion_detalle" placeholder="Ingrese la Descripcion"><br>
+              <input type="text" class="form-control" id="txt_descripcion_detalle" placeholder="Ingrese la descripcion"><br>
             </div>
             <div class="col-md-12">
             <div class="form-group">
-              <label for="">Categoria Miscelaneo</label>
+              <label for="">Categoria miscelaneo</label>
               <select class="js-example-basic-single"  name="state" id="sel_cat_miscelaneos_detalle" style="width:100%; heigth: 40px;">   
               </select><br><br>
             </div>
@@ -82,7 +82,7 @@
     <div class="modal-dialog modal-sm">
       <div class="modal-content">
         <div class="modal-header modal-primary">
-        <h4 class="modal-title"><b>Editar Miscelaneo</b></h4>
+        <h4 class="modal-title"><b>Editar miscelaneo</b></h4>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
         <div class="modal-body">
@@ -93,13 +93,13 @@
           <div class="col-md-12">
           <input type="hidden" id="id" >
             <div class="form-group">
-              <label for="">Nueva Descripcion</label>
+              <label for="">Nueva descripcion</label>
               <input type="text" class="form-control" id="txt_miscelaneos_detalle_edit" placeholder="Ingrese la descripcion"><br>
             </div>
           </div>
           <div class="col-md-12">
             <div class="form-group">
-              <label for="">Categoria Miscelaneo</label>
+              <label for="">Categoria miscelaneo</label>
               <select class="js-example-basic-single"  name="state" id="sel_cat_miscelaneos_detalle_edit" style="width:100%; heigth: 40px;">   
               </select><br><br>
             </div>

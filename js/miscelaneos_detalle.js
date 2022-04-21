@@ -1,7 +1,7 @@
 var table_miscelaneos_detalle;
 function listar_miscelaneos_detalle(){
     table_miscelaneos_detalle = $('#tabla_miscelaneos_detalle').DataTable( {
-        "ordering":true,
+        "ordering":false,
         "paging": true,
         "searching": { "regex": true },
         "lengthMenu": [ [10, 25, 50, 100, -1], [10, 25, 50, 100, "All"] ],

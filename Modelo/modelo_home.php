@@ -23,7 +23,7 @@ session_start();
             $idUsuario = $_SESSION['S_ID'];
 
           
-            $sql  = "DECLARE @Fecha DATE = DATEADD( DAY, 15, CONVERT ( DATE, GETDATE( ), 1 ) ), @fechaActual DATE = GETDATE( ) SELECT
+            $sql  = "DECLARE @Fecha DATE = DATEADD( DAY, 2, CONVERT ( DATE, GETDATE( ), 1 ) ), @fechaActual DATE = GETDATE( ) SELECT
             * 
             FROM
                 (
@@ -127,26 +127,6 @@ session_start();
                                         LEFT JOIN propietario AS pro ON ( pro.id = v.idPropietario )
                                         LEFT JOIN persona AS prop ON ( pro.idPersona = prop.id )
                                         INNER JOIN servicio AS s ON ( os.idServicio = s.id ) UNION
-                                    SELECT
-                                        ( prop.nombre + ' ' + prop.apellido ) AS propietario,
-                                        prop.cedula,
-                                        prop.telefono,
-                                        prop.email,
-                                        v.placa,
-                                        CONVERT ( VARCHAR, s.proximoCambio ) AS Fecha,
-                                        @Fecha AS FechaActual,
-                                    CASE
-                                            
-                                            WHEN s.proximoCambio BETWEEN @fechaActual 
-                                            AND @Fecha THEN
-                                                'Bateria' 
-                                                END AS Vencimiento 
-                                        FROM
-                                            ordenServicio AS os
-                                            LEFT JOIN vehiculo AS v ON ( os.idVehiculo = v.id )
-                                            LEFT JOIN propietario AS pro ON ( pro.id = v.idPropietario )
-                                            LEFT JOIN persona AS prop ON ( pro.idPersona = prop.id )
-                                            INNER JOIN servicio AS s ON ( os.idServicio = s.id ) UNION
                                         SELECT
                                             ( prop.nombre + ' ' + prop.apellido ) AS propietario,
                                             prop.cedula,

@@ -1,7 +1,7 @@
 <div class="col-md-12">
     <div class="card card-success">
             <div class="card-header">
-            <h3 class="card-title">Bienvenido al contenido del vehiculo</h3>
+            <h3 class="card-title">Bienvenido al contenido del vehículo</h3>
 
             <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="maximize"><i class="fas fa-expand"></i></button>
@@ -26,7 +26,7 @@
                           <th>#</th>
                           <th>Placa</th>
                           <th>N° interno</th>
-                          <th>Odometro</th>
+                          <th>Odómetro</th>
                           <th>Marca</th>
                           <th>Modelo</th>
                           <th>Empresa</th>
@@ -50,7 +50,7 @@
     <div class="modal-dialog modal-xl">
       <div class="modal-content">
         <div class="modal-header modal-primary">
-        <h4 class="modal-title"><b>Registro de vehiculo</b></h4>
+        <h4 class="modal-title"><b>Registro de vehículo</b></h4>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
         <div class="modal-body">
@@ -123,7 +123,7 @@
           </div>
           <div class="col-md-3">
             <div class="form-group">
-              <label for="">Revision tecnico-mecánica</label>
+              <label for="">Revisión técnico-mecánica</label>
               <input type="text" class="form-control" id="txt_tecnomecanica" placeholder="Cert. de emisiones"><br>
             </div>
           </div>
@@ -150,7 +150,7 @@
           </div>
           <div class="col-md-3">
             <div class="form-group">
-              <label for="">Vencimiento tecnico-mecánica</label>
+              <label for="">Vencimiento técnico-mecánica</label>
               <input type="date" class="form-control" id="venc_tecno" ><br>
             </div>
           </div>
@@ -185,7 +185,7 @@
     <div class="modal-dialog modal-xl">
       <div class="modal-content">
         <div class="modal-header modal-primary">
-        <h4 class="modal-title"><b>Edicion de vehiculo</b></h4>
+        <h4 class="modal-title"><b>Edicion de véhiculo</b></h4>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
         <div class="modal-body">

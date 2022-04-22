@@ -29,12 +29,12 @@
                           <th>Nombres</th>
                           <th>Apellidos</th>
                           <th>Cedula</th>
-                          <th>Telefono</th>
+                          <th>Teléfono</th>
                           <th>E-mail</th>
-                          <th>Direccion</th>
+                          <th>Dirección</th>
                           <th>Usuario</th>
                           <th>Rol</th>
-                          <th>Compañia</th>
+                          <th>Compañía</th>
                           <th>Editar</th>
                         </tr>
                     </thead>
@@ -87,8 +87,8 @@
         <div class="row">
           <div class="col-md-4">
             <div class="form-group">
-              <label for="">Telefono</label>
-              <input type="text" class="form-control" id="txt_tel" placeholder="Ingrese el telefono"><br>
+              <label for="">Teléfono</label>
+              <input type="text" class="form-control" id="txt_tel" placeholder="Ingrese el teléfono"><br>
             </div>
           </div>
           <div class="col-md-4">
@@ -99,8 +99,8 @@
           </div>
           <div class="col-md-4">
             <div class="form-group">
-              <label for="">Direccion</label>
-              <input type="text" class="form-control" id="txt_dir" placeholder="Ingrese la direccion"><br>
+              <label for="">Dirección</label>
+              <input type="text" class="form-control" id="txt_dir" placeholder="Ingrese la dirección"><br>
             </div>
           </div>
           </div>
@@ -183,8 +183,8 @@
         <div class="row">
           <div class="col-md-4">
             <div class="form-group">
-              <label for="">Telefono</label>
-              <input type="text" class="form-control" id="txt_tel_edit" placeholder="Ingrese el telefono"><br>
+              <label for="">Teléfono</label>
+              <input type="text" class="form-control" id="txt_tel_edit" placeholder="Ingrese el teléfono"><br>
             </div>
           </div>
           <div class="col-md-4">
@@ -195,8 +195,8 @@
           </div>
           <div class="col-md-4">
             <div class="form-group">
-              <label for="">Direccion</label>
-              <input type="text" class="form-control" id="txt_dir_edit" placeholder="Ingrese la direccion"><br>
+              <label for="">Dirección</label>
+              <input type="text" class="form-control" id="txt_dir_edit" placeholder="Ingrese la dirección"><br>
             </div>
           </div>
           </div>

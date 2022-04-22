@@ -180,9 +180,9 @@
                       <th>Placa</th>
                       <th>N° interno</th>
                       <th>Registradora</th>
-                      <th>Tecnico</th>
-                      <th>Creacion</th>
-                      <th>Observacion</th>
+                      <th>Técnico</th>
+                      <th>Creación</th>
+                      <th>Observación</th>
                       <th>Acciones</th>
                     </tr>
                     </thead>
@@ -319,7 +319,7 @@
                         </div>
                         <div class="col-md-4">
                           <div class="form-group">
-                            <label for="">Tecnico</label>
+                            <label for="">Técnico</label>
                             <select class="js-example-basic-single" id="sel_tecnico" name="state" style="width:100%; heigth: 40px;">   
                             </select><br><br>
                           </div>
@@ -337,14 +337,14 @@
                     <div class="row">
                       <div class="col-md-4">
                           <div class="form-group">
-                            <label for="">Bateria</label>
+                            <label for="">Batería</label>
                             <select class="js-example-basic-single"  name="state" id="sel_bateria" style="width:100%; heigth: 40px;">   
                             </select><br><br>
                           </div>
                       </div>
                       <div class="col-md-4">
                           <div class="form-group">
-                            <label for="">Tipo de bateria</label>
+                            <label for="">Tipo de batería</label>
                             <select class="js-example-basic-single"  name="state" id="sel_tipoBateria" style="width:100%; heigth: 40px;">   
                             </select><br><br>
                           </div>
@@ -386,13 +386,13 @@
                         </div>
                         <div class="col-md-4">
                           <div class="form-group">
-                            <label for="">Proximo cambio</label>
+                            <label for="">Próximo cambio</label>
                             <input type="date" class="form-control" id="txt_pCambio" style="width:100%; heigth: 40px;" value="<?php echo date("Y-m-d");?>"><br>
                           </div>
                         </div>
                         <div class="col-md-4">
                           <div class="form-group">
-                            <label for="">Proximo mantenimiento</label>
+                            <label for="">Próximo mantenimiento</label>
                             <input type="date" class="form-control" id="txt_pMantenimiento" style="width:100%; heigth: 40px;" value="<?php echo date("Y-m-d");?>"><br>
                           </div>
                         </div>
@@ -1143,7 +1143,7 @@
                       </div>
                       <div class="col-md-2">
                           <div class="form-group">
-                            <label for="">Alineacion #2.</label>
+                            <label for="">Alineación #2.</label>
                             <select class="js-example-basic-single"  name="state" id="sel_alineacion2" style="width:100%; heigth: 40px;">   
                               <option value="0" selected>Seleccionar</option>
                               <option value="1">Si</option>
@@ -1188,7 +1188,7 @@
                           </div>
                           <div class="col-md-4">
                             <div class="form-group">
-                              <label for="">Proximo cambio</label>
+                              <label for="">Próximo cambio</label>
                               <input type="date" class="form-control"  id="txt_pCambioA" ><br>
                             </div>
                           </div>
@@ -1319,7 +1319,7 @@
                           </div>
                           <div class="col-md-3">
                             <div class="form-group">
-                              <label for="">Proximo cambio</label>
+                              <label for="">Próximo cambio</label>
                               <input type="date" class="form-control cochenta" id="txt_pCambio1" placeholder="Ingrese proximo cambio"><br>
                             </div>
                           </div>
@@ -1385,7 +1385,7 @@
                           </div>
                           <div class="col-md-3">
                             <div class="form-group">
-                              <label for="">Proximo cambio</label>
+                              <label for="">Póximo cambio</label>
                               <input type="date" class="form-control cochenta" id="txt_pCambio2" placeholder="Ingrese proximo cambio"><br>
                             </div>
                           </div>
@@ -1451,7 +1451,7 @@
                           </div>
                           <div class="col-md-3">
                             <div class="form-group">
-                              <label for="">Proximo cambio</label>
+                              <label for="">Próximo cambio</label>
                               <input type="date" class="form-control" id="txt_pCambio3" value="<?php echo date("Y-m-d");?>" placeholder="Ingrese proximo cambio"><br>
                             </div>
                           </div>
@@ -1491,11 +1491,11 @@
                       </div>
 
                       <div class="callout callout-danger">
-                        <h5 class="text-danger">MEDICION DE LIQUIDOS</h5>
+                        <h5 class="text-danger">MEDICIÓN DE LÍQUIDOS</h5>
                         <div class="row">
                         <div class="col-md-4">
                             <div class="form-group">
-                              <label for="">Liquido de frenos</label>
+                              <label for="">Líquido de frenos</label>
                               <select class="js-example-basic-single"  name="state" id="sel_lFreno" style="width:100%; heigth: 40px;">   
                                 <option value="0">Seleccionar</option>
                                 <option value="1">Si</option>
@@ -1505,7 +1505,7 @@
                           </div>
                           <div class="col-md-4">
                             <div class="form-group">
-                              <label for="">liquido de parabrisas</label>
+                              <label for="">líquido de parabrisas</label>
                               <select class="js-example-basic-single"  name="state" id="sel_lParabrisa" style="width:100%; heigth: 40px;">   
                                 <option value="0">Seleccionar</option>
                                 <option value="1">Si</option>
@@ -1731,7 +1731,7 @@
                       </div>
                       <div class="col-md-4">
                           <div class="form-group">
-                            <label for="">Revision bimestral Cotrautol</label>
+                            <label for="">Revisión bimestral Cotrautol</label>
                             <select class="js-example-basic-single"  name="state" id="txt_editar_revb" style="width:100%; heigth: 40px;">   
                               <option value="0">Seleccionar</option>
                               <option value="1">Si</option>
@@ -1741,7 +1741,7 @@
                         </div>
                         <div class="col-md-4">
                           <div class="form-group">
-                            <label for="">Revision registradora</label>
+                            <label for="">Revisión registradora</label>
                             <select class="js-example-basic-single"  name="state" id="sel_editar_rReg" style="width:100%; heigth: 40px;">   
                               <option value="0">Seleccionar</option>
                               <option value="1">Si</option>
@@ -1778,7 +1778,7 @@
                         </div>
                         <div class="col-md-4">
                           <div class="form-group">
-                            <label for="">Tecnico</label>
+                            <label for="">Técnico</label>
                             <select class="js-example-basic-single" id="sel_editar_tecnico" name="state" style="width:100%; heigth: 40px;">   
                             </select><br><br>
                           </div>
@@ -1796,14 +1796,14 @@
                     <div class="row">
                       <div class="col-md-4">
                           <div class="form-group">
-                            <label for="">Bateria</label>
+                            <label for="">Batería</label>
                             <select class="js-example-basic-single"  name="state" id="sel_editar_bateria" style="width:100%; heigth: 40px;">   
                             </select><br><br>
                           </div>
                       </div>
                       <div class="col-md-4">
                           <div class="form-group">
-                            <label for="">Tipo de bateria</label>
+                            <label for="">Tipo de batería</label>
                             <select class="js-example-basic-single"  name="state" id="sel_editar_tipoBateria" style="width:100%; heigth: 40px;">   
                             </select><br><br>
                           </div>
@@ -1845,13 +1845,13 @@
                         </div>
                         <div class="col-md-4">
                           <div class="form-group">
-                            <label for="">Proximo cambio</label>
+                            <label for="">Próximo cambio</label>
                             <input type="date" class="form-control" id="txt_editar_pCambio" style="width:100%; heigth: 40px;"><br>
                           </div>
                         </div>
                         <div class="col-md-4">
                           <div class="form-group">
-                            <label for="">Proximo mantenimiento</label>
+                            <label for="">Próximo mantenimiento</label>
                             <input type="date" class="form-control" id="txt_editar_pMantenimiento" style="width:100%; heigth: 40px;"><br>
                           </div>
                         </div>
@@ -2638,7 +2638,7 @@
                           </div>
                           <div class="col-md-4">
                             <div class="form-group">
-                              <label for="">Proximo cambio</label>
+                              <label for="">Próximo cambio</label>
                               <input type="date" class="form-control " id="txt_editar_pCambioA" placeholder="Ingrese el proximo cambio"><br>
                             </div>
                           </div>
@@ -2768,7 +2768,7 @@
                           </div>
                           <div class="col-md-3">
                             <div class="form-group">
-                              <label for="">Proximo cambio</label>
+                              <label for="">Próximo cambio</label>
                               <input type="date" class="form-control" id="txt_editar_pCambio1" placeholder="Ingrese proximo cambio"><br>
                             </div>
                           </div>
@@ -2833,7 +2833,7 @@
                           </div>
                           <div class="col-md-3">
                             <div class="form-group">
-                              <label for="">Proximo cambio</label>
+                              <label for="">Próximo cambio</label>
                               <input type="date" class="form-control" id="txt_editar_pCambio2" placeholder="Ingrese proximo cambio"><br>
                             </div>
                           </div>
@@ -2898,7 +2898,7 @@
                           </div>
                           <div class="col-md-3">
                             <div class="form-group">
-                              <label for="">Proximo cambio</label>
+                              <label for="">Próximo cambio</label>
                               <input type="date" class="form-control" id="txt_editar_pCambio3" placeholder="Ingrese proximo cambio"><br>
                             </div>
                           </div>
@@ -2929,18 +2929,18 @@
                           </div>
                           <div class="col-md-3">
                             <div class="form-group">
-                              <label for="">Proximo cambio</label>
+                              <label for="">Próximo cambio</label>
                               <input type="date" class="form-control" id="txt_editar_pCambio4" placeholder="Ingrese proximo cambio"><br>
                             </div>
                           </div>
                         </div>
                         </div>
                     <div class="callout callout-danger">
-                    <h5 class="text-danger">MEDICION DE LIQUIDOS</h5>
+                    <h5 class="text-danger">MEDICION DE LÍQUIDOS</h5>
                         <div class="row">
                         <div class="col-md-4">
                             <div class="form-group">
-                              <label for="">Liquido de frenos</label>
+                              <label for="">Líquido de frenos</label>
                               <select class="js-example-basic-single"  name="state" id="sel_editar_lFreno" style="width:100%; heigth: 40px;">   
                                 <option value="0">Seleccionar</option>
                                 <option value="1">Si</option>
@@ -2950,7 +2950,7 @@
                           </div>
                           <div class="col-md-4">
                             <div class="form-group">
-                              <label for="">Liquido de parabrisas</label>
+                              <label for="">Líquido de parabrisas</label>
                               <select class="js-example-basic-single"  name="state" id="sel_editar_lParabrisa" style="width:100%; heigth: 40px;">   
                                 <option value="0">Seleccionar</option>
                                 <option value="1">Si</option>
@@ -3175,7 +3175,7 @@
                       </div>
                       <div class="col-md-4">
                           <div class="form-group">
-                            <label for="">Revision bimestral Cotrautol</label>
+                            <label for="">Revisión bimestral Cotrautol</label>
                             <select disabled class="js-example-basic-single"  name="state" id="txt_ver_revb" style="width:100%; heigth: 40px;">   
                               <option value="0">Seleccionar</option>
                               <option value="1">Si</option>
@@ -3185,7 +3185,7 @@
                         </div>
                         <div class="col-md-4">
                           <div class="form-group">
-                            <label for="">Revision registradora</label>
+                            <label for="">Revisión registradora</label>
                             <select disabled class="js-example-basic-single"  name="state" id="sel_ver_rReg" style="width:100%; heigth: 40px;">   
                               <option value="0">Seleccionar</option>
                               <option value="1">Si</option>
@@ -3222,7 +3222,7 @@
                         </div>
                         <div class="col-md-4">
                           <div class="form-group">
-                            <label for="">Tecnico</label>
+                            <label for="">Técnico</label>
                             <select disabled class="js-example-basic-single" id="sel_ver_tecnico" name="state" style="width:100%; heigth: 40px;">   
                             </select><br><br>
                           </div>
@@ -3275,7 +3275,7 @@
                         </div>
                         <div class="col-md-4">
                           <div class="form-group">
-                            <label for="">Fecha de instalacion</label>
+                            <label for="">Fecha de instalación</label>
                             <input readonly type="date" class="form-control" id="txt_ver_fInstalacion" style="width:100%; heigth: 40px;" ><br>
                           </div>
                         </div>
@@ -3289,13 +3289,13 @@
                         </div>
                         <div class="col-md-4">
                           <div class="form-group">
-                            <label for="">Proximo cambio</label>
+                            <label for="">Próximo cambio</label>
                             <input readonly type="date" class="form-control" id="txt_ver_pCambio" style="width:100%; heigth: 40px;"><br>
                           </div>
                         </div>
                         <div class="col-md-4">
                           <div class="form-group">
-                            <label for="">Proximo mantenimiento</label>
+                            <label for="">Próximo mantenimiento</label>
                             <input readonly type="date" class="form-control" id="txt_ver_pMantenimiento" style="width:100%; heigth: 40px;"><br>
                           </div>
                         </div>
@@ -4029,7 +4029,7 @@
                     <div class="row">
                       <div class="col-md-2">
                           <div class="form-group">
-                            <label for="">Alineacion #1.</label>
+                            <label for="">Alineación #1.</label>
                             <select disabled class="js-example-basic-single"  name="state" id="sel_ver_alineacion1" style="width:100%; heigth: 40px;">   
                               <option value="0" selected>Seleccionar</option>
                               <option value="1">Si</option>
@@ -4039,7 +4039,7 @@
                       </div>
                       <div class="col-md-2">
                           <div class="form-group">
-                            <label for="">Alineacion #2.</label>
+                            <label for="">Alineación #2.</label>
                             <select disabled class="js-example-basic-single"  name="state" id="sel_ver_alineacion2" style="width:100%; heigth: 40px;">   
                               <option value="0" selected>Seleccionar</option>
                               <option value="1">Si</option>
@@ -4082,7 +4082,7 @@
                           </div>
                           <div class="col-md-4">
                             <div class="form-group">
-                              <label for="">Proximo cambio</label>
+                              <label for="">Próximo cambio</label>
                               <input readonly type="date" class="form-control " id="txt_ver_pCambioA" placeholder="Ingrese el proximo cambio"><br>
                             </div>
                           </div>
@@ -4134,7 +4134,7 @@
                           </div>
                           <div class="col-md-3">
                             <div class="form-group">
-                              <label for="">Nivelacion</label>
+                              <label for="">Nivelación</label>
                               <select disabled class="js-example-basic-single"  name="state" id="sel_ver_nivelacion1" style="width:100%; heigth: 40px;">   
                                 <option value="0">Seleccionar</option>
                                 <option value="1">Si</option>
@@ -4212,7 +4212,7 @@
                           </div>
                           <div class="col-md-3">
                             <div class="form-group">
-                              <label for="">Proximo cambio</label>
+                              <label for="">Próximo cambio</label>
                               <input readonly type="date" class="form-control" id="txt_ver_pCambio1" placeholder="Ingrese proximo cambio"><br>
                             </div>
                           </div>
@@ -4226,7 +4226,7 @@
                             </div>
                             <div class="col-md-3">
                               <div class="form-group">
-                                <label for="">presentacion</label>
+                                <label for="">presentación</label>
                                 <select disabled class="js-example-basic-single"  name="state" id="sel_ver_presentacion2" style="width:100%; heigth: 40px;">   
                                   <option value="0">Seleccionar</option>
                                   <option value="1">Sellado</option>
@@ -4236,7 +4236,7 @@
                             </div>
                             <div class="col-md-3">
                               <div class="form-group">
-                                <label for="">Nivelacion</label>
+                                <label for="">Nivelación</label>
                                 <select disabled class="js-example-basic-single"  name="state" id="sel_ver_nivelacion2" style="width:100%; heigth: 40px;">   
                                   <option value="0">Seleccionar</option>
                                   <option value="1">Si</option>
@@ -4253,7 +4253,7 @@
                           </div>
                           </div>
                         <div class="callout callout-danger">
-                        <h5 class="text-danger">ACEITE DE TRANSMISION</h5>
+                        <h5 class="text-danger">ACEITE DE TRANSMISIÓN</h5>
                         <div class="row">
                         <div class="col-md-3">
                             <div class="form-group">
@@ -4277,7 +4277,7 @@
                           </div>
                           <div class="col-md-3">
                             <div class="form-group">
-                              <label for="">Proximo cambio</label>
+                              <label for="">Próximo cambio</label>
                               <input readonly type="date" class="form-control" id="txt_ver_pCambio2" placeholder="Ingrese proximo cambio"><br>
                             </div>
                           </div>
@@ -4291,7 +4291,7 @@
                             </div>
                             <div class="col-md-3">
                               <div class="form-group">
-                                <label for="">Presentacion</label>
+                                <label for="">Presentación</label>
                                 <select disabled class="js-example-basic-single"  name="state" id="sel_ver_presentacion3" style="width:100%; heigth: 40px;">   
                                   <option value="0">Seleccionar</option>
                                   <option value="1">Sellado</option>
@@ -4301,7 +4301,7 @@
                             </div>
                             <div class="col-md-3">
                               <div class="form-group">
-                                <label for="">Nivelacion</label>
+                                <label for="">Nivelación</label>
                                 <select disabled class="js-example-basic-single"  name="state" id="sel_ver_nivelacion3" style="width:100%; heigth: 40px;">   
                                   <option value="0">Seleccionar</option>
                                   <option value="1">Si</option>
@@ -4342,7 +4342,7 @@
                           </div>
                           <div class="col-md-3">
                             <div class="form-group">
-                              <label for="">Proximo cambio</label>
+                              <label for="">Próximo cambio</label>
                               <input readonly type="date" class="form-control" id="txt_ver_pCambio3" placeholder="Ingrese proximo cambio"><br>
                             </div>
                           </div>
@@ -4373,18 +4373,18 @@
                           </div>
                           <div class="col-md-3">
                             <div class="form-group">
-                              <label for="">Proximo cambio</label>
+                              <label for="">Próximo cambio</label>
                               <input readonly type="date" class="form-control" id="txt_ver_pCambio4" placeholder="Ingrese proximo cambio"><br>
                             </div>
                           </div>
                         </div>
                         </div>
                     <div class="callout callout-danger">
-                    <h5 class="text-danger">MEDICION DE LIQUIDOS</h5>
+                    <h5 class="text-danger">MEDICION DE LÍQUIDOS</h5>
                         <div class="row">
                         <div class="col-md-4">
                             <div class="form-group">
-                              <label for="">Liquido de frenos</label>
+                              <label for="">Líquido de frenos</label>
                               <select disabled class="js-example-basic-single"  name="state" id="sel_ver_lFreno" style="width:100%; heigth: 40px;">   
                                 <option value="0">Seleccionar</option>
                                 <option value="1">Si</option>
@@ -4394,7 +4394,7 @@
                           </div>
                           <div class="col-md-4">
                             <div class="form-group">
-                              <label for="">liquido de parabrisas</label>
+                              <label for="">líquido de parabrisas</label>
                               <select disabled class="js-example-basic-single"  name="state" id="sel_ver_lParabrisa" style="width:100%; heigth: 40px;">   
                                 <option value="0">Seleccionar</option>
                                 <option value="1">Si</option>
@@ -4446,7 +4446,7 @@
                             </div>
                             <div class="col-md-3">
                               <div class="form-group">
-                                <label for="">Transmision</label>
+                                <label for="">Transmisión</label>
                                 <select disabled class="js-example-basic-single"  name="state" id="sel_ver_lTransmision" style="width:100%; heigth: 40px;">   
                                   <option value="0">Seleccionar</option>
                                   <option value="1">Si</option>

@@ -1,7 +1,7 @@
 <div class="col-md-12">
     <div class="card card-success">
             <div class="card-header">
-            <h3 class="card-title">Bienvenido al contenido de los Tecnicos</h3>
+            <h3 class="card-title">Bienvenido al contenido de los Técnicos</h3>
 
             <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="maximize"><i class="fas fa-expand"></i></button>
@@ -27,9 +27,9 @@
                           <th>Nombre</th>
                           <th>Apellido</th>
                           <th>Cedula</th>
-                          <th>Telefono</th>
+                          <th>Teléfono</th>
                           <th>E-mail</th>
-                          <th>Direccion</th>
+                          <th>Direccién</th>
                           <th>Editar</th>
                         </tr>
                     </thead>
@@ -50,7 +50,7 @@
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header modal-primary">
-        <h4 class="modal-title"><b>Registro de Personal Tecnico</b></h4>
+        <h4 class="modal-title"><b>Registro de Personal Técnico</b></h4>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
         <div class="modal-body">
@@ -82,8 +82,8 @@
         <div class="row">
           <div class="col-md-4">
             <div class="form-group">
-              <label for="">Telefono</label>
-              <input type="text" class="form-control" id="txt_telp" placeholder="Ingrese el telefono"><br>
+              <label for="">Teléfono</label>
+              <input type="text" class="form-control" id="txt_telp" placeholder="Ingrese el teléfono"><br>
             </div>
           </div>
           <div class="col-md-4">
@@ -94,8 +94,8 @@
           </div>
           <div class="col-md-4">
             <div class="form-group">
-              <label for="">Direccion</label>
-              <input type="text" class="form-control" id="txt_dirp" placeholder="Ingrese la direccion"><br>
+              <label for="">Dirección</label>
+              <input type="text" class="form-control" id="txt_dirp" placeholder="Ingrese la dirección"><br>
             </div>
           </div>
           </div>
@@ -146,8 +146,8 @@
         <div class="row">
           <div class="col-md-4">
             <div class="form-group">
-              <label for="">Telefono</label>
-              <input type="text" class="form-control" id="txt_telp_edit" placeholder="Ingrese el telefono"><br>
+              <label for="">Teléfono</label>
+              <input type="text" class="form-control" id="txt_telp_edit" placeholder="Ingrese el teléfono"><br>
             </div>
           </div>
           <div class="col-md-4">
@@ -158,8 +158,8 @@
           </div>
           <div class="col-md-4">
             <div class="form-group">
-              <label for="">Direccion</label>
-              <input type="text" class="form-control" id="txt_dirp_edit" placeholder="Ingrese la direccion"><br>
+              <label for="">Dirección</label>
+              <input type="text" class="form-control" id="txt_dirp_edit" placeholder="Ingrese la dirección"><br>
             </div>
           </div>
           </div>

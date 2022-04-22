@@ -19,7 +19,7 @@ if ($Rol == 1 || $Rol == 4) {
                     <div class="icon">
                     <i class="fas fa-list"></i>
                     </div>
-                    <a onclick="cargar_contenido('contenido_principal','ordenServicio/vista_ordenServicio_listar.php')" class="small-box-footer">Usuarios Registrados 
+                    <a onclick="cargar_contenido('contenido_principal','ordenServicio/vista_ordenServicio_listar.php')" class="small-box-footer">Ordenes mensuales registradas 
                         <i class="fas fa-arrow-circle-right"></i>
                     </a>
                 </div>
@@ -35,7 +35,7 @@ if ($Rol == 1 || $Rol == 4) {
                         <div class="icon">
                         <i class="fas fa-taxi"></i>
                         </div>
-                        <a onclick="cargar_contenido('contenido_principal','vehiculo/vista_vehiculo_listar.php')" class="small-box-footer">Vehículos registrados 
+                        <a onclick="cargar_contenido('contenido_principal','vehiculo/vista_vehiculo_listar.php')" class="small-box-footer">Vehículos mensuales registrados 
                             <i class="fas fa-arrow-circle-right"></i>
                         </a>
                     </div>
@@ -51,7 +51,7 @@ if ($Rol == 1 || $Rol == 4) {
                     <div class="icon">
                         <i class="fas fa-user-tie"></i>
                     </div>
-                        <a onclick="cargar_contenido('contenido_principal','propietario/vista_propietario_listar.php')" class="small-box-footer">Propietarios registrados 
+                        <a onclick="cargar_contenido('contenido_principal','propietario/vista_propietario_listar.php')" class="small-box-footer">Propietarios mensuales registrados 
                             <i class="fas fa-arrow-circle-right"></i>
                         </a>
                     </div>
@@ -96,7 +96,7 @@ if ($Rol == 1 || $Rol == 4) {
 <div class="col-md-6">
   <div class="card card-primary">
       <div class="card-header">
-        <h3 class="card-title">Numero de ordenes por tecnico</h3>
+        <h3 class="card-title">Numero de ordenes por técnico</h3>
       </div>
       <div class="card-body">
         <div class="chart">
@@ -118,7 +118,7 @@ if ($Rol == 1 || $Rol == 4) {
 <div class="col-md-6">
   <div class="card card-primary">
       <div class="card-header">
-        <h3 class="card-title">Baterias por orden </h3>
+        <h3 class="card-title">Baterías por orden </h3>
       </div>
       <div class="card-body">
         <div class="chart"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>

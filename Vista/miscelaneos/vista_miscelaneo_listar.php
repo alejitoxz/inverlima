@@ -23,7 +23,7 @@
                     <thead>
                         <tr>
                           <!--<th>#</th>-->
-                          <th>Descripcion</th>
+                          <th>Descripción</th>
                           <th>Editar</th>
                         </tr>
                     </thead>
@@ -54,7 +54,7 @@
         <div class="row">
           <div class="col-md-12">
             <div class="form-group">
-              <label for="">Descripcion</label>
+              <label for="">Descripción</label>
               <input type="text" class="form-control" id="txt_descripcion" placeholder="Ingrese la Descripcion"><br>
             </div>
           </div>
@@ -85,7 +85,7 @@
           <div class="col-md-12">
           <input type="hidden" id="id" >
             <div class="form-group">
-              <label for="">Nueva Descripcion</label>
+              <label for="">Nueva Descripción</label>
               <input type="text" class="form-control" id="txt_miscelaneos_edit" placeholder="Ingrese la descripcion"><br>
             </div>
           </div>

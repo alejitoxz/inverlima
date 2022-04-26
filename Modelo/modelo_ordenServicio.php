@@ -1267,7 +1267,7 @@ session_start();
         $pCambio3,$cantidad3,$presentacion3,$nivelacion3,$cNivelacion3,$tipoAceite4,$marca4,$uCambio4,$pCambio4,$tipoAceite5,$marca5,
         $uCambio5,$pCambio5,$lFreno,$lParabrisa,$refrigerante,$hidraulico,
         $lMotor,$lCaja,$lTransmision,$lFrenos1,$engrase,$sRadiador,
-        $sFiltroAire,$observacionesF,$fCombustible2,$fCombustible3){
+        $sFiltroAire,$observacionesF,$fCombustible2,$fCombustible3,$fecha_creacion){
         
             $revBimCotrautolr = '';
             // echo $Email;
@@ -1650,8 +1650,11 @@ session_start();
             <b><h4><center>Inverlima</center></h4><b>
             <center><img width='450' height='150' src='https://www.visualsaturbano.com/inverlima/Vista/imagenes/logo_administracion.png'></center>
             <b><h4><center>Inverlima te informa que se realizaron las siguientes funciones a el vehiculo de placas $placa bajo el cargo del tecnico $tecnico :</center></h4><b>
-            
-            <table style='width:600px; border-collapse:collapse; border:solid 1px black;margin:auto'>
+            <br>
+            <b><h3><center>Servicio solicitado</center></h3></b>
+            <br>
+            <b><h4 style='margin-left:22.5%;'><left>Fecha de creacion: $fecha_creacion</left></h4></b>
+                <table style='width:600px; border-collapse:collapse; border:solid 1px black;margin:auto'>
                 <thead style='background-color:#005395; border: solid 1px black'>
                     <th style='color:white;'>DESCRIPCIÓN</th>
                     <th style='color:white;'>RESULTADO</th>

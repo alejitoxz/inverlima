@@ -1456,6 +1456,7 @@ function registrar_orden_Servicio(){
             Swal.fire("Mensaje De Confirmacion",'Registro realizado', "success").then((value)=>{
                 table.ajax.reload();
                 limpiarRegistro();
+                enviarCorreo();
             });
         }else{
             Swal.fire("Mensaje De Advertencia",'El usuario ya se encuentra en uso', "warning");
@@ -2744,7 +2745,7 @@ $('#tabla_orden').on('click','.enviarCorreo',function(){
     }else{
         var datosOrden = table.row($(this).parents('tr')).data();
     }
-    console.log("entra");
+    console.log("entra".fecha_creacion);
     var email =datosOrden.email;
     var placa =datosOrden.placa;
     var revBimCotrautol =datosOrden.revBimCotrautol;
@@ -2906,6 +2907,7 @@ $('#tabla_orden').on('click','.enviarCorreo',function(){
 
     var fCombustible2 =datosOrden.txtmotorfiltroCombustible2;
     var fCombustible3 =datosOrden.txtmotorfiltroCombustible3;
+    var fecha_creacion =datosOrden.fecha_creacion;
 
     Swal.fire({
         title: '¿Seguro desea enviar un email?',
@@ -3071,7 +3073,8 @@ $('#tabla_orden').on('click','.enviarCorreo',function(){
                     sFiltroAire:sFiltroAire,
                     observacionesF:observacionesF,
                     fCombustible2:fCombustible2,
-                    fCombustible3:fCombustible3
+                    fCombustible3:fCombustible3,
+                    fecha_creacion:fecha_creacion
                 }
             }).done(function(resp){
                 if(resp > 0){

@@ -268,6 +268,39 @@ session_start();
                     GROUP BY os.idTecnico
                 ";
             //echo $sql;
+            /*
+select * from (
+	SELECT COUNT
+		( * ) AS cantidad,
+		md.descripcion
+	FROM
+		ordenServicio AS os
+		INNER JOIN servicio AS s ON ( s.id = os.idServicio) 
+		INNER JOIN miscelaneos_detalle AS md ON ( md.id = s.motorMarca) 
+	WHERE
+		os.estatus = 1 
+	GROUP BY
+		md.descripcion
+	
+
+
+union ALL
+
+
+
+SELECT COUNT
+		( * ) AS cantidad,
+		md.descripcion
+	FROM
+		ordenServicio AS os
+		INNER JOIN servicio AS s ON ( s.id = os.idServicio) 
+		INNER JOIN miscelaneos_detalle AS md ON ( md.id = s.cajaMarca) 
+	WHERE
+		os.estatus = 1 
+	GROUP BY
+		md.descripcion
+		) as hol ORDER BY descripcion
+*/
             $resp=sqlsrv_query($conn,$sql);
             if( $resp === false ) { echo estadistica; exit; }	
             $i=0;

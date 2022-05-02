@@ -223,9 +223,9 @@ if ($Rol == 1 || $Rol == 4) {
     contarVehiculo();
     contarPropietario();
     graficaOrdenes();
-    graficaBateria();
+    //graficaBateria();
     graficaAceite();
-    graficaLlanta();
+   // graficaLlanta();
     graficaTecnico();
  // enviarCorreoA();
     //contarConductor();

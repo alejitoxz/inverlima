@@ -239,49 +239,67 @@ session_start();
            
         }
 
-        function listar_grafico_tecnico(){
+        function listar_grafico_aceitico(){
+            
             $conn = $this->conexion->conectar();
-          
-            $sql  = "SELECT COUNT ( os.idTecnico ) AS cantidad,
-                     (p.nombre + ' ' + p.apellido) as tecnico
-                     FROM ordenServicio AS os
-                     INNER JOIN tecnico as t ON (t.id = os.idTecnico)
-                     INNER JOIN persona AS p ON ( p.id = t.idPersona )
-                     WHERE os.estatus = 1 
-                     GROUP BY os.idTecnico, p.nombre, p.apellido
-            ";
-            $resp = sqlsrv_query($conn, $sql);
-            if( $resp === false) {
-                return 0;
-            }
-            $i = 0;
-            $data = [];
-            while($row = sqlsrv_fetch_array( $resp, SQLSRV_FETCH_ASSOC))
-            {
-                $orden[$i] = $row;
+
+            $sql="SELECT
+                    md.id,
+                    md.descripcion as nombres
+                FROM
+                    miscelaneos_detalle as md
+                    INNER JOIN miscelaneos AS m ON (m.id= md.id_miscelaneo)
+                    WHERE md.estatus = 1 and m.id = 14
+                ";
+            $resp=sqlsrv_query($conn,$sql);
+            if( $resp === false ) { echo ciudad; exit; }	
+            $i=0;
+            while($row = sqlsrv_fetch_array( $resp, SQLSRV_FETCH_ASSOC)) {
+                $aceite[$i]=$row;
                 $i++;
             }
-               
+            //  contadores historial
+            $sql="SELECT COUNT ( * ) AS cantidad,
+                    os.idTecnico
+                    FROM ordenServicio AS os
+                    INNER JOIN tecnico as t ON (t.id = os.idTecnico)
+                    INNER JOIN persona AS p ON ( p.id = t.idPersona )
+                    WHERE os.estatus = 1 
+                    GROUP BY os.idTecnico
+                ";
+            //echo $sql;
+            $resp=sqlsrv_query($conn,$sql);
+            if( $resp === false ) { echo estadistica; exit; }	
+            $i=0;
+            while($row = sqlsrv_fetch_array( $resp, SQLSRV_FETCH_ASSOC)) {
+            $orden[$i]=$row;
+            $i++;
+            }
+            $data      = [];
+    
+            for($x=0; $x<count($aceite);$x++){
+        
             $arrayData      = [];
             $arrayDatax     = [];
-            for($j=1; $j<=12; $j++){
-                $mes    = $j;
-                $cant   = 0;
-                if($j<=9) {
-                    $mes = '0'.$j;   
-                }             
-                for($x=0; $x<count($orden);$x++){              
-                    if($mes==$orden[$x]["MONTH"] ){
-                        $cant = $orden[$x]["cantidad"];
-                    }
-                }
-                    
-                array_push($arrayDatax,$cant);
-                    
-                if($j==12){          
-                    array_push($data,$arrayDatax); 
-                }            
-            } 
+
+            for($j=0; $j<count($orden); $j++){
+                if(intval($orden[$j]["idMiscelaneo"]) === intval($aceite[$x]["id"])){
+                    $cantidad = $orden[$j]["cantidad"];
+                      
+                }    
+            }  
+
+            array_push($arrayDatax,$cantidad); 
+            /* if($i==count($asesor2)){*/
+            $StatusField = $aceite[$x]["nombres"];
+            
+            $arrayData = ["nombres"=>$StatusField,"cantidad"=>$cantidad];
+            array_push($data,$arrayData); 
+            
+            }
+
+            //var_dump($data);
+
             if($data>0){
                 return $data;
             }else{
@@ -292,7 +310,7 @@ session_start();
            
         }
 
-        function listar_grafico_llanta(){
+        function listar_grafico_aceite(){
             $conn = $this->conexion->conectar();
           
             $sql  = "SELECT COUNT

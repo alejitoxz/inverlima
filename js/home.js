@@ -8,7 +8,7 @@ function listar_home(){
         "pageLength": 10,
         "destroy":true,
         "async": true ,
-        "processing": true,
+        "processing": false,
         "ajax": {
             "url": "../controlador/home/controlador_home_listar.php",
             "type": "POST"

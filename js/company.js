@@ -8,7 +8,7 @@ function listar_company(){
         "pageLength": 10,
         "destroy":true,
         "async": true ,
-        "processing": true,
+        "processing": false,
         "ajax": {
             "url": "../controlador/company/controlador_company_listar.php",
             "type": "POST"

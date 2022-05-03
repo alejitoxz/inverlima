@@ -8,7 +8,7 @@ function listar_propietario(){
         "pageLength": 10,
         "destroy":true,
         "async": true ,
-        "processing": true,
+        "processing": false,
         "ajax": {
             "url": "../controlador/propietario/controlador_propietario_listar.php",
             "type": "POST"

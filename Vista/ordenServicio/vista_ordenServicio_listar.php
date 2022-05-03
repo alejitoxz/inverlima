@@ -14,10 +14,12 @@
             <div class="card-body">
             <div class="form-group">
                 <div class="col-lg-10">
-                    <div class="col-lg-2">
+                    
+                    <div class="row">
                     <button type="button" class="btn btn-primary"  onclick="AbrirModalRegistroOrdenServicio()"><i class="fas fa-plus"> </i> Registrar</button>
-                    <button type="button" class="btn btn-primary"  onclick="exportarReporte()"><i class="fas fa-file-pdf"> </i> Reporte</button>
-                    </div> 
+                    <button type="button" class="btn btn-primary" style="margin-left:2px;" onclick="exportarReporte()"><i class="fas fa-file-pdf"> </i> Reporte</button>
+                    </div>
+                  
                 </div>
             </div>
             <table id="tabla_orden" class="display responsive nowrap" style="width:100%">

@@ -8,7 +8,7 @@ function listar_miscelaneos_detalle(){
         "pageLength": 10,
         "destroy":true,
         "async": true ,
-        "processing": true,
+        "processing": false,
         "ajax": {
             "url": "../controlador/miscelaneos_detalle/controlador_miscelaneos_detalle_listar.php",
             "type": "POST"

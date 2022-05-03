@@ -236,7 +236,7 @@ if(isset($Datos[$i]['submodulos'])){
     <strong><a href="https://www.visualsat.com">Visualsat</a></strong>
    Todos los derechos reservados.
     <div class="float-right d-none d-sm-inline-block">
-      <b>Version</b> 1.0
+      <b>Version</b> 2.8
     </div>
   </footer>
 
@@ -269,7 +269,7 @@ if(isset($Datos[$i]['submodulos'])){
 			"sSearch":         "Buscar:",
 			"sUrl":            "",
 			"sInfoThousands":  ",",
-			"sLoadingRecords": "<b>No se encontraron datos</b>",
+			"sLoadingRecords": "<b>Cargando Informacion...</b>",
 			"oPaginate": {
 					"sFirst":    "Primero",
 					"sLast":     "Último",

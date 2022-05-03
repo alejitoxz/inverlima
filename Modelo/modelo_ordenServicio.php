@@ -956,8 +956,12 @@ session_start();
             $idUsuario = $_SESSION['S_ID'];
 
 
-            $sql  = "SELECT COUNT(s.id) as contadorServicio from servicio as s
-            inner join ordenServicio as os ON (os.idServicio = s.Id)
+            $sql  = "SELECT COUNT
+            ( s.id ) AS contadorServicio 
+            FROM
+            servicio AS s
+            INNER JOIN ordenServicio AS os ON ( os.idServicio = s.Id ) 
+            where os.estatus = 1 and fecha_creacion >= '2022-05-03 00:00:00.000'
            ";
            //echo $sql;
             $resp = sqlsrv_query($conn, $sql);

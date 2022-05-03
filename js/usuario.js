@@ -100,7 +100,7 @@ function listar_usuario(){
         "pageLength": 10,
         "destroy":true,
         "async": true ,
-        "processing": true,
+        "processing": false,
         "ajax": {
             "url": "../controlador/usuario/controlador_usuario_listar.php",
             "type": "POST"

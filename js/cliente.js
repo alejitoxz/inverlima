@@ -8,7 +8,7 @@ function listar_cliente(){
         "pageLength": 10,
         "destroy":true,
         "async": true ,
-        "processing": true,
+        "processing": false,
         "ajax": {
             "url": "../controlador/cliente/controlador_cliente_listar.php",
             "type": "POST"

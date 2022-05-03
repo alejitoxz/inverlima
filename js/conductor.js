@@ -8,7 +8,7 @@ function listar_conductor(){
         "pageLength": 10,
         "destroy":true,
         "async": true ,
-        "processing": true,
+        "processing": false,
         "ajax": {
             "url": "../controlador/conductor/controlador_conductor_listar.php",
             "type": "POST"

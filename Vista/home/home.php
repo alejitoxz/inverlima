@@ -9,7 +9,7 @@ if ($Rol == 1 || $Rol == 4) {
         <div class="card-body">
             <div class="row">
 
-                <div class="col-lg-3 col-6">
+                <div class="col-lg-4 col-6">
                 <div class="small-box bg-warning">
                     <div class="inner">
                     <h3 id="contadorServicio">0</h3>
@@ -25,7 +25,7 @@ if ($Rol == 1 || $Rol == 4) {
                 </div>
                 </div>
 
-                <div class="col-lg-3 col-6">
+                <div class="col-lg-4 col-6">
                     <div class="small-box bg-info">
                         <div class="inner">
                         <h3 id="contadorVehiculo">0</h3>
@@ -41,7 +41,7 @@ if ($Rol == 1 || $Rol == 4) {
                     </div>
                 </div>
 
-                <div class="col-lg-3 col-6">
+                <div class="col-lg-4 col-6">
                     <!-- small box -->
                     <div class="small-box bg-success">
                     <div class="inner">
@@ -115,7 +115,7 @@ if ($Rol == 1 || $Rol == 4) {
       <!-- /.card-body -->
   </div>
 </div>
-<div class="col-md-12">
+<div class="col-md-6">
   <div class="card card-primary">
       <div class="card-header">
         <h3 class="card-title">Baterías por orden </h3>
@@ -130,7 +130,7 @@ if ($Rol == 1 || $Rol == 4) {
 </div>
 </div>
 
-
+<!--
 <div class="row">
 <div class="col-md-6">
   <div class="card card-primary">
@@ -151,7 +151,7 @@ if ($Rol == 1 || $Rol == 4) {
         </canvas>
         </div>
       </div>
-      <!-- /.card-body -->
+       /.card-body 
   </div>
 </div>
 <div class="col-md-6">
@@ -164,11 +164,10 @@ if ($Rol == 1 || $Rol == 4) {
           <canvas id="areaChartAceite" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%; display: block; width: 487px;" width="487" height="250" class="chartjs-render-monitor"></canvas>
         </div>
       </div>
-      <!-- /.card-body -->
   </div>
 </div>
 </div>
-
+-->
 
 <div class="col-md-12">
     <div class="card card-primary">

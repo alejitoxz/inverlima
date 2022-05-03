@@ -98,7 +98,7 @@ function graficaOrdenes(){
         datasets: [
             {
             label               : 'Ordenes registradas',
-            backgroundColor     : 'rgba(17,61,40,0.8)',
+            backgroundColor     : '#0055F4',
             borderColor         : 'rgba(17,61,40)',
             pointRadius          : false,
             pointColor          : '#3b8bba',
@@ -168,10 +168,11 @@ function graficaBateria(){
       datasets: [
           {
           label               : 'Numero de Revisiones',
-          backgroundColor     : 'rgba(17,61,40,0.8)',
-          borderColor         : 'rgba(17,61,40)',
-          pointRadius         : false,
+          backgroundColor     : '#D100D1',
+          borderColor         : '#380038',
+          pointRadius         : true,
           pointColor          : '#3b8bba',
+          color               : '#380038',
           pointStrokeColor    : 'rgba(60,141,188,1)',
           pointHighlightFill  : '#fff',
           pointHighlightStroke: 'rgba(60,141,188,1)',
@@ -180,7 +181,7 @@ function graficaBateria(){
       ]
       }
 
-    
+     
 
   var areaChartOptions = {
     maintainAspectRatio : false,
@@ -188,17 +189,21 @@ function graficaBateria(){
     legend: {
       display: false
     },
+
     scales: {
+      
       xAxes: [{
         gridLines : {
           display : false,
         }
       }],
       yAxes: [{
+        
         gridLines : {
           display : false,
         }
-      }]
+      }],
+      
     }
   }
 
@@ -207,6 +212,7 @@ function graficaBateria(){
     type: 'bar',
     data: areaChartData,
     options: areaChartOptions
+
   })
 
   })
@@ -368,7 +374,7 @@ function graficaTecnico(){
       datasets: [
           {
           label               : '# Revisiones',
-          backgroundColor     : 'rgba(17,61,40,0.8)',
+          backgroundColor     : '#00AD17',
           borderColor         : 'rgba(17,61,40)',
           pointRadius         : false,
           pointColor          : '#3b8bba',

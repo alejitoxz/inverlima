@@ -475,14 +475,13 @@ SELECT COUNT
             $conn = $this->conexion->conectar();
 
             $sql="SELECT
-                md.id,
-                md.descripcion AS nombres 
+                id,
+                descripcion AS nombres 
                 FROM
-                miscelaneos_detalle AS md
-                INNER JOIN miscelaneos AS m ON ( m.id= md.id_miscelaneo ) 
+                miscelaneos_detalle 
                 WHERE
-                md.estatus = 1 
-                AND md.id_miscelaneo = 19
+                estatus = 1 
+                AND id_miscelaneo = 19
                 ";
             $resp=sqlsrv_query($conn,$sql);
             if( $resp === false ) { echo ciudad; exit; }	
@@ -500,7 +499,7 @@ SELECT COUNT
             INNER JOIN servicio AS s ON ( s.id = os.idServicio )
             INNER JOIN miscelaneos_detalle AS md ON ( md.id = s.marca ) 
             WHERE
-            os.estatus = 1 and md.estatus = 1
+            os.estatus = 1 and md.estatus = 1 AND md.id_miscelaneo = 19
             GROUP BY
             s.marca
                 ";
@@ -518,24 +517,25 @@ SELECT COUNT
                 
                 $arrayData      = [];
                 $arrayDatax     = [];
-    
                 for($j=0; $j<count($orden); $j++){
-                    if(intval($orden[$j]["idBateria"]) === intval($bateria[$x]["id"])){
+                    
+                    if( intval($orden[$j]["idBateria"]) === intval($bateria[$x]["id"]) ){
+                        
                         $cantidad = $orden[$j]["cantidad"];
-                          
-                    }    
+                        $StatusField = $bateria[$x]["nombres"];
+                        $arrayData = ["nombres"=>$StatusField,"cantidad"=>$cantidad];
+                        array_push($data,$arrayData); 
+                    }   
+                    
                 }  
-    
-                array_push($arrayDatax,$cantidad); 
-                /* if($i==count($asesor2)){*/
-                $StatusField = $bateria[$x]["nombres"];
+                                
                 
-                $arrayData = ["nombres"=>$StatusField,"cantidad"=>$cantidad];
-                array_push($data,$arrayData); 
+               
                 
-                }
+            }
 
-            //var_dump($data);
+            
+           
 
             if($data>0){
                 return $data;

@@ -25,7 +25,7 @@ if ($Rol == 1 || $Rol == 4) {
                     <div class="icon">
                     <i class="fas fa-list"></i>
                     </div>
-                    <a onclick="cargar_contenido('contenido_principal','ordenServicio/vista_ordenServicio_listar.php')" class="small-box-footer">Ordenes mensuales registradas 
+                    <a onclick="cargar_contenido('contenido_principal','ordenServicio/vista_ordenServicio_listar.php')" class="small-box-footer">Ordenes registradas del dia
                         <i class="fas fa-arrow-circle-right"></i>
                     </a>
                 </div>
@@ -41,7 +41,7 @@ if ($Rol == 1 || $Rol == 4) {
                         <div class="icon">
                         <i class="fas fa-taxi"></i>
                         </div>
-                        <a onclick="cargar_contenido('contenido_principal','vehiculo/vista_vehiculo_listar.php')" class="small-box-footer">Vehículos mensuales registrados 
+                        <a onclick="cargar_contenido('contenido_principal','vehiculo/vista_vehiculo_listar.php')" class="small-box-footer">Total de vehículos  registrados 
                             <i class="fas fa-arrow-circle-right"></i>
                         </a>
                     </div>
@@ -57,7 +57,7 @@ if ($Rol == 1 || $Rol == 4) {
                     <div class="icon">
                         <i class="fas fa-user-tie"></i>
                     </div>
-                        <a onclick="cargar_contenido('contenido_principal','propietario/vista_propietario_listar.php')" class="small-box-footer">Propietarios mensuales registrados 
+                        <a onclick="cargar_contenido('contenido_principal','propietario/vista_propietario_listar.php')" class="small-box-footer">Total de propietarios registrados 
                             <i class="fas fa-arrow-circle-right"></i>
                         </a>
                     </div>

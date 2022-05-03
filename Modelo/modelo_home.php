@@ -343,6 +343,77 @@ SELECT COUNT
            
         }
 
+        function listar_grafico_tecnico(){
+            
+            $conn = $this->conexion->conectar();
+
+            $sql="SELECT
+                    t.id,
+                    p.nombre+' '+p.apellido as nombres
+                FROM
+                    tecnico as t
+                    INNER JOIN persona AS p ON (t.idPersona= p.id)
+                    WHERE t.estatus = 1 
+                ";
+            $resp=sqlsrv_query($conn,$sql);
+            if( $resp === false ) { echo ciudad; exit; }	
+            $i=0;
+            while($row = sqlsrv_fetch_array( $resp, SQLSRV_FETCH_ASSOC)) {
+                $tecnico[$i]=$row;
+                $i++;
+            }
+            //  contadores historial
+            $sql="SELECT COUNT ( * ) AS cantidad,
+                    os.idTecnico
+                    FROM ordenServicio AS os
+                    INNER JOIN tecnico as t ON (t.id = os.idTecnico)
+                    INNER JOIN persona AS p ON ( p.id = t.idPersona )
+                    WHERE os.estatus = 1 
+                    GROUP BY os.idTecnico
+                ";
+
+            $resp=sqlsrv_query($conn,$sql);
+            if( $resp === false ) { echo estadistica; exit; }	
+            $i=0;
+            while($row = sqlsrv_fetch_array( $resp, SQLSRV_FETCH_ASSOC)) {
+            $orden[$i]=$row;
+            $i++;
+            }
+            $data      = [];
+    
+            for($x=0; $x<count($tecnico);$x++){
+        
+            $arrayData      = [];
+            $arrayDatax     = [];
+
+            for($j=0; $j<count($orden); $j++){
+                if(intval($orden[$j]["idTecnico"]) === intval($tecnico[$x]["id"])){
+                    $cantidad = $orden[$j]["cantidad"];
+                      
+                }    
+            }  
+
+            array_push($arrayDatax,$cantidad); 
+            /* if($i==count($asesor2)){*/
+            $StatusField = $tecnico[$x]["nombres"];
+            
+            $arrayData = ["nombres"=>$StatusField,"cantidad"=>$cantidad];
+            array_push($data,$arrayData); 
+            
+            }
+
+            //var_dump($data);
+
+            if($data>0){
+                return $data;
+            }else{
+                return 0;
+            }
+            
+            $this->conexion->conectar();
+           
+        }
+
         function listar_grafico_aceite(){
             $conn = $this->conexion->conectar();
           

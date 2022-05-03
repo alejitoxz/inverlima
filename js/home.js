@@ -1,4 +1,14 @@
-var table;
+const colorArray = [
+		  
+	
+		  
+		 
+		  '#66664D', '#991AFF', '#E666FF', '#4DB3FF', '#1AB399',
+		  '#E666B3', '#33991A', '#CC9999', '#B3B31A', '#00E680', 
+		  '#4D8066', '#809980', '#E6FF80', '#1AFF33', '#999933',
+		  '#FF3380', '#CCCC00', '#66E64D', '#4D80CC', '#9900B3', 
+		  '#E64D66', '#4DB380', '#FF4D4D', '#99E6E6', '#6666FF'];
+      var table;
 function listar_home(){
     table = $('#tabla_alerta').DataTable( {
         "ordering":true,
@@ -90,7 +100,6 @@ function graficaOrdenes(){
     }).done(function(resp){
     
         var resultado = eval("(" + resp + ")");
-        console.log("Prueba",resultado['cantidad']);
 
         var areaChartCanvas = $('#areaChart').get(0).getContext('2d')
         var areaChartData = {
@@ -98,7 +107,7 @@ function graficaOrdenes(){
         datasets: [
             {
             label               : 'Ordenes registradas',
-            backgroundColor     : '#0055F4',
+            backgroundColor     : colorArray,
             borderColor         : 'rgba(17,61,40)',
             pointRadius          : false,
             pointColor          : '#3b8bba',
@@ -159,7 +168,7 @@ function graficaBateria(){
         
         }
      
-         console.log("bateria",resultado);
+         
           
 
       var areaChartCanvas = $('#areaChartBateria').get(0).getContext('2d')
@@ -168,7 +177,7 @@ function graficaBateria(){
       datasets: [
           {
           label               : 'Numero de Revisiones',
-          backgroundColor     : '#D100D1',
+          backgroundColor     : colorArray,
           borderColor         : '#380038',
           pointRadius         : true,
           pointColor          : '#3b8bba',
@@ -218,6 +227,7 @@ function graficaBateria(){
   })
 }
 
+
 // funcion para charts de ordenbes de servicio por meses
 function graficaAceite(){
   $.ajax({
@@ -226,7 +236,7 @@ function graficaAceite(){
   }).done(function(resp){
   
     var resultado = eval("(" + resp + ")");
-  
+    
     var nombres =[];
     var cantidad =[];
       for(var i=0; i<resultado.length;i++){
@@ -236,18 +246,16 @@ function graficaAceite(){
         cantidad[i] = resultado[i]["cantidad"]
       
       }
-   
-       console.log("resultado",resultado);
-        
-
-    var areaChartCanvas = $('#areaChartTecnico').get(0).getContext('2d')
+           
+      console.log("aceite",resultado);
+      
+    var areaChartCanvas = $('#areaChartAceite').get(0).getContext('2d')
     var areaChartData = {
     labels  : nombres,
     datasets: [
         {
         label               : 'Ordenes registradas',
-        backgroundColor     : 'rgba(17,61,40,0.8)',
-        borderColor         : 'rgba(17,61,40)',
+        backgroundColor     : colorArray,
         pointRadius         : false,
         pointColor          : '#3b8bba',
         pointStrokeColor    : 'rgba(60,141,188,1)',
@@ -260,27 +268,22 @@ function graficaAceite(){
 
   var areaChartOptions = {
     maintainAspectRatio : false,
-    responsive : true,
-    legend: {
-      display: false
-    },
-    scales: {
-      xAxes: [{
-        gridLines : {
-          display : false,
-        }
-      }],
-      yAxes: [{
-        gridLines : {
-          display : false,
-        }
-      }]
+    responsive: true,
+    plugins: {
+      legend: {
+        position: 'top',
+      },
+      title: {
+        display: true,
+        text: 'Chart.js Pie Chart'
+      }
     }
+    
   }
 
   // This will get the first returned node in the jQuery collection.
   new Chart(areaChartCanvas, {
-    type: 'bar',
+    type: 'pie',
     data: areaChartData,
     options: areaChartOptions
   })
@@ -296,7 +299,6 @@ function graficaLlanta(){
   }).done(function(resp){
   
       var resultado = eval("(" + resp + ")");
-      console.log("Prueba",resultado['cantidad']);
 
       var areaChartCanvas = $('#areaChartLlanta').get(0).getContext('2d')
       var areaChartData = {
@@ -364,9 +366,7 @@ function graficaTecnico(){
           cantidad[i] = resultado[i]["cantidad"]
         
         }
-     
-         console.log("resultado",resultado);
-          
+               
 
       var areaChartCanvas = $('#areaChartTecnico').get(0).getContext('2d')
       var areaChartData = {
@@ -374,7 +374,7 @@ function graficaTecnico(){
       datasets: [
           {
           label               : '# Revisiones',
-          backgroundColor     : '#00AD17',
+          backgroundColor     : colorArray,
           borderColor         : 'rgba(17,61,40)',
           pointRadius         : false,
           pointColor          : '#3b8bba',

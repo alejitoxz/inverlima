@@ -259,13 +259,34 @@ session_start();
                 $i++;
             }
             //  contadores historial
-            $sql="SELECT COUNT ( * ) AS cantidad,
-                    os.idTecnico
-                    FROM ordenServicio AS os
-                    INNER JOIN tecnico as t ON (t.id = os.idTecnico)
-                    INNER JOIN persona AS p ON ( p.id = t.idPersona )
-                    WHERE os.estatus = 1 
-                    GROUP BY os.idTecnico
+            $sql="SELECT * from (
+					SELECT COUNT
+							( * ) AS cantidad,
+							s.motorMarca as idAceite
+					FROM
+							ordenServicio AS os
+							INNER JOIN servicio AS s ON ( s.id = os.idServicio) 
+							INNER JOIN miscelaneos_detalle AS md ON ( md.id = s.motorMarca) 
+					WHERE
+							os.estatus = 1 
+					GROUP BY
+							s.motorMarca 
+			
+			union
+			
+			
+			SELECT COUNT
+							( * ) AS cantidad,
+							s.cajaMarca as idAceite
+					FROM
+							ordenServicio AS os
+							INNER JOIN servicio AS s ON ( s.id = os.idServicio) 
+							INNER JOIN miscelaneos_detalle AS md ON ( md.id = s.cajaMarca) 
+					WHERE
+							os.estatus = 1 
+					GROUP BY
+							s.cajaMarca 
+							) AS t
                 ";
             //echo $sql;
             /*
@@ -316,22 +337,16 @@ SELECT COUNT
             $arrayDatax     = [];
 
             for($j=0; $j<count($orden); $j++){
-                if(intval($orden[$j]["idMiscelaneo"]) === intval($aceite[$x]["id"])){
+                if(intval($orden[$j]["idAceite"]) === intval($aceite[$x]["id"])){
+
                     $cantidad = $orden[$j]["cantidad"];
-                      
+                    $StatusField = $aceite[$x]["nombres"];
+                    $arrayData = ["nombres"=>$StatusField,"cantidad"=>$cantidad];
+                    array_push($data,$arrayData); 
                 }    
             }  
 
-            array_push($arrayDatax,$cantidad); 
-            /* if($i==count($asesor2)){*/
-            $StatusField = $aceite[$x]["nombres"];
-            
-            $arrayData = ["nombres"=>$StatusField,"cantidad"=>$cantidad];
-            array_push($data,$arrayData); 
-            
             }
-
-            //var_dump($data);
 
             if($data>0){
                 return $data;

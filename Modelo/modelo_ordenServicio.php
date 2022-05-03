@@ -1267,7 +1267,14 @@ session_start();
         $pCambio3,$cantidad3,$presentacion3,$nivelacion3,$cNivelacion3,$tipoAceite4,$marca4,$uCambio4,$pCambio4,$tipoAceite5,$marca5,
         $uCambio5,$pCambio5,$lFreno,$lParabrisa,$refrigerante,$hidraulico,
         $lMotor,$lCaja,$lTransmision,$lFrenos1,$engrase,$sRadiador,
-        $sFiltroAire,$observacionesF,$fCombustible2,$fCombustible3,$fecha_creacion){
+        $sFiltroAire,$observacionesF,$fCombustible2,$fCombustible3,$fecha_creacion,$idOrdenServicio){
+
+            $conn = $this->conexion->conectar();
+            $sql  = "UPDATE ordenServicio set eCorreo = 1
+                    WHERE id='$idOrdenServicio'
+                    ";
+            $resp = sqlsrv_query($conn, $sql);        
+                   
         
             $revBimCotrautolr = '';
             // echo $Email;

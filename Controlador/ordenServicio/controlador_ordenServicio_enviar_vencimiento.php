@@ -150,6 +150,7 @@
     $fCombustible2 = htmlspecialchars($_POST['fCombustible2'],ENT_QUOTES,'UTF-8');
     $fCombustible3 = htmlspecialchars($_POST['fCombustible3'],ENT_QUOTES,'UTF-8');
     $fecha_creacion = htmlspecialchars($_POST['fecha_creacion'],ENT_QUOTES,'UTF-8');
+    $idOrdenServicio = htmlspecialchars($_POST['idOrdenServicio'],ENT_QUOTES,'UTF-8');
 
     $consulta = $MU->enviarVencimiento($email,$placa,$revBimCotrautol,$rRegistradora,$vExtintor,$oReg,
     $observacion,$tecnico,$bateria,$tipoBateria,$marca,$serial,
@@ -173,7 +174,7 @@
     $pCambio3,$cantidad3,$presentacion3,$nivelacion3,$cNivelacion3,$tipoAceite4,$marca4,$uCambio4,$pCambio4,$tipoAceite5,$marca5,
     $uCambio5,$pCambio5,$lFreno,$lParabrisa,$refrigerante,$hidraulico,
     $lMotor,$lCaja,$lTransmision,$lFrenos1,$engrase,$sRadiador,
-    $sFiltroAire,$observacionesF,$fCombustible2,$fCombustible3,$fecha_creacion); 
+    $sFiltroAire,$observacionesF,$fCombustible2,$fCombustible3,$fecha_creacion,$idOrdenServicio); 
     if($consulta){
         return 1;
     }else {

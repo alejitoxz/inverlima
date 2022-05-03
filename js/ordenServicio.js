@@ -10,7 +10,7 @@ function listar_orden(){
         "pageLength": 10,
         "destroy":true,
         "async": true ,
-        "processing": true,
+        "processing": false,
         "ajax": {
             "url": "../controlador/ordenServicio/controlador_listar_orden.php",
             "type": "POST"
@@ -626,6 +626,11 @@ function listar_orden(){
                 "targets": [ 152],
                 "visible": false
             }
+            ,
+            {
+                "targets": [ 153],
+                "visible": false
+            }
         ],
         "columns": [
             { "data": "txtmotorFiltroAire" },
@@ -781,11 +786,20 @@ function listar_orden(){
             { "data": "oRegistradora" },
             { "data": "vExtintor" },
             { "data": "idServicio" },
+            { "data": "rRegistradora" },
 
             { "data": "idOrdenServicio" },
             { "data": "placa" },
             { "data": "cod_interno" },
-            { "data": "rRegistradora" },
+            { "data": "eCorreo",
+            render: function(data, type, row){
+                if(data=='1'){
+                    return "Correo enviado"
+                }else{
+                    return "Correo no enviado"
+                }
+            }
+            },
             { "data": "tecnico" },
             { "data": "fecha_creacion" },
             { "data": "observacion" },
@@ -3077,12 +3091,14 @@ $('#tabla_orden').on('click','.enviarCorreo',function(){
                     fecha_creacion:fecha_creacion
                 }
             }).done(function(resp){
+                
                 if(resp > 0){
                     Swal.fire("¡Email enviado con exito!",'Pronto recibira el email', "success")
                 }else{
                     Swal.fire("Error",'No se pudo enviar el email, revise su conexion', "error");
                 }
             })
+            listar_orden()
         }
       })
 

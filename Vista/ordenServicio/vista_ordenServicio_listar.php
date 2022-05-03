@@ -176,10 +176,11 @@
                       <th style="display:none"></th>
                       <th style="display:none"></th>
                       <th style="display:none"></th>
+                      <th style="display:none"></th>
                       <th>Orden</th>
                       <th>Placa</th>
                       <th>N° interno</th>
-                      <th>Registradora</th>
+                      <th>Estatus correo</th>
                       <th>Técnico</th>
                       <th>Creación</th>
                       <th>Observación</th>

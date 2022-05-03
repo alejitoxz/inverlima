@@ -143,30 +143,44 @@ function graficaOrdenes(){
 // funcion para charts de ordenbes de servicio por meses
 function graficaBateria(){
   $.ajax({
-      "url": "../Controlador/home/controlador_grafico_orden.php",
+      "url": "../Controlador/home/controlador_grafico_bateria.php",
       "type": "POST",
   }).done(function(resp){
   
-      var resultado = eval("(" + resp + ")");
-      console.log("Prueba",resultado['cantidad']);
+    var resultado = eval("(" + resp + ")");
+  
+      var nombres =[];
+      var cantidad =[];
+        for(var i=0; i<resultado.length;i++){
 
-      var areaChartCanvas = $('#areaChart').get(0).getContext('2d')
+        
+          nombres[i] = resultado[i]["nombres"]
+          cantidad[i] = resultado[i]["cantidad"]
+        
+        }
+     
+         console.log("bateria",resultado);
+          
+
+      var areaChartCanvas = $('#areaChartBateria').get(0).getContext('2d')
       var areaChartData = {
-      labels  : ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'],
+      labels  : nombres,
       datasets: [
           {
-          label               : 'Ordenes registradas',
+          label               : 'Numero de Revisiones',
           backgroundColor     : 'rgba(17,61,40,0.8)',
           borderColor         : 'rgba(17,61,40)',
-          pointRadius          : false,
+          pointRadius         : false,
           pointColor          : '#3b8bba',
           pointStrokeColor    : 'rgba(60,141,188,1)',
           pointHighlightFill  : '#fff',
           pointHighlightStroke: 'rgba(60,141,188,1)',
-          data                : resultado[0]
+          data  	            : cantidad
           }
       ]
       }
+
+    
 
   var areaChartOptions = {
     maintainAspectRatio : false,
@@ -353,7 +367,7 @@ function graficaTecnico(){
       labels  : nombres,
       datasets: [
           {
-          label               : 'Ordenes registradas',
+          label               : '# Revisiones',
           backgroundColor     : 'rgba(17,61,40,0.8)',
           borderColor         : 'rgba(17,61,40)',
           pointRadius         : false,

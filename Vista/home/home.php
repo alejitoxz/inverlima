@@ -115,7 +115,7 @@ if ($Rol == 1 || $Rol == 4) {
       <!-- /.card-body -->
   </div>
 </div>
-<div class="col-md-6">
+<div class="col-md-12">
   <div class="card card-primary">
       <div class="card-header">
         <h3 class="card-title">Baterías por orden </h3>
@@ -223,7 +223,7 @@ if ($Rol == 1 || $Rol == 4) {
     contarVehiculo();
     contarPropietario();
     graficaOrdenes();
-    //graficaBateria();
+    graficaBateria();
     graficaAceite();
    // graficaLlanta();
     graficaTecnico();

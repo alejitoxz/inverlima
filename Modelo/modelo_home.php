@@ -473,51 +473,70 @@ SELECT COUNT
 
         function listar_grafico_bateria(){
             $conn = $this->conexion->conectar();
-          
-            $sql  = "SELECT COUNT
-                        ( * ) AS cantidad,
-                        m.descripcion	as detalle 
-                    FROM
-                        ordenServicio AS os
-                        INNER JOIN servicio AS s ON (s.id = os.idServicio)
-                        INNER JOIN miscelaneos_detalle AS m ON (m.id = s.bateria) 
-                    WHERE
-                        os.estatus = 1 
-                    GROUP BY
-                        m.descripcion
-            ";
-            $resp = sqlsrv_query($conn, $sql);
-            if( $resp === false) {
-                return 0;
-            }
-            $i = 0;
-            $data = [];
-            while($row = sqlsrv_fetch_array( $resp, SQLSRV_FETCH_ASSOC))
-            {
-                $orden[$i] = $row;
+
+            $sql="SELECT
+                md.id,
+                md.descripcion AS nombres 
+                FROM
+                miscelaneos_detalle AS md
+                INNER JOIN miscelaneos AS m ON ( m.id= md.id_miscelaneo ) 
+                WHERE
+                md.estatus = 1 
+                AND md.id_miscelaneo = 19
+                ";
+            $resp=sqlsrv_query($conn,$sql);
+            if( $resp === false ) { echo ciudad; exit; }	
+            $i=0;
+            while($row = sqlsrv_fetch_array( $resp, SQLSRV_FETCH_ASSOC)) {
+                $bateria[$i]=$row;
                 $i++;
             }
-               
-            $arrayData      = [];
-            $arrayDatax     = [];
-            for($j=1; $j<=12; $j++){
-                $mes    = $j;
-                $cant   = 0;
-                if($j<=9) {
-                    $mes = '0'.$j;   
-                }             
-                for($x=0; $x<count($orden);$x++){              
-                    if($mes==$orden[$x]["MONTH"] ){
-                        $cant = $orden[$x]["cantidad"];
-                    }
+            //  contadores historial
+            $sql="SELECT COUNT
+            ( * ) AS cantidad,
+            s.marca as idBateria
+            FROM
+            ordenServicio AS os
+            INNER JOIN servicio AS s ON ( s.id = os.idServicio )
+            INNER JOIN miscelaneos_detalle AS md ON ( md.id = s.marca ) 
+            WHERE
+            os.estatus = 1 and md.estatus = 1
+            GROUP BY
+            s.marca
+                ";
+
+            $resp=sqlsrv_query($conn,$sql);
+            if( $resp === false ) { echo estadistica; exit; }	
+            $i=0;
+            while($row = sqlsrv_fetch_array( $resp, SQLSRV_FETCH_ASSOC)) {
+            $orden[$i]=$row;
+            $i++;
+            }
+            $data      = [];
+    
+            for($x=0; $x<count($bateria);$x++){
+                
+                $arrayData      = [];
+                $arrayDatax     = [];
+    
+                for($j=0; $j<count($orden); $j++){
+                    if(intval($orden[$j]["idBateria"]) === intval($bateria[$x]["id"])){
+                        $cantidad = $orden[$j]["cantidad"];
+                          
+                    }    
+                }  
+    
+                array_push($arrayDatax,$cantidad); 
+                /* if($i==count($asesor2)){*/
+                $StatusField = $bateria[$x]["nombres"];
+                
+                $arrayData = ["nombres"=>$StatusField,"cantidad"=>$cantidad];
+                array_push($data,$arrayData); 
+                
                 }
-                    
-                array_push($arrayDatax,$cant);
-                    
-                if($j==12){          
-                    array_push($data,$arrayDatax); 
-                }            
-            } 
+
+            //var_dump($data);
+
             if($data>0){
                 return $data;
             }else{

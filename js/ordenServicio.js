@@ -1,5 +1,10 @@
+
 var table;
+var rol;
 function listar_orden(){
+
+    rol = $("#rol").val();
+    console.log("rol",rol)
     
     table = $('#tabla_orden').DataTable( {
         "ordering":false,
@@ -787,24 +792,30 @@ function listar_orden(){
             { "data": "vExtintor" },
             { "data": "idServicio" },
             { "data": "rRegistradora" },
-
             { "data": "idOrdenServicio" },
             { "data": "placa" },
             { "data": "cod_interno" },
             { "data": "eCorreo",
             render: function(data, type, row){
                 if(data=='1'){
-                    return "Correo enviado"
+                    return "<span class='badge bg-primary'>Correo enviado</span>"
                 }else{
-                    return "Correo no enviado"
+                    return "<span class='badge bg-danger'>Correo no enviado</span>"
                 }
             }
             },
             { "data": "tecnico" },
             { "data": "fecha_creacion" },
             { "data": "observacion" },
-            {"defaultContent":
-            "<button style='font-size:13px;' type='button' class='eliminar btn btn-danger'><i class='fa fa-trash'></i></button><button style='font-size:13px;' type='button' class='editar btn btn-info'><i class='fa fa-edit'></i></button><button style='font-size:13px;' type='button' class='ver btn btn-primary'><i class='fa fa-eye'></i></button><button style='font-size:13px;' type='button' class='enviarCorreo btn btn-success'><i class='fa fa-envelope'></i></button>"}
+            {
+                render: function(data, type, row){
+                    if(rol == 1){
+                        return "<button style='font-size:13px;' type='button' class='eliminar btn btn-danger'><i class='fa fa-trash'></i></button><button style='font-size:13px;' type='button' class='editar btn btn-info'><i class='fa fa-edit'></i></button><button style='font-size:13px;' type='button' class='ver btn btn-primary'><i class='fa fa-eye'></i></button><button style='font-size:13px;' type='button' class='enviarCorreo btn btn-success'><i class='fa fa-envelope'></i></button>"
+                    }else if(rol == 2){
+                        return "<button style='font-size:13px;' type='button' class='ver btn btn-primary'><i class='fa fa-eye'></i></button>"
+                    }
+                }
+            }
         ],
         "language":idioma_espanol,
        select: true

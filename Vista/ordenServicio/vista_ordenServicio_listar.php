@@ -1,3 +1,7 @@
+<?php
+session_start();
+$Rol = $_SESSION['ROL'];
+?>
 <div class="col-md-12">
     <div class="card card-success">
             <div class="card-header">
@@ -7,6 +11,7 @@
             <button type="button" class="btn btn-tool" data-card-widget="maximize"><i class="fas fa-expand"></i></button>
             <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i></button>
             <button type="button" class="btn btn-tool" data-card-widget="remove"><i class="fas fa-times"></i></button>
+            <input type="hidden" id="rol" name="rol" value="<?php echo $Rol; ?>">
             </div>
                 <!-- /.card-tools -->
             </div>

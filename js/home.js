@@ -1,8 +1,4 @@
 const colorArray = [
-		  
-	
-		  
-		 
 		  '#66664D', '#991AFF', '#E666FF', '#4DB3FF', '#1AB399',
 		  '#E666B3', '#33991A', '#CC9999', '#B3B31A', '#00E680', 
 		  '#4D8066', '#809980', '#E6FF80', '#1AFF33', '#999933',
@@ -94,9 +90,16 @@ function reporte(){
 
 // funcion para charts de ordenbes de servicio por meses
 function graficaOrdenes(){
+  var fecha = $("#fecIni").val();
+  var inicioDate = fecha.substring(0, 16);
+  var finDate = fecha.substring(22, 38);
     $.ajax({
         "url": "../Controlador/home/controlador_grafico_orden.php",
         "type": "POST",
+        data:{
+          inicioDate:inicioDate,
+          finDate:finDate
+          }
     }).done(function(resp){
     
         var resultado = eval("(" + resp + ")");
@@ -151,9 +154,16 @@ function graficaOrdenes(){
 
 // funcion para charts de ordenbes de servicio por meses
 function graficaBateria(){
+  var fecha = $("#fecIni").val();
+  var inicioDate = fecha.substring(0, 16);
+  var finDate = fecha.substring(22, 38);
   $.ajax({
       "url": "../Controlador/home/controlador_grafico_bateria.php",
       "type": "POST",
+      data:{
+        inicioDate:inicioDate,
+        finDate:finDate
+        }
   }).done(function(resp){
   
     var resultado = eval("(" + resp + ")");
@@ -230,9 +240,16 @@ function graficaBateria(){
 
 // funcion para charts de ordenbes de servicio por meses
 function graficaAceite(){
+  var fecha = $("#fecIni").val();
+  var inicioDate = fecha.substring(0, 16);
+  var finDate = fecha.substring(22, 38);
   $.ajax({
       "url": "../Controlador/home/controlador_grafico_aceite.php",
       "type": "POST",
+      data:{
+        inicioDate:inicioDate,
+        finDate:finDate
+        }
   }).done(function(resp){
   
     var resultado = eval("(" + resp + ")");
@@ -350,9 +367,17 @@ function graficaLlanta(){
 
 // funcion para charts de ordenbes de servicio por meses
 function graficaTecnico(){
+  var fecha = $("#fecIni").val();
+  var inicioDate = fecha.substring(0, 16);
+  var finDate = fecha.substring(22, 38);
+  
   $.ajax({
       "url": "../Controlador/home/controlador_grafico_tecnico.php",
       "type": "POST",
+      data:{
+        inicioDate:inicioDate,
+        finDate:finDate
+        }
   }).done(function(resp){
   
     var resultado = eval("(" + resp + ")");
@@ -427,6 +452,27 @@ function enviarCorreoA(){
       "type": "POST"
     })
 }
+
+const date = new Date();
+const year = date.getFullYear();
+const month = date.getDate();
+const day = date.getDay();
+
+const fechaActual = year+"/"+month+"/"+day;
+const inicio = fechaActual+" 00:00";
+const fin = fechaActual+" 23:59";
+
+$("#fecIni").daterangepicker({
+  timePicker: true,
+  timePicker24Hour:true,
+  startDate: moment().inicio, 
+  endDate: moment().fin,
+  locale: {
+    format: 'YYYY/MM/DD hh:mm A'
+  }
+
+});
+
 
 
 

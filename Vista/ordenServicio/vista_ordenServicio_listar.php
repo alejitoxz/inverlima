@@ -345,21 +345,24 @@ $Rol = $_SESSION['ROL'];
                     <div class="row">
                       <div class="col-md-4">
                           <div class="form-group">
-                            <label for="">Batería</label>
-                            <select class="js-example-basic-single"  name="state" id="sel_bateria" style="width:100%; heigth: 40px;">   
+                            <label for="">Propiedad</label>
+                            <select class="js-example-basic-single"  name="state" id="sel_bateria" style="width:100%; heigth: 40px;"> 
+                              <option value="0">Seleccionar</option>
+                              <option value="1">Inverlima</option>
+                              <option value="2">Externo</option>  
                             </select><br><br>
                           </div>
                       </div>
                       <div class="col-md-4">
                           <div class="form-group">
-                            <label for="">Tipo de batería</label>
+                            <label for="">Bateria actual</label>
                             <select class="js-example-basic-single"  name="state" id="sel_tipoBateria" style="width:100%; heigth: 40px;">   
                             </select><br><br>
                           </div>
                       </div>
                       <div class="col-md-4">
                           <div class="form-group">
-                            <label for="">Marca</label>
+                            <label for="">Bateria vendida</label>
                             <select class="js-example-basic-single"  name="state" id="sel_marca" style="width:100%; heigth: 40px;">   
                             </select><br><br>
                           </div>
@@ -1804,21 +1807,24 @@ $Rol = $_SESSION['ROL'];
                     <div class="row">
                       <div class="col-md-4">
                           <div class="form-group">
-                            <label for="">Batería</label>
-                            <select class="js-example-basic-single"  name="state" id="sel_editar_bateria" style="width:100%; heigth: 40px;">   
+                            <label for="">Propiedad</label>
+                            <select class="js-example-basic-single"  name="state" id="sel_editar_bateria" style="width:100%; heigth: 40px;">
+                              <option value="0">Seleccionar</option>
+                              <option value="1">Inverlima</option>
+                              <option value="2">Externo</option>     
                             </select><br><br>
                           </div>
                       </div>
                       <div class="col-md-4">
                           <div class="form-group">
-                            <label for="">Tipo de batería</label>
+                            <label for="">Bateria actual</label>
                             <select class="js-example-basic-single"  name="state" id="sel_editar_tipoBateria" style="width:100%; heigth: 40px;">   
                             </select><br><br>
                           </div>
                       </div>
                       <div class="col-md-4">
                           <div class="form-group">
-                            <label for="">Marca</label>
+                            <label for="">Bateria vendida</label>
                             <select class="js-example-basic-single"  name="state" id="sel_editar_marca" style="width:100%; heigth: 40px;">   
                             </select><br><br>
                           </div>
@@ -3248,21 +3254,24 @@ $Rol = $_SESSION['ROL'];
                     <div class="row">
                       <div class="col-md-4">
                           <div class="form-group">
-                            <label for="">Batería</label>
-                            <select disabled class="js-example-basic-single"  name="state" id="sel_ver_bateria" style="width:100%; heigth: 40px;">   
+                            <label for="">Propiedad</label>
+                            <select disabled class="js-example-basic-single"  name="state" id="sel_ver_bateria" style="width:100%; heigth: 40px;">
+                              <option value="0">Seleccionar</option>
+                              <option value="1">Inverlima</option>
+                              <option value="2">Externo</option>    
                             </select><br><br>
                           </div>
                       </div>
                       <div class="col-md-4">
                           <div class="form-group">
-                            <label for="">Tipo de batería</label>
+                            <label for="">Bateria actual</label>
                             <select disabled class="js-example-basic-single"  name="state" id="sel_ver_tipoBateria" style="width:100%; heigth: 40px;">   
                             </select><br><br>
                           </div>
                       </div>
                       <div class="col-md-4">
                           <div class="form-group">
-                            <label for="">Marca</label>
+                            <label for="">Bateria vendida</label>
                             <select disabled class="js-example-basic-single"  name="state" id="sel_ver_marca" style="width:100%; heigth: 40px;">   
                             </select><br><br>
                           </div>
@@ -4549,7 +4558,6 @@ $Rol = $_SESSION['ROL'];
   listar_orden();
   listar_placa();
   listar_tecnico();
-  listar_bateria();
   listar_tipoBateria();
   listar_marca();
   listar_marca_llanta();

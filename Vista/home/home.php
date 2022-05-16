@@ -7,12 +7,14 @@ if ($Rol == 1 || $Rol == 4) {
 <div class="col-md-12">
     <div class="card">
         <div class="card-body">
-          <!--
+          
         <div class="row">
-        <input type="date" class="form-control" id="txt_fVenta" style="margin-left:8px; width:13%; heigth: 40px;" value="<?php echo date("Y-m-d");?>">
-        <input type="date" class="form-control" id="txt_fVenta" style="margin-left:2px; width:13%; heigth: 40px;" value="<?php echo date("Y-m-d");?>">
-        <button type="button" class="btn btn-primary" onclick="modificar_miscelaneos()" style="margin-left:4px; border-radius:15%;"><i class="fa fa-caret-right"> </i></button><br>
-        </div>-->
+          
+        <label style="margin-left:8px; margin-top:5px;" for="">Fecha inicial:</label>
+        <input type="text" class="form-control" id="fecIni" style="margin-left:8px; width:26%; heigth: 40px; text-align:center;" >
+        <button type="button" class="btn btn-primary" onclick="graficaTecnico();graficaBateria();graficaOrdenes();graficaAceite()" style="margin-left:4px; width:50px; border-radius:15%;"><i class="fa fa-caret-right"> </i></button><br>
+        </div>
+        <br>
             <div class="row">
 
                 <div class="col-lg-4 col-6">
@@ -159,8 +161,8 @@ if ($Rol == 1 || $Rol == 4) {
       </div>
        /.card-body 
   </div>
-</div>
-<div class="col-md-6">
+</div> -->
+<div class="col-md-12">
   <div class="card card-primary">
       <div class="card-header">
         <h3 class="card-title">Aceites por orden</h3>
@@ -173,7 +175,7 @@ if ($Rol == 1 || $Rol == 4) {
   </div>
 </div>
 </div>
--->
+
 
 <div class="col-md-12">
     <div class="card card-primary">
@@ -215,6 +217,7 @@ if ($Rol == 1 || $Rol == 4) {
 
 <script src="../js/home.js"></script>
 <script>
+  
   $(document).ready(function(){
     listar_home();
   })

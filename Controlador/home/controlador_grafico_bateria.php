@@ -2,7 +2,9 @@
     require '../../modelo/modelo_home.php';
 
     $MU = new modelo_home();
-    $consulta = $MU->listar_grafico_bateria();
+    $inicioDate = htmlspecialchars($_POST['inicioDate'],ENT_QUOTES,'UTF-8');
+    $finDate = htmlspecialchars($_POST['finDate'],ENT_QUOTES,'UTF-8');
+    $consulta = $MU->listar_grafico_bateria($inicioDate,$finDate);
     if($consulta){
         echo json_encode($consulta);
     }else {

@@ -178,19 +178,18 @@ session_start();
            
         }
 
-        function listar_grafico_orden(){
+        function listar_grafico_orden($inicioDate,$finDate){
             $conn = $this->conexion->conectar();
           
             $sql  = " SELECT COUNT
                             ( * ) AS cantidad,
-                            --YEAR ( s.fecha_creacion ) YEAR,
                             MONTH ( s.fecha_creacion ) MONTH 
                         FROM
                             ordenServicio AS s 
-                           where s.estatus = 1
+                           where s.estatus = 1 
+                           and s.fecha_creacion between '$inicioDate' and '$finDate'
 
                         GROUP BY
-                            --YEAR ( s.fecha_creacion ),
                             MONTH ( s.fecha_creacion )
             ";
             $resp = sqlsrv_query($conn, $sql);
@@ -239,7 +238,7 @@ session_start();
            
         }
 
-        function listar_grafico_aceitico(){
+        function listar_grafico_aceitico($inicioDate,$finDate){
             
             $conn = $this->conexion->conectar();
 
@@ -268,7 +267,7 @@ session_start();
 							INNER JOIN servicio AS s ON ( s.id = os.idServicio) 
 							INNER JOIN miscelaneos_detalle AS md ON ( md.id = s.motorMarca) 
 					WHERE
-							os.estatus = 1 
+							os.estatus = 1  and os.fecha_creacion between '$inicioDate' and '$finDate'
 					GROUP BY
 							s.motorMarca 
 			
@@ -283,12 +282,11 @@ session_start();
 							INNER JOIN servicio AS s ON ( s.id = os.idServicio) 
 							INNER JOIN miscelaneos_detalle AS md ON ( md.id = s.cajaMarca) 
 					WHERE
-							os.estatus = 1 
+							os.estatus = 1 and os.fecha_creacion between '$inicioDate' and '$finDate'
 					GROUP BY
 							s.cajaMarca 
 							) AS t
                 ";
-            //echo $sql;
             /*
 select * from (
 	SELECT COUNT
@@ -358,7 +356,7 @@ SELECT COUNT
            
         }
 
-        function listar_grafico_tecnico(){
+        function listar_grafico_tecnico($inicioDate,$finDate){
             
             $conn = $this->conexion->conectar();
 
@@ -370,6 +368,7 @@ SELECT COUNT
                     INNER JOIN persona AS p ON (t.idPersona= p.id)
                     WHERE t.estatus = 1 
                 ";
+               // echo $sql;
             $resp=sqlsrv_query($conn,$sql);
             if( $resp === false ) { echo ciudad; exit; }	
             $i=0;
@@ -383,7 +382,7 @@ SELECT COUNT
                     FROM ordenServicio AS os
                     INNER JOIN tecnico as t ON (t.id = os.idTecnico)
                     INNER JOIN persona AS p ON ( p.id = t.idPersona )
-                    WHERE os.estatus = 1 
+                    WHERE os.estatus = 1 and os.fecha_creacion between '$inicioDate' and '$finDate'
                     GROUP BY os.idTecnico
                 ";
 
@@ -486,7 +485,7 @@ SELECT COUNT
            
         }
 
-        function listar_grafico_bateria(){
+        function listar_grafico_bateria($inicioDate,$finDate){
             $conn = $this->conexion->conectar();
 
             $sql="SELECT
@@ -514,7 +513,7 @@ SELECT COUNT
             INNER JOIN servicio AS s ON ( s.id = os.idServicio )
             INNER JOIN miscelaneos_detalle AS md ON ( md.id = s.marca ) 
             WHERE
-            os.estatus = 1 and md.estatus = 1 AND md.id_miscelaneo = 19
+            os.estatus = 1 and md.estatus = 1 AND md.id_miscelaneo = 19 and os.fecha_creacion between '$inicioDate' and '$finDate'
             GROUP BY
             s.marca
                 ";

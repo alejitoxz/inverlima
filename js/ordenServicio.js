@@ -924,27 +924,7 @@ function odometro(id){
     })
 }
 
-function listar_bateria(){
-    $.ajax({
-        "url": "../controlador/ordenServicio/controlador_bateria_listar.php",
-        "type": "POST"
-    }).done(function(resp){
-        var data = JSON.parse(resp);
-        
-        var cadena="";
-        if(data.length>0){
-            cadena+="<option value='0'>Seleccionar</option>"; 
-            for(var i=0; i < data.length; i++){
-                cadena+="<option value ='"+data[i]['id']+"'>"+data[i]['bateria']+"</option>";
-            }
-            $("#sel_bateria").html(cadena);
-            $("#sel_editar_bateria").html(cadena);
-            $("#sel_ver_bateria").html(cadena);
-        }else{
-            cadena+="<option value =''>No se encontraron registros</option>"; 
-        }
-    })
-}
+
 function listar_tipoBateria(){
     $.ajax({
         "url": "../controlador/ordenServicio/controlador_tipoBateria_listar.php",
@@ -1481,7 +1461,6 @@ function registrar_orden_Servicio(){
             Swal.fire("Mensaje De Confirmacion",'Registro realizado', "success").then((value)=>{
                 table.ajax.reload();
                 limpiarRegistro();
-                enviarCorreo();
             });
         }else{
             Swal.fire("Mensaje De Advertencia",'El usuario ya se encuentra en uso', "warning");

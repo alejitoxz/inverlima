@@ -88,11 +88,39 @@ function reporte(){
     window.open(url,'_blank');
 }
 
+function contarOrden(){
+
+  $("#contadorServicio").html(0);
+
+  var fecha = $("#fecIni").val();
+  var inicioDate = fecha.substring(0, 16);
+  var finDate = fecha.substring(18, 38);
+
+  $.ajax({
+      url:'../controlador/ordenServicio/controlador_contador_orden.php',
+      type:'post',
+      data:{
+        inicioDate:inicioDate,
+        finDate:finDate
+        }
+  }).done(function(req){
+  var resultado=eval("("+req+")");
+
+      if(resultado.length>0){
+          $("#contadorServicio").html(resultado[0]['contadorServicio']);
+       }else{
+          $("#contadorServicio").html(0);
+       }
+          
+          
+  })
+}
+
 // funcion para charts de ordenbes de servicio por meses
 function graficaOrdenes(){
   var fecha = $("#fecIni").val();
   var inicioDate = fecha.substring(0, 16);
-  var finDate = fecha.substring(22, 38);
+  var finDate = fecha.substring(18, 38);
     $.ajax({
         "url": "../Controlador/home/controlador_grafico_orden.php",
         "type": "POST",
@@ -156,7 +184,7 @@ function graficaOrdenes(){
 function graficaBateria(){
   var fecha = $("#fecIni").val();
   var inicioDate = fecha.substring(0, 16);
-  var finDate = fecha.substring(22, 38);
+  var finDate = fecha.substring(18, 38);
   $.ajax({
       "url": "../Controlador/home/controlador_grafico_bateria.php",
       "type": "POST",
@@ -242,7 +270,7 @@ function graficaBateria(){
 function graficaAceite(){
   var fecha = $("#fecIni").val();
   var inicioDate = fecha.substring(0, 16);
-  var finDate = fecha.substring(22, 38);
+  var finDate = fecha.substring(18, 38);
   $.ajax({
       "url": "../Controlador/home/controlador_grafico_aceite.php",
       "type": "POST",
@@ -369,7 +397,7 @@ function graficaLlanta(){
 function graficaTecnico(){
   var fecha = $("#fecIni").val();
   var inicioDate = fecha.substring(0, 16);
-  var finDate = fecha.substring(22, 38);
+  var finDate = fecha.substring(18, 38);
   
   $.ajax({
       "url": "../Controlador/home/controlador_grafico_tecnico.php",
@@ -468,7 +496,7 @@ $("#fecIni").daterangepicker({
   startDate: moment().inicio, 
   endDate: moment().fin,
   locale: {
-    format: 'YYYY/MM/DD hh:mm A'
+    format: 'YYYY/MM/DD HH:MM'
   }
 
 });

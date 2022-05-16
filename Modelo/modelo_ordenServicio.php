@@ -949,7 +949,7 @@ session_start();
             $this->conexion->conectar();
         }
 
-        function contador_orden(){
+        function contador_orden($inicioDate,$finDate){
             $conn = $this->conexion->conectar();
             $idCompany = $_SESSION['COMPANY'];
             $Rol = $_SESSION['ROL'];
@@ -961,7 +961,7 @@ session_start();
             FROM
             servicio AS s
             INNER JOIN ordenServicio AS os ON ( os.idServicio = s.Id ) 
-            where os.estatus = 1 and fecha_creacion >= '2022-05-03 00:00:00.000'
+            where os.estatus = 1 and fecha_creacion between '$inicioDate' and '$finDate'
            ";
            //echo $sql;
             $resp = sqlsrv_query($conn, $sql);

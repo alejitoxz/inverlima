@@ -12,7 +12,7 @@ if ($Rol == 1 || $Rol == 4) {
           
         <label style="margin-left:8px; margin-top:5px;" for="">Fecha inicial:</label>
         <input type="text" class="form-control" id="fecIni" style="margin-left:8px; width:26%; heigth: 40px; text-align:center;" >
-        <button type="button" class="btn btn-primary" onclick="graficaTecnico();graficaBateria();graficaOrdenes();graficaAceite()" style="margin-left:4px; width:50px; border-radius:15%;"><i class="fa fa-caret-right"> </i></button><br>
+        <button type="button" class="btn btn-primary" onclick="graficaTecnico();graficaBateria();graficaOrdenes();graficaAceite();contarOrden()" style="margin-left:4px; width:50px; border-radius:15%;"><i class="fa fa-caret-right"> </i></button><br>
         </div>
         <br>
             <div class="row">

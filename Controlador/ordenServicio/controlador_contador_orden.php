@@ -2,7 +2,9 @@
     require '../../modelo/modelo_ordenServicio.php';
 
     $MU = new modelo_ordenServicio();
-    $consulta = $MU->contador_orden();
+    $inicioDate = htmlspecialchars($_POST['inicioDate'],ENT_QUOTES,'UTF-8');
+    $finDate = htmlspecialchars($_POST['finDate'],ENT_QUOTES,'UTF-8');
+    $consulta = $MU->contador_orden($inicioDate,$finDate);
     if($consulta){
         echo json_encode($consulta);
     }else {

@@ -401,23 +401,7 @@ function registrar_usuario(){
 
 }
 
-function contarOrden(){
-    $("#contadorServicio").html(0);
-    $.ajax({
-        url:'../controlador/ordenServicio/controlador_contador_orden.php',
-        type:'post',
-    }).done(function(req){
-		var resultado=eval("("+req+")");
 
-        if(resultado.length>0){
-            $("#contadorServicio").html(resultado[0]['contadorServicio']);
-         }else{
-            $("#contadorServicio").html(0);
-         }
-            
-            
-    })
-}
 
 function limpiarRegistro(){
     $("#txt_nom").val("");

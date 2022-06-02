@@ -22,8 +22,8 @@ session_start();
             v.modelo,
             v.chasis,
             v.placa,
-            p.nombre,
-            p.apellido,
+            (p.nombre + ' ' +p.apellido) as nombre,
+            p.cedula,
             md.Descripcion as empresa,
             md.id as idEmpresa,
             v.soat,
@@ -78,7 +78,8 @@ session_start();
 
         $sql  = "SELECT 
         pro.id,
-        (p.nombre + ' ' +p.apellido) as dueno
+        (p.nombre + ' ' +p.apellido) as dueno,
+        p.cedula
         from 
         propietario as pro
         INNER JOIN persona AS p ON (pro.idPersona = p.id)

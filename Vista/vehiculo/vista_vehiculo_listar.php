@@ -31,6 +31,7 @@
                           <th>Modelo</th>
                           <th>Empresa</th>
                           <th>Propietario</th>
+                          <th>Cedula</th>
                           <th align="right" >Acciones</th>
                         </tr>
                     </thead>

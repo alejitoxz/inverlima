@@ -1,7 +1,7 @@
 <?php
 session_start();
 $Rol = $_SESSION['ROL'];
-if ($Rol == 1 || $Rol == 4) {
+if ($Rol == 1 || $Rol == 3) {
 
 ?>
 <div class="col-md-12">
@@ -71,11 +71,6 @@ if ($Rol == 1 || $Rol == 4) {
         </div>
     </div>
 </div> 
-
-<?php
-}
-?>
-
 
 <div class="col-md-12">
   <div class="card card-primary">
@@ -168,14 +163,28 @@ if ($Rol == 1 || $Rol == 4) {
         <h3 class="card-title">Aceites por orden</h3>
       </div>
       <div class="card-body">
-        <div class="chart"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+      <select class="js-example-basic-single"  name="state" id="" style="width:15%; heigth: 40px;">   
+      <option value="s.motorMarca">Motor</option>
+      <option value="s.cajaMarca">Caja</option>
+      <option value="s.transmicionMarca">Transmision</option>
+      <option value="s.refrigeranteMarca">Refrigerante</option>
+      <option value="s.hidraulicoMarca">Hidraulico</option>
+      </select>
+        <div class="chart"><div class="chartjs-size-monitor">
+          <div class="chartjs-size-monitor-expand">
+            <div class="">
+            </div>
+          </div>
+          <div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
           <canvas id="areaChartAceite" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%; display: block; width: 487px;" width="487" height="250" class="chartjs-render-monitor"></canvas>
         </div>
       </div>
   </div>
 </div>
 </div>
-
+<?php
+}
+?>
 
 <div class="col-md-12">
     <div class="card card-primary">

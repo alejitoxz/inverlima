@@ -29,6 +29,7 @@ function listar_vehiculo(){
             { "data": "modelo" },
             { "data": "empresa" },
             { "data": "nombre" },
+            { "data": "cedula" },
             {"defaultContent":
             "<button style='font-size:13px;' type='button' class='eliminarv btn btn-danger'><i class='fa fa-trash'></i></button><button style='font-size:13px;' type='button' class='editarv btn btn-info'><i class='fa fa-edit'></i></button>"}
         ],
@@ -55,7 +56,7 @@ function listar_pro(){
         if(data.length>0){
             cadena+="<option value='0'>Seleccionar</option>"; 
             for(var i=0; i < data.length; i++){
-                cadena+="<option value ='"+data[i]['id']+"'>"+data[i]['dueno']+"</option>";
+                cadena+="<option value ='"+data[i]['id']+"'>"+data[i]['dueno']+" - "+data[i]['cedula']+"</option>";
             }
             
             $("#sel_pro_vehiculo").html(cadena);

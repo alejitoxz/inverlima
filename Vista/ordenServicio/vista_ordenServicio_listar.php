@@ -21,7 +21,13 @@ $Rol = $_SESSION['ROL'];
                 <div class="col-lg-10">
                     
                     <div class="row">
+                    <?php
+                    if ($Rol == 1 || $Rol == 3) {
+                    ?>
                     <button type="button" class="btn btn-primary"  onclick="AbrirModalRegistroOrdenServicio()"><i class="fas fa-plus"> </i> Registrar</button>
+                    <?php
+                    }
+                    ?>
                     <button type="button" class="btn btn-primary" style="margin-left:2px;" onclick="exportarReporte()"><i class="fas fa-file-pdf"> </i> Reporte</button>
                     </div>
                   

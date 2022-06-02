@@ -809,7 +809,7 @@ function listar_orden(){
             { "data": "observacion" },
             {
                 render: function(data, type, row){
-                    if(rol == 1){
+                    if(rol == 1 || rol == 3){
                         return "<button style='font-size:13px;' type='button' class='eliminar btn btn-danger'><i class='fa fa-trash'></i></button><button style='font-size:13px;' type='button' class='editar btn btn-info'><i class='fa fa-edit'></i></button><button style='font-size:13px;' type='button' class='ver btn btn-primary'><i class='fa fa-eye'></i></button><button style='font-size:13px;' type='button' class='enviarCorreo btn btn-success'><i class='fa fa-envelope'></i></button>"
                     }else if(rol == 2){
                         return "<button style='font-size:13px;' type='button' class='ver btn btn-primary'><i class='fa fa-eye'></i></button>"

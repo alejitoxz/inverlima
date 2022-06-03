@@ -374,7 +374,7 @@ $.ajax({
   data:{
     inicioDate:inicioDate,
     finDate:finDate,
-    optionl:opntionl
+    optionl:optionl
     }
 }).done(function(resp){
 

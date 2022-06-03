@@ -4,7 +4,8 @@
     $MU = new modelo_home();
     $inicioDate = htmlspecialchars($_POST['inicioDate'],ENT_QUOTES,'UTF-8');
     $finDate = htmlspecialchars($_POST['finDate'],ENT_QUOTES,'UTF-8');
-    $consulta = $MU->listar_grafico_aceitico($inicioDate,$finDate);
+    $option = htmlspecialchars($_POST['option'],ENT_QUOTES,'UTF-8');
+    $consulta = $MU->listar_grafico_aceitico($inicioDate,$finDate,$option);
     if($consulta){
         echo json_encode($consulta);
     }else {

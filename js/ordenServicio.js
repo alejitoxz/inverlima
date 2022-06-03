@@ -807,6 +807,7 @@ function listar_orden(){
             { "data": "tecnico" },
             { "data": "fecha_creacion" },
             { "data": "observacion" },
+            { "data": "factura" },
             {
                 render: function(data, type, row){
                     if(rol == 1 || rol == 3){
@@ -1298,6 +1299,8 @@ function registrar_orden_Servicio(){
     var observacionesF = $("#txt_observacionesF").val();
     var fCombustible2 = $("#sel_filtro_combustible2").val();
     var fCombustible3 = $("#sel_filtro_combustible3").val();
+    var factura = $("#txt_factura").val();
+    
 
     $.ajax({
         "url": "../controlador/ordenServicio/controlador_ordenServicio_registro.php",
@@ -1452,6 +1455,7 @@ function registrar_orden_Servicio(){
         observacionesF:observacionesF,
         fCombustible2:fCombustible2,
         fCombustible3:fCombustible3,
+        factura:factura
         }
     }).done(function(resp){
         
@@ -1639,6 +1643,8 @@ $('#tabla_orden').on('click','.editar',function(){
 
     var fCombustible2 =datosOrden.motorfiltroCombustible2;
     var fCombustible3 =datosOrden.motorfiltroCombustible3;
+    var factura =datosOrden.factura;
+
     
 
     //levantar modal
@@ -1803,6 +1809,8 @@ $('#tabla_orden').on('click','.editar',function(){
 
     $("#sel_editar_filtro_combustible2").val(fCombustible2).trigger('change');
     $("#sel_editar_filtro_combustible3").val(fCombustible3).trigger('change');
+    $("#txt_editar_factura").val(factura)
+    
 
 })
 
@@ -1967,6 +1975,7 @@ function modificar_orden_Servicio(){
 
     var fCombustible2 = $("#sel_editar_filtro_combustible2").val();
     var fCombustible3 = $("#sel_editar_filtro_combustible3").val();
+    var factura = $("#txt_editar_factura").val();
 
     $.ajax({
         "url": "../controlador/ordenServicio/controlador_ordenServicio_modificar.php",
@@ -2121,7 +2130,8 @@ function modificar_orden_Servicio(){
             sFiltroAire:sFiltroAire,
             observacionesF:observacionesF,
             fCombustible2:fCombustible2,
-            fCombustible3:fCombustible3
+            fCombustible3:fCombustible3,
+            factura:factura
         }
     }).done(function(resp){
         console.log(resp);
@@ -2192,6 +2202,7 @@ function limpiarRegistro(){
     $("#txt_oReg").val("");
     $("#txt_obs").val("");
     $("#sel_tecnico").val(0);
+    $("#txt_factura").val("");
     $("#sel_bateria").val(0);
     $("#sel_tipoBateria").val(0);
     $("#sel_marca").val(0);
@@ -2574,6 +2585,7 @@ $('#tabla_orden').on('click','.ver',function(){
 
     var fCombustible2 =datosOrden.motorfiltroCombustible2;
     var fCombustible3 =datosOrden.motorfiltroCombustible3;
+    var factura =datosOrden.factura;
     
 
     //levantar modal
@@ -2738,6 +2750,8 @@ $('#tabla_orden').on('click','.ver',function(){
 
     $("#sel_ver_filtro_combustible2").val(fCombustible2).trigger('change');
     $("#sel_ver_filtro_combustible3").val(fCombustible3).trigger('change');
+    $("#txt_ver_factura").val(factura)
+    
 
 });
 
@@ -2912,6 +2926,7 @@ $('#tabla_orden').on('click','.enviarCorreo',function(){
     var fCombustible2 =datosOrden.txtmotorfiltroCombustible2;
     var fCombustible3 =datosOrden.txtmotorfiltroCombustible3;
     var fecha_creacion =datosOrden.fecha_creacion;
+    var factura =datosOrden.factura;
 
     Swal.fire({
         title: '¿Seguro desea enviar un email?',
@@ -3078,7 +3093,8 @@ $('#tabla_orden').on('click','.enviarCorreo',function(){
                     observacionesF:observacionesF,
                     fCombustible2:fCombustible2,
                     fCombustible3:fCombustible3,
-                    fecha_creacion:fecha_creacion
+                    fecha_creacion:fecha_creacion,
+                    factura
                 }
             }).done(function(resp){
                 

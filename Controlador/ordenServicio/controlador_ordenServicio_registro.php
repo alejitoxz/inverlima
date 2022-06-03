@@ -146,6 +146,8 @@
     $observacionesF = htmlspecialchars($_POST['observacionesF'],ENT_QUOTES,'UTF-8');
     $fCombustible2 = htmlspecialchars($_POST['fCombustible2'],ENT_QUOTES,'UTF-8');
     $fCombustible3 = htmlspecialchars($_POST['fCombustible3'],ENT_QUOTES,'UTF-8');
+    $factura = htmlspecialchars($_POST['factura'],ENT_QUOTES,'UTF-8');
+    
 
     $consulta = $MU->registrar_ordenServicio(
     $placa,$revBimCotrautol,$rRegistradora,$kmGps,$vExtintor,$oReg,
@@ -170,6 +172,6 @@
     $pCambio3,$cantidad3,$presentacion3,$nivelacion3,$cNivelacion3,$tipoAceite4,$marca4,$uCambio4,$pCambio4,$tipoAceite5,$marca5,
     $uCambio5,$pCambio5,$lFreno,$lParabrisa,$refrigerante,$hidraulico,
     $lMotor,$lCaja,$lTransmision,$lFrenos1,$engrase,$sRadiador,
-    $sFiltroAire,$observacionesF,$fCombustible2,$fCombustible3
+    $sFiltroAire,$observacionesF,$fCombustible2,$fCombustible3,$factura
     );
     echo $consulta;

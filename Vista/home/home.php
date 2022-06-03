@@ -12,7 +12,7 @@ if ($Rol == 1 || $Rol == 3) {
           
         <label style="margin-left:8px; margin-top:5px;" for="">Fecha inicial:</label>
         <input type="text" class="form-control" id="fecIni" style="margin-left:8px; width:26%; heigth: 40px; text-align:center;" >
-        <button type="button" class="btn btn-primary" onclick="graficaTecnico();graficaBateria();graficaOrdenes();graficaAceite();contarOrden()" style="margin-left:4px; width:50px; border-radius:15%;"><i class="fa fa-caret-right"> </i></button><br>
+        <button type="button" class="btn btn-primary" onclick="graficaLlanta($('#tipoLlanta').val());graficaTecnico();graficaBateria();graficaOrdenes();graficaAceite($('#tipoAceite').val());contarOrden()" style="margin-left:4px; width:50px; border-radius:15%;"><i class="fa fa-caret-right"> </i></button><br>
         </div>
         <br>
             <div class="row">
@@ -133,14 +133,24 @@ if ($Rol == 1 || $Rol == 3) {
 </div>
 </div>
 
-<!--
-<div class="row">
-<div class="col-md-6">
+
+
+<div class="col-md-12">
   <div class="card card-primary">
       <div class="card-header">
         <h3 class="card-title">Llantas por orden</h3>
       </div>
       <div class="card-body">
+
+      <select class="js-example-basic-single"  name="state" id="tipoLlanta" style="width:15%; heigth: 40px;">   
+      <option selected value="0">Llanta #1</option>
+      <option value="1">Llanta #2</option>
+      <option value="2">Llanta #3</option>
+      <option value="3">Llanta #4</option>
+      <option value="4">Llanta #5</option>
+      <option value="5">Llanta #6</option>
+      </select>
+
         <div class="chart">
           <div class="chartjs-size-monitor">
             <div class="chartjs-size-monitor-expand">
@@ -154,21 +164,21 @@ if ($Rol == 1 || $Rol == 3) {
         </canvas>
         </div>
       </div>
-       /.card-body 
+
   </div>
-</div> -->
+</div> 
 <div class="col-md-12">
   <div class="card card-primary">
       <div class="card-header">
         <h3 class="card-title">Aceites por orden</h3>
       </div>
       <div class="card-body">
-      <select class="js-example-basic-single"  name="state" id="" style="width:15%; heigth: 40px;">   
-      <option value="s.motorMarca">Motor</option>
-      <option value="s.cajaMarca">Caja</option>
-      <option value="s.transmicionMarca">Transmision</option>
-      <option value="s.refrigeranteMarca">Refrigerante</option>
-      <option value="s.hidraulicoMarca">Hidraulico</option>
+      <select class="js-example-basic-single"  name="state" id="tipoAceite" style="width:15%; heigth: 40px;">   
+      <option selected value="0">Motor</option>
+      <option value="1">Caja</option>
+      <option value="2">Transmision</option>
+      <option value="3">Refrigerante</option>
+      <option value="4">Hidraulico</option>
       </select>
         <div class="chart"><div class="chartjs-size-monitor">
           <div class="chartjs-size-monitor-expand">
@@ -236,13 +246,23 @@ if ($Rol == 1 || $Rol == 3) {
 <script src="../js/vehiculo.js"></script>
 <script src="../js/propietario.js"></script>
 <script>
+    $("#tipoAceite").change(function(){
+      var tipoAceite = $("#tipoAceite").val();
+      graficaAceite(tipoAceite);
+      
+    });
+    $("#tipoLlanta").change(function(){
+      var tipoLlanta = $("#tipoLlanta").val();
+      graficaLlanta(tipoLlanta);
+      
+    });
     contarOrden();
     contarVehiculo();
     contarPropietario();
     graficaOrdenes();
     graficaBateria();
-    graficaAceite();
-   // graficaLlanta();
+    graficaLlanta(0);
+    graficaAceite(0);
     graficaTecnico();
  // enviarCorreoA();
     //contarConductor();

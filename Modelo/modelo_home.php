@@ -238,7 +238,7 @@ session_start();
            
         }
 
-        function listar_grafico_aceitico($inicioDate,$finDate){
+        function listar_grafico_aceitico($inicioDate,$finDate,$option){
             
             $conn = $this->conexion->conectar();
 
@@ -258,68 +258,19 @@ session_start();
                 $i++;
             }
             //  contadores historial
-            $sql="SELECT * from (
-					SELECT COUNT
+            $sql="SELECT COUNT
 							( * ) AS cantidad,
-							s.motorMarca as idAceite
+							$option as idAceite
 					FROM
 							ordenServicio AS os
 							INNER JOIN servicio AS s ON ( s.id = os.idServicio) 
-							INNER JOIN miscelaneos_detalle AS md ON ( md.id = s.motorMarca) 
+							INNER JOIN miscelaneos_detalle AS md ON ( md.id = $option) 
 					WHERE
 							os.estatus = 1  and os.fecha_creacion between '$inicioDate' and '$finDate'
 					GROUP BY
-							s.motorMarca 
-			
-			union
+							$option ";
 			
 			
-			SELECT COUNT
-							( * ) AS cantidad,
-							s.cajaMarca as idAceite
-					FROM
-							ordenServicio AS os
-							INNER JOIN servicio AS s ON ( s.id = os.idServicio) 
-							INNER JOIN miscelaneos_detalle AS md ON ( md.id = s.cajaMarca) 
-					WHERE
-							os.estatus = 1 and os.fecha_creacion between '$inicioDate' and '$finDate'
-					GROUP BY
-							s.cajaMarca 
-							) AS t
-                ";
-            /*
-select * from (
-	SELECT COUNT
-		( * ) AS cantidad,
-		md.descripcion
-	FROM
-		ordenServicio AS os
-		INNER JOIN servicio AS s ON ( s.id = os.idServicio) 
-		INNER JOIN miscelaneos_detalle AS md ON ( md.id = s.motorMarca) 
-	WHERE
-		os.estatus = 1 
-	GROUP BY
-		md.descripcion
-	
-
-
-union ALL
-
-
-
-SELECT COUNT
-		( * ) AS cantidad,
-		md.descripcion
-	FROM
-		ordenServicio AS os
-		INNER JOIN servicio AS s ON ( s.id = os.idServicio) 
-		INNER JOIN miscelaneos_detalle AS md ON ( md.id = s.cajaMarca) 
-	WHERE
-		os.estatus = 1 
-	GROUP BY
-		md.descripcion
-		) as hol ORDER BY descripcion
-*/
             $resp=sqlsrv_query($conn,$sql);
             if( $resp === false ) { echo estadistica; exit; }	
             $i=0;
@@ -537,6 +488,79 @@ SELECT COUNT
                         
                         $cantidad = $orden[$j]["cantidad"];
                         $StatusField = $bateria[$x]["nombres"];
+                        $arrayData = ["nombres"=>$StatusField,"cantidad"=>$cantidad];
+                        array_push($data,$arrayData); 
+                    }   
+                    
+                }  
+                                
+                
+               
+                
+            }
+
+            
+           
+
+            if($data>0){
+                return $data;
+            }else{
+                return 0;
+            }
+            
+            $this->conexion->conectar();
+           
+        }
+        function listar_grafico_llanta($inicioDate,$finDate,$optionl){
+            $conn = $this->conexion->conectar();
+
+            $sql="SELECT
+                id,
+                descripcion AS nombres 
+                FROM
+                miscelaneos_detalle 
+                WHERE
+                estatus = 1 
+                AND id_miscelaneo = 9
+                ";
+            $resp=sqlsrv_query($conn,$sql);
+            if( $resp === false ) { echo ciudad; exit; }	
+            $i=0;
+            while($row = sqlsrv_fetch_array( $resp, SQLSRV_FETCH_ASSOC)) {
+                $llanta[$i]=$row;
+                $i++;
+            }
+            //  contadores historial
+            $sql="SELECT COUNT ( * ) AS cantidad,
+            $optionl as idLlanta
+            FROM
+            ordenServicio AS os
+            INNER JOIN servicio AS s ON ( s.id = os.idServicio )
+            INNER JOIN miscelaneos_detalle AS md ON ( md.id = $optionl ) 
+            WHERE
+            os.estatus = 1 and md.estatus = 1 AND md.id_miscelaneo = 9 and os.fecha_creacion between '$inicioDate' and '$finDate'
+            GROUP BY
+            $optionl";
+
+            $resp=sqlsrv_query($conn,$sql);
+            if( $resp === false ) { echo estadistica; exit; }	
+            $i=0;
+            while($row = sqlsrv_fetch_array( $resp, SQLSRV_FETCH_ASSOC)) {
+            $orden[$i]=$row;
+            $i++;
+            }
+            $data      = [];
+    
+            for($x=0; $x<count($llanta);$x++){
+                
+                $arrayData      = [];
+                $arrayDatax     = [];
+                for($j=0; $j<count($orden); $j++){
+                    
+                    if( intval($orden[$j]["idLlanta"]) === intval($llanta[$x]["id"]) ){
+                        
+                        $cantidad = $orden[$j]["cantidad"];
+                        $StatusField = $llanta[$x]["nombres"];
                         $arrayData = ["nombres"=>$StatusField,"cantidad"=>$cantidad];
                         array_push($data,$arrayData); 
                     }   

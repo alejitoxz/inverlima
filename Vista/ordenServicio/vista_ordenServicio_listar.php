@@ -197,6 +197,7 @@ $Rol = $_SESSION['ROL'];
                       <th>Técnico</th>
                       <th>Creación</th>
                       <th>Observación</th>
+                      <th>#Factura</th>
                       <th>Acciones</th>
                     </tr>
                     </thead>
@@ -331,11 +332,19 @@ $Rol = $_SESSION['ROL'];
                             <textarea class="form-control" id="txt_obs" placeholder="Ingrese las observaciones"></textarea><br>
                           </div>
                         </div>
+                        </div>
+                        <div class="row">
                         <div class="col-md-4">
                           <div class="form-group">
                             <label for="">Técnico</label>
                             <select class="js-example-basic-single" id="sel_tecnico" name="state" style="width:100%; heigth: 40px;">   
                             </select><br><br>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <label for=""># Factura</label>
+                            <input type="text" class="form-control" id="txt_factura" placeholder="Ingrese el numero de factura"><br>
                           </div>
                         </div>
                         </div>
@@ -1793,11 +1802,19 @@ $Rol = $_SESSION['ROL'];
                             <textarea class="form-control" id="txt_editar_obs" placeholder="Ingrese las observaciones"></textarea><br>
                           </div>
                         </div>
+                        </div>
+                        <div class="row">
                         <div class="col-md-4">
                           <div class="form-group">
                             <label for="">Técnico</label>
                             <select class="js-example-basic-single" id="sel_editar_tecnico" name="state" style="width:100%; heigth: 40px;">   
                             </select><br><br>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <label for=""># Factura</label>
+                            <input type="text" class="form-control" id="txt_editar_factura" placeholder="Ingrese el numero de factura"><br>
                           </div>
                         </div>
                         </div>
@@ -3240,11 +3257,19 @@ $Rol = $_SESSION['ROL'];
                             <textarea readonly class="form-control" id="txt_ver_obs" placeholder="Ingrese las observaciones"></textarea><br>
                           </div>
                         </div>
+                        </div>
+                        <div class="row">
                         <div class="col-md-4">
                           <div class="form-group">
                             <label for="">Técnico</label>
                             <select disabled class="js-example-basic-single" id="sel_ver_tecnico" name="state" style="width:100%; heigth: 40px;">   
                             </select><br><br>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <label for=""># Factura</label>
+                            <input type="text" disabled class="form-control" id="txt_ver_factura" placeholder="Ingrese el numero de factura"><br>
                           </div>
                         </div>
                         </div>

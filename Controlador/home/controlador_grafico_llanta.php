@@ -2,7 +2,10 @@
     require '../../modelo/modelo_home.php';
 
     $MU = new modelo_home();
-    $consulta = $MU->listar_grafico_llanta();
+    $inicioDate = htmlspecialchars($_POST['inicioDate'],ENT_QUOTES,'UTF-8');
+    $finDate = htmlspecialchars($_POST['finDate'],ENT_QUOTES,'UTF-8');
+    $optionl = htmlspecialchars($_POST['optionl'],ENT_QUOTES,'UTF-8');
+    $consulta = $MU->listar_grafico_llanta($inicioDate,$finDate,$optionl);
     if($consulta){
         echo json_encode($consulta);
     }else {

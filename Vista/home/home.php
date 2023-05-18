@@ -121,7 +121,7 @@ if ($Rol == 1 || $Rol == 3) {
 <div class="col-md-6">
   <div class="card card-primary">
       <div class="card-header">
-        <h3 class="card-title">Baterías por orden </h3>
+        <h3 class="card-title">Numero de baterias vendidas</h3>
       </div>
       <div class="card-body">
         <div class="chart"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
@@ -138,7 +138,7 @@ if ($Rol == 1 || $Rol == 3) {
 <div class="col-md-12">
   <div class="card card-primary">
       <div class="card-header">
-        <h3 class="card-title">Llantas por orden</h3>
+        <h3 class="card-title">Numero de llantas vendidas</h3>
       </div>
       <div class="card-body">
 
@@ -170,7 +170,7 @@ if ($Rol == 1 || $Rol == 3) {
 <div class="col-md-12">
   <div class="card card-primary">
       <div class="card-header">
-        <h3 class="card-title">Aceites por orden</h3>
+        <h3 class="card-title">Aceites vendidos x Lts</h3>
       </div>
       <div class="card-body">
       <select class="js-example-basic-single"  name="state" id="tipoAceite" style="width:15%; heigth: 40px;">   

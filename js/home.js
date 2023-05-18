@@ -214,7 +214,7 @@ var resultado = eval("(" + resp + ")");
   labels  : nombres,
   datasets: [
       {
-      label               : 'Numero de Revisiones',
+      label               : '# de baterias vendidas',
       backgroundColor     : colorArray,
       borderColor         : '#380038',
       pointRadius         : true,
@@ -312,7 +312,7 @@ var areaChartData = {
 labels  : nombres,
 datasets: [
     {
-    label               : 'Ordenes registradas',
+    label               : 'Lts de aceite vendidos',
     backgroundColor     : colorArray,
     pointRadius         : false,
     pointColor          : '#3b8bba',
@@ -395,7 +395,7 @@ $.ajax({
   labels  : nombres,
   datasets: [
       {
-      label               : '# Revisiones',
+      label               : '# de llantas vendidas',
       backgroundColor     : colorArray,
       borderColor         : 'rgba(17,61,40)',
       pointRadius         : false,

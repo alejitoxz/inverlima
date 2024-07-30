@@ -127,169 +127,28 @@ session_start();
                                         LEFT JOIN propietario AS pro ON ( pro.id = v.idPropietario )
                                         LEFT JOIN persona AS prop ON ( pro.idPersona = prop.id )
                                         INNER JOIN servicio AS s ON ( os.idServicio = s.id ) UNION
-                                    SELECT
-                                        ( prop.nombre + ' ' + prop.apellido ) AS propietario,
-                                        prop.cedula,
-                                        prop.telefono,
-                                        prop.email,
-                                        v.placa,
-                                        CONVERT ( VARCHAR, os.vExtintor ) AS Fecha,
-                                        @Fecha AS FechaActual,
-                                        
-                                        
-                                        
+                                        SELECT
+                                            ( prop.nombre + ' ' + prop.apellido ) AS propietario,
+                                            prop.cedula,
+                                            prop.telefono,
+                                            prop.email,
+                                            v.placa,
+                                            CONVERT ( VARCHAR, os.vExtintor ) AS Fecha,
+                                            @Fecha AS FechaActual,
                                         CASE
-                                        
-                                        WHEN s.llanta1Cambio BETWEEN @fechaActual 
-                                        AND @Fecha THEN
-                                            'Cambio de llanta 1' 
-                                            END AS Vencimiento 
-                                    FROM
-                                        ordenServicio AS os
-                                        LEFT JOIN vehiculo AS v ON ( os.idVehiculo = v.id )
-                                        LEFT JOIN propietario AS pro ON ( pro.id = v.idPropietario )
-                                        LEFT JOIN persona AS prop ON ( pro.idPersona = prop.id )
-                                        INNER JOIN servicio AS s ON ( os.idServicio = s.id ) UNION
-                                    SELECT
-                                        ( prop.nombre + ' ' + prop.apellido ) AS propietario,
-                                        prop.cedula,
-                                        prop.telefono,
-                                        prop.email,
-                                        v.placa,
-                                        CONVERT ( VARCHAR, os.vExtintor ) AS Fecha,
-                                        @Fecha AS FechaActual,
-                                        
-                                        
-                                        CASE
-                                        
-                                        WHEN s.llanta2Cambio BETWEEN @fechaActual 
-                                        AND @Fecha THEN
-                                            'Cambio de llanta 2' 
-                                            END AS Vencimiento 
-                                    FROM
-                                        ordenServicio AS os
-                                        LEFT JOIN vehiculo AS v ON ( os.idVehiculo = v.id )
-                                        LEFT JOIN propietario AS pro ON ( pro.id = v.idPropietario )
-                                        LEFT JOIN persona AS prop ON ( pro.idPersona = prop.id )
-                                        INNER JOIN servicio AS s ON ( os.idServicio = s.id ) UNION
-                                    SELECT
-                                        ( prop.nombre + ' ' + prop.apellido ) AS propietario,
-                                        prop.cedula,
-                                        prop.telefono,
-                                        prop.email,
-                                        v.placa,
-                                        CONVERT ( VARCHAR, os.vExtintor ) AS Fecha,
-                                        @Fecha AS FechaActual,
-                                        
-                                        
-                                        
-                                        CASE
-                                        
-                                        WHEN s.llanta3Cambio BETWEEN @fechaActual 
-                                        AND @Fecha THEN
-                                            'Cambio de llanta 3' 
-                                            END AS Vencimiento 
-                                    FROM
-                                        ordenServicio AS os
-                                        LEFT JOIN vehiculo AS v ON ( os.idVehiculo = v.id )
-                                        LEFT JOIN propietario AS pro ON ( pro.id = v.idPropietario )
-                                        LEFT JOIN persona AS prop ON ( pro.idPersona = prop.id )
-                                        INNER JOIN servicio AS s ON ( os.idServicio = s.id ) UNION
-                                    SELECT
-                                        ( prop.nombre + ' ' + prop.apellido ) AS propietario,
-                                        prop.cedula,
-                                        prop.telefono,
-                                        prop.email,
-                                        v.placa,
-                                        CONVERT ( VARCHAR, os.vExtintor ) AS Fecha,
-                                        @Fecha AS FechaActual,
-                                        
-                                        
-                                        CASE
-                                        
-                                        WHEN s.llanta4Cambio BETWEEN @fechaActual 
-                                        AND @Fecha THEN
-                                            'Cambio de llanta 4' 
-                                            END AS Vencimiento 
-                                    FROM
-                                        ordenServicio AS os
-                                        LEFT JOIN vehiculo AS v ON ( os.idVehiculo = v.id )
-                                        LEFT JOIN propietario AS pro ON ( pro.id = v.idPropietario )
-                                        LEFT JOIN persona AS prop ON ( pro.idPersona = prop.id )
-                                        INNER JOIN servicio AS s ON ( os.idServicio = s.id ) UNION
-                                    SELECT
-                                        ( prop.nombre + ' ' + prop.apellido ) AS propietario,
-                                        prop.cedula,
-                                        prop.telefono,
-                                        prop.email,
-                                        v.placa,
-                                        CONVERT ( VARCHAR, os.vExtintor ) AS Fecha,
-                                        @Fecha AS FechaActual,
-                                        
-                                        
-                                        CASE
-                                        
-                                        WHEN s.llanta5Cambio BETWEEN @fechaActual 
-                                        AND @Fecha THEN
-                                            'Cambio de llanta 5' 
-                                            END AS Vencimiento 
-                                    FROM
-                                        ordenServicio AS os
-                                        LEFT JOIN vehiculo AS v ON ( os.idVehiculo = v.id )
-                                        LEFT JOIN propietario AS pro ON ( pro.id = v.idPropietario )
-                                        LEFT JOIN persona AS prop ON ( pro.idPersona = prop.id )
-                                        INNER JOIN servicio AS s ON ( os.idServicio = s.id ) UNION
-                                    SELECT
-                                        ( prop.nombre + ' ' + prop.apellido ) AS propietario,
-                                        prop.cedula,
-                                        prop.telefono,
-                                        prop.email,
-                                        v.placa,
-                                        CONVERT ( VARCHAR, os.vExtintor ) AS Fecha,
-                                        @Fecha AS FechaActual,
-                                        
-                                        
-                                        
-                                        CASE
-                                        
-                                        WHEN s.llanta6Cambio BETWEEN @fechaActual 
-                                        AND @Fecha THEN
-                                            'Cambio de llanta 6' 
-                                            END AS Vencimiento 
-                                    FROM
-                                        ordenServicio AS os
-                                        LEFT JOIN vehiculo AS v ON ( os.idVehiculo = v.id )
-                                        LEFT JOIN propietario AS pro ON ( pro.id = v.idPropietario )
-                                        LEFT JOIN persona AS prop ON ( pro.idPersona = prop.id )
-                                        INNER JOIN servicio AS s ON ( os.idServicio = s.id ) UNION
-                                    SELECT
-                                        ( prop.nombre + ' ' + prop.apellido ) AS propietario,
-                                        prop.cedula,
-                                        prop.telefono,
-                                        prop.email,
-                                        v.placa,
-                                        CONVERT ( VARCHAR, os.vExtintor ) AS Fecha,
-                                        @Fecha AS FechaActual,
-                                        
-                                        
-                                        
-                                        
-                                        
-                                        
-                                    CASE
-                                            
-                                            WHEN os.vExtintor BETWEEN @fechaActual 
-                                            AND @Fecha THEN
-                                                'Extintor' 
-                                                END AS Vencimiento 
-                                        FROM
-                                            ordenServicio AS os
-                                            LEFT JOIN vehiculo AS v ON ( os.idVehiculo = v.id )
-                                            LEFT JOIN propietario AS pro ON ( pro.id = v.idPropietario )
-                                            LEFT JOIN persona AS prop ON ( pro.idPersona = prop.id )
-                                            INNER JOIN servicio AS s ON ( os.idServicio = s.id ) 
-                                        ) tablas 
-                                WHERE
+                                                
+                                                WHEN os.vExtintor BETWEEN @fechaActual 
+                                                AND @Fecha THEN
+                                                    'Extintor' 
+                                                    END AS Vencimiento 
+                                            FROM
+                                                ordenServicio AS os
+                                                LEFT JOIN vehiculo AS v ON ( os.idVehiculo = v.id )
+                                                LEFT JOIN propietario AS pro ON ( pro.id = v.idPropietario )
+                                                LEFT JOIN persona AS prop ON ( pro.idPersona = prop.id )
+                                                INNER JOIN servicio AS s ON ( os.idServicio = s.id ) 
+                                            ) tablas 
+                                    WHERE
                 Vencimiento IS NOT NULL
             ";
             $resp = sqlsrv_query($conn, $sql);

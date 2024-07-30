@@ -4,7 +4,7 @@
 
     $MU = new modelo_ordenServicio();
 
-    $email = htmlspecialchars($_POST['email'],ENT_QUOTES,'UTF-8');
+    $correo = htmlspecialchars($_POST['correo'],ENT_QUOTES,'UTF-8');
     $placa = htmlspecialchars($_POST['placa'],ENT_QUOTES,'UTF-8');
     $revBimCotrautol = htmlspecialchars($_POST['revBimCotrautol'],ENT_QUOTES,'UTF-8');
     $rRegistradora = htmlspecialchars($_POST['rRegistradora'],ENT_QUOTES,'UTF-8');
@@ -152,7 +152,7 @@
     $fecha_creacion = htmlspecialchars($_POST['fecha_creacion'],ENT_QUOTES,'UTF-8');
     $idOrdenServicio = htmlspecialchars($_POST['idOrdenServicio'],ENT_QUOTES,'UTF-8');
 
-    $consulta = $MU->enviarVencimiento($email,$placa,$revBimCotrautol,$rRegistradora,$vExtintor,$oReg,
+    $consulta = $MU->enviarVencimiento($correo,$placa,$revBimCotrautol,$rRegistradora,$vExtintor,$oReg,
     $observacion,$tecnico,$bateria,$tipoBateria,$marca,$serial,
     $fVenta,$fInstalacion,$tUso,$pCambio,$pMantenimiento,$oMejora,
     $llantaSerial1,$profundidad1,$opmarca1,$tipoMarca1,$estado1,$fInstalacion1,

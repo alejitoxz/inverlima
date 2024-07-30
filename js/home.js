@@ -131,7 +131,7 @@ $.ajax({
 }).done(function(resp){
 
     var resultado = eval("(" + resp + ")");
-
+  console.log(resultado);
     var areaChartCanvas = $('#areaChart').get(0).getContext('2d')
     var areaChartData = {
     labels  : ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'],

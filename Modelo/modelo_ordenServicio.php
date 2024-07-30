@@ -2,6 +2,8 @@
 
 use PHPMailer\PHPMailer\PHPMailer;
 use  PHPMailer\PHPMailer\Exception;
+include_once("../../Vista/plugins/JSON.php");
+include_once("../../Vista/plugins/sendgrid-php/sendgrid-php.php");
 session_start();
     class modelo_ordenServicio{
         private $conexion;
@@ -1251,7 +1253,7 @@ session_start();
             $this->conexion->conectar();
         }
 
-        function enviarVencimiento($email,$placa,$revBimCotrautol,$rRegistradora,$vExtintor,$oReg,
+        function enviarVencimiento($correo,$placa,$revBimCotrautol,$rRegistradora,$vExtintor,$oReg,
         $observacion,$tecnico,$bateria,$tipoBateria,$marca,$serial,
         $fVenta,$fInstalacion,$tUso,$pCambio,$pMantenimiento,$oMejora,
         $llantaSerial1,$profundidad1,$opmarca1,$tipoMarca1,$estado1,$fInstalacion1,
@@ -1657,8 +1659,7 @@ session_start();
                 $fAirer = "No se realizaron cambios";
             }
 
-            try {
-            
+        
             $cuerpoMail = utf8_decode("
             <b><h4><center>Inverlima</center></h4><b>
             <center><img width='450' height='150' src='https://www.visualsaturbano.com/inverlima/Vista/imagenes/logo_administracion.png'></center>
@@ -1920,27 +1921,41 @@ session_start();
                 </tbody>    
             </table>
             
-                ");	 
+                ");	
+                
 
-
-            $this->mail->IsSMTP();
-            $this->mail->SMTPAuth = true;
-            $this->mail->SMTPSecure = "ssl";
-            $this->mail->Host = "smtp.gmail.com";
-            $this->mail->Port = 465;
-            $this->mail->Username = "pruebahost19@gmail.com";
-            $this->mail->Password = "123456789-a";									
-            $this->mail->setFrom( 'pruebahost19@gmail.com'  );
-            $this->mail->addAddress ( $email );									
-            $this->mail->Subject='INVERLIMA';
-            $this->mail->From ="pruebahost19@gmail.com";
-            $this->mail->FromName = "INVERLIMA"; 
-            $this->mail->MsgHTML($cuerpoMail);
-            $this->mail->IsHTML(true);
-            $this->mail->Send();
-            echo 1 ;
-            }catch( Exception  $e ) {
-            echo 0 ;
+                $correos = [];
+                array_push($correos, $correo);
+                array_push($correos, 'dacaycedo2@misena.edu.co');
+                // download sendgrid-php.zip from the latest release here,
+                // replacing <PATH TO> with the path to the sendgrid-php.php file,
+                // which is included in the download:
+                //====|| Se realiza un bucle con los correos ||====/
+                for ($i=0; $i < COUNT($correos); $i++) { 
+                
+                $email = new \SendGrid\Mail\Mail();
+                $email->setFrom("avisos@visualsat.com", "Visualsat Co");
+                $email->setSubject("Inverlima");
+                $email->addTo("$correos[$i]", "");
+                $email->addContent(
+                    "text/html", "$cuerpoMail"
+                );
+                $sendgrid = new \SendGrid('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');
+                try {
+                    $response = $sendgrid->send($email);
+                    /*print $response->statusCode() . "\n";
+                    print_r($response->headers());
+                    print $response->body() . "\n";*/
+                    $json=new Services_JSON(); 
+                        $resp=$json->encode("si"); 
+                        echo 1;
+                } catch (Exception $e) {
+                  $json=new Services_JSON(); 
+                         $resp=$json->encode("no");
+                         echo 0;
+                     /*
+                    echo 'Caught exception: '. $e->getMessage() ."\n";*/
+                }
             }
 
         }

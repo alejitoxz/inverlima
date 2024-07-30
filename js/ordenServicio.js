@@ -2764,7 +2764,7 @@ $('#tabla_orden').on('click','.enviarCorreo',function(){
         var datosOrden = table.row($(this).parents('tr')).data();
     }
     console.log("entra".fecha_creacion);
-    var email =datosOrden.email;
+    var correo =datosOrden.email;
     var placa =datosOrden.placa;
     var revBimCotrautol =datosOrden.revBimCotrautol;
     var rRegistradora =datosOrden.rRegistradora;
@@ -2943,7 +2943,7 @@ $('#tabla_orden').on('click','.enviarCorreo',function(){
                 "url": "../Controlador/ordenServicio/controlador_ordenServicio_enviar_vencimiento.php",
                 "type": "POST",
                 data:{
-                    email:email,
+                    correo:correo,
                     idOrdenServicio: idOrdenServicio,
                     idServicio:idServicio,
                     placa:placa,
@@ -3104,7 +3104,7 @@ $('#tabla_orden').on('click','.enviarCorreo',function(){
                     Swal.fire("Error",'No se pudo enviar el email, revise su conexion', "error");
                 }
             })
-            listar_orden()
+            table.ajax.reload();
         }
       })
 
